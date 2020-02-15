@@ -1,7 +1,9 @@
 hostname：
-account.wps.com,dayone.me,license.pdfexpert.com,mobile-api.adguard.com,education.github.com,backend.getdrafts.com,book.haitunwallet.com,mubu.com,lcs-mobile-cops.adobe.io,vira.llsapp.com,apic.musixmatch.com,api.rr.tv,ap*.intsig.net,buy.itunes.apple.com,apimboom2.globaldelight.net,m.client.10010,api.flexibits.com,api.diyidan.net
+account.wps.com,dayone.me,license.pdfexpert.com,mobile-api.adguard.com,education.github.com,backend.getdrafts.com,book.haitunwallet.com,mubu.com,lcs-mobile-cops.adobe.io,vira.llsapp.com,apic.musixmatch.com,api.rr.tv,ap*.intsig.net,buy.itunes.apple.com,apimboom2.globaldelight.net,m.client.10010,api.flexibits.com,api.diyidan.net,*.xiaoxiaoimg.com, *.xiaoxiaoapps.com
 
 Scripts：
+# 小小影视
+http-response ^https:\/\/.+\.xiaoxiao(apps|img)\.com\/(vod\/reqplay\/|ucp/index|getGlobalData) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js
 # 第一弹
 http-response ^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/Surge/master/Scripts/Diyidan.js
 # Fantastical
