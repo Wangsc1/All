@@ -138,7 +138,7 @@ if (isSurge) {
 }
 // #endregion
 
-const tel = "18550776549";
+const tel = "xxx";
 
 //上行引号内填入联通号码，使用前请登陆一次联通支付宝小程序
 //有问题请通过Telegram反馈 https://t.me/Leped_Bot
