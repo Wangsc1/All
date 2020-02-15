@@ -7,8 +7,19 @@
     您也可直接在tg中联系@wechatu
 */
 // #region 固定头部
-let isQuantumultX = $task !== undefined; //判断当前运行环境是否是qx
-let isSurge = $httpClient !== undefined; //判断当前运行环境是否是surge
+let isQuantumultX = $task != undefined; //判断当前运行环境是否是qx
+let isSurge = $httpClient != undefined; //判断当前运行环境是否是surge
+// 判断request还是respons
+// down方法重写
+var $done = (obj={}) => {
+    var isRequest = typeof $request != "undefined";
+    if (isQuantumultX) {
+        return isRequest ? $done({}) : ""
+    }
+    if (isSurge) {
+        return isRequest ? $done({}) : $done()
+    }
+}
 // http请求
 var $task = isQuantumultX ? $task : {};
 var $httpClient = isSurge ? $httpClient : {};
@@ -68,17 +79,29 @@ if (isSurge) {
             return new Promise((resolve, reject) => {
                 if (url.method == 'POST') {
                     $httpClient.post(url, (error, response, data) => {
-                        response.body = data;
-                        resolve(response, {
-                            error: error
-                        });
+                        if (response) {
+                            response.body = data;
+                            resolve(response, {
+                                error: error
+                            });
+                        } else {
+                            resolve(null, {
+                                error: error
+                            })
+                        }
                     })
                 } else {
                     $httpClient.get(url, (error, response, data) => {
-                        response.body = data;
-                        resolve(response, {
-                            error: error
-                        });
+                        if (response) {
+                            response.body = data;
+                            resolve(response, {
+                                error: error
+                            });
+                        } else {
+                            resolve(null, {
+                                error: error
+                            })
+                        }
                     })
                 }
             })
@@ -127,7 +150,7 @@ if (isSurge) {
 // #endregion
 
 const region = "us"
-const appIds = ["373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
+const appIds = ["1439415992","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
 
 var cacheData = $persistentStore.read()
 if (!cacheData) {
