@@ -1,7 +1,9 @@
 hostname：
-account.wps.com,dayone.me,license.pdfexpert.com,mobile-api.adguard.com,education.github.com,backend.getdrafts.com,book.haitunwallet.com,mubu.com,lcs-mobile-cops.adobe.io,vira.llsapp.com,apic.musixmatch.com,api.rr.tv,ap*.intsig.net,buy.itunes.apple.com,apimboom2.globaldelight.net,m.client.10010,api.flexibits.com,api.diyidan.net,*.xiaoxiao*.com
+account.wps.com,dayone.me,license.pdfexpert.com,mobile-api.adguard.com,education.github.com,backend.getdrafts.com,book.haitunwallet.com,mubu.com,lcs-mobile-cops.adobe.io,vira.llsapp.com,apic.musixmatch.com,api.rr.tv,ap*.intsig.net,buy.itunes.apple.com,apimboom2.globaldelight.net,m.client.10010,api.flexibits.com,api.diyidan.net,*.xiaoxiao*.com,m.pearkin.com
 
 Scripts：
+# Pear
+http-response ^https:\/\/m\.pearkin\.com\/(api\/Movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail) requires-body=1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Pear.js
 # 小小影视
 http-response ^https:\/\/.*\.xiaoxiao.*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/XXys.js
 # 第一弹
