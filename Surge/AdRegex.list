@@ -189,7 +189,6 @@ URL-REGEX,^https?:\/\/api\.ycapp\.yiche\.com\/appnews\/getadlist
 URL-REGEX,^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getadlist
 URL-REGEX,^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getappads\/
 URL-REGEX,^https?:\/\/cheyouapi\.ycapp\.yiche\.com\/appforum\/getusermessagecount
-URL-REGEX,^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/
 URL-REGEX,^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite
 URL-REGEX,^https?:\/\/s0\.2mdn\.net\/ads\/
 URL-REGEX,^https?:\/\/stats\.tubemogul\.com\/stats\/
