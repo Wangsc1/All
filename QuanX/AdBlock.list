@@ -130,6 +130,19 @@ HOST,mobileads.msn.com,REJECT
 HOST,mopnativeadv.037201.com,REJECT
 HOST,nativeadv.dftoutiao.com,REJECT
 
+# 杂项&广告联盟
+USER-AGENT,*AdSDK*,REJECT
+USER-AGENT,*Banner*,REJECT
+USER-AGENT,*Splash*,REJECT
+HOST,e.crashlytics.com,REJECT
+HOST,unidesk.alicdn.com,REJECT
+HOST,cdn-adphone.wenhua.com.cn,REJECT
+HOST,sdk.e.qq.com,REJECT
+HOST,mi.gdt.qq.com,REJECT
+HOST,net.rayjump.com,REJECT
+HOST,report.adview.cn,REJECT
+HOST-SUFFIX,doubleclick.net,REJECT
+
 # (A)
 # Apple
 HOST-SUFFIX,iadsdk.apple.com,REJECT
