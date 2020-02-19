@@ -130,6 +130,19 @@ DOMAIN,mobileads.msn.com
 DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
 
+# 杂项&广告联盟
+USER-AGENT,*AdSDK*
+USER-AGENT,*Banner*
+USER-AGENT,*Splash*
+DOMAIN,e.crashlytics.com
+DOMAIN,unidesk.alicdn.com
+DOMAIN,cdn-adphone.wenhua.com.cn
+DOMAIN,sdk.e.qq.com
+DOMAIN,mi.gdt.qq.com
+DOMAIN,net.rayjump.com
+DOMAIN,report.adview.cn
+DOMAIN-SUFFIX,doubleclick.net
+
 # (A)
 # Apple
 DOMAIN-SUFFIX,iadsdk.apple.com
