@@ -16,8 +16,6 @@ URL-REGEX,https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/
 URL-REGEX,https?:\/\/.+\.mp4\?ccode=0902
 URL-REGEX,https?:\/\/.+\.mp4\?sid=
 URL-REGEX,https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+\.mp4\?sid=
-# AcFun
-URL-REGEX,https?:\/\/aes\.acfun\.cn\/s\?adzones
 # APICloud
 URL-REGEX,https?:\/\/a\.apicloud\.com\/start_page\/
 
@@ -49,12 +47,6 @@ URL-REGEX,https?:\/\/cntv\.hls\.cdn\.myqcloud\.com\/.+\?maxbr=850
 URL-REGEX,https?:\/\/asp\.cntv\.myalicdn\.com\/.+\?maxbr=850
 URL-REGEX,https?:\/\/www\.cntv\.cn\/nettv\/adp\/
 URL-REGEX,https?:\/\/v\.cctv\.com\/.+850
-# 车来了
-URL-REGEX,https?:\/\/api\.chelaile\.net\.cn\/adpub\/
-# URL-REGEX,https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/
-URL-REGEX,https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/
-# URL-REGEX,https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image
-URL-REGEX,https?:\/\/pic\d\.chelaile\.net\.cn\/adv\/
 # 曹操出行
 URL-REGEX,https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/
 # 超级课程表
@@ -125,8 +117,6 @@ URL-REGEX,https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\?
 URL-REGEX,https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/
 # 埋堆堆
 URL-REGEX,https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/
-# 漫画人
-URL-REGEX,https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds
 # 美团
 URL-REGEX,https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$
 URL-REGEX,https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+\.jpg
@@ -134,8 +124,6 @@ URL-REGEX,https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp
 URL-REGEX,https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4)
 # 美味不用等
 URL-REGEX,https?:\/\/capi.mwee.cn/app-api/V\d{2}/app/(ad|getstartad)
-# 秒拍
-URL-REGEX,https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/
 # 马蜂窝
 URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/ad\/
 URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/
@@ -159,12 +147,6 @@ URL-REGEX,https?:\/\/slapi\.oray\.net\/client\/ad
 # 拼多多
 URL-REGEX,https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash
 
-# Q
-# 穷游
-URL-REGEX,https?:\/\/open\.qyer\.com\/qyer\/startpage\/
-URL-REGEX,https?:\/\/open\.qyer\.com\/qyer\/config\/get
-URL-REGEX,https?:\/\/media\.qyer\.com\/ad\/
-
 # R
 # 人人视频
 URL-REGEX,https?:\/\/msspjh\.emarbox\.com\/getAdConfig
@@ -172,30 +154,19 @@ URL-REGEX,https?:\/\/api\.videozhishi\.com\/api\/getAdvertising
 URL-REGEX,https?:\/\/api\.rr\.tv\/ad\/
 # 人人影视
 URL-REGEX,https?:\/\/ctrl\.(playcvn|zmzapi)\.(com|net)\/app\/(ads|init)
-# 日日煮
-URL-REGEX,https?:\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/
-URL-REGEX,https?:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/
 
 # S
 # 什么值得买
 URL-REGEX,https?:\/\/api\.smzdm\.com\/v\d\/util\/loading
 URL-REGEX,https?:\/\/app-api\.smzdm\.com\/util\/loading
 URL-REGEX,https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
-# 识货
-URL-REGEX,https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo
 # 首汽约车
 URL-REGEX,https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/car-rest\/webservice\/passenger\/recommendADs
 URL-REGEX,https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/zhuanche-passenger-token\/leachtoken\/webservice\/homepage\/queryADs
 # 苏宁
 URL-REGEX,https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/
-# 神舟专车
-URL-REGEX,https?:\/\/img01\.10101111cdn\.com\/adpos\/
 # 扫描全能王
 URL-REGEX,https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/
-# 省点
-URL-REGEX,https?:\/\/api\.waitwaitpay\.com\/\/api\/splash
-# 搜狗
-URL-REGEX,https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+\.jpg
 
 # T
 # 腾讯
@@ -288,8 +259,6 @@ URL-REGEX,https?:\/\/api\.zhihu\.com\/fringe\/ad
 URL-REGEX,https?:\/\/api\.zhihu\.com\/ad-
 # 作业帮
 URL-REGEX,https?:\/\/www\.zybang\.com\/adx\/
-# 最右
-URL-REGEX,https?:\/\/api\.izuiyou\.com\/ad\/
 # 字节跳动
 URL-REGEX,https?:\/\/.+\.pstatp\.com\/img\/ad
 URL-REGEX,https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/
