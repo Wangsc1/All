@@ -156,6 +156,8 @@ URL-REGEX,https?:\/\/api\.rr\.tv\/ad\/
 URL-REGEX,https?:\/\/ctrl\.(playcvn|zmzapi)\.(com|net)\/app\/(ads|init)
 
 # S
+# 苏州市民卡
+URL-REGEX,^https?:\/\/newapp\.szsmk\.com\/app\/config\/.*Ad$
 # 什么值得买
 URL-REGEX,https?:\/\/api\.smzdm\.com\/v\d\/util\/loading
 URL-REGEX,https?:\/\/app-api\.smzdm\.com\/util\/loading
