@@ -94,7 +94,6 @@ HOST-SUFFIX,wedolook.com,REJECT
 HOST-SUFFIX,xdrig.com,REJECT
 HOST-SUFFIX,yumimobi.com,REJECT
 HOST-SUFFIX,zu08e.cn,REJECT
-
 HOST-SUFFIX,ad.cmvideo.cn,REJECT
 HOST-SUFFIX,ad.daum.net,REJECT
 HOST,abema-adx.ameba.jp,REJECT
@@ -131,8 +130,6 @@ HOST,mobileads.msn.com,REJECT
 HOST,mopnativeadv.037201.com,REJECT
 HOST,nativeadv.dftoutiao.com,REJECT
 
-# (0~9)
-# 58 同城
 # (A)
 # Apple
 HOST-SUFFIX,iadsdk.apple.com,REJECT
@@ -163,9 +160,6 @@ HOST,ad.toutiao.com,REJECT
 # BitAuto
 HOST,adx.yiche.com,REJECT
 HOST,log.ycapp.yiche.com,REJECT
-# 百词斩
-HOST,advertise.baicizhan.com,REJECT
-HOST,advertise.baicizhan.org,REJECT
 # (C)
 # CNTV
 HOST,galaxy.bjcathay.com,REJECT
@@ -177,15 +171,6 @@ HOST,ad.21cn.com,REJECT
 HOST,ad.k.21cn.com,REJECT
 HOST,admarket.21cn.com,REJECT
 HOST,adshows.21cn.com,REJECT
-# 车来了
-HOST,atrace.chelaile.net.cn,REJECT
-HOST,logs.chelaile.net.cn,REJECT
-# (G)
-# Google
-HOST-SUFFIX,doubleclick.net,REJECT
-HOST-SUFFIX,googleadservices.com,REJECT
-HOST-SUFFIX,googleadsserving.cn,REJECT
-HOST-SUFFIX,googlesyndication.com,REJECT
 # (H)
 # HunanTV
 HOST-SUFFIX,da.mgtv.com,REJECT
@@ -232,11 +217,6 @@ HOST,ark.letv.com,REJECT
 HOST,emma-414870e223.huodonghezi.com,REJECT
 HOST,g3.letv.com,REJECT
 HOST,n.mark.letv.com,REJECT
-# 乐播投屏
-HOST,ad.hpplay.cn,REJECT
-HOST,adcdn.hpplay.cn,REJECT
-HOST,adeng.hpplay.cn,REJECT
-HOST,rp.hpplay.cn,REJECT
 # (M)
 # MI
 HOST-SUFFIX,ad.intl.xiaomi.com,REJECT
@@ -275,9 +255,6 @@ HOST,de.as.pptv.com,REJECT
 # Photoable
 HOST,regist.fotoable.com,REJECT
 HOST,cdn.adapi.fotoable.com,REJECT
-# PeanutWiFiMpass
-HOST,adnew.wifi8.com,REJECT
-HOST,adfile.wifi8.com,REJECT
 # (S)
 # Sina
 HOST-SUFFIX,beacon.sina.com.cn,REJECT
@@ -309,28 +286,12 @@ HOST,splashqqlive.gtimg.com,REJECT
 HOST,wa.gtimg.com,REJECT
 HOST,wxsnsdy.wxs.qq.com,REJECT
 HOST,wxsnsdythumb.wxs.qq.com,REJECT
-# The Paper
-HOST,admonitor.thepaper.cn,REJECT
-HOST,adpai.thepaper.cn,REJECT
-HOST,imgadpai.thepaper.cn,REJECT
 # Thunder
 HOST,adsp.xunlei.com,REJECT
 HOST,etl.xlmc.sandai.net,REJECT
 # 同花顺
 HOST,adm.10jqka.com.cn,REJECT
 HOST,stat.10jqka.com.cn,REJECT
-# 太平洋
-HOST,ad-analysis.pconline.com.cn,REJECT
-HOST,iad0ssl.pcauto.com.cn,REJECT
-HOST,iad0ssl.pconline.com.cn,REJECT
-HOST,imgad0.pcauto.com.cn,REJECT
-HOST,imgad0.pconline.com.cn,REJECT
-HOST,ivy.pchouse.com.cn,REJECT
-# (W)
-# WiFi 万能钥匙
-HOST,a.wkanx.com,REJECT
-HOST,cwx.lianwangtech.com,REJECT
-HOST,c1wx.lianwangtech.com,REJECT
 # (X)
 # 喜马拉雅
 HOST,ad.ximalaya.com,REJECT
@@ -348,10 +309,6 @@ HOST,t-ads.xiaohongshu.com,REJECT
 HOST-SUFFIX,atm.youku.com,REJECT
 HOST,ad.mobile.youku.com,REJECT
 HOST,iyes.youku.com,REJECT
-# (Z)
-# ZOL
-HOST,apppv.zol.com.cn,REJECT
-HOST,pvnapp.zol.com.cn,REJECT
 # Internet Service Providers Hijacking 运营商劫持
 HOST-SUFFIX,17gouwuba.com,REJECT
 HOST-SUFFIX,186078.com,REJECT
