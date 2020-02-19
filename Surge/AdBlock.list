@@ -94,7 +94,6 @@ DOMAIN-SUFFIX,wedolook.com
 DOMAIN-SUFFIX,xdrig.com
 DOMAIN-SUFFIX,yumimobi.com
 DOMAIN-SUFFIX,zu08e.cn
-
 DOMAIN-SUFFIX,ad.cmvideo.cn
 DOMAIN-SUFFIX,ad.daum.net
 DOMAIN,abema-adx.ameba.jp
@@ -131,8 +130,6 @@ DOMAIN,mobileads.msn.com
 DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
 
-# (0~9)
-# 58 同城
 # (A)
 # Apple
 DOMAIN-SUFFIX,iadsdk.apple.com
@@ -163,9 +160,6 @@ DOMAIN,ad.toutiao.com
 # BitAuto
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
-# 百词斩
-DOMAIN,advertise.baicizhan.com
-DOMAIN,advertise.baicizhan.org
 # (C)
 # CNTV
 DOMAIN,galaxy.bjcathay.com
@@ -177,15 +171,6 @@ DOMAIN,ad.21cn.com
 DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
-# 车来了
-DOMAIN,atrace.chelaile.net.cn
-DOMAIN,logs.chelaile.net.cn
-# (G)
-# Google
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,googleadservices.com
-DOMAIN-SUFFIX,googleadsserving.cn
-DOMAIN-SUFFIX,googlesyndication.com
 # (H)
 # HunanTV
 DOMAIN-SUFFIX,da.mgtv.com
@@ -232,11 +217,6 @@ DOMAIN,ark.letv.com
 DOMAIN,emma-414870e223.huodonghezi.com
 DOMAIN,g3.letv.com
 DOMAIN,n.mark.letv.com
-# 乐播投屏
-DOMAIN,ad.hpplay.cn
-DOMAIN,adcdn.hpplay.cn
-DOMAIN,adeng.hpplay.cn
-DOMAIN,rp.hpplay.cn
 # (M)
 # MI
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
@@ -275,9 +255,6 @@ DOMAIN,de.as.pptv.com
 # Photoable
 DOMAIN,regist.fotoable.com
 DOMAIN,cdn.adapi.fotoable.com
-# PeanutWiFiMpass
-DOMAIN,adnew.wifi8.com
-DOMAIN,adfile.wifi8.com
 # (S)
 # Sina
 DOMAIN-SUFFIX,beacon.sina.com.cn
@@ -309,28 +286,12 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-# The Paper
-DOMAIN,admonitor.thepaper.cn
-DOMAIN,adpai.thepaper.cn
-DOMAIN,imgadpai.thepaper.cn
 # Thunder
 DOMAIN,adsp.xunlei.com
 DOMAIN,etl.xlmc.sandai.net
 # 同花顺
 DOMAIN,adm.10jqka.com.cn
 DOMAIN,stat.10jqka.com.cn
-# 太平洋
-DOMAIN,ad-analysis.pconline.com.cn
-DOMAIN,iad0ssl.pcauto.com.cn
-DOMAIN,iad0ssl.pconline.com.cn
-DOMAIN,imgad0.pcauto.com.cn
-DOMAIN,imgad0.pconline.com.cn
-DOMAIN,ivy.pchouse.com.cn
-# (W)
-# WiFi 万能钥匙
-DOMAIN,a.wkanx.com
-DOMAIN,cwx.lianwangtech.com
-DOMAIN,c1wx.lianwangtech.com
 # (X)
 # 喜马拉雅
 DOMAIN,ad.ximalaya.com
@@ -348,10 +309,6 @@ DOMAIN,t-ads.xiaohongshu.com
 DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
 DOMAIN,iyes.youku.com
-# (Z)
-# ZOL
-DOMAIN,apppv.zol.com.cn
-DOMAIN,pvnapp.zol.com.cn
 # Internet Service Providers Hijacking 运营商劫持
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com
