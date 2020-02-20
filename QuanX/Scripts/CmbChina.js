@@ -1,3 +1,16 @@
+/*
+招商银行信用卡微信公众号："领积分 - 🎁签到领积分" 获取 Cookie
+
+[task_local]
+8 0 * * * cmbchina.js
+
+[rewrite_local]
+https://weclub\.ccc\.cmbchina.com/SCRMCustomActivityFront/checkin/request/get-home-data\.json\?activityCode=checkin url script-request-header cmbchina.js
+
+[mitm]
+hostname = weclub.ccc.cmbchina.com
+*/
+
 // #region 固定头部
 let isQuantumultX = $task != undefined; //判断当前运行环境是否是qx
 let isSurge = $httpClient != undefined; //判断当前运行环境是否是surge
@@ -140,19 +153,6 @@ if (isSurge) {
     }
 }
 // #endregion
-
-/*
-招商银行信用卡微信公众号："领积分 - 🎁签到领积分" 获取 Cookie
-
-[task_local]
-8 0 * * * cmbchina.js
-
-[rewrite_local]
-https://weclub\.ccc\.cmbchina.com/SCRMCustomActivityFront/checkin/request/get-home-data\.json\?activityCode=checkin url script-request-header cmbchina.js
-
-[mitm]
-hostname = weclub.ccc.cmbchina.com
-*/
 
 const checkinURL = 'https://weclub.ccc.cmbchina.com/SCRMCustomActivityFront/checkin/request/checkin.json';
 const cookieKey = 'iNotificatioin_cmbchina_cookieKey';
