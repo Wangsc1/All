@@ -52,6 +52,11 @@ URL-REGEX,https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo
 URL-REGEX,https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
 URL-REGEX,https?:\/\/www\.didapinche\.com\/app\/adstat\/
 
+# E
+# 饿了么 
+URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/
+URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*\.mp4\?$
+
 # F
 # 飞常准
 URL-REGEX,https?:\/\/app\.variflight\.com\/ad\/
