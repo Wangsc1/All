@@ -72,8 +72,6 @@ URL-REGEX,https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(interfaceAdMonitor|interf
 URL-REGEX,https?:\/\/business\.msstatic\.com\/advertiser\/
 # 韩剧社
 URL-REGEX,https?:\/\/47\.97\.20\.12\/ad\/
-# HiveBox
-URL-REGEX,https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/
 
 # J
 # 京东
