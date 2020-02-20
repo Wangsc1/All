@@ -193,12 +193,6 @@ URL-REGEX,https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/
 URL-REGEX,https?:\/\/api\.feng\.com\/v\d\/advertisement\/.*Claunch
 
 # X
-# 新浪
-URL-REGEX,https?:\/\/edit\.sinaapp\.com\/ua\?t=adv
-# 新浪微博
-URL-REGEX,https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php
-URL-REGEX,https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua
-URL-REGEX,https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads
 # 虾米
 URL-REGEX,https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/
 # 小睡眠
