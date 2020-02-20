@@ -1,5 +1,5 @@
 /*
-招商银行信用卡微信公众号：“领积分 - 🎁签到领积分” 获取 Cookie
+招商银行信用卡微信公众号："领积分 - 🎁签到领积分" 获取 Cookie
 
 [task_local]
 8 0 * * * cmbchina.js
@@ -24,7 +24,7 @@ if (isGetCookie) {
         var userAgent = $request.headers['User-Agent'];
         $prefs.setValueForKey(cookie, cookieKey);
         $prefs.setValueForKey(userAgent, userAgentKey);
-        $notify("成功获取招商银行信用卡Cookie 🎉", "", "请禁用该脚本")
+        $notify("成功获取招商银行信用卡 cookie 🎉", "", "请禁用该脚本")
     }
     $done({});
 } else {
