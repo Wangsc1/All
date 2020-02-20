@@ -37,14 +37,6 @@ if (isQuantumultX) {
                 }
             } else {
                 urlObj = url;
-                if (urlObj.body && typeof (urlObj.body) != 'string') {
-                    urlObj.body = JSON.stringify(urlObj.body);
-                    if (urlObj.headers) {
-                        urlObj.headers['Content-type'] = 'application/json; charset=utf-8';
-                    } else {
-                        urlObj.headers = {'Content-type' : 'application/json; charset=utf-8'};
-                    }
-                }
             }
             $task.fetch(urlObj).then(response => {
                 cb(undefined, response, response.body)
@@ -61,16 +53,8 @@ if (isQuantumultX) {
                 }
             } else {
                 urlObj = url;
-                if (urlObj.body && typeof (urlObj.body) != 'string') {
-                    urlObj.body = JSON.stringify(urlObj.body);
-                    if (urlObj.headers) {
-                        urlObj.headers['Content-type'] = 'application/json; charset=utf-8';
-                    } else {
-                        urlObj.headers = {'Content-type' : 'application/json; charset=utf-8'};
-                    }
-                }
             }
-            urlObj.method = 'POST';
+            url.method = 'POST';
             $task.fetch(urlObj).then(response => {
                 cb(undefined, response, response.body)
             }, reason => {
@@ -156,7 +140,6 @@ if (isSurge) {
     }
 }
 // #endregion
-
 /*
 App Pricer for Surge by Neurogram
 
