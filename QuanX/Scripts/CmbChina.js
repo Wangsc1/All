@@ -24,7 +24,7 @@ if (isGetCookie) {
         var userAgent = $request.headers['User-Agent'];
         $prefs.setValueForKey(cookie, cookieKey);
         $prefs.setValueForKey(userAgent, userAgentKey);
-        $notify("成功获取招商银行信用卡 cookie 🎉", "", "请禁用该脚本")
+        $notify("成功获取招商银行信用卡Cookie 🎉", "", "请禁用该脚本")
     }
     $done({});
 } else {
