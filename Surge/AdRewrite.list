@@ -16,8 +16,6 @@ URL-REGEX,https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/
 URL-REGEX,https?:\/\/.+\.mp4\?ccode=0902
 URL-REGEX,https?:\/\/.+\.mp4\?sid=
 URL-REGEX,https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+\.mp4\?sid=
-# APICloud
-URL-REGEX,https?:\/\/a\.apicloud\.com\/start_page\/
 
 # B
 # 百度
@@ -42,31 +40,19 @@ URL-REGEX,https?:\/\/app\.bilibili\.com\/x\/v\d\/splash\/
 URL-REGEX,https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash
 
 # C
-# CNTV
-URL-REGEX,https?:\/\/cntv\.hls\.cdn\.myqcloud\.com\/.+\?maxbr=850
-URL-REGEX,https?:\/\/asp\.cntv\.myalicdn\.com\/.+\?maxbr=850
-URL-REGEX,https?:\/\/www\.cntv\.cn\/nettv\/adp\/
-URL-REGEX,https?:\/\/v\.cctv\.com\/.+850
 # 曹操出行
 URL-REGEX,https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/
-# 超级课程表
-URL-REGEX,https?:\/\/.+/V\d\/splash\/getSplashV\d\.action
 
 # D
 # 豆瓣 (154.8.131.* 自签证书不可用)
 URL-REGEX,https?:\/\/api\.douban\.com\/v\d\/app_ads\/
 # 斗鱼
 URL-REGEX,https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo
-# 当当
-URL-REGEX,https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init
-URL-REGEX,https?:\/\/e\.dangdang\.com\/.+getDeviceStartPage
 # 嘀嗒出行
 URL-REGEX,https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
 URL-REGEX,https?:\/\/www\.didapinche\.com\/app\/adstat\/
 
 # F
-# 飞客茶馆
-URL-REGEX,https?:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis
 # 飞常准
 URL-REGEX,https?:\/\/app\.variflight\.com\/ad\/
 URL-REGEX,https?:\/\/app\.variflight\.com\/v\d\/advert\/
@@ -113,17 +99,9 @@ URL-REGEX,https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jp
 URL-REGEX,https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+\.jpg
 URL-REGEX,https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp
 URL-REGEX,https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4)
-# 美味不用等
-URL-REGEX,https?:\/\/capi.mwee.cn/app-api/V\d{2}/app/(ad|getstartad)
 # 马蜂窝
 URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/ad\/
 URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/
-
-# N
-# NationalGeographic
-URL-REGEX,https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/
-# NationalGeographicChina
-URL-REGEX,https?:\/\/wap\.ngchina\.cn\/news\/adverts\/
 
 # P
 # 拼多多
@@ -172,18 +150,11 @@ URL-REGEX,https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/
 URL-REGEX,https?:\/\/c\.m\.163\.com\/nc\/gl\/
 # 网易云音乐
 URL-REGEX,https?:\/\/.+\/eapi\/(ad|log)\/
-# 网易考拉
-URL-REGEX,https?:\/\/sp\.kaola\.com\/api\/openad
 # 网易严选
 URL-REGEX,https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json
-# 网易蜗牛读书
-URL-REGEX,https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\/
-URL-REGEX,https?:\/\/p\.du\.163\.com\/ad\/
 # 有道词典
 URL-REGEX,https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish
 URL-REGEX,https?:\/\/dsp-impr2\.youdao\.com\/adload.s\?
-# Weico
-URL-REGEX,https?:\/\/overseas\.weico\.cc/portal\.php\?a=get_coopen_ads
 # 蜗牛睡眠
 URL-REGEX,https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\?
 URL-REGEX,https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/
@@ -200,12 +171,6 @@ URL-REGEX,https?:\/\/api\.psy-1\.com\/cosleep\/startup
 # 喜马拉雅
 URL-REGEX,https?:\/\/\w+\.ximalaya\.com\/api\/v\d\/adRealTime
 URL-REGEX,https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/
-
-# Y
-# 印象笔记
-URL-REGEX,https?:\/\/app\.yinxiang\.com\/ads\/
-# 迅雷
-URL-REGEX,https?:\/\/images\.client\.vip\.xunlei\.com\/.+\/advert\/
 
 # Z
 # 直播吧
