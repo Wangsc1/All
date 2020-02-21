@@ -173,17 +173,6 @@ DOMAIN,ad.toutiao.com
 # BitAuto
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
-# (C)
-# CNTV
-DOMAIN,galaxy.bjcathay.com
-DOMAIN,mdrecv.app.cntvwb.cn
-DOMAIN,sdapprecv.app.cntvwb.cn
-DOMAIN,vdapprecv.app.cntvwb.cn
-# ChinaTelecom
-DOMAIN,ad.21cn.com
-DOMAIN,ad.k.21cn.com
-DOMAIN,admarket.21cn.com
-DOMAIN,adshows.21cn.com
 # (H)
 # HunanTV
 DOMAIN-SUFFIX,da.mgtv.com
@@ -223,13 +212,6 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
-# (L)
-# Le
-DOMAIN-SUFFIX,webp2p.letv.com
-DOMAIN,ark.letv.com
-DOMAIN,emma-414870e223.huodonghezi.com
-DOMAIN,g3.letv.com
-DOMAIN,n.mark.letv.com
 # (M)
 # MI
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
@@ -237,11 +219,6 @@ DOMAIN-SUFFIX,ad.xiaomi.com
 DOMAIN-SUFFIX,admob.xiaomi.com
 DOMAIN,adv.sec.intl.miui.com
 DOMAIN,adv.sec.miui.com
-# 墨迹天气
-DOMAIN,ad.api.moji.com
-DOMAIN,adlaunch.moji.com
-DOMAIN,ads.mojicdn.com
-DOMAIN,v1.log.moji.com
 # (N)
 # NetEase
 DOMAIN,ad.bn.netease.com
@@ -265,25 +242,6 @@ DOMAIN,ads.aplus.pptv.com
 DOMAIN,ads.aplusapi.pptv.com
 DOMAIN,asimgs.pplive.cn
 DOMAIN,de.as.pptv.com
-# Photoable
-DOMAIN,regist.fotoable.com
-DOMAIN,cdn.adapi.fotoable.com
-# (S)
-# Sina
-DOMAIN-SUFFIX,beacon.sina.com.cn
-DOMAIN,adimg.vue.weibo.com
-DOMAIN,u1.img.mobile.sina.cn
-DOMAIN,sax.sina.com.cn
-DOMAIN,saxs.sina.com.cn
-DOMAIN,saxn.sina.com.cn
-# Sohu
-DOMAIN-SUFFIX,ad.sohu.com
-DOMAIN-SUFFIX,ads.sohu.com
-DOMAIN-SUFFIX,aty.sohu.com
-DOMAIN,imp.optaim.com
-DOMAIN,v2.reachmax.cn
-DOMAIN,track.sohu.com
-DOMAIN,hui.sohu.com
 # (T)
 # Tencent
 DOMAIN-SUFFIX,e.qq.com
@@ -299,9 +257,6 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-# Thunder
-DOMAIN,adsp.xunlei.com
-DOMAIN,etl.xlmc.sandai.net
 # 同花顺
 DOMAIN,adm.10jqka.com.cn
 DOMAIN,stat.10jqka.com.cn

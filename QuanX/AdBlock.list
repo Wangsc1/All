@@ -173,17 +173,6 @@ HOST,ad.toutiao.com,REJECT
 # BitAuto
 HOST,adx.yiche.com,REJECT
 HOST,log.ycapp.yiche.com,REJECT
-# (C)
-# CNTV
-HOST,galaxy.bjcathay.com,REJECT
-HOST,mdrecv.app.cntvwb.cn,REJECT
-HOST,sdapprecv.app.cntvwb.cn,REJECT
-HOST,vdapprecv.app.cntvwb.cn,REJECT
-# ChinaTelecom
-HOST,ad.21cn.com,REJECT
-HOST,ad.k.21cn.com,REJECT
-HOST,admarket.21cn.com,REJECT
-HOST,adshows.21cn.com,REJECT
 # (H)
 # HunanTV
 HOST-SUFFIX,da.mgtv.com,REJECT
@@ -223,13 +212,6 @@ HOST,minfo.wps.cn,REJECT
 HOST,mobad.ijinshan.com,REJECT
 HOST,ups.ksmobile.net,REJECT
 HOST,ws.ksmobile.net,REJECT
-# (L)
-# Le
-HOST-SUFFIX,webp2p.letv.com,REJECT
-HOST,ark.letv.com,REJECT
-HOST,emma-414870e223.huodonghezi.com,REJECT
-HOST,g3.letv.com,REJECT
-HOST,n.mark.letv.com,REJECT
 # (M)
 # MI
 HOST-SUFFIX,ad.intl.xiaomi.com,REJECT
@@ -237,11 +219,6 @@ HOST-SUFFIX,ad.xiaomi.com,REJECT
 HOST-SUFFIX,admob.xiaomi.com,REJECT
 HOST,adv.sec.intl.miui.com,REJECT
 HOST,adv.sec.miui.com,REJECT
-# 墨迹天气
-HOST,ad.api.moji.com,REJECT
-HOST,adlaunch.moji.com,REJECT
-HOST,ads.mojicdn.com,REJECT
-HOST,v1.log.moji.com,REJECT
 # (N)
 # NetEase
 HOST,ad.bn.netease.com,REJECT
@@ -265,25 +242,6 @@ HOST,ads.aplus.pptv.com,REJECT
 HOST,ads.aplusapi.pptv.com,REJECT
 HOST,asimgs.pplive.cn,REJECT
 HOST,de.as.pptv.com,REJECT
-# Photoable
-HOST,regist.fotoable.com,REJECT
-HOST,cdn.adapi.fotoable.com,REJECT
-# (S)
-# Sina
-HOST-SUFFIX,beacon.sina.com.cn,REJECT
-HOST,adimg.vue.weibo.com,REJECT
-HOST,u1.img.mobile.sina.cn,REJECT
-HOST,sax.sina.com.cn,REJECT
-HOST,saxs.sina.com.cn,REJECT
-HOST,saxn.sina.com.cn,REJECT
-# Sohu
-HOST-SUFFIX,ad.sohu.com,REJECT
-HOST-SUFFIX,ads.sohu.com,REJECT
-HOST-SUFFIX,aty.sohu.com,REJECT
-HOST,imp.optaim.com,REJECT
-HOST,v2.reachmax.cn,REJECT
-HOST,track.sohu.com,REJECT
-HOST,hui.sohu.com,REJECT
 # (T)
 # Tencent
 HOST-SUFFIX,e.qq.com,REJECT
@@ -299,9 +257,6 @@ HOST,splashqqlive.gtimg.com,REJECT
 HOST,wa.gtimg.com,REJECT
 HOST,wxsnsdy.wxs.qq.com,REJECT
 HOST,wxsnsdythumb.wxs.qq.com,REJECT
-# Thunder
-HOST,adsp.xunlei.com,REJECT
-HOST,etl.xlmc.sandai.net,REJECT
 # 同花顺
 HOST,adm.10jqka.com.cn,REJECT
 HOST,stat.10jqka.com.cn,REJECT
