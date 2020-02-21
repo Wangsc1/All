@@ -46,8 +46,6 @@ URL-REGEX,https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/
 # D
 # 豆瓣 (154.8.131.* 自签证书不可用)
 URL-REGEX,https?:\/\/api\.douban\.com\/v\d\/app_ads\/
-# 斗鱼
-URL-REGEX,https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo
 # 嘀嗒出行
 URL-REGEX,https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
 URL-REGEX,https?:\/\/www\.didapinche\.com\/app\/adstat\/
@@ -83,18 +81,12 @@ URL-REGEX,https?:\/\/ios\.wps\.cn\/ad-statistics-service
 URL-REGEX,https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/
 URL-REGEX,https?:\/\/\w+\.kingsoft-office-service\.com\/ad
 
-# K
-# Keep
-URL-REGEX,https?:\/\/api\.gotokeep\.com\/ads
-
 # M
 # 小米
 URL-REGEX,https?:\/\/api\.m\.mi\.com\/v\d\/app\/start
 URL-REGEX,https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/
 URL-REGEX,https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen
 URL-REGEX,https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\?
-# 墨迹天气
-URL-REGEX,https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/
 # 埋堆堆
 URL-REGEX,https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/
 # 美团
@@ -102,9 +94,6 @@ URL-REGEX,https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jp
 URL-REGEX,https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+\.jpg
 URL-REGEX,https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp
 URL-REGEX,https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4)
-# 马蜂窝
-URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/ad\/
-URL-REGEX,https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/
 
 # P
 # 拼多多
@@ -144,8 +133,6 @@ URL-REGEX,https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|
 URL-REGEX,https?:\/\/news\.ssp\.qq\.com\/app
 # 微信
 URL-REGEX,https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad)
-# 途牛
-URL-REGEX,https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/
 
 # W
 # 网易
