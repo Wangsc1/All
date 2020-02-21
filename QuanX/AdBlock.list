@@ -174,9 +174,6 @@ HOST,ad.toutiao.com,REJECT
 HOST,adx.yiche.com,REJECT
 HOST,log.ycapp.yiche.com,REJECT
 # (H)
-# HunanTV
-HOST-SUFFIX,da.mgtv.com,REJECT
-HOST-SUFFIX,da.hunantv.com,REJECT
 # Hupu
 HOST,adx.hupu.com,REJECT
 HOST,adx-api.hupu.com,REJECT

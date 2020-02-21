@@ -174,9 +174,6 @@ DOMAIN,ad.toutiao.com
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
 # (H)
-# HunanTV
-DOMAIN-SUFFIX,da.mgtv.com
-DOMAIN-SUFFIX,da.hunantv.com
 # Hupu
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
