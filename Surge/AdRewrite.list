@@ -162,11 +162,8 @@ URL-REGEX,https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|
 URL-REGEX,https?:\/\/a\.qiumibao\.com\/activities\/config\.php
 URL-REGEX,https?:\/\/.+\/allOne\.php\?ad_name
 # 知乎
-URL-REGEX,https?:\/\/www\.zhihu\.com\/api\/v4\/community-ad\/
-URL-REGEX,https?:\/\/api\.zhihu\.com\/(launch|real_time)
-URL-REGEX,https?:\/\/api\.zhihu\.com\/commercial_api\/.*(launch|real_time)
-URL-REGEX,https?:\/\/api\.zhihu\.com\/fringe\/ad
-URL-REGEX,https?:\/\/api\.zhihu\.com\/ad-
+URL-REGEX,https://www.zhihu.com/api/v4/mcn/
+URL-REGEX,https://api.zhihu.com/(ab|adx|drama|fringe|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad))
 # 作业帮
 URL-REGEX,https?:\/\/www\.zybang\.com\/adx\/
 # 字节跳动
