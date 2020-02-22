@@ -35,9 +35,6 @@ URL-REGEX,https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo
 URL-REGEX,https?:\/\/.+\/(mixer|track2)\?
 URL-REGEX,https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do
 URL-REGEX,https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show
-# 哔哩哔哩
-URL-REGEX,https?:\/\/app\.bilibili\.com\/x\/v\d\/splash\/
-URL-REGEX,https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash
 
 # C
 # 曹操出行
