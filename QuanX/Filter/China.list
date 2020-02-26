@@ -2,13 +2,6 @@
 # > 360
 HOST-SUFFIX,qhres.com,DIRECT
 HOST-SUFFIX,qhimg.com,DIRECT
-# > Akamai
-HOST-SUFFIX,akadns.net,DIRECT
-# HOST-SUFFIX,akamai.net,DIRECT
-# HOST-SUFFIX,akamaiedge.net,DIRECT
-# HOST-SUFFIX,akamaihd.net,DIRECT
-# HOST-SUFFIX,akamaistream.net,DIRECT
-# HOST-SUFFIX,akamaized.net,DIRECT
 # > Alibaba
 USER-AGENT,%E4%BC%98%E9%85%B7*,DIRECT
 HOST-SUFFIX,alibaba.com,DIRECT
@@ -52,10 +45,6 @@ HOST-SUFFIX,biliapi.net,DIRECT
 HOST-SUFFIX,bilibili.com,DIRECT
 HOST-SUFFIX,bilibili.tv,DIRECT
 HOST-SUFFIX,hdslb.com,DIRECT
-# > Blizzard
-HOST-SUFFIX,blizzard.com,DIRECT
-HOST-SUFFIX,battle.net,DIRECT
-HOST,blzddist1-a.akamaihd.net,DIRECT
 # > ByteDance
 HOST-SUFFIX,feiliao.com,DIRECT
 HOST-SUFFIX,pstatp.com,DIRECT
@@ -70,14 +59,6 @@ HOST-SUFFIX,livechina.com,DIRECT
 HOST-SUFFIX,didialift.com,DIRECT
 HOST-SUFFIX,didiglobal.com,DIRECT
 HOST-SUFFIX,udache.com,DIRECT
-# > 蛋蛋赞
-HOST-SUFFIX,343480.com,DIRECT
-HOST-SUFFIX,baduziyuan.com,DIRECT
-HOST-SUFFIX,com-hs-hkdy.com,DIRECT
-HOST-SUFFIX,czybjz.com,DIRECT
-HOST-SUFFIX,dandanzan.com,DIRECT
-HOST-SUFFIX,fjhps.com,DIRECT
-HOST-SUFFIX,kuyunbo.club,DIRECT
 # > ChinaNet
 HOST-SUFFIX,21cn.com,DIRECT
 # > HunanTV
@@ -139,15 +120,6 @@ HOST-SUFFIX,v-56.com,DIRECT
 HOST-SUFFIX,sogo.com,DIRECT
 HOST-SUFFIX,sogou.com,DIRECT
 HOST-SUFFIX,sogoucdn.com,DIRECT
-# > Steam
-HOST-SUFFIX,steampowered.com,DIRECT
-HOST-SUFFIX,steam-chat.com,DIRECT
-HOST-SUFFIX,steamgames.com,DIRECT
-HOST-SUFFIX,steamusercontent.com,DIRECT
-HOST-SUFFIX,steamcontent.com,DIRECT
-HOST-SUFFIX,steamstatic.com,DIRECT
-HOST-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
-HOST-SUFFIX,steamstat.us,DIRECT
 # > Tencent
 USER-AGENT,MicroMessenger%20Client,DIRECT
 USER-AGENT,WeChat*,DIRECT
@@ -183,10 +155,6 @@ HOST-SUFFIX,ip-cdn.com,DIRECT
 HOST-SUFFIX,ipv6-test.com,DIRECT
 HOST-SUFFIX,test-ipv6.com,DIRECT
 HOST-SUFFIX,whatismyip.com,DIRECT
-# > Speed Test
-# HOST-SUFFIX,speedtest.net,DIRECT
-HOST-SUFFIX,netspeedtestmaster.com,DIRECT
-HOST,speedtest.macpaw.com,DIRECT
 # > Private Tracker
 HOST-SUFFIX,awesome-hd.me,DIRECT
 HOST-SUFFIX,broadcasthe.net,DIRECT
