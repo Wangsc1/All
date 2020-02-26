@@ -1,5 +1,5 @@
 # > PayPal
 USER-AGENT,PayPal*,PayPal
-DOMAIN-KEYWORD,paypal,PayPal
-DOMAIN-SUFFIX,paypal.com,PayPal
-DOMAIN-SUFFIX,paypalobjects.com,PayPal
+HOST-KEYWORD,paypal,PayPal
+HOST-SUFFIX,paypal.com,PayPal
+HOST-SUFFIX,paypalobjects.com,PayPal

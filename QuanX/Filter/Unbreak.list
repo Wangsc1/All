@@ -2,18 +2,18 @@
 # > General
 USER-AGENT,coffeecorp*,DIRECT
 USER-AGENT,restaurant-mobile*,DIRECT
-DOMAIN,app.adjust.com,DIRECT
+HOST,app.adjust.com,DIRECT
 # > Google
-DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
-DOMAIN,analyticsinsights-pa.googleapis.com,PROXY
-DOMAIN,analyticsreporting.googleapis.com,PROXY
-DOMAIN,dl.google.com,DIRECT
-DOMAIN,mtalk.google.com,DIRECT
+HOST-SUFFIX,googletraveladservices.com,DIRECT
+HOST,analyticsinsights-pa.googleapis.com,PROXY
+HOST,analyticsreporting.googleapis.com,PROXY
+HOST,dl.google.com,DIRECT
+HOST,mtalk.google.com,DIRECT
 # > Tencent
-DOMAIN,livew.l.qq.com,DIRECT
-DOMAIN,vd.l.qq.com,DIRECT
+HOST,livew.l.qq.com,DIRECT
+HOST,vd.l.qq.com,DIRECT
 # > Strava
-DOMAIN,analytics.strava.com,DIRECT
+HOST,analytics.strava.com,DIRECT
 # > Umeng
-DOMAIN,msg.umeng.com,DIRECT
-DOMAIN,msg.umengcloud.com,DIRECT
+HOST,msg.umeng.com,DIRECT
+HOST,msg.umengcloud.com,DIRECT
