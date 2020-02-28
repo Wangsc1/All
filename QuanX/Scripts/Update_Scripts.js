@@ -50,7 +50,7 @@ const conf = {
     "^https:\/\/api\.diyidan\.net",
     // 克拉壁纸
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js":
-    "^https:\/\/claritywallpaper\.com",
+    "^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)",
 }
 const $tool = new Tool()
 const isTask = $tool.isTask
