@@ -16,7 +16,7 @@
  * hostname = api.m.jd.com
  */
  
-const conf = {
+const __conf = {
     //京东价格
     "https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js": "^https?:\/\/api\.m\.jd.com",
     // 淘宝价格
