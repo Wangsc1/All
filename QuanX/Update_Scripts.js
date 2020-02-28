@@ -25,10 +25,32 @@ const conf = {
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WeChat.js":
     "^https?:\/\/mp\.weixin\.qq\.com",
     // 知乎
-    ["https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Answer.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Feed.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_People.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Recommend.js"]:"^https://api.zhihu.com",
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Answer.js":
+"^https://api.zhihu.com",
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Feed.js":
+"^https://api.zhihu.com",
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_People.js":
+"^https://api.zhihu.com",
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Recommend.js":
+"^https://api.zhihu.com",
     // WPS
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WPS.js":
-    "^https://account.wps.com"
+    "^https://account.wps.com",
+    // Drafts
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Drafts.js":
+    "^https:\/\/backend\.getdrafts\.com",
+    // 扫描全能王
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/CamScanner.js":
+    "^https:\/\/(api|api-cs)\.intsig\.net",
+    // 人人视频
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/RRtv.js":
+    "^https:\/\/api\.rr\.tv",
+    // 第一弹
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Diyidan.js":
+    "^https:\/\/api\.diyidan\.net",
+    // 克拉壁纸
+    "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js":
+    "^https:\/\/claritywallpaper\.com",
     //继续添加新的远程脚本...
 }
 const $tool = new Tool()
