@@ -69,11 +69,11 @@ if (__isTask) {
                         resolve(`🎉${filename} update success`)
                         console.log(`Update success: ${url}`)
                     } else {
-                        resolve(`🎉${filename} update fail`)
+                        resolve(`‼️${filename} update fail`)
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve(`🎉${filename} update fail`)
+                    resolve(`‼️${filename} update fail`)
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
