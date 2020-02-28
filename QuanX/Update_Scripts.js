@@ -15,11 +15,18 @@
  * hostname = api.m.jd.com
  */
 const conf = {
+    //京东价格
     "https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js": "^https?:\/\/api\.m\.jd.com",
+    // 淘宝价格
     "https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js": ["^https?://trade-acs\.m\.taobao\.com", "^https?://amdc\.m\.taobao\.com"],
+    // Netflix
     "https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js": "^https?://ios\.prod\.ftl\.netflix\.com",
+    // 微信公众号
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WeChat.js":
     "^https?:\/\/mp\.weixin\.qq\.com",
+    // 知乎
+    ["https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Answer.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Feed.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_People.js","https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Recommend.js"]:"^https://api.zhihu.com",
+    // WPS
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WPS.js":
     "^https://account.wps.com"
     //继续添加新的远程脚本...
