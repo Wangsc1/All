@@ -51,7 +51,6 @@ const conf = {
     // 克拉壁纸
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js":
     "^https:\/\/claritywallpaper\.com",
-    //继续添加新的远程脚本...
 }
 const $tool = new Tool()
 const isTask = $tool.isTask
