@@ -91,7 +91,7 @@ if (isTask) {
         console.log(vals.join("\n"))
         let lastDate = $tool.read("ScriptLastUpdateDate")
         lastDate = lastDate ? lastDate : new Date()
-        $tool.notify("Update done.", `${lastDate.Format("yyyy-MM-dd HH:mm:ss")} last update.`, `${vals.join("\n")}`)
+        $tool.notify("Scripts Updated.", `${lastDate.Format("yyyy-MM-dd HH:mm:ss")} last update.`, `${vals.join("\n")}`)
         $tool.write(new Date(), "ScriptLastUpdateDate")
         $done()
     })
