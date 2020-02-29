@@ -66,14 +66,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve(`🎉${filename} update success`)
+                        resolve(`🎉${filename} - update success`)
                         console.log(`Update success: ${url}`)
                     } else {
-                        resolve(`‼️${filename} update fail`)
+                        resolve(`‼️${filename} - update fail`)
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve(`‼️${filename} update fail`)
+                    resolve(`‼️${filename} - update fail`)
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
