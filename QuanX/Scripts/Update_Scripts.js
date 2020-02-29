@@ -18,41 +18,41 @@
  
 const __conf = {
     //京东价格
-    "https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js": "^https?:\/\/api\.m\.jd.com",
+    "https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js": "^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig)",
     // 淘宝价格
-    "https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js": ["^https?://trade-acs\.m\.taobao\.com", "^https?://amdc\.m\.taobao\.com"],
+    "https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js": ["^https?://.+/amdc/mobileDispatch", "^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail"],
     // Netflix
-    "https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js": "^https?://ios\.prod\.ftl\.netflix\.com",
+    "https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js": "^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D",
     // 微信公众号
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WeChat.js":
-    "^https?:\/\/mp\.weixin\.qq\.com",
+    "^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad",
     // 知乎
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Answer.js":
-"^https://api.zhihu.com",
+"^https://api.zhihu.com/v4/questions",
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Feed.js":
-"^https://api.zhihu.com",
+"^https://api.zhihu.com/moments\?(action|feed_type)",
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_People.js":
-"^https://api.zhihu.com",
+"^https://api.zhihu.com/people/",
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Zhihu_Recommend.js":
-"^https://api.zhihu.com",
+"^https://api.zhihu.com/topstory/recommend",
     // WPS
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/WPS.js":
-    "^https://account.wps.com",
+    "^https://account.wps.com/api/users/",
     // Drafts
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Drafts.js":
-    "^https:\/\/backend\.getdrafts\.com",
+    "^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification*",
     // 扫描全能王
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/CamScanner.js":
-    "^https:\/\/(api|api-cs)\.intsig\.net",
+    "^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?",
     // 人人视频
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/RRtv.js":
-    "^https:\/\/api\.rr\.tv",
+    "^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll)",
     // 第一弹
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Diyidan.js":
-    "^https:\/\/api\.diyidan\.net",
+    "^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne)",
     // 克拉壁纸
     "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js":
-    "^https:\/\/claritywallpaper\.com",
+    "^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)",
 }
 
 const __tool = new __Tool()
