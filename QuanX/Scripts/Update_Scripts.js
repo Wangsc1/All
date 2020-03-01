@@ -6,6 +6,7 @@
  * 0 0 * * * eval_script.js
  * 
  * 2.__conf 配置说明：
+ * 
  * 参考下面 __conf 示例，格式为：远程脚本的链接 url 匹配脚本对应的正则1,匹配脚本对应的正则2
  * 
  * 
@@ -17,16 +18,22 @@
  * hostname = api.m.jd.com
  */
 
-//远程配置
-const __remoteConf = "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Js_Update.conf"
 
-//本地配置
+//配置
 const __conf = String.raw`
+
+[remote]
+//配置远程订阅
+https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Js_Update.conf
+
+[local]
+//配置本地脚本
+//京东
+https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js url ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig)
 
 `
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
-
 if (__isTask) {
     const downloadScript = (url) => {
         return new Promise((resolve) => {
@@ -35,14 +42,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve({ body, msg: `🎉 ${filename} - update success` })
+                        resolve({ body, msg: `🪓${filename} update success` })
                         console.log(`Update success: ${url}`)
                     } else {
-                        resolve({ body, msg: `‼️ ${filename} - update fail` })
+                        resolve({ body, msg: `🪓${filename} update fail` })
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve({ body: null, msg: `‼️ ${filename} - update fail` })
+                    resolve({ body: null, msg: `🪓${filename} update fail` })
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
@@ -51,26 +58,41 @@ if (__isTask) {
 
     const getConf = (() => {
         return new Promise((resolve) => {
-            if (__remoteConf.length > 0) {
-                downloadScript(__remoteConf).then((data) => {
-                    let content = __conf
-                    if (data.body) {
-                        content = `${__conf}\n${____parseRemoteConf(data.body)}`
+            const remoteConf = ____removeGarbage(____getConfInfo(__conf, "remote"))
+            const localConf = ____removeGarbage(____getConfInfo(__conf, "local"))
+            if (remoteConf.length > 0) {
+                const promises = (() => {
+                    let all = []
+                    remoteConf.forEach((url) => {
+                        all.push(downloadScript(url))
+                    })
+                    return all
+                })()
+                Promise.all(promises).then(result => {
+                    let allRemoteConf = ""
+                    let allRemoteMSg = ""
+                    result.forEach(data => {
+                        if (data.body) {
+                            allRemoteConf += "\n" + ____parseRemoteConf(data.body)
+                        }
+                        allRemoteMSg += allRemoteMSg.length > 0 ? "\n" + data.msg : data.msg
+                    });
+                    let content = localConf.join("\n")
+                    if (allRemoteConf.length > 0) {
+                        content = `${content}\n${allRemoteConf}`
                     }
-                    resolve({ content, msg: data.msg })
+                    resolve({ content, msg: allRemoteMSg })
                 })
             } else {
-                resolve({ content: __conf, msg: "" })
+                const content = localConf.join("\n")
+                resolve({ content: content, msg: "" })
             }
         })
     })
-
+    
     getConf()
         .then((conf) => {
-            console.log(conf.content);
             const parseConf = ____parseConf(conf.content)
-            console.log(parseConf);
-            
             const promises = (() => {
                 let all = []
                 Object.keys(parseConf).forEach((url) => {
@@ -91,7 +113,7 @@ if (__isTask) {
                 console.log(notifyMsg)
                 let lastDate = __tool.read("ScriptLastUpdateDate")
                 lastDate = lastDate ? lastDate : new Date().Format("yyyy-MM-dd HH:mm:ss")
-                __tool.notify("Scripts Updated.", `${lastDate} last update.`, `${notifyMsg}`)
+                __tool.notify("Update Done.", `${lastDate} last update.`, `${notifyMsg}`)
                 __tool.write(JSON.stringify(parseConf), "ScriptConfObject")
                 __tool.write(new Date().Format("yyyy-MM-dd HH:mm:ss"), "ScriptLastUpdateDate")
                 $done()
@@ -130,6 +152,17 @@ if (!__isTask) {
     }
 }
 
+function ____getConfInfo(conf, type) {
+    const rex = new RegExp("\\[" + type + "\\](.|\\n)*?($|\\n\\[)", "g")
+    let result = rex.exec(conf)
+    result = result[0].split("\n")
+    if (result[2].length > 0) {
+        result.pop()
+    }
+    result.shift()
+    return result
+}
+
 function ____parseRemoteConf(conf) {
     const lines = conf.split("\n")
     let newLines = []
@@ -144,6 +177,17 @@ function ____parseRemoteConf(conf) {
     return newLines.join("\n")
 }
 
+function ____removeGarbage(lines) {
+    let newLines = []
+    lines.forEach((line) => {
+        line = line.replace(/^\s*/, "")
+        if (line.length > 0 && line.substring(0, 2) != "//") {
+            newLines.push(line)
+        }
+    })
+    return newLines
+}
+
 function ____parseConf(conf) {
     const lines = conf.split("\n")
     let confObj = {}
@@ -155,14 +199,10 @@ function ____parseConf(conf) {
                 return format.test(line)
             })()
             if (avaliable) {
-                console.log("line: " + line);
                 const value = line.split("url")
                 const remote = value[0].replace(/\s/g, "")
-                console.log("remote:  " + remote);
                 const match = value[1].replace(/\s/g, "")
-                console.log("match:  " + match);
                 confObj[remote] = match
-                console.log("confObj[remote]:  " + confObj[remote])
             } else {
                 __tool.notify("Configuration error", "", line)
                 throw "Configuration error:" + line
