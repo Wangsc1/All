@@ -32,6 +32,7 @@ HOST-SUFFIX,icloud.com,DIRECT
 HOST-SUFFIX,icloud-content.com,DIRECT
 HOST-SUFFIX,me.com,DIRECT
 HOST-SUFFIX,mzstatic.com,DIRECT
+HOST,testflight.apple.com,DIRECT
 HOST,www-cdn.icloud.com.akadns.net,DIRECT
 # > Baidu
 HOST-SUFFIX,baidu.com,DIRECT
