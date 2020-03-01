@@ -19,9 +19,9 @@
 const __c = String.raw
 const __conf = __c`
 
-// 京东价格
+// 京东
 https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js url ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig)
-// 淘宝价格
+// 淘宝
 https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js url ^https?://.+/amdc/mobileDispatch, ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail
 // Netflix
 https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js url https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D
