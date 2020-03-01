@@ -23,11 +23,7 @@ const __remoteConf = "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX
 //本地配置
 const __conf = String.raw`
 
-//添加自定义远程脚本...
-
-
 `
-
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
 
@@ -39,14 +35,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve({ body, msg: `🎉${filename} - update success` })
+                        resolve({ body, msg: `🎉 ${filename} - update success` })
                         console.log(`Update success: ${url}`)
                     } else {
-                        resolve({ body, msg: `‼️${filename} - update fail` })
+                        resolve({ body, msg: `‼️ ${filename} - update fail` })
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve({ body: null, msg: `‼️${filename} - update fail` })
+                    resolve({ body: null, msg: `‼️ ${filename} - update fail` })
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
