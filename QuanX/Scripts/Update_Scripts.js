@@ -18,7 +18,7 @@
  */
 
 //远程配置
-const __remoteConf = "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/test.conf"
+const __remoteConf = "https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Js_Update.conf"
 
 //本地配置
 const __conf = String.raw`
