@@ -42,14 +42,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve({ body, msg: `🪓${filename} update success` })
+                        resolve({ body, msg: `🎉 ${filename} - update success` })
                         console.log(`Update success: ${url}`)
                     } else {
-                        resolve({ body, msg: `🪓${filename} update fail` })
+                        resolve({ body, msg: `‼️ ${filename} - update fail` })
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve({ body: null, msg: `🪓${filename} update fail` })
+                    resolve({ body: null, msg: `‼️ ${filename} - update fail` })
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
@@ -113,7 +113,7 @@ if (__isTask) {
                 console.log(notifyMsg)
                 let lastDate = __tool.read("ScriptLastUpdateDate")
                 lastDate = lastDate ? lastDate : new Date().Format("yyyy-MM-dd HH:mm:ss")
-                __tool.notify("Update Done.", `${lastDate} last update.`, `${notifyMsg}`)
+                __tool.notify("Scripts Updated.", `${lastDate} last update.`, `${notifyMsg}`)
                 __tool.write(JSON.stringify(parseConf), "ScriptConfObject")
                 __tool.write(new Date().Format("yyyy-MM-dd HH:mm:ss"), "ScriptLastUpdateDate")
                 $done()
