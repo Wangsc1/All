@@ -13,4 +13,6 @@ HOST-SUFFIX,me.com,Apple
 HOST-SUFFIX,mzstatic.com,Apple
 HOST,testflight.apple.com,Apple
 HOST,www-cdn.icloud.com.akadns.net,Apple
+HOST,apps.apple.com,Apple
+HOST,itunes.apple.com,Apple
 IP-CIDR,17.0.0.0/8,Apple

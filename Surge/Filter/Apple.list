@@ -13,3 +13,5 @@ DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN,testflight.apple.com
 DOMAIN,www-cdn.icloud.com.akadns.net
+DOMAIN,apps.apple.com
+DOMAIN,itunes.apple.com

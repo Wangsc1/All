@@ -405,9 +405,6 @@ DOMAIN-SUFFIX,appsto.re
 DOMAIN,books.itunes.apple.com
 # >> iTunes Store Moveis Trailers
 DOMAIN,hls.itunes.apple.com
-# >> App Store Preview
-DOMAIN,apps.apple.com
-DOMAIN,itunes.apple.com
 # >> Spotlight
 DOMAIN,api-glb-sea.smoot.apple.com
 # >> Dictionary
