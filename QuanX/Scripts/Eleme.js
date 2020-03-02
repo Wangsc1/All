@@ -1,38 +1,28 @@
+
 /*
 参考chavyleung和NobyDa的写法
-
 //饿了么
-
 > 代码已同时兼容 Surge & QuanX, 使用同一份签到脚本即可
-
-
 ## 配置 (Surge)
-
 ```properties
 [MITM]
 h5.ele.me
-
 [Script]
-http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/QuantumultX/master/Scripts/Eleme_Cookie.js
+http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=https://raw.githubusercontent.com/Wangsc1/QuantumultX/master/Scripts/Eleme_Cookie.js
 cron "0 12 22 * * *" script-path=https://raw.githubusercontent.com/Wangsc1/QuantumultX/master/Scripts/Eleme.js
 
-## 配置 (QuanX)
 
+```
+## 配置 (QuanX)
 ```properties
 [MITM]
 h5.ele.me
-
 [rewrite_local]
 ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ url script-request-header Quanx/Scripts/Eleme_Cookie.js
-
-
-
 [task_local]
 5 0 * * * elemSign.js
 ```
-
 ## 说明
-
 1. 先把h5.ele.me`加到`[MITM]`
 2. 再配置重写规则:
    - Surge: 把两条远程脚本放到`[Script]`
@@ -40,11 +30,10 @@ h5.ele.me
 3. 打开 APP, 访问下`我的`>`签到领红包`(左上角)
 4. 系统提示: `获取Cookie: 成功` （如果不提示获取成功, 尝试杀进程再进`个人`>`每日签到`）
 5. 最后就可以把第 1 条脚本注释掉了
-
 > 第 1 条脚本是用来获取 cookie 的, 用浏览器访问一次获取 cookie 成功后就可以删掉或注释掉了, 但请确保在`登录成功`后再获取 cookie.
-
 > 第 2 条脚本是签到脚本, 每天`00:05:00`执行一次.
 */
+
 
 const cookieName = '饿了么'
 const cookieKey = 'cookie_elem'
@@ -55,43 +44,195 @@ var regx=/USERID=\d+/;
 
 var userid=cookieVal.match(regx)[0];
 userid=userid.replace('USERID=','');
-console.log(userid);
-var endurl='/sign_in'
+
+
+var headerscommon={
+  'Content-Type':'application/json',
+  'Cookie':cookieVal,
+  'f-refer':'wv_h5',
+  'Origin':'https://tb.ele.me',
+   'Referer':'https://tb.ele.me/wow/zele/act/qiandao?wh_biz=tm&source=main',
+   'User-Agent':'Rajax/1 Apple/iPhone11,8 iOS/13.3 Eleme/8.29.6 ID/BFA5A018-7070-4341-9DEF-763E3B23EA282; IsJailbroken/1 Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 AliApp(ELMC/8.29.6) UT4Aplus/0.0.4 WindVane/8.6.0 828x1792 WK'
+}
+
+//签到结果
+var signresult='';
+
+//翻牌JSON
+var turnstr='';
+//翻牌结果
+var turnresult=new Array;
+
+
+
+var hisresult;
 sign()
 
 function sign() {
-  const timestamp = Date.parse(new Date())
-  let url = { url: `https://h5.ele.me/restapi/member/v2/users/`, headers: { Cookie: cookieVal } }
-  if(cookieVal==undefined||cookieVal=="0"||cookieVal==null){
-	   sy.msg(cookieName, "未获取Cookie", '');
-	   return ;
-  }
-  url.headers['Origin']='https://tb.ele.me';
-  url.url+=userid;
-  url.url+=endurl;
-  sy.log(url.url);
-  sy.post(url, (error, response, data) => {
-    let result = JSON.parse(data)
-    const title = `${cookieName}`
-    let subTitle = ''
-    let detail = ''
-    sy.log(response.status);
-    if (response.status == 200) {
-      subTitle = '签到结果: 成功'
-      // else subTitle = '签到结果: 成功 (重复签到)'
-      // detail = `人人钻: ${result.data.userinfo.point}, 登录天数: ${result.data.usercount.cont_login} -> ${result.data.upgrade_day}`
-     sy.msg(title, subTitle, detail)
-    } else if(response.status == 400) {
-      subTitle = '签到结果: 重复'
-      sy.msg(title, subTitle, detail)
-    }
-	else{
-      subTitle = '签到结果: 未知'
-      sy.msg(title, subTitle, detail)
-	}
-  })
-  sy.done()
+  let data = dosign().then( (data) => {                                         
+         
+          doturnover().then( (data) => {   
+
+            dosignhis().then( (data) => {   
+
+              doNotify();
+              sy.done()
+            })
+          })
+        
+      });
 }
+
+function dosign() {
+
+  return new Promise(resolve => {
+    setTimeout(() => {
+
+      try{
+        var endurl='/sign_in'
+        url = { url: `https://h5.ele.me/restapi/member/v2/users/`, headers: headerscommon }
+        if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
+          sy.msg(cookieName, "未获取Cookie", '');
+          return;
+        }
+        
+        url.url += userid;
+        url.url += endurl;
+        sy.log(url.url);
+        sy.post(url, (error, response, data) => {
+          sy.log(response.status);
+          if (response.status == 200) {
+            signresult = '签到结果: 成功🎉'
+            
+           
+          } else if (response.status == 400) {
+            signresult = '签到结果: 重复❗'
+          
+          }
+          else {
+            signresult = '签到结果: 未知❗'
+          }
+          resolve('done');
+        })
+      }
+      catch(erre){
+        resolve('done')
+      }
+    })
+  })
+}
+
+function doturnover() {
+
+  return new Promise(resolve => {
+    setTimeout(() => {
+
+      try{
+        var endurl='/sign_in/daily/prize'
+        let body={"channel": "app","index": 0,"longitude": 116.334716796875,"latitude": 59.73897171020508};
+        url = { 
+          url: `https://h5.ele.me/restapi/member/v2/users/`, 
+          headers: headerscommon,
+          body: JSON.stringify(body)
+        }
+        if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
+          sy.msg(cookieName, "未获取Cookie", '');
+          return;
+        }
+        url.url += userid;
+        url.url += endurl;
+        //headers['Content-Type']='application/json';
+        sy.log(url);
+        sy.post(url, (error, response, data) => {
+         console.log(response);
+          var obj=JSON.parse(data);
+
+          if (response.status == 200) {
+            turnstr = '翻牌结果: 成功🎉'
+            turnresult=obj;
+           
+          } else if (response.status == 400) {
+            turnstr = '翻牌结果: 重复❗'
+          
+          }
+          else {
+            turnstr = '翻牌结果: 未知❗'
+          }
+
+
+          resolve('done');
+        })
+      }
+      catch(erre){
+        resolve('done')
+      }
+    })
+  })
+}
+
+function dosignhis() {
+
+  return new Promise(resolve => {
+    setTimeout(() => {
+
+      try{
+        var endurl='/sign_in/info'
+        url = { url: `https://h5.ele.me/restapi/member/v1/users/`, headers: headerscommon }
+        if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
+          sy.msg(cookieName, "未获取Cookie", '');
+          return;
+        }
+        url.url += userid;
+        url.url += endurl;
+        sy.log(url.url);
+        sy.get(url, (error, response, data) => {
+         
+          var obj=JSON.parse(data);
+
+          hisresult=obj;
+
+
+          resolve('done');
+        })
+      }
+      catch(erre){
+        resolve('done')
+      }
+    })
+  })
+}
+
+function doNotify(){
+
+    console.log(hisresult);
+    console.log(turnresult);
+    console.log(turnstr);
+    var ret=signresult;
+    var signday=0;
+    for(var i=0;i<hisresult.statuses.length;i++){
+        if(hisresult.statuses[i]==1){
+          signday++;
+        }
+    }
+    ret=ret+',已连续签到'+signday+'天\n';
+    ret=ret+turnstr;
+    for(var i=0;i<turnresult.length;i++){
+        if(turnresult[i].status==1){
+            ret=ret+' 获得：'+turnresult[i].prizes[0].name+'('+turnresult[i].prizes[0].amount+')元🧧';
+        }
+    }
+    ret=ret+'\n';
+    ret=ret+'签到3天得3元红包，10天抽10-200元🧧';
+
+    sy.msg('饿了么签到','',ret);
+}
+
+
+
+
+
+
+
 
 
 
@@ -139,4 +280,10 @@ function init() {
     $done(value)
   }
   return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, done }
+}
+
+
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
