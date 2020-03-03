@@ -29,7 +29,6 @@
 const __conf = String.raw`
 
 [remote]
-//custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
 
 [local]
@@ -40,8 +39,7 @@ const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
 const __debug = true
-const __emoji-s = "🎉 "
-const __emoji-f = "‼️ "
+const __emoji = "🪓"
 
 if (__isTask) {
     const downloadFile = (url) => {
@@ -51,14 +49,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve({ body, msg: `${__emoji-s}${filename} - update success` })
+                        resolve({ body, msg: `${__emoji}${filename} update success` })
                         console.log(`Update success: ${url}`)
                     } else {
-                         resolve({ body, msg: `${__emoji-f}${filename} - update fail` })
+                        resolve({ body, msg: `${__emoji}${filename} update fail` })
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve({ body: null, msg: `${__emoji-f}${filename} - update fail` })
+                    resolve({ body: null, msg: `${__emoji}${filename} update fail` })
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
