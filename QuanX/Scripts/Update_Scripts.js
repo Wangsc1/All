@@ -1,41 +1,48 @@
 /**
- * 远程脚本管理（QuanX 举例）
+ * 脚本管理工具（QuanX 举例）
  * 
- * 1.设置定时任务更新添加的远程脚本，第一次运行需要手动执行一下更新脚本（Qanx 普通调试模式容易更新失败，使用最新 TF 红色按钮调试），例如设置每天凌晨更新脚本：
+ * 一.设置定时任务更新脚本，第一次运行需要手动执行一下更新脚本（Qanx 普通调试模式容易更新失败，使用最新 TF 橙色按钮调试），例如设置每天凌晨更新脚本：
  * [task_local]
  * 0 0 * * * eval_script.js
  * 
- * 2.__conf 配置说明：
+ * 二.__conf 配置说明：
  * 
- * 参考下面 __conf 示例，格式为：远程脚本的链接 url 匹配脚本对应的正则1,匹配脚本对应的正则2
+ * 参考下面 __conf 示例
  * 
+ * [远程配置]
+ * 参考示例：https://raw.githubusercontent.com/yichahucha/surge/master/sub_script.conf
  * 
- * 3.修改配置文件的本地脚本为此脚本，例如之前京东 jd_price.js 改为 eval_script.js 即可：
+ * [本地配置]
+ * jd 脚本举例
+ * 1.添加配置，格式为：匹配脚本对应的正则1,匹配脚本对应的正则2 eval 远程脚本的链接
+ * [local]
+ * ^https?://api\.m\.jd\.com/client\.action\？functionId=(wareBusiness|serverConfig) eval https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+ *
+ * 2.修改配置文件原脚本路径为 eval_script.js 的脚本路径
  * [rewrite_local]
- * # ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body jd_price.js
+ * #^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body jd_price.js
  * ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body eval_script.js
  * [mitm]
  * hostname = api.m.jd.com
  */
 
-
-//配置
 const __conf = String.raw`
 
 [remote]
-//配置远程订阅
+//custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Js_Update.conf
 
 [local]
-//配置本地脚本
-//京东
-https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js url ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig)
+//custom local...
 
 `
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
+const __log = false
+const __debug = true
+
 if (__isTask) {
-    const downloadScript = (url) => {
+    const downloadFile = (url) => {
         return new Promise((resolve) => {
             __tool.get(url, (error, response, body) => {
                 let filename = url.match(/.*\/(.*?)$/)[1]
@@ -61,14 +68,16 @@ if (__isTask) {
             const remoteConf = ____removeGarbage(____getConfInfo(__conf, "remote"))
             const localConf = ____removeGarbage(____getConfInfo(__conf, "local"))
             if (remoteConf.length > 0) {
-                const promises = (() => {
+                const confPromises = (() => {
                     let all = []
                     remoteConf.forEach((url) => {
-                        all.push(downloadScript(url))
+                        all.push(downloadFile(url))
                     })
                     return all
                 })()
-                Promise.all(promises).then(result => {
+                console.log("Start updating conf...")
+                Promise.all(confPromises).then(result => {
+                    console.log("Stop updating conf.")
                     let allRemoteConf = ""
                     let allRemoteMSg = ""
                     result.forEach(data => {
@@ -89,20 +98,20 @@ if (__isTask) {
             }
         })
     })
-    
+
     getConf()
         .then((conf) => {
             const parseConf = ____parseConf(conf.content)
-            const promises = (() => {
+            const scriptPromises = (() => {
                 let all = []
                 Object.keys(parseConf).forEach((url) => {
-                    all.push(downloadScript(url))
+                    all.push(downloadFile(url))
                 })
                 return all
             })()
-            console.log("Start updating...")
-            Promise.all(promises).then(result => {
-                console.log("Stop updating.")
+            console.log("Start updating script...")
+            Promise.all(scriptPromises).then(result => {
+                console.log("Stop updating script.")
                 const notifyMsg = (() => {
                     let msg = conf.msg
                     result.forEach(data => {
@@ -113,7 +122,7 @@ if (__isTask) {
                 console.log(notifyMsg)
                 let lastDate = __tool.read("ScriptLastUpdateDate")
                 lastDate = lastDate ? lastDate : new Date().Format("yyyy-MM-dd HH:mm:ss")
-                __tool.notify("Scripts Updated.", `${lastDate} last update.`, `${notifyMsg}`)
+                __tool.notify("Update Done.", `${lastDate} last update.`, `${notifyMsg}`)
                 __tool.write(JSON.stringify(parseConf), "ScriptConfObject")
                 __tool.write(new Date().Format("yyyy-MM-dd HH:mm:ss"), "ScriptLastUpdateDate")
                 $done()
@@ -138,40 +147,44 @@ if (!__isTask) {
         }
         return s
     })()
+
     if (__script) {
         if (__script.content) {
             eval(__script.content)
-            console.log(`Request url: ${__url}\nMatch url: ${__script.match}\nExecute script: ${__script.url}`)
+            if (__log) console.log(`Request url: ${__url}\nMatch url: ${__script.match}\nExecute script: ${__script.url}`)
         } else {
             $done({})
-            console.log(`Request url: ${__url}\nMatch url: ${__script.match}\nScript not executed. Script not found: ${__script.url}`)
+            if (__log) console.log(`Request url: ${__url}\nMatch url: ${__script.match}\nScript not executed. Script not found: ${__script.url}`)
         }
     } else {
         $done({})
-        console.log(`No match url: ${__url}`)
+        if (__log) console.log(`No match url: ${__url}`)
     }
 }
 
 function ____getConfInfo(conf, type) {
-    const rex = new RegExp("\\[" + type + "\\](.|\\n)*?($|\\n\\[)", "g")
+    const rex = new RegExp("\\[" + type + "\\](.|\\n)*?(?=\\n($|\\[))", "g")
     let result = rex.exec(conf)
-    result = result[0].split("\n")
-    if (result[2].length > 0) {
-        result.pop()
+    if (result) {
+      result = result[0].split("\n")
+      result.shift()
+    } else {
+      result = []
     }
-    result.shift()
     return result
-}
+  }
 
 function ____parseRemoteConf(conf) {
     const lines = conf.split("\n")
     let newLines = []
     lines.forEach((line) => {
         line = line.replace(/^\s*/, "")
-        if (line.length > 0 && line.substring(0, 3) == "###") {
-            line = line.replace("###", "")
+        if (line.length > 0 && /^#{3}/.test(line)) {
+            line = line.replace(/^#*/, "")
             line = line.replace(/^\s*/, "")
-            newLines.push(line)
+            if (line.length > 0) {
+                newLines.push(line)
+            }
         }
     })
     return newLines.join("\n")
@@ -194,23 +207,42 @@ function ____parseConf(conf) {
     lines.forEach((line) => {
         line = line.replace(/^\s*/, "")
         if (line.length > 0 && line.substring(0, 2) != "//") {
+            let urlRegex = /.+\s+url\s+.+/
+            let evalRegex = /.+\s+eval\s+.+/
             const avaliable = (() => {
-                const format = /^https?:\/\/.*\s+url\s+.*/
-                return format.test(line)
+                return urlRegex.test(line) || evalRegex.test(line)
             })()
             if (avaliable) {
-                const value = line.split("url")
-                const remote = value[0].replace(/\s/g, "")
-                const match = value[1].replace(/\s/g, "")
-                confObj[remote] = match
+                let remote = ""
+                let match = ""
+                if (urlRegex.test(line)) {
+                    const value = line.split("url")
+                    remote = value[0].replace(/\s/g, "")
+                    match = value[1].replace(/\s/g, "")
+                }
+                if (evalRegex.test(line)) {
+                    const value = line.split("eval")
+                    remote = value[1].replace(/\s/g, "")
+                    match = value[0].replace(/\s/g, "")
+                }
+                if (remote.length > 0 && match.length > 0) {
+                    confObj[remote] = match
+                } else {
+                    if (__debug) ____throwConfError(line)
+                }
             } else {
-                __tool.notify("Configuration error", "", line)
-                throw "Configuration error:" + line
+                if (__debug) ____throwConfError(line)
             }
         }
     })
-    console.log(`Configuration information:  ${JSON.stringify(confObj)}`)
+    console.log(`Conf information:  ${JSON.stringify(confObj)}`)
     return confObj
+}
+
+function ____throwConfError(line) {
+    __tool.notify("Conf error", "", line)
+    $done()
+    throw new Error(`Conf error: ${line}`)
 }
 
 function ____Tool() {
