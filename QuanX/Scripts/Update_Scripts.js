@@ -51,14 +51,14 @@ if (__isTask) {
                 if (!error) {
                     if (response.statusCode == 200) {
                         __tool.write(body, url)
-                        resolve({ body, msg: `${__emoji-s}${filename} update success` })
+                        resolve({ body, msg: `${__emoji-s}${filename} - update success` })
                         console.log(`Update success: ${url}`)
                     } else {
-                         resolve({ body, msg: `${__emoji-f}${filename} update fail` })
+                         resolve({ body, msg: `${__emoji-f}${filename} - update fail` })
                         console.log(`Update fail ${response.statusCode}: ${url}`)
                     }
                 } else {
-                    resolve({ body: null, msg: `${__emoji-f}${filename} update fail` })
+                    resolve({ body: null, msg: `${__emoji-f}${filename} - update fail` })
                     console.log(`Update fail ${error}: ${url}`)
                 }
             })
