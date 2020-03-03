@@ -30,7 +30,7 @@ const __conf = String.raw`
 
 [remote]
 //custom remote...
-https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Js_Update.conf
+https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
 
 [local]
 //custom local...
