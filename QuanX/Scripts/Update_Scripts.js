@@ -129,7 +129,7 @@ if (__isTask) {
             let sliceLength = 20
             let part1 = scriptPromises.slice(0, sliceLength)
             let part2 = scriptUrls.slice(sliceLength)
-            __tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
+            //__tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
             console.log("Start updating script...")
             ____concurrentQueue(part1).then(result1 => {
                 if (part2.length > 0) {
