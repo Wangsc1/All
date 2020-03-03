@@ -132,7 +132,7 @@ if (__isTask) {
                 })
                 let notifyMsgs = notifyMsg.split("\n")
                 let countObj = count(notifyMsgs)
-                notifyMsg = `${notifyMsgs.slice(0, 20).join("\n")}${notifyMsgs.length > 20 ? "\n......" : ""}\n${__emoji_s}success: ${countObj.success}   fail: ${countObj.fail}`
+                notifyMsg = `${notifyMsgs.slice(0, 20).join("\n")}${notifyMsgs.length > 20 ? "\n......" : ""}\n${__emoji_s}success: ${countObj.success}   ‼️ fail: ${countObj.fail}`
 
                 let lastDate = __tool.read("ScriptLastUpdateDate")
                 lastDate = lastDate ? lastDate : new Date().Format("yyyy-MM-dd HH:mm:ss")
