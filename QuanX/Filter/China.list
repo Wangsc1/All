@@ -109,6 +109,7 @@ HOST-SUFFIX,sogou.com,DIRECT
 HOST-SUFFIX,sogoucdn.com,DIRECT
 # > Tencent
 USER-AGENT,MicroMessenger%20Client,DIRECT
+USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*,DIRECT
 USER-AGENT,WeChat*,DIRECT
 HOST-SUFFIX,gtimg.com,DIRECT
 HOST-SUFFIX,idqqimg.com,DIRECT
@@ -116,8 +117,11 @@ HOST-SUFFIX,igamecj.com,DIRECT
 HOST-SUFFIX,myapp.com,DIRECT
 HOST-SUFFIX,myqcloud.com,DIRECT
 HOST-SUFFIX,qq.com,DIRECT
+HOST-SUFFIX,servicewechat.com,DIRECT
 HOST-SUFFIX,tencent.com,DIRECT
 HOST-SUFFIX,tencent-cloud.net,DIRECT
+HOST-SUFFIX,tenpay.com,DIRECT
+HOST,file-igamecj.akamaized.net,DIRECT
 # > YYeTs
 USER-AGENT,YYeTs*,DIRECT
 HOST-SUFFIX,jstucdn.com,DIRECT
