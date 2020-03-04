@@ -117,7 +117,7 @@ if (__isTask) {
                     let notifyMsg = `${resultMsgs.slice(0, 20).join("\n")}${resultMsgs.length > 20 ? `\n${__emoji_s}......\n` : ""}`
                     let lastDate = __tool.read("ScriptLastUpdateDate")
                     lastDate = lastDate ? lastDate : new Date().Format("yyyy-MM-dd HH:mm:ss")
-                    __tool.notify("Update Done", `🎉 Success: ${count.success}   ‼️ Fail: ${count.fail}   Tasks: ${____timeDiff(beginDate, new Date())}s`, `${notifyMsg}\n${lastDate} last update`)
+                    __tool.notify("Update Done", `Success: ${count.success}   Fail: ${count.fail}   Tasks: ${____timeDiff(beginDate, new Date())}s`, `${notifyMsg}\n${lastDate} last update`)
                     __tool.write(new Date().Format("yyyy-MM-dd HH:mm:ss"), "ScriptLastUpdateDate")
                     $done()
                 })
