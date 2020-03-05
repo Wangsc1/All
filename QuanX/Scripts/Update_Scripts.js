@@ -32,7 +32,7 @@ const __conf = String.raw`
 [eval_remote]
 // custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
-
+https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
 
 [eval_local]
 // custom local...
@@ -142,7 +142,7 @@ if (__isTask) {
                     const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
                     console.log(`${summary}\n${resultInfo.message}\n${lastDate ? lastDate : nowDate}`)
-                    __tool.notify("Update Done", summary, `${detail}\n${lastDate ? lastDate : nowDate}`)
+                    __tool.notify("✔️ Update Done", summary, `${detail}\n${lastDate ? lastDate : nowDate}`)
                     __tool.write(nowDate, "ScriptLastUpdateDateKey")
                     $done()
                 })
