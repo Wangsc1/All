@@ -31,8 +31,7 @@ const __conf = String.raw`
 
 [eval_remote]
 // custom remote...
-
-https://raw.githubusercontent.com/yichahucha/surge/master/sub_script.conf
+https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
 
 
 [eval_local]
@@ -45,8 +44,8 @@ const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
 const __debug = false
-const __emoji = "🪓"
-const __concurrencyLimit = 5
+const __emoji = "🎉 "
+const __concurrencyLimit = 6
 
 if (__isTask) {
     const ____getConf = (() => {
@@ -109,7 +108,7 @@ if (__isTask) {
             const confResult = conf.result
             const scriptUrls = Object.keys(confObj)
             console.log("Start updating script...")
-            __tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
+            //__tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
             ____concurrentQueueLimit(scriptUrls, __concurrencyLimit, (url) => {
                 return new Promise((resolve) => {
                     ____downloadFile(url).then((data) => {
@@ -238,14 +237,14 @@ function ____downloadFile(url) {
                 const code = response.statusCode
                 if (code == 200) {
                     console.log(`Update Success: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} update success` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} - update success` })
                 } else {
                     console.log(`Update Fail ${response.statusCode}: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} update fail` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} - update fail` })
                 }
             } else {
                 console.log(`Update Fail ${error}`)
-                resolve({ url, code: null, body: null, message: `${__emoji}${filename} update fail` })
+                resolve({ url, code: null, body: null, message: `${__emoji}${filename} - update fail` })
             }
         })
     })
