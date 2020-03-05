@@ -28,17 +28,19 @@
 
 const __conf = String.raw`
 
-[remote]
-// custom remote...
-https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
 
-[local]
+[eval_remote]
+// custom remote...
+https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Update_Scripts.js
+
+[eval_local]
 // custom local...
 
 `
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
+const __debug = false
 const __emoji_s = "🎉 "
 const __emoji_f = "‼️ "
 const __concurrencyLimit = 8
@@ -46,11 +48,11 @@ const __concurrencyLimit = 8
 if (__isTask) {
     const ____getConf = (() => {
         return new Promise((resolve) => {
-            const remoteConf = ____removeGarbage(____extractConf(__conf, "remote"))
-            const localConf = ____removeGarbage(____extractConf(__conf, "local"))
+            const remoteConf = ____removeGarbage(____extractConf(__conf, "eval_remote"))
+            const localConf = ____removeGarbage(____extractConf(__conf, "eval_local"))
             if (remoteConf.length > 0) {
                 console.log("Start updating conf...")
-                //__tool.notify("", "", `Start updating ${remoteConf.length} confs...`)
+                if (__debug) __tool.notify("", "", `Start updating ${remoteConf.length} confs...`)
                 ____concurrentQueueLimit(remoteConf, __concurrencyLimit, (url) => {
                     return ____downloadFile(url)
                 })
@@ -76,15 +78,14 @@ if (__isTask) {
         .then((conf) => {
             return new Promise((resolve, reject) => {
                 if (conf.content.length > 0) {
-                    resolve(conf)
                     if (__log) console.log(conf.content)
+                    resolve(conf)
                 } else {
                     let message = ""
                     conf.result.forEach(data => {
                         message += message.length > 0 ? "\n" + data.message : data.message
                     });
-                    __tool.notify("", "", message)
-                    reject(`Unavailable configuration! Please check!`)
+                    reject(message.length > 0 ? message : `Unavailable configuration! Please check!`)
                 }
             })
         })
@@ -93,8 +94,8 @@ if (__isTask) {
                 const result = ____parseConf(conf.content)
                 if (result.obj) {
                     conf["obj"] = result.obj
-                    resolve(conf)
                     if (__log) console.log(result.obj)
+                    resolve(conf)
                 } else {
                     reject(`Configuration information error: ${result.error}`)
                 }
@@ -105,7 +106,7 @@ if (__isTask) {
             const confResult = conf.result
             const scriptUrls = Object.keys(confObj)
             console.log("Start updating script...")
-            //__tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
+            __tool.notify("", "", `Start updating ${scriptUrls.length} scripts...`)
             ____concurrentQueueLimit(scriptUrls, __concurrencyLimit, (url) => {
                 return new Promise((resolve) => {
                     ____downloadFile(url).then((data) => {
@@ -134,11 +135,11 @@ if (__isTask) {
                 })
                 .then((resultInfo) => {
                     const messages = resultInfo.message.split("\n")
-                    const detail = `${messages.slice(0, 20).join("\n")}${messages.length > 20 ? `\n${__emoji_s}......` : ""}`
+                    const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji_s}......` : ""}`
                     const summary = `Success: ${resultInfo.count.success}   Fail: ${resultInfo.count.fail}   Tasks: ${____timeDiff(begin, new Date())}s`
                     const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
-                    console.log(`${summary}\n${detail}\n${lastDate ? lastDate : nowDate}`)
+                    console.log(`${summary}\n${resultInfo.message}\n${lastDate ? lastDate : nowDate}`)
                     __tool.notify("Update Done", summary, `${detail}\n${lastDate ? lastDate : nowDate}`)
                     __tool.write(nowDate, "ScriptLastUpdateDateKey")
                     $done()
@@ -146,7 +147,7 @@ if (__isTask) {
         })
         .catch((error) => {
             console.log(error)
-            __tool.notify("", "", error)
+            __tool.notify("eval_script.js", "", error)
             $done()
         })
 }
@@ -195,10 +196,10 @@ function ____timeDiff(begin, end) {
     return Math.ceil((end.getTime() - begin.getTime()) / 1000)
 }
 
-async function ____sequenceQueue(urls) {
+async function ____sequenceQueue(urls, asyncHandle) {
     let results = []
     for (let i = 0, len = urls.length; i < len; i++) {
-        let result = await ____downloadFile(urls[i])
+        let result = await asyncHandle(urls[i])
         results.push(result)
     }
     return results
@@ -233,15 +234,15 @@ function ____downloadFile(url) {
             if (!error) {
                 const code = response.statusCode
                 if (code == 200) {
-                    resolve({ url, code, body, message: `${__emoji_s}${filename} - update success` })
                     console.log(`Update Success: ${url}`)
+                    resolve({ url, code, body, message: `${__emoji_s}${filename} - update success` })
                 } else {
-                    resolve({ url, code, body, message: `${__emoji_f}${filename} - update fail` })
                     console.log(`Update Fail ${response.statusCode}: ${url}`)
+                    resolve({ url, code, body, message: `${__emoji_f}${filename} - update fail` })
                 }
             } else {
+                console.log(`Update Fail ${error}`)
                 resolve({ url, code: null, body: null, message: `${__emoji_f}${filename} - update fail` })
-                console.log(`Update Fail ${error}: ${url}`)
             }
         })
     })
