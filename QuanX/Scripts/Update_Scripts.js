@@ -41,7 +41,7 @@ const __isTask = __tool.isTask
 const __log = false
 const __emoji_s = "🎉 "
 const __emoji_f = "‼️ "
-const __concurrencyLimit = 6
+const __concurrencyLimit = 8
 
 if (__isTask) {
     const ____getConf = (() => {
