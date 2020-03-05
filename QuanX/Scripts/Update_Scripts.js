@@ -44,7 +44,7 @@ const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
 const __debug = false
-const __emoji = "🎉 "
+const __emoji = "• "
 const __concurrencyLimit = 6
 
 if (__isTask) {
@@ -138,7 +138,7 @@ if (__isTask) {
                 .then((resultInfo) => {
                     const messages = resultInfo.message.split("\n")
                     const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji}......` : ""}`
-                    const summary = `Success: ${resultInfo.count.success}   Fail: ${resultInfo.count.fail}   Tasks: ${____timeDiff(begin, new Date())}s`
+                    const summary = `🎉 Success: ${resultInfo.count.success}    ‼️ Fail: ${resultInfo.count.fail}    🕒 Tasks: ${____timeDiff(begin, new Date())}s`
                     const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
                     console.log(`${summary}\n${resultInfo.message}\n${lastDate ? lastDate : nowDate}`)
