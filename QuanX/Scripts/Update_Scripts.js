@@ -31,19 +31,22 @@ const __conf = String.raw`
 
 [eval_remote]
 // custom remote...
-https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Update_Scripts.js
+
+https://raw.githubusercontent.com/yichahucha/surge/master/sub_script.conf
+
 
 [eval_local]
 // custom local...
 
+
 `
+
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
 const __debug = false
-const __emoji_s = "🎉 "
-const __emoji_f = "‼️ "
-const __concurrencyLimit = 8
+const __emoji = "🪓"
+const __concurrencyLimit = 5
 
 if (__isTask) {
     const ____getConf = (() => {
@@ -135,7 +138,7 @@ if (__isTask) {
                 })
                 .then((resultInfo) => {
                     const messages = resultInfo.message.split("\n")
-                    const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji_s}......` : ""}`
+                    const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji}......` : ""}`
                     const summary = `Success: ${resultInfo.count.success}   Fail: ${resultInfo.count.fail}   Tasks: ${____timeDiff(begin, new Date())}s`
                     const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
@@ -235,14 +238,14 @@ function ____downloadFile(url) {
                 const code = response.statusCode
                 if (code == 200) {
                     console.log(`Update Success: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji_s}${filename} - update success` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} update success` })
                 } else {
                     console.log(`Update Fail ${response.statusCode}: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji_f}${filename} - update fail` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} update fail` })
                 }
             } else {
                 console.log(`Update Fail ${error}`)
-                resolve({ url, code: null, body: null, message: `${__emoji_f}${filename} - update fail` })
+                resolve({ url, code: null, body: null, message: `${__emoji}${filename} update fail` })
             }
         })
     })
