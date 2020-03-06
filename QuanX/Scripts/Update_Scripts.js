@@ -140,7 +140,7 @@ if (__isTask) {
                     const messages = resultInfo.message.split("\n")
                     const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji}......` : ""}`
                     const summary = `🎉 Success: ${resultInfo.count.success}    ‼️ Fail: ${resultInfo.count.fail}    🕒 Tasks: ${____timeDiff(begin, new Date())}s`
-                    const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
+                    const nowDate = `${new Date().Format("• yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
                     console.log(`${summary}\n${resultInfo.message}\n${lastDate ? lastDate : nowDate}`)
                     __tool.notify("✔️ Update Done", summary, `${detail}\n${lastDate ? lastDate : nowDate}`)
