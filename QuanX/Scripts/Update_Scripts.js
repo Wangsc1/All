@@ -32,7 +32,8 @@ const __conf = String.raw`
 [eval_remote]
 // custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
-https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
+
+//https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
 
 [eval_local]
 // custom local...
