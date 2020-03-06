@@ -46,7 +46,7 @@ const __emojiSuccess = "🎉 "
 const __emojiFail = "‼️ "
 const __emojiTasks = "🕒 "
 const __emojiDone = "✔️ "
-const __showLine = 30
+const __showLine = 28
 
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
