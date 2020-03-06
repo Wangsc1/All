@@ -32,7 +32,7 @@ const __conf = String.raw`
 [eval_remote]
 // custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
-//https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
+https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
 
 [eval_local]
 // custom local...
@@ -45,7 +45,7 @@ const __isTask = __tool.isTask
 const __log = false
 const __debug = false
 const __emoji = "• "
-const __concurrencyLimit = 6
+const __concurrencyLimit = 5
 
 if (__isTask) {
     const ____getConf = (() => {
