@@ -32,7 +32,7 @@ const __conf = String.raw`
 [eval_remote]
 // custom remote...
 // https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
-https://raw.githubusercontent.com/Wangsc1/All/master/Update_Scripts.conf
+https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
 
 
 [eval_local]
