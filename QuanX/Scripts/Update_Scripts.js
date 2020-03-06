@@ -31,9 +31,9 @@ const __conf = String.raw`
 
 [eval_remote]
 // custom remote...
+// https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
 https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts.conf
 
-//https://raw.githubusercontent.com/Wangsc1/All/master/nzw9314_eval.conf
 
 [eval_local]
 // custom local...
@@ -41,11 +41,17 @@ https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Filter/Update_Scripts
 
 `
 
+const __emoji = "• "
+const __emojiSuccess = "🎉 "
+const __emojiFail = "‼️ "
+const __emojiTasks = "🕒 "
+const __emojiDone = "✔️ "
+const __showLine = 20
+
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
 const __log = false
 const __debug = false
-const __emoji = "• "
 const __concurrencyLimit = 5
 
 if (__isTask) {
@@ -138,12 +144,12 @@ if (__isTask) {
                 })
                 .then((resultInfo) => {
                     const messages = resultInfo.message.split("\n")
-                    const detail = `${messages.slice(0, 25).join("\n")}${messages.length > 20 ? `\n${__emoji}......` : ""}`
-                    const summary = `🎉 Success: ${resultInfo.count.success}    ‼️ Fail: ${resultInfo.count.fail}    🕒 Tasks: ${____timeDiff(begin, new Date())}s`
-                    const nowDate = `${new Date().Format("• yyyy-MM-dd HH:mm:ss")} last update`
+                    const detail = `${messages.slice(0, __showLine).join("\n")}${messages.length > 20 ? `\n${__emoji}......` : ""}`
+                    const summary = `${__emojiSuccess}Success: ${resultInfo.count.success}  ${__emojiFail}Fail: ${resultInfo.count.fail}   ${__emojiTasks}Tasks: ${____timeDiff(begin, new Date())}s`
+                    const nowDate = `${new Date().Format("yyyy-MM-dd HH:mm:ss")} last update`
                     const lastDate = __tool.read("ScriptLastUpdateDateKey")
                     console.log(`${summary}\n${resultInfo.message}\n${lastDate ? lastDate : nowDate}`)
-                    __tool.notify("✔️ Update Done", summary, `${detail}\n${lastDate ? lastDate : nowDate}`)
+                    __tool.notify(`${__emojiDone}Update Done`, summary, `${detail}\n${__emoji}${lastDate ? lastDate : nowDate}`)
                     __tool.write(nowDate, "ScriptLastUpdateDateKey")
                     $done()
                 })
@@ -238,14 +244,14 @@ function ____downloadFile(url) {
                 const code = response.statusCode
                 if (code == 200) {
                     console.log(`Update Success: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} - update success` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} update success` })
                 } else {
                     console.log(`Update Fail ${response.statusCode}: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} - update fail` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} update fail` })
                 }
             } else {
                 console.log(`Update Fail ${error}`)
-                resolve({ url, code: null, body: null, message: `${__emoji}${filename} - update fail` })
+                resolve({ url, code: null, body: null, message: `${__emoji}${filename} update fail` })
             }
         })
     })
