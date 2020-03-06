@@ -244,14 +244,14 @@ function ____downloadFile(url) {
                 const code = response.statusCode
                 if (code == 200) {
                     console.log(`Update Success: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} update success` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} - update success` })
                 } else {
                     console.log(`Update Fail ${response.statusCode}: ${url}`)
-                    resolve({ url, code, body, message: `${__emoji}${filename} update fail` })
+                    resolve({ url, code, body, message: `${__emoji}${filename} - update fail` })
                 }
             } else {
                 console.log(`Update Fail ${error}`)
-                resolve({ url, code: null, body: null, message: `${__emoji}${filename} update fail` })
+                resolve({ url, code: null, body: null, message: `${__emoji}${filename} - update fail` })
             }
         })
     })
