@@ -402,11 +402,6 @@ function ____Tool() {
         if (_isResponse) {
             return "response"
         } else {
-            // if (_isRequestBody) {
-            //     return "request-body"
-            // } else {
-            //     return "request"
-            // }
             return "request"
         }
     })()
