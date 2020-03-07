@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
 
 [eval_local]
 // custom local...
-
+response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) eval https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
 `
 
