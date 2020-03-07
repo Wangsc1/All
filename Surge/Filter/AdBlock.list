@@ -261,8 +261,8 @@ DOMAIN,ad.mobile.youku.com
 DOMAIN,iyes.youku.com
 # (Z)
 # Zhihu
-AND,((USER-AGENT,osee2*), (NOT,((DOMAIN-SUFFIX,zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))))
-USER-AGENT,AVOS*
+;AND,((USER-AGENT,osee2*), (NOT,((DOMAIN-SUFFIX,zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))))
+;USER-AGENT,AVOS*
 # Internet Service Providers Hijacking 运营商劫持
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com

@@ -261,8 +261,8 @@ HOST,ad.mobile.youku.com,REJECT
 HOST,iyes.youku.com,REJECT
 # (Z)
 # Zhihu
-USER-AGENT,osee2*,REJECT
-USER-AGENT,AVOS*,REJECT
+;USER-AGENT,osee2*,REJECT
+;USER-AGENT,AVOS*,REJECT
 # Internet Service Providers Hijacking 运营商劫持
 HOST-SUFFIX,17gouwuba.com,REJECT
 HOST-SUFFIX,186078.com,REJECT
