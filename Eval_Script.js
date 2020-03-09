@@ -57,8 +57,8 @@ const __developmentMode = false
 if (__isTask) {
     const ____getConf = (() => {
         return new Promise((resolve) => {
-            const remoteConf = ____removeGarbage(____extractConf(__conf, "eval_remote"))
-            const localConf = ____removeGarbage(____extractConf(__conf, "eval_local"))
+            const remoteConf = ____removeAnnotation(____extractConf(__conf, "eval_remote"))
+            const localConf = ____removeAnnotation(____extractConf(__conf, "eval_local"))
             if (remoteConf.length > 0) {
                 console.log("Start updating conf...")
                 if (__debug) __tool.notify("", "", `Start updating ${remoteConf.length} confs...`)
@@ -342,12 +342,12 @@ function ____parseRemoteConf(conf) {
     return newLines
 }
 
-function ____removeGarbage(lines) {
+function ____removeAnnotation(lines) {
     if (lines.length > 0) {
         let i = lines.length;
         while (i--) {
-            const line = lines[i]
-            if (line.length == 0 || line.substring(0, 2) == "//") {
+            const line = lines[i].replace(/^\s*/, "")
+            if (line.length == 0 || line.substring(0, 2) == "//" || line.substring(0, 1) == "#") {
                 lines.splice(i, 1)
             }
         }
@@ -358,8 +358,8 @@ function ____removeGarbage(lines) {
 function ____parseConf(lines) {
     let confObj = {}
     for (let i = 0, len = lines.length; i < len; i++) {
-        let line = lines[i].replace(/^\s*/, "")
-        if (line.length > 0 && line.substring(0, 2) != "//") {
+        const line = lines[i].replace(/^\s*/, "")
+        if (line.length > 0) {
             const urlRegex = /.+\s+url\s+.+/
             const evalRegex = /.+\s+eval\s+.+/
             const avaliable = (() => {
