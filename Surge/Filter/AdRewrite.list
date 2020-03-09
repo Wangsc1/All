@@ -23,10 +23,6 @@ URL-REGEX,https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+\.mp4\?sid=
 URL-REGEX,https?:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adx
 URL-REGEX,https?:\/\/pan\.baidu\.com\/act\/api\/activityentry
 URL-REGEX,https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/
-# 百度贴吧
-URL-REGEX,https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule
-URL-REGEX,https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo
-URL-REGEX,https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog)
 # 百度地图
 URL-REGEX,https?:\/\/.+\/client\/phpui2\/
 URL-REGEX,https?:\/\/ss0\.bdstatic\.com/.+_\d{3}_\d{4}\.jpg
@@ -41,8 +37,6 @@ URL-REGEX,https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show
 URL-REGEX,https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/
 
 # D
-# 豆瓣 (154.8.131.* 自签证书不可用)
-URL-REGEX,https?:\/\/api\.douban\.com\/v\d\/app_ads\/
 # 嘀嗒出行
 URL-REGEX,https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
 URL-REGEX,https?:\/\/www\.didapinche\.com\/app\/adstat\/
@@ -135,8 +129,6 @@ URL-REGEX,https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad)
 URL-REGEX,https?:\/\/c\.m\.163\.com\/nc\/gl\/
 # 网易云音乐
 URL-REGEX,https?:\/\/.+\/eapi\/(ad|log)\/
-# 网易严选
-URL-REGEX,https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json
 # 有道词典
 URL-REGEX,https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish
 URL-REGEX,https?:\/\/dsp-impr2\.youdao\.com\/adload.s\?
