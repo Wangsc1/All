@@ -122,6 +122,8 @@ URL-REGEX,https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|
 URL-REGEX,https?:\/\/news\.ssp\.qq\.com\/app
 # 微信
 URL-REGEX,https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad)
+# QQ音乐
+URL-REGEX,^http:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/
 
 # W
 # 网易

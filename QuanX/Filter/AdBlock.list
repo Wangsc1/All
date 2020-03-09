@@ -168,6 +168,7 @@ HOST,duclick.baidu.com,REJECT
 HOST,mobads.baidu.com,REJECT
 HOST,mobads-logs.baidu.com,REJECT
 HOST,nsclick.baidu.com,REJECT
+HOST,map-mobile-opnimg.cdn.bcebos.com,REJECT
 # ByteDance
 HOST,ad.toutiao.com,REJECT
 # BitAuto
