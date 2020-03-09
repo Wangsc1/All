@@ -26,6 +26,7 @@ URL-REGEX,https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/
 # 百度地图
 URL-REGEX,https?:\/\/.+\/client\/phpui2\/
 URL-REGEX,https?:\/\/ss0\.bdstatic\.com/.+_\d{3}_\d{4}\.jpg
+AND,((IP-CIDR,0.0.0.0/0,no-resolve), (USER-AGENT,%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE*))
 # 爱奇艺
 URL-REGEX,https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo
 URL-REGEX,https?:\/\/.+\/(mixer|track2)\?
