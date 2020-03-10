@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
 
 [eval_local]
 // custom local...
-http-response ^https?://amdc\.m\.taobao\.com/amdc/mobileDispatch requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Eval_Script.js
+
 `
 const __emoji = "• "
 const __emojiSuccess = "🎉 "
