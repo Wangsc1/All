@@ -1,39 +1,9 @@
-/**
- * 脚本管理工具（QuanX 举例）
- * 
- * 一.设置定时任务更新脚本，第一次运行需要手动执行一下更新脚本（Qanx 普通调试模式容易更新失败，使用最新 TF 橙色按钮调试），例如设置每天凌晨更新脚本：
- * [task_local]
- * 0 0 * * * eval_script.js
- * 
- * 二.__conf 配置说明：
- * 
- * 参考下面 __conf 示例
- * 
- * [远程配置]
- * 参考示例：https://raw.githubusercontent.com/yichahucha/surge/master/sub_script.conf
- * 
- * [本地配置]
- * jd 脚本举例
- * 1.添加配置，格式为：匹配脚本对应的正则1 匹配脚本对应的正则2 eval 远程脚本的链接
- * [local]
- * ^https?://api\.m\.jd\.com/client\.action\？functionId=(wareBusiness|serverConfig) eval https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
- *
- * 2.修改配置文件原脚本路径为 eval_script.js 的脚本路径
- * [rewrite_local]
- * #^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body jd_price.js
- * ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body eval_script.js
- * [mitm]
- * hostname = api.m.jd.com
- */
-
 const __conf = String.raw`
 
 [eval_remote]
-// custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
 
 [eval_local]
-// custom local...
 
 `
 const __emoji = "• "
@@ -45,7 +15,7 @@ const __showLine = 28
 
 const __tool = new ____Tool()
 const __isTask = __tool.isTask
-const __concurrencyLimit = 8
+const __concurrencyLimit = 6
 const __log = false
 const __debug = false
 const __developmentMode = false
