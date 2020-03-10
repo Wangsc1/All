@@ -28,19 +28,14 @@
 
 const __conf = String.raw`
 
-
 [eval_remote]
 // custom remote...
 https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
 
-
 [eval_local]
 // custom local...
-// 淘宝
-^https?://(trade-acs|amdc)\.m\.taobao\.com/(gw/mtop\.taobao\.detail\.getdetail|amdc/mobileDispatch) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 
 `
-
 const __emoji = "• "
 const __emojiSuccess = "🎉 "
 const __emojiFail = "‼️ "
