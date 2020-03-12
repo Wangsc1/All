@@ -34,8 +34,7 @@ $task.fetch(config).then((res)=>{
                 }
       }}
       else{
-        notifys.push(`🏷️${x.trackName} - 版本：${x.version}`)
-        notifys.push(`〽️${x.trackName} - 价格：${x.formattedPrice}`)
+        notifys.push(`🏷️${x.trackName} - 版本：${x.version} 〽️ ${x.formattedPrice}`)
       }
     }))
     infos=JSON.stringify(infos)
