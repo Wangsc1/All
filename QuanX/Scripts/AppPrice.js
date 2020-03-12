@@ -165,7 +165,7 @@ if (!cacheData) {
 $httpClient.post('https://itunes.apple.com/lookup?id=' + appIds + "&country=" + region, function (error, response, data) {
     if (error) {
         console.log(error);
-        $notification.post("App Pricer", "获取价格失败")
+        $notification.post("App价格监控", "运行失败")
         $done()
     } else {
         let appData = JSON.parse(data).results
