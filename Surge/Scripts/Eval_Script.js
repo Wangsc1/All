@@ -1,16 +1,32 @@
 const __conf = String.raw`
 
 [eval_remote]
-
+//https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Filter/Js_Update.conf
 [eval_local]
+# 克拉壁纸
+http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js
+# WorkingCopy
+http-response ^https:\/\/education\.github\.com\/api\/user$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/WorkingCopy.js
+# 第一弹
+http-response ^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Diyidan.js
+# 扫描全能王
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/CamScanner.js
+# 人人视频
+http-response ^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/RRtv.js
+# Drafts
+http-response https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js
+# WPS
+http-response ^https://account.wps.com/api/users/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/WPS.js
+# 淘宝
+http-response ^http://amdc\.m\.taobao\.com/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+# 京东
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+# Netflix
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
-^http://amdc\.m\.taobao\.com/amdc/mobileDispatch url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-
 `
-
 const __emoji = "• "
 const __emojiSuccess = "🎉 "
 const __emojiFail = "‼️ "
