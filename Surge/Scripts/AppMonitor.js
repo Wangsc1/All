@@ -6,7 +6,7 @@ let config={
   url:'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
   method:"post"
 }
-$task.fetch(config).then((res)=>{
+$httpClient.post(config).then((res)=>{
   let results=JSON.parse(res.body).results
   if(results.length>0){
     let app_monitor=$prefs.valueForKey("app_monitor");
