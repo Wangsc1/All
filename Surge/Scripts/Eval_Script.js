@@ -1,7 +1,7 @@
 const __conf = String.raw`
 
 [eval_remote]
-https://raw.githubusercontent.com/Wangsc1/All/master/Js_Update.conf
+https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Filter/Js_Update.conf
 
 [eval_local]
 
