@@ -34,20 +34,19 @@ http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Inde
 
 `
 const __emoji = "• "
-const __emojiSuccess = "🎉 "
-const __emojiFail = "‼️ "
-const __emojiTasks = "🕒 "
 const __emojiDone = "✔️ "
-const __showLine = 28
-
-const __tool = new ____Tool()
-const __isTask = __tool.isTask
-const __concurrencyLimit = 6
+const __emojiTasks = "🕒 "
+const __emojiFail = "‼️ "
+const __emojiSuccess = "🎉 "
 const __log = false
 const __debug = false
 const __developmentMode = false
+const __showLine = 28
+const __concurrencyLimit = 6
+const __tool = new ____Tool()
 
-if (__isTask) {
+
+if (__tool.isTask) {
     const ____getConf = (() => {
         return new Promise((resolve) => {
             const remoteConf = ____removeAnnotation(____extractConf(__conf, "eval_remote"))
@@ -159,7 +158,7 @@ if (__isTask) {
         })
 }
 
-if (!__isTask) {
+if (!__tool.isTask) {
     const __url = $request.url
     const __confObj = (() => {
         if (__developmentMode) {
@@ -265,15 +264,6 @@ function ____parseDevelopmentModeConf(conf) {
 
 function ____timeDiff(begin, end) {
     return Math.ceil((end.getTime() - begin.getTime()) / 1000)
-}
-
-async function ____sequenceQueue(urls, asyncHandle) {
-    let results = []
-    for (let i = 0, len = urls.length; i < len; i++) {
-        let result = await asyncHandle(urls[i])
-        results.push(result)
-    }
-    return results
 }
 
 function ____concurrentQueueLimit(list, limit, asyncHandle) {
