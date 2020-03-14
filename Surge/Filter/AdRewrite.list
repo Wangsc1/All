@@ -68,10 +68,6 @@ URL-REGEX,https?:\/\/47\.97\.20\.12\/ad\/
 URL-REGEX,https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
 URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
 URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
-# 金山 WPS
-URL-REGEX,https?:\/\/ios\.wps\.cn\/ad-statistics-service
-URL-REGEX,https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/
-URL-REGEX,https?:\/\/\w+\.kingsoft-office-service\.com\/ad
 
 # M
 # 小米
