@@ -193,5 +193,5 @@ $task.fetch(config).then((res)=>{
 function notify(notifys){
   notifys=notifys.join("\n")
   console.log(notifys)
-  $notify("👉 (`${x.trackName}`)","",notifys)
+  $notify("x.trackName","",notifys)
 }
