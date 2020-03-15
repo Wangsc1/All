@@ -170,15 +170,14 @@ $task.fetch(config).then((res)=>{
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
-          notifys.push(`🏷️${x.trackName} - 更新：${x.version}`)
+          notifys.push(`🏷️ ${x.trackName} - 更新：${x.version}`)
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-                  notifys.push(`〽️${x.trackName} - 价格：${x.formattedPrice}`)
+                  notifys.push(`〽️ ${x.trackName} - 价格：${x.formattedPrice}`)
                 }
       }}
       else{
-        notifys.push(`🏷️${x.trackName} - 版本：${x.version}`)
-        notifys.push(`〽️${x.trackName} - 价格：${x.formattedPrice}`)
+        notifys.push(`🏷 版本：${x.version}〽️ 价格：${x.formattedPrice}`)
       }
     }))
     infos=JSON.stringify(infos)
@@ -194,5 +193,5 @@ $task.fetch(config).then((res)=>{
 function notify(notifys){
   notifys=notifys.join("\n")
   console.log(notifys)
-  $notify("APP监控","",notifys)
+  $notify("👉 ${x.trackName}","",notifys)
 }
