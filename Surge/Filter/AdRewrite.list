@@ -101,7 +101,7 @@ URL-REGEX,https?:\/\/api\.smzdm\.com\/v\d\/util\/loading
 URL-REGEX,https?:\/\/app-api\.smzdm\.com\/util\/loading
 URL-REGEX,https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
 # 苏宁
-URL-REGEX,https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/
+URL-REGEX,^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo
 # 扫描全能王
 URL-REGEX,https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/
 
