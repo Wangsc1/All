@@ -33,15 +33,6 @@ URL-REGEX,https?:\/\/.+\/(mixer|track2)\?
 URL-REGEX,https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do
 URL-REGEX,https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show
 
-# C
-# 曹操出行
-URL-REGEX,https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/
-
-# D
-# 嘀嗒出行
-URL-REGEX,https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
-URL-REGEX,https?:\/\/www\.didapinche\.com\/app\/adstat\/
-
 # E
 # 饿了么 
 URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/
@@ -51,17 +42,6 @@ URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*\.mp4\?$
 # 飞常准
 URL-REGEX,https?:\/\/app\.variflight\.com\/ad\/
 URL-REGEX,https?:\/\/app\.variflight\.com\/v\d\/advert\/
-
-# G
-# Gofun
-URL-REGEX,https?:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json
-
-# H
-# 虎扑
-URL-REGEX,https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(interfaceAdMonitor|interfaceAd)\/
-URL-REGEX,https?:\/\/business\.msstatic\.com\/advertiser\/
-# 韩剧社
-URL-REGEX,https?:\/\/47\.97\.20\.12\/ad\/
 
 # J
 # 京东
@@ -126,24 +106,13 @@ URL-REGEX,^http:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/
 # 网易
 # 网易新闻
 URL-REGEX,https?:\/\/c\.m\.163\.com\/nc\/gl\/
-# 网易云音乐
-URL-REGEX,https?:\/\/.+\/eapi\/(ad|log)\/
 # 有道词典
 URL-REGEX,https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish
 URL-REGEX,https?:\/\/dsp-impr2\.youdao\.com\/adload.s\?
-# 蜗牛睡眠
-URL-REGEX,https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\?
-URL-REGEX,https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/
 # 微店
 URL-REGEX,https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/
-# 威锋
-URL-REGEX,https?:\/\/api\.feng\.com\/v\d\/advertisement\/.*Claunch
 
 # X
-# 虾米
-URL-REGEX,https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/
-# 小睡眠
-URL-REGEX,https?:\/\/api\.psy-1\.com\/cosleep\/startup
 # 喜马拉雅
 URL-REGEX,https?:\/\/\w+\.ximalaya\.com\/api\/v\d\/adRealTime
 URL-REGEX,https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/
