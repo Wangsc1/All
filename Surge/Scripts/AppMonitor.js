@@ -143,7 +143,7 @@ if (isSurge) {
 
 console.log("APP监控运行")
 let
-apps=["1376515087","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
+apps=["897446215","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
 let reg="us"
 let config={
   url:'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
@@ -161,12 +161,15 @@ $task.fetch(config).then((res)=>{
     }
     let notifys=[]
     let infos={}
+    let newname=""
+  
     results.forEach((x=>{
       infos[x.trackId]={
         n:x.trackName,
         v:x.version,
         p:x.formattedPrice
       }
+      newname=x.trackName
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
@@ -183,15 +186,15 @@ $task.fetch(config).then((res)=>{
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
     if(notifys.length>0){
-      notify(notifys)
+      notify(notifys,newname)
     }
     else{
       console.log("APP监控：版本及价格无变化")
     }
   }
 })
-function notify(notifys){
+function notify(notifys,n){
   notifys=notifys.join("\n")
-  console.log(notifys)
-  $notify("x.trackName","",notifys)
+  console.log(notifys,n)
+  $notify(n,"",notifys)
 }
