@@ -171,16 +171,16 @@ $task.fetch(config).then((res)=>{
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
-          notifys=`📱 ${x.trackName}：
+          notifys=`📲 ${x.trackName}：
 🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}` 
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-          notifys= `📱 ${x.trackName}：
+          notifys= `📲 ${x.trackName}：
 〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`
         }
       }}
       else{
-        notifys=`📱 ${x.trackName}：
+        notifys=`📲 ${x.trackName}：
 🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
       }
     }))
