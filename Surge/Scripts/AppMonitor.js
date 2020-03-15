@@ -178,10 +178,11 @@ $task.fetch(config).then((res)=>{
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
           notifys.push(`〽️ 价格：${x.formattedPrice}`)
+        }
         if(x.trackName != app_monitor[x.trackId].trackName){
           newname=x.trackName
         }
-      }}  
+      }  
       else{
         notifys.push(`🏷 版本：${x.version} == 〽️ 价格：${x.formattedPrice}`)
       }
