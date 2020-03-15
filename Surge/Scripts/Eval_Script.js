@@ -23,12 +23,6 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 # Netflix
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-# 饿了么签到Cookie
-http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
-# 喜马拉雅签到Cookie
-http-request ^https?:\/\/.*\/mobile\-user\/homePage\/.* script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
-# 京东签到Cookie
-http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 `
 const __emoji = "• "
