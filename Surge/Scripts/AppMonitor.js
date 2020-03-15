@@ -184,7 +184,7 @@ $task.fetch(config).then((res)=>{
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
     if(notifys.length>0){
-      notify(notifys,x.trackname)
+      notify(notifys,JSON.stringify(infos[x.trackName]))
     }
     else{
       console.log("APP监控：版本及价格无变化")
