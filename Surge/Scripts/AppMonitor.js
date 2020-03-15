@@ -149,7 +149,7 @@ let config={
   url:'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
   method:"post"
 }
-   let newname=''
+   
 $task.fetch(config).then((res)=>{
   let results=JSON.parse(res.body).results
   if(results.length>0){
@@ -168,8 +168,7 @@ $task.fetch(config).then((res)=>{
         v:x.version,
         p:x.formattedPrice
       }
-      newname=x.trackName
-      if(app_monitor.hasOwnProperty(x.trackId)){
+    if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
           notifys.push(`🏷️ 更新：${x.version}`)
@@ -185,15 +184,15 @@ $task.fetch(config).then((res)=>{
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
     if(notifys.length>0){
-      notify(notifys)
+      notify(notifys,x.trackname)
     }
     else{
       console.log("APP监控：版本及价格无变化")
     }
   }
 })
-function notify(notifys){
+function notify(notifys,n){
   notifys=notifys.join("\n")
   console.log(notifys)
-  $notify(newname,"",notifys)
+  $notify(n,"",notifys)
 }
