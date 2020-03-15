@@ -143,7 +143,8 @@ if (isSurge) {
 
 console.log("APP监控运行")
 let
-apps=["897446215","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
+apps=["1132762804","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
+
 let reg="us"
 let config={
   url:'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
@@ -161,30 +162,24 @@ $task.fetch(config).then((res)=>{
     }
     let notifys=[]
     let infos={}
-    let newname=""
-    
-  
     results.forEach((x=>{
       infos[x.trackId]={
         n:x.trackName,
         v:x.version,
         p:x.formattedPrice
       }
-      
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
-          notifys.push(`🏷️ 更新：${x.version}`)
+          notifys.push(`🏷️${x.trackName} - 更新：${x.version}`)
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-          notifys.push(`〽️ 价格：${x.formattedPrice}`)
-        }
-        if(x.trackName != app_monitor[x.trackId].trackName){
-          newname=x.trackName
-        }
-      }  
+                  notifys.push(`〽️${x.trackName} - 价格：${x.formattedPrice}`)
+                }
+      }}
       else{
-        notifys.push(`🏷 版本：${x.version} == 〽️ 价格：${x.formattedPrice}`)
+        notifys.push(`🤖 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
       }
     }))
     infos=JSON.stringify(infos)
@@ -200,5 +195,5 @@ $task.fetch(config).then((res)=>{
 function notify(notifys){
   notifys=notifys.join("\n")
   console.log(notifys)
-  $notify(newname,"",notifys)
+  $notify("AppMonitor","",notifys)
 }
