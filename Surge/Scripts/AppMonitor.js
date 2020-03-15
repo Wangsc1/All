@@ -175,7 +175,7 @@ $task.fetch(config).then((res)=>{
 🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}` 
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-          notifys= `👉 ${ x.trackName}：
+          notifys= `👉 ${x.trackName}：
 〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`
         }
       }}
