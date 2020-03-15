@@ -160,7 +160,7 @@ $task.fetch(config).then((res)=>{
     else{
       app_monitor=JSON.parse(app_monitor)
     }
-    let notifys=[]
+    let notifys=""
     let infos={}
     results.forEach((x=>{
       infos[x.trackId]={
