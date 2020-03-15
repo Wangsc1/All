@@ -32,7 +32,7 @@ $task.fetch(config).then((res)=>{
 🏷 版本升级：${x.version}`)
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-                  notifys.push(`👉 ${x.trackName}：
+          notifys.push(`👉 ${x.trackName}：
 〽️ 价格变化：${x.formattedPrice}`)
                 }
       }}
