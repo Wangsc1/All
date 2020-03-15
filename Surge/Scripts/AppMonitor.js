@@ -162,6 +162,7 @@ $task.fetch(config).then((res)=>{
     let notifys=[]
     let infos={}
     let newname=""
+    
   
     results.forEach((x=>{
       infos[x.trackId]={
@@ -169,7 +170,7 @@ $task.fetch(config).then((res)=>{
         v:x.version,
         p:x.formattedPrice
       }
-      newname=x.trackName
+      
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
@@ -177,7 +178,9 @@ $task.fetch(config).then((res)=>{
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
           notifys.push(`〽️ 价格：${x.formattedPrice}`)
-                }
+        if(x.trackName != app_monitor[x.trackId].trackName){
+          newname=x.trackName
+        }
       }}  
       else{
         notifys.push(`🏷 版本：${x.version} == 〽️ 价格：${x.formattedPrice}`)
@@ -186,15 +189,15 @@ $task.fetch(config).then((res)=>{
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
     if(notifys.length>0){
-      notify(notifys,newname)
+      notify(notifys)
     }
     else{
       console.log("APP监控：版本及价格无变化")
     }
   }
 })
-function notify(notifys,n){
+function notify(notifys){
   notifys=notifys.join("\n")
-  console.log(notifys,n)
-  $notify(n,"",notifys)
+  console.log(notifys)
+  $notify(newname,"",notifys)
 }
