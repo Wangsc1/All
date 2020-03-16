@@ -180,7 +180,7 @@ $task.fetch(config).then((res)=>{
       }}
       else{
         notifys.push(`📲 ${x.trackName}：
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice})
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
       }
     }))
     infos=JSON.stringify(infos)
