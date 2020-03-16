@@ -144,7 +144,6 @@ if (isSurge) {
 console.log("APP监控运行")
 let
 apps=["1447768809","1439731526","363590051","544007664","526831380","1199564834","947792507","414478124","983337376","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
-
 let reg="us"
 let config={
   url:'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
@@ -160,7 +159,7 @@ $task.fetch(config).then((res)=>{
     else{
       app_monitor=JSON.parse(app_monitor)
     }
-    let notifys=""
+    let notifys=[]
     let infos={}
     results.forEach((x=>{
       infos[x.trackId]={
@@ -171,26 +170,26 @@ $task.fetch(config).then((res)=>{
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
-          notifys=`📲 ${x.trackName}：
-🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}` 
+          notifys.push(`📲 ${x.trackName}：
+🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}`)
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-          notifys= `📲 ${x.trackName}：
-〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`
-        }
+                  notifys.push(`📲 ${x.trackName}：
+〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`)
+                }
       }}
       else{
-        notifys=`📲 ${x.trackName}：
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
+        notifys.push(`📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice})
       }
     }))
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
-    if(notifys!=""){
+    if(notifys.length>0){
       notify(notifys)
     }
     else{
-      console.log("APP监控：版本及价格无变化")
+      console.log("AppMonitor：无变化")
     }
   }
 })
