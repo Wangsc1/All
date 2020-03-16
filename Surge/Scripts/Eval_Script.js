@@ -5,8 +5,6 @@ const __conf = String.raw`
 [eval_local]
 # 克拉壁纸
 http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js
-# WorkingCopy
-http-response ^https:\/\/education\.github\.com\/api\/user$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/WorkingCopy.js
 # 第一弹
 http-response ^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Diyidan.js
 # 扫描全能王
