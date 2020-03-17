@@ -194,7 +194,7 @@ $task.fetch(config).then((res)=>{
   }
 })
 function notify(notifys){
-  //notifys=notifys.join("\n")
+  notifys=notifys.join("\n")
   console.log(notifys)
   $notify("AppMonitor","",notifys)
 }
