@@ -159,7 +159,7 @@ $task.fetch(config).then((res)=>{
     else{
       app_monitor=JSON.parse(app_monitor)
     }
-    let notifys=[]
+    let notifys=""
     let infos={}
     results.forEach((x=>{
       infos[x.trackId]={
@@ -170,26 +170,26 @@ $task.fetch(config).then((res)=>{
       if(app_monitor.hasOwnProperty(x.trackId)){
       if(JSON.stringify(app_monitor[x.trackId])!=JSON.stringify(infos[x.trackId])){
         if(x.version!=app_monitor[x.trackId].version){
-          notifys.push(`📲 ${x.trackName}：
-🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}`)
+          notifys=`📲 ${x.trackName}：
+🏷 版本升级：${app_monitor[x.trackId].version} → ${x.version}` 
         }
         if(x.formattedPrice!=app_monitor[x.trackId].formattedPrice){
-                  notifys.push(`📲 ${x.trackName}：
-〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`)
-                }
+          notifys= `📲 ${x.trackName}：
+〽️ 价格变化：${app_monitor[x.trackId].formattedPrice} → ${x.formattedPrice}`
+        }
       }}
       else{
-        notifys.push(`📲 ${x.trackName}：
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
+        notifys=`📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
       }
     }))
     infos=JSON.stringify(infos)
     $prefs.setValueForKey(infos,"app_monitor")
-    if(notifys.length>0){
+    if(notifys!=""){
       notify(notifys)
     }
     else{
-      console.log("AppMonitor：无变化")
+      console.log("APP监控：版本及价格无变化")
     }
   }
 })
