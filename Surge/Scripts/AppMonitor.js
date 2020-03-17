@@ -138,7 +138,7 @@ $task.fetch(config).then((res) => {
                     senddata(infos, notifys)
                 }
             } else { //新增
-                notifys=`📲 ${x.trackName}：
+                        notifys +=`📲 ${x.trackName}：
 🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
                 senddata(infos, notifys)
             }
