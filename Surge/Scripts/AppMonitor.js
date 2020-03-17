@@ -189,7 +189,7 @@ $task.fetch(config).then((res)=>{
       notify(notifys)
     }
     else{
-      console.log("APP监控：版本及价格无变化")
+      console.log("AppMonitor：无变化")
     }
   }
 })
