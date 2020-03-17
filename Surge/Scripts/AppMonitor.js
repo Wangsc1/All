@@ -152,29 +152,31 @@ let config = {
 $task.fetch(config).then((res) => {
     let results = JSON.parse(res.body).results
     if (results.length > 0) {
-        let app_monitor = $prefs.valueForKey("app_monitor");
+        let app_monitor = $prefs.valueForKey("app_monitor"); //取出app_monitor
         if (app_monitor == "" || app_monitor == undefined) {
             app_monitor = {}
         } else {
-            app_monitor = JSON.parse(app_monitor)
+            app_monitor = JSON.parse(app_monitor)  //从json字符串转换成json对象
         }
         let notifys = "" //需要展示的字符串
         let infos = {} //获取到的新信息
 
-        console.log('这个发给我：', app_monitor[x.trackId])
+        console.log('这个发给我：', app_monitor)
 
-
+        //循环 去匹配结果中的信息
         results.forEach((x => {
             infos[x.trackId] = {
                 n: x.trackName,
                 v: x.version,
                 p: x.formattedPrice
             }
+            //老数据(app_monitor对象)中有此trackId原型
             if (app_monitor.hasOwnProperty(x.trackId)) {
+                //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
                 if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
-                    let oldTrackName = app_monitor[x.trackId].n //老名字
-                    let oldVersion = app_monitor[x.trackId].v //老版本
-                    let oldFormattedPrice = app_monitor[x.trackId].p //老价格 
+                    let oldTrackName = app_monitor[x.trackId].n //定义老名字
+                    let oldVersion = app_monitor[x.trackId].v //定义老版本
+                    let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
                     //版本有变化时
                     if (oldVersion != x.version) {
@@ -193,9 +195,9 @@ $task.fetch(config).then((res) => {
             }
         }))
 
-
-        infos = JSON.stringify(infos)
-        $prefs.setValueForKey(infos, "app_monitor")
+       
+        infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
+        $prefs.setValueForKey(infos, "app_monitor")  //存进app_monitor 下次请求的时候取出app_monitor
 
         if (notifys != "") {
             notify(notifys)
