@@ -178,18 +178,18 @@ $task.fetch(config).then((res) => {
 
                     //版本有变化时
                     if (oldVersion != x.version) {
-                        notifys = ` ${x.trackName}：
-?? 版本升级：${oldVersion} → ${x.version}`
+                        notifys = ` 📲 ${x.trackName}：
+🏷 版本升级：${oldVersion} → ${x.version}`
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
-                        notifys = ` ${x.trackName}：
-价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
+                        notifys = ` 📲 ${x.trackName}：
+〽️ 价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
                     }
                 }
             } else {
-                notifys = ` ${x.trackName}：
-?? 版本：${x.version}  /  ? 价格：${x.formattedPrice}`
+                notifys = ` 📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
             }
         }))
 
