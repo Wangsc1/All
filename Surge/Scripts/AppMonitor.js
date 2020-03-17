@@ -141,7 +141,7 @@ if (isSurge) {
 }
 // #endregion
 
-console.log("APP监控运行")
+console.log("AppMonitor")
 let
 apps=["1063183999","424598114","1436429074","1062022008","882914841","1481018071","406239138","1312014438","990591885","1141312799","1073473333","432850144","896694807","1434207799","924695435","680469088","869346854","935754064","1035331258","904237743","946930094","1373567447","916366645","1382419586","1299735217","1460078746","333710667","1049254261","1489780246","1407367202","436577167","1481018071","1315744137","1436650069","980368562","1007355333","1126386264","492648096","950519698","317107309","539397400","1444671526","1416894836","1117998129","1462386180","558818638","691121579","1474856599","436577167","641613694","1312014438","1416894836","1117998129","1462386180","558818638","691121579","1474856599","436577167","641613694","1312014438","444934666","997102246","951937596","951610982","1435195637","904237743","541164041","1447768809","1439731526","363590051","544007664","526831380","1199564834","947792507","414478124","983337376","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
 let reg = "us"
@@ -158,7 +158,7 @@ $task.fetch(config).then((res) => {
         } else {
             app_monitor = JSON.parse(app_monitor) //从json字符串转换成json对象
         }
-        let notifys = "" //需要展示的字符串
+        let notifys = [] //需要展示的字符串
         let infos = {} //获取到的新信息
 
         //循环 去匹配结果中的信息
@@ -180,39 +180,45 @@ $task.fetch(config).then((res) => {
                     let oldVersion = app_monitor[x.trackId].v //定义老版本
                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
+                    if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
+                        notifys.push(` ???${x.trackName}：
+                        `)
+                    }
                     //版本有变化时
                     if (oldVersion != x.version) {
                         console.log('id:', oldid, oldTrackName, '的版本从', oldVersion, '更新到了:', x.version)
-                        notifys = `📲 ${x.trackName}：
-🏷 版本升级：${oldVersion} → ${x.version}`
+                        notifys.push(`?? 版本升级：${oldVersion} → ${x.version}`)
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
                         console.log('id:', oldid, oldTrackName, '的价格从', oldFormattedPrice, '更新到了:', x.formattedPrice)
-                        notifys = `📲 ${x.trackName}：
-〽️ 价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
+                        notifys.push(`价格变化：${oldFormattedPrice} → ${x.formattedPrice}`)
                     }
+                    senddata(infos, notifys)
                 }
             } else {
-                notifys = `📲 ${x.trackName}：
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
+                notifys.push(` ???${x.trackName}：
+                ?? 版本：${x.version}  /  ? 价格：${x.formattedPrice}`)
+                senddata(infos, notifys)
             }
+
         }))
-
-
-        infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
-        $prefs.setValueForKey(infos, "app_monitor") //存进app_monitor value和key
-
-        if (notifys != "") {
-            notify(notifys)
-        } else {
-            console.log("AppMonitor：无变化")
-        }
     }
 })
 
+function senddata(infos, notifys) {
+    infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
+    $prefs.setValueForKey(infos, "app_monitor") //存进app_monitor value和key
+
+    if (notifys.length != 0) {
+        notify(notifys)
+    } else {
+        console.log("AppMonitor：无变化")
+    }
+}
+
 function notify(notifys) {
-    // notifys = notifys.join("\n")
+    //notifys = notifys.join("\n")
     console.log(notifys)
     $notify("AppMonitor", "", notifys)
 }
