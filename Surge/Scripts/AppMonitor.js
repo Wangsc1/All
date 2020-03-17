@@ -186,24 +186,24 @@ $task.fetch(config).then((res) => {
                     //版本有变化时
                     if (oldVersion != x.version) {
                         console.log('版本变化了')
-                        notifys = ` ${x.trackName}：
-?? 版本升级：${oldVersion} → ${x.version}`
+                        notifys = `📲 ${x.trackName}：
+🏷 版本升级：${oldVersion} → ${x.version}`
                     }else{  
                         console.log('版本没变化')
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
                         console.log('价格变化了')
-                        notifys = ` ${x.trackName}：
-价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
+                        notifys = `📲 ${x.trackName}：
+〽️ 价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
                     }else{
                         console.log('价格没变化')
                     }
                 // }
             } else {
                 console.log('无此trackId原型')
-                notifys = ` ${x.trackName}：
-?? 版本：${x.version}  /  ? 价格：${x.formattedPrice}`
+                notifys = `📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
             }
         }))
 
