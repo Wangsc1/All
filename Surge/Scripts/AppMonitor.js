@@ -152,22 +152,19 @@ let config = {
 $task.fetch(config).then((res) => {
     let results = JSON.parse(res.body).results
     if (results.length > 0) {
-        let app_monitor = $prefs.valueForKey("app_monitor"); //取出app_monitor
+        let app_monitor = $prefs.valueForKey("app_monitor"); //取出app_monitor的key
         if (app_monitor == "" || app_monitor == undefined) {
-            console.log('app_monitor是空的或undefined')
             app_monitor = {}
         } else {
-            console.log('app_monitor有值')
-            app_monitor = JSON.parse(app_monitor)  //从json字符串转换成json对象
+            app_monitor = JSON.parse(app_monitor) //从json字符串转换成json对象
         }
         let notifys = "" //需要展示的字符串
         let infos = {} //获取到的新信息
 
-        // console.log('这个发给我：', app_monitor)
-
         //循环 去匹配结果中的信息
         results.forEach((x => {
             infos[x.trackId] = {
+                i: x.trackId,
                 n: x.trackName,
                 v: x.version,
                 p: x.formattedPrice
@@ -175,41 +172,36 @@ $task.fetch(config).then((res) => {
 
             //老数据(app_monitor对象)中有此trackId原型
             if (app_monitor.hasOwnProperty(x.trackId)) {
-                console.log('有此trackId原型')
                 //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
-                // if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
+                if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
                     console.log('更换了app执行')
+                    let oldid = app_monitor[x.trackId].i //老id
                     let oldTrackName = app_monitor[x.trackId].n //定义老名字
                     let oldVersion = app_monitor[x.trackId].v //定义老版本
                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
                     //版本有变化时
                     if (oldVersion != x.version) {
-                        console.log('版本变化了')
+                        console.log('id:', oldid, oldTrackName, '的版本从', oldVersion, '更新到了:', x.version)
                         notifys = `📲 ${x.trackName}：
 🏷 版本升级：${oldVersion} → ${x.version}`
-                    }else{  
-                        console.log('版本没变化')
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
-                        console.log('价格变化了')
+                        console.log('id:', oldid, oldTrackName, '的价格从', oldFormattedPrice, '更新到了:', x.formattedPrice)
                         notifys = `📲 ${x.trackName}：
 〽️ 价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
-                    }else{
-                        console.log('价格没变化')
                     }
-                // }
+                }
             } else {
-                console.log('无此trackId原型')
                 notifys = `📲 ${x.trackName}：
 🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`
             }
         }))
 
-       
+
         infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
-        $prefs.setValueForKey(infos, "app_monitor")  //存进app_monitor 下次请求的时候取出app_monitor
+        $prefs.setValueForKey(infos, "app_monitor") //存进app_monitor value和key
 
         if (notifys != "") {
             notify(notifys)
@@ -220,7 +212,7 @@ $task.fetch(config).then((res) => {
 })
 
 function notify(notifys) {
-    //notifys = notifys.join("\n")
+    // notifys = notifys.join("\n")
     console.log(notifys)
     $notify("AppMonitor", "", notifys)
 }
