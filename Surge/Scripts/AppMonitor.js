@@ -172,13 +172,13 @@ $task.fetch(config).then((res) => {
                 v: x.version,
                 p: x.formattedPrice
             }
-            
+
             //老数据(app_monitor对象)中有此trackId原型
             if (app_monitor.hasOwnProperty(x.trackId)) {
                 console.log('有此trackId原型')
                 //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
-                if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
-                    console.log('更换了app')
+                // if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
+                    console.log('更换了app执行')
                     let oldTrackName = app_monitor[x.trackId].n //定义老名字
                     let oldVersion = app_monitor[x.trackId].v //定义老版本
                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
@@ -199,7 +199,7 @@ $task.fetch(config).then((res) => {
                     }else{
                         console.log('价格没变化')
                     }
-                }
+                // }
             } else {
                 console.log('无此trackId原型')
                 notifys = ` 📲 ${x.trackName}：
