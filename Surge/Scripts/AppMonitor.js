@@ -172,58 +172,55 @@ $task.fetch(config).then((res) => {
                 v: x.version,
                 p: x.formattedPrice
             }
-            console.log(app_monitor[x.trackId].v)
-            console.log(x.version)
 
             //老数据(app_monitor对象)中有此trackId原型
-//             if (app_monitor.hasOwnProperty(x.trackId)) {
-//                 console.log('有此trackId原型')
-//                 //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
-//                 // if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
-//                     console.log('更换了app执行')
+            if (app_monitor.hasOwnProperty(x.trackId)) {
+                console.log('有此trackId原型')
+                //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
+                // if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
+                    console.log('更换了app执行')
+                    let oldTrackName = app_monitor[x.trackId].n //定义老名字
+                    let oldVersion = app_monitor[x.trackId].v //定义老版本
+                    let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
-//                     let oldTrackName = app_monitor[x.trackId].n //定义老名字
-//                     let oldVersion = app_monitor[x.trackId].v //定义老版本
-//                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
-
-//                     //版本有变化时
-//                     if (oldVersion != x.version) {
-//                         console.log('版本变化了')
-//                         notifys = ` ${x.trackName}：
-// ?? 版本升级：${oldVersion} → ${x.version}`
-//                     }else{  
-//                         console.log('版本没变化')
-//                     }
-//                     //价格有变化时
-//                     if (oldFormattedPrice != x.formattedPrice) {
-//                         console.log('价格变化了')
-//                         notifys = ` ${x.trackName}：
-// 价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
-//                     }else{
-//                         console.log('价格没变化')
-//                     }
-//                 // }
-//             } else {
-//                 console.log('无此trackId原型')
-//                 notifys = ` ${x.trackName}：
-// ?? 版本：${x.version}  /  ? 价格：${x.formattedPrice}`
-//             }
+                    //版本有变化时
+                    if (oldVersion != x.version) {
+                        console.log('版本变化了')
+                        notifys = ` ${x.trackName}：
+?? 版本升级：${oldVersion} → ${x.version}`
+                    }else{  
+                        console.log('版本没变化')
+                    }
+                    //价格有变化时
+                    if (oldFormattedPrice != x.formattedPrice) {
+                        console.log('价格变化了')
+                        notifys = ` ${x.trackName}：
+价格变化：${oldFormattedPrice} → ${x.formattedPrice}`
+                    }else{
+                        console.log('价格没变化')
+                    }
+                // }
+            } else {
+                console.log('无此trackId原型')
+                notifys = ` ${x.trackName}：
+?? 版本：${x.version}  /  ? 价格：${x.formattedPrice}`
+            }
         }))
 
        
-        // infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
-        // $prefs.setValueForKey(infos, "app_monitor")  //存进app_monitor 下次请求的时候取出app_monitor
+        infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
+        $prefs.setValueForKey(infos, "app_monitor")  //存进app_monitor 下次请求的时候取出app_monitor
 
-        // if (notifys != "") {
-        //     notify(notifys)
-        // } else {
-        //     console.log("AppMonitor：无变化")
-        // }
+        if (notifys != "") {
+            notify(notifys)
+        } else {
+            console.log("AppMonitor：无变化")
+        }
     }
 })
 
 function notify(notifys) {
-    notifys = notifys.join("\n")
+    //notifys = notifys.join("\n")
     console.log(notifys)
     $notify("AppMonitor", "", notifys)
 }
