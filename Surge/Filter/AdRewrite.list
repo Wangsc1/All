@@ -136,10 +136,7 @@ URL-REGEX,https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/preCacheAdvertise\
 URL-REGEX,https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/getAdvertisement\.json
 URL-REGEX,https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
 # 中国移动
-# 手机营业厅
 URL-REGEX,https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit
-# 江苏
-URL-REGEX,https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query
 # 中国联通
 URL-REGEX,https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm
 URL-REGEX,^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)
