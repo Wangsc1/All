@@ -119,7 +119,7 @@ $task.fetch(config).then((res) => {
                     let oldVersion = app_monitor[x.trackId].v //定义老版本
                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
-                    if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
+                    //if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
                         notifys.push(`${x.trackName}：
                         `)
                     }
