@@ -127,14 +127,14 @@ $task.fetch(config).then((res) => {
                     if (oldVersion != x.version) {
                         console.log('id:', oldid, oldTrackName, '的版本从', oldVersion, '更新到了:', x.version)
                         notifys.push(`📲 ${x.trackName}：
-🏷 版本升级：${oldVersion} → ${x.version}
+🏷 版本升级：${oldVersion} 👉 ${x.version}
                          `)
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
                         console.log('id:', oldid, oldTrackName, '的价格从', oldFormattedPrice, '更新到了:', x.formattedPrice)
                         notifys.push(`📲 ${x.trackName}：
-〽️ 价格变化：${oldFormattedPrice} → ${x.formattedPrice} `)
+〽️ 价格变化：${oldFormattedPrice} 👉 ${x.formattedPrice} `)
                     }
                     senddata(infos, notifys)
                 }
