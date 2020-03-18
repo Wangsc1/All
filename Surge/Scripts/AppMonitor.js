@@ -139,15 +139,11 @@ $task.fetch(config).then((res) => {
                     senddata(infos, notifys)
                 }
             } else {
-                console.log(notifys,app_monitor[x.trackId])
-
-
-                
+console.log(notifys,app_monitor[x.trackId])
                 notifys.push(`📲 ${x.trackName}：
 🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
                 senddata(infos, notifys)
             }
-
         }))
     }
 })
