@@ -119,7 +119,7 @@ $task.fetch(config).then((res) => {
                     let oldVersion = app_monitor[x.trackId].v //定义老版本
                     let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
 
-                    //if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
+                    if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
                         notifys.push(`${x.trackName}：
                         `)
                     }
@@ -137,8 +137,20 @@ $task.fetch(config).then((res) => {
 〽️ 价格变化：${oldFormattedPrice} 👉 ${x.formattedPrice} `)
                     }
                     senddata(infos, notifys)
+                }
+            } else {
+                console.log(notifys,app_monitor[x.trackId])
+
+
+                
+                notifys.push(`📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
+                senddata(infos, notifys)
+            }
+
+        }))
     }
-}))
+})
 
 function senddata(infos, notifys) {
     infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
