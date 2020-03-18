@@ -137,11 +137,8 @@ $task.fetch(config).then((res) => {
 〽️ 价格变化：${oldFormattedPrice} 👉 ${x.formattedPrice} `)
                     }
                     senddata(infos, notifys)
-                }
-            } 
-        }))
     }
-})
+}))
 
 function senddata(infos, notifys) {
     infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
