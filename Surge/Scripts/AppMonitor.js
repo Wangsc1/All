@@ -126,19 +126,25 @@ $task.fetch(config).then((res) => {
                     //版本有变化时
                     if (oldVersion != x.version) {
                         console.log('id:', oldid, oldTrackName, '的版本从', oldVersion, '更新到了:', x.version)
-                        notifys.push(`📲 ${x.trackName}：
+                notifys.push(`📲 ${x.trackName}：
 🏷 版本升级：${oldVersion} 👉 ${x.version}
                          `)
                     }
                     //价格有变化时
                     if (oldFormattedPrice != x.formattedPrice) {
                         console.log('id:', oldid, oldTrackName, '的价格从', oldFormattedPrice, '更新到了:', x.formattedPrice)
-                        notifys.push(`📲 ${x.trackName}：
+                notifys.push(`📲 ${x.trackName}：
 〽️ 价格变化：${oldFormattedPrice} 👉 ${x.formattedPrice} `)
                     }
                     senddata(infos, notifys)
                 }
-            } 
+            } else {
+                console.log(notifys,app_monitor[x.trackId])
+                notifys.push(`📲 ${x.trackName}：
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
+                senddata(infos, notifys)
+            }
+
         }))
     }
 })
