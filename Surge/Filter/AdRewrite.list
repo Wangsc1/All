@@ -45,6 +45,7 @@ URL-REGEX,https?:\/\/app\.variflight\.com\/v\d\/advert\/
 
 # J
 # 京东
+URL-REGEX,https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT-TINYGIF
 URL-REGEX,https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
 URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
 URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
