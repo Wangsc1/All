@@ -1,6 +1,4 @@
-let isSurge = $httpClient != undefined; //判断当前运行环境是否是surge
-// 判断request还是respons
-// down方法重写
+let isSurge = $httpClient != undefined;
 var $done = (obj={}) => {
     var isRequest = typeof $request != "undefined";
     if (isQuantumultX) {
@@ -10,19 +8,12 @@ var $done = (obj={}) => {
         return isRequest ? $done({}) : $done()
     }
 }
-// http请求
 var $httpClient = isSurge ? $httpClient : {};
-// cookie读写
 var $persistentStore = isSurge ? $persistentStore : {};
-// 消息通知
 var $notification = isSurge ? $notification : {};
-// #endregion 固定头部
-
-// #region 网络请求专用转换
 if (isSurge) {
     $task = {
         fetch: url => {
-            //为了兼容qx中fetch的写法,所以永不reject
             return new Promise((resolve, reject) => {
                 if (url.method == 'POST') {
                     $httpClient.post(url, (error, response, data) => {
@@ -56,9 +47,6 @@ if (isSurge) {
         }
     }
 }
-// #endregion 网络请求专用转换
-
-// #region cookie操作
 if (isSurge) {
     $prefs = {
         valueForKey: key => {
@@ -69,18 +57,14 @@ if (isSurge) {
         }
     }
 }
-// #endregion
-
-// #region 消息通知
 if (isSurge) {
     $notify = function (title, subTitle, detail) {
         $notification.post(title, subTitle, detail);
     }
 }
-// #endregion
 
 console.log("AppMonitor：运行");
-let apps=["1477376905","1477376905","1444671526","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"];
+let apps=["1477376905","1444671526","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"];
 
 let reg="us";
 let notifys=[];
