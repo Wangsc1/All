@@ -79,88 +79,111 @@ if (isSurge) {
 }
 // #endregion
 
-console.log("AppMonitor")
-let
-apps=["507161324","518213356","300704847","602660809","1239397626","504631398","1188080269","992210239","1063183999","424598114","1436429074","1062022008","882914841","406239138","990591885","1141312799","1073473333","432850144","896694807","1434207799","924695435","680469088","869346854","935754064","1035331258","904237743","946930094","1373567447","916366645","1382419586","1299735217","1460078746","333710667","1049254261","1489780246","1407367202","436577167","1481018071","1315744137","1436650069","980368562","1007355333","1126386264","492648096","950519698","317107309","539397400","1444671526","1416894836","1117998129","1462386180","558818638","691121579","1474856599","641613694","1312014438","444934666","997102246","951937596","951610982","1435195637","541164041","1447768809","1439731526","363590051","544007664","526831380","1199564834","947792507","414478124","983337376","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","989565871","440488550","1134218562","1261944766","1067198688","1371929193","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"]
-let reg = "us"
-let config = {
-    url: 'https://itunes.apple.com/lookup?id=' + apps + "&country=" + reg,
-    method: "post"
-}
-$task.fetch(config).then((res) => {
-    let results = JSON.parse(res.body).results
-    if (results.length > 0) {
-        let app_monitor = $prefs.valueForKey("app_monitor"); //取出app_monitor的key
-        if (app_monitor == "" || app_monitor == undefined) {
-            app_monitor = {}
-        } else {
-            app_monitor = JSON.parse(app_monitor) //从json字符串转换成json对象
-        }
-
-        let infos = {} //获取到的新信息
-
-        //循环 去匹配结果中的信息
-        results.forEach((x => {
-            infos[x.trackId] = {
-                i: x.trackId,
-                n: x.trackName,
-                v: x.version,
-                p: x.formattedPrice
-            }
-            let notifys = [] //需要展示的字符串
-
-            //老数据(app_monitor对象)中有此trackId原型  新增
-            if (app_monitor.hasOwnProperty(x.trackId)) {
-                //2个对象都转成json字符串去判断是否相同 不相同则是更换了app
-                if (JSON.stringify(app_monitor[x.trackId]) != JSON.stringify(infos[x.trackId])) {
-                    console.log('更换了app执行')
-                    let oldid = app_monitor[x.trackId].i //老id
-                    let oldTrackName = app_monitor[x.trackId].n //定义老名字
-                    let oldVersion = app_monitor[x.trackId].v //定义老版本
-                    let oldFormattedPrice = app_monitor[x.trackId].p //定义老价格 
-
-                    if (oldVersion != x.version || oldFormattedPrice != x.formattedPrice) {
-                        notifys.push(`${x.trackName}：
-                        `)
-                    }
-                    //版本有变化时
-                    if (oldVersion != x.version) {
-                        console.log('id:', oldid, oldTrackName, '的版本从', oldVersion, '更新到了:', x.version)
-                notifys.push(`📲 ${x.trackName}：
-🏷 版本升级：${oldVersion} 👉 ${x.version}
-                         `)
-                    }
-                    //价格有变化时
-                    if (oldFormattedPrice != x.formattedPrice) {
-                        console.log('id:', oldid, oldTrackName, '的价格从', oldFormattedPrice, '更新到了:', x.formattedPrice)
-                notifys.push(`📲 ${x.trackName}：
-〽️ 价格变化：${oldFormattedPrice} 👉 ${x.formattedPrice} `)
-                    }
-                    senddata(infos, notifys)
+console.log("AppMonitor：运行");
+let apps=
+["1444671526","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"];
+let reg="us";
+let notifys=[];
+format_apps(apps);
+function format_apps(x) {
+    let apps_f={};
+    x.forEach((n)=>{
+        if(/^[a-zA-Z0-9:/|\-_\s]{1,}$/.test(n))
+        {
+            n=n.replace(/[/|\-_\s]/g,":");
+            let n_n=n.split(":");
+            if(n_n.length===1){
+                if(apps_f.hasOwnProperty(reg)){
+                    apps_f[reg].push(n_n);
                 }
-            } else {
-console.log(notifys,app_monitor[x.trackId])
-                notifys.push(`📲 ${x.trackName}：
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
-                senddata(infos, notifys)
+                else
+                {
+                    apps_f[reg]=[];
+                    apps_f[reg].push(n_n[0])
+                }
             }
-        }))
-    }
-})
-
-function senddata(infos, notifys) {
-    infos = JSON.stringify(infos) //把当前的infos 从json对象转成json字符串 
-    $prefs.setValueForKey(infos, "app_monitor") //存进app_monitor value和key
-
-    if (notifys.length != 0) {
-        notify(notifys)
-    } else {
-        console.log("AppMonitor：无变化")
+            else if(n_n.length===2){
+                if(apps_f.hasOwnProperty(n_n[1])){
+                    apps_f[n_n[1]].push(n_n[0]);
+                }
+                else
+                {
+                    apps_f[n_n[1]]=[];
+                    apps_f[n_n[1]].push(n_n[0])
+                }
+            }
+            else{
+                notifys.push(`ID格式错误:【${n}】`)
+            }
+        }
+        else{
+            notifys.push(`ID格式错误:【${n}】`)
+        }
+    });
+    if(Object.keys(apps_f).length>0){
+        post_data(apps_f);
     }
 }
-
-function notify(notifys) {
-    //notifys = notifys.join("\n")
-    console.log(notifys)
-    $notify("AppMonitor", "", notifys)
+async function post_data(d) {
+    try{
+        let app_monitor=$prefs.valueForKey("app_monitor");
+        if(app_monitor===""||app_monitor===undefined){
+            app_monitor={}
+        }
+        else{
+            app_monitor=JSON.parse(app_monitor)
+        }
+        let infos={};
+        await Promise.all(Object.keys(d).map(async (k)=>{
+            let config={
+                url:'https://itunes.apple.com/lookup?id=' + d[k] + "&country=" + k,
+                method:"post"
+            };
+            await $task.fetch(config).then((res)=>{
+                let results=JSON.parse(res.body).results;
+                if(Array.isArray(results)&&results.length>0){
+                    results.forEach((x=>{
+                        infos[x.trackId]={
+                            n:x.trackName,
+                            v:x.version,
+                            p:x.formattedPrice
+                        };
+                        if(app_monitor.hasOwnProperty(x.trackId)){
+                            if(JSON.stringify(app_monitor[x.trackId])!==JSON.stringify(infos[x.trackId])){
+                                if(x.version!==app_monitor[x.trackId].v){
+                                    notifys.push(`📲 ${x.trackName}:
+🏷 版本：${app_monitor[x.trackId].v} 👉 ${x.version}`)
+                                }
+                                if(x.formattedPrice!==app_monitor[x.trackId].p){
+                                    notifys.push(`📲 ${x.trackName}:
+〽️ 价格：${app_monitor[x.trackId].p} 👉 ${x.formattedPrice}`)
+                                }
+                            }}
+                        else{
+                            notifys.push(`📲 ${x.trackName}:
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
+                        }
+                    }));
+                }
+                return Promise.resolve()
+            }).catch((e)=>{
+                console.log(e);
+            });
+        }));
+        infos=JSON.stringify(infos);
+        $prefs.setValueForKey(infos,"app_monitor");
+        if(notifys.length>0){
+            notify(notifys)
+        }
+        else{
+            console.log("AppMonitor：无变化")
+        }
+    }catch (e) {
+        console.log(e);
+    }
+}
+function notify(notifys){
+    notifys=notifys.join("\n");
+    console.log(notifys);
+    $notify("AppMonitor","",notifys)
 }
