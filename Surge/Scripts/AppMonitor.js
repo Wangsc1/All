@@ -186,8 +186,7 @@ async function post_data(d) {
                             }}
                         else{
                             notifys.push(`📲 ${x.trackName}:
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`);
-                            notifys.push(`${flag(k)}💰${x.trackName}:price【${x.formattedPrice}】`)
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
                         }
                     }));
                 }
@@ -202,7 +201,7 @@ async function post_data(d) {
             notify(notifys)
         }
         else{
-            console.log("APPPRICE：No change 🔕")
+            console.log("AppMonitor：无更新")
         }
     }catch (e) {
         console.log(e);
