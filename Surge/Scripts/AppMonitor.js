@@ -1,49 +1,83 @@
-let isSurge = $httpClient != undefined;
-var $done = (obj={}) => {
-    var isRequest = typeof $request != "undefined";
-    if (isQuantumultX) {
-        return isRequest ? $done({}) : ""
-    }
-    if (isSurge) {
-        return isRequest ? $done({}) : $done()
+//Smart Qx&Surge + @Neurogam
+let isQuantumultX = $task !== undefined;
+let isSurge = $httpClient !== undefined;
+var $task = isQuantumultX ? $task : {};
+var $httpClient = isSurge ? $httpClient : {};
+var $prefs = isQuantumultX ? $prefs : {};
+var $persistentStore = isSurge ? $persistentStore : {};
+var $notify = isQuantumultX ? $notify : {};
+var $notification = isSurge ? $notification : {};
+if (isQuantumultX) {
+    var errorInfo = {
+        error: ''
+    };
+    $httpClient = {
+        get: (url, cb) => {
+            var urlObj;
+            if (typeof (url) == 'string') {
+                urlObj = {
+                    url: url
+                }
+            } else {
+                urlObj = url;
+            }
+            $task.fetch(urlObj).then(response => {
+                cb(undefined, response, response.body)
+            }, reason => {
+                errorInfo.error = reason.error;
+                cb(errorInfo, response, '')
+            })
+        },
+        post: (url, cb) => {
+            var urlObj;
+            if (typeof (url) == 'string') {
+                urlObj = {
+                    url: url
+                }
+            } else {
+                urlObj = url;
+            }
+            url.method = 'POST';
+            $task.fetch(urlObj).then(response => {
+                cb(undefined, response, response.body)
+            }, reason => {
+                errorInfo.error = reason.error;
+                cb(errorInfo, response, '')
+            })
+        }
     }
 }
-var $httpClient = isSurge ? $httpClient : {};
-var $persistentStore = isSurge ? $persistentStore : {};
-var $notification = isSurge ? $notification : {};
 if (isSurge) {
     $task = {
         fetch: url => {
             return new Promise((resolve, reject) => {
                 if (url.method == 'POST') {
                     $httpClient.post(url, (error, response, data) => {
-                        if (response) {
-                            response.body = data;
-                            resolve(response, {
-                                error: error
-                            });
-                        } else {
-                            resolve(null, {
-                                error: error
-                            })
-                        }
+                        response.body = data;
+                        resolve(response, {
+                            error: error
+                        });
                     })
                 } else {
                     $httpClient.get(url, (error, response, data) => {
-                        if (response) {
-                            response.body = data;
-                            resolve(response, {
-                                error: error
-                            });
-                        } else {
-                            resolve(null, {
-                                error: error
-                            })
-                        }
+                        response.body = data;
+                        resolve(response, {
+                            error: error
+                        });
                     })
                 }
             })
 
+        }
+    }
+}
+if (isQuantumultX) {
+    $persistentStore = {
+        read: key => {
+            return $prefs.valueForKey(key);
+        },
+        write: (val, key) => {
+            return $prefs.setValueForKey(val, key);
         }
     }
 }
@@ -57,6 +91,13 @@ if (isSurge) {
         }
     }
 }
+if (isQuantumultX) {
+    $notification = {
+        post: (title, subTitle, detail) => {
+            $notify(title, subTitle, detail);
+        }
+    }
+}
 if (isSurge) {
     $notify = function (title, subTitle, detail) {
         $notification.post(title, subTitle, detail);
@@ -65,7 +106,6 @@ if (isSurge) {
 
 console.log("AppMonitor：运行");
 let apps=["1047223162","393313223","363590051","544007664","997102246","951937596","422689480","541164041","1059152023","896694807","1018355599","324684580","414478124","1457369322","1477376905","1444671526","1436650069","1314212521","1347998487","1443988620","1449412357","1164801111","1495946973","333710667","961390574","373311252","673907758","1423330822","945993620","393670998","1154746981","390017969","1312014438","989565871","440488550","1134218562","1373567447","1261944766","1049254261","1067198688","1371929193","1489780246","697927927","718043190","360593530","284666222","1490527415","1455832781","469338840","1355476695"];
-
 let reg="us";
 let notifys=[];
 format_apps(apps);
@@ -97,11 +137,11 @@ function format_apps(x) {
                 }
             }
             else{
-                notifys.push(`ID格式错误:【${n}】`)
+                notifys.push(`ID error:【${n}】`)
             }
         }
         else{
-            notifys.push(`ID格式错误:【${n}】`)
+            notifys.push(`ID error:【${n}】`)
         }
     });
     if(Object.keys(apps_f).length>0){
@@ -145,7 +185,8 @@ async function post_data(d) {
                             }}
                         else{
                             notifys.push(`📲 ${x.trackName}:
-🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`);
+                            notifys.push(`${flag(k)}💰${x.trackName}:price【${x.formattedPrice}】`)
                         }
                     }));
                 }
@@ -160,7 +201,7 @@ async function post_data(d) {
             notify(notifys)
         }
         else{
-            console.log("AppMonitor：无更新")
+            console.log("APPPRICE：No change 🔕")
         }
     }catch (e) {
         console.log(e);
@@ -169,5 +210,9 @@ async function post_data(d) {
 function notify(notifys){
     notifys=notifys.join("\n");
     console.log(notifys);
-    $notify("AppMonitor","",notifys)
+    $notify("APPPRICE","",notifys)
+}
+function flag(x){
+  var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "🇦🇮" ] , [ "AL" , "🇦🇱" ] , [ "AM" , "🇦🇲" ] , [ "AQ" , "🇦🇶" ] , [ "AR" , "🇦🇷" ] , [ "AS" , "🇦🇸" ] , [ "AT" , "🇦🇹" ] , [ "AU" , "🇦🇺" ] , [ "AW" , "🇦🇼" ] , [ "AX" , "🇦🇽" ] , [ "AZ" , "🇦🇿" ] , [ "BB" , "🇧🇧" ] , [ "BD" , "🇧🇩" ] , [ "BE" , "🇧🇪" ] , [ "BF" , "🇧🇫" ] , [ "BG" , "🇧🇬" ] , [ "BH" , "🇧🇭" ] , [ "BI" , "🇧🇮" ] , [ "BJ" , "🇧🇯" ] , [ "BM" , "🇧🇲" ] , [ "BN" , "🇧🇳" ] , [ "BO" , "🇧🇴" ] , [ "BR" , "🇧🇷" ] , [ "BS" , "🇧🇸" ] , [ "BT" , "🇧🇹" ] , [ "BV" , "🇧🇻" ] , [ "BW" , "🇧🇼" ] , [ "BY" , "🇧🇾" ] , [ "BZ" , "🇧🇿" ] , [ "CA" , "🇨🇦" ] , [ "CF" , "🇨🇫" ] , [ "CH" , "🇨🇭" ] , [ "CK" , "🇨🇰" ] , [ "CL" , "🇨🇱" ] , [ "CM" , "🇨🇲" ] , [ "CN" , "🇨🇳" ] , [ "CO" , "🇨🇴" ] , [ "CP" , "🇨🇵" ] , [ "CR" , "🇨🇷" ] , [ "CU" , "🇨🇺" ] , [ "CV" , "🇨🇻" ] , [ "CW" , "🇨🇼" ] , [ "CX" , "🇨🇽" ] , [ "CY" , "🇨🇾" ] , [ "CZ" , "🇨🇿" ] , [ "DE" , "🇩🇪" ] , [ "DG" , "🇩🇬" ] , [ "DJ" , "🇩🇯" ] , [ "DK" , "🇩🇰" ] , [ "DM" , "🇩🇲" ] , [ "DO" , "🇩🇴" ] , [ "DZ" , "🇩🇿" ] , [ "EA" , "🇪🇦" ] , [ "EC" , "🇪🇨" ] , [ "EE" , "🇪🇪" ] , [ "EG" , "🇪🇬" ] , [ "EH" , "🇪🇭" ] , [ "ER" , "🇪🇷" ] , [ "ES" , "🇪🇸" ] , [ "ET" , "🇪🇹" ] , [ "EU" , "🇪🇺" ] , [ "FI" , "🇫🇮" ] , [ "FJ" , "🇫🇯" ] , [ "FK" , "🇫🇰" ] , [ "FM" , "🇫🇲" ] , [ "FO" , "🇫🇴" ] , [ "FR" , "🇫🇷" ] , [ "GA" , "🇬🇦" ] , [ "GB" , "🇬🇧" ] , [ "HK" , "🇭🇰" ] , [ "ID" , "🇮🇩" ] , [ "IE" , "🇮🇪" ] , [ "IL" , "🇮🇱" ] , [ "IM" , "🇮🇲" ] , [ "IN" , "🇮🇳" ] , [ "IS" , "🇮🇸" ] , [ "IT" , "🇮🇹" ] , [ "JP" , "🇯🇵" ] , [ "KR" , "🇰🇷" ] , [ "MO" , "🇲🇴" ] , [ "MX" , "🇲🇽" ] , [ "MY" , "🇲🇾" ] , [ "NL" , "🇳🇱" ] , [ "PH" , "🇵🇭" ] , [ "RO" , "🇷🇴" ] , [ "RS" , "🇷🇸" ] , [ "RU" , "🇷🇺" ] , [ "RW" , "🇷🇼" ] , [ "SA" , "🇸🇦" ] , [ "SB" , "🇸🇧" ] , [ "SC" , "🇸🇨" ] , [ "SD" , "🇸🇩" ] , [ "SE" , "🇸🇪" ] , [ "SG" , "🇸🇬" ] , [ "TH" , "🇹🇭" ] , [ "TN" , "🇹🇳" ] , [ "TO" , "🇹🇴" ] , [ "TR" , "🇹🇷" ] , [ "TV" , "🇹🇻" ] , [ "TW" , "🇨🇳" ] , [ "UK" , "🇬🇧" ] , [ "UM" , "🇺🇲" ] , [ "US" , "🇺🇸" ] , [ "UY" , "🇺🇾" ] , [ "UZ" , "🇺🇿" ] , [ "VA" , "🇻🇦" ] , [ "VE" , "🇻🇪" ] , [ "VG" , "🇻🇬" ] , [ "VI" , "🇻🇮" ] , [ "VN" , "🇻🇳" ]])
+  return flags.get(x.toUpperCase())
 }
