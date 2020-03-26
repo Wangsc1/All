@@ -68,7 +68,7 @@ async function post_data(d) {
                         };
                         if(app_monitor.hasOwnProperty(x.trackId)){
                             if(JSON.stringify(app_monitor[x.trackId])!==JSON.stringify(infos[x.trackId])){
-                                if(x.version!==app_monitor[x.trackId].v){
+if(x.version!==app_monitor[x.trackId].v){
                                     notifys.push(`📲 ${x.trackName}:
 🏷 版本更新：${app_monitor[x.trackId].v} 👉 ${x.version}`)
                                 }
@@ -78,7 +78,7 @@ async function post_data(d) {
                                 }
                             }}
                         else{
-                            notifys.push(`📲 ${x.trackName}:
+notifys.push(`📲 ${x.trackName}:
 🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`)
                         }
                     }));
