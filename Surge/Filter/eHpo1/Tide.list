@@ -113,13 +113,9 @@ URL-REGEX,^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
 # > 中国招商银行
 URL-REGEX,^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
 # > 中国移动
-# >> 手机营业厅
 URL-REGEX,^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit
-# >> 江苏
-URL-REGEX,^https?+:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query
 # > 中国联通
 URL-REGEX,^https?+:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm
 URL-REGEX,^https?+:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)
 # > 中国电信
-# >> 电信营业厅
 URL-REGEX,^https?+:\/\/image1\.chinatelecom-ec\.com\/images\/\d{4}\/\d{1,2}+\/\d{1,2}+\/client\w+?\.jpg$
