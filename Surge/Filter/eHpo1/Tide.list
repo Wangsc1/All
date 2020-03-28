@@ -40,9 +40,9 @@ URL-REGEX,^https?+:\/\/app\.variflight\.com\/v\d\/advert\/
 
 # J
 # > 京东
-URL-REGEX,https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
-URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
-URL-REGEX,https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
+URL-REGEX,https?+:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
+URL-REGEX,https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
+URL-REGEX,https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
 
 # M
 # > 小米
@@ -116,8 +116,8 @@ URL-REGEX,^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit
 # >> 江苏
 URL-REGEX,^https?+:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query
 # > 中国联通
-URL-REGEX,https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm
-URL-REGEX,^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)
+URL-REGEX,https?+:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm
+URL-REGEX,^https?+:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)
 # > 中国电信
 # >> 电信营业厅
 URL-REGEX,^https?+:\/\/image1\.chinatelecom-ec\.com\/images\/\d{4}\/\d{1,2}+\/\d{1,2}+\/client\w+?\.jpg$
