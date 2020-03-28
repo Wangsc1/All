@@ -35,6 +35,11 @@ URL-REGEX,^https?+:\/\/.+\/client\/phpui2\/
 URL-REGEX,^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg
 AND,((IP-CIDR,0.0.0.0/0,no-resolve), (USER-AGENT,%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE*))
 
+# E
+# 饿了么 
+URL-REGEX,^https?+:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/
+URL-REGEX,^https?+:\/\/cube\.elemecdn\.com\/.*\.mp4\?$
+
 # F
 # > 飞常准
 URL-REGEX,^https?+:\/\/app\.variflight\.com\/ad\/
