@@ -32,9 +32,7 @@ URL-REGEX,^https?+:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid=
 # B
 # 百度
 # 百度地图
-URL-REGEX,^https?+:\/\/.+\/client\/phpui2\/
 URL-REGEX,^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg
-AND,((IP-CIDR,0.0.0.0/0,no-resolve), (USER-AGENT,%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE*))
 
 # E
 # 饿了么 
@@ -100,9 +98,6 @@ URL-REGEX,^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/
 # 网易
 # 网易新闻
 URL-REGEX,^https?+:\/\/c\.m\.163\.com\/nc\/gl\/
-# 有道词典
-URL-REGEX,^https?+:\/\/oimage[a-z][0-9]\.ydstatic\.com\/.+?adpublish
-URL-REGEX,^https?+:\/\/dsp-impr2\.youdao\.com\/adload
 
 # X
 # 喜马拉雅
