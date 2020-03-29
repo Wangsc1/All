@@ -29,11 +29,6 @@ DOMAIN-SUFFIX,pstatp.com
 DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,iesdouyin.com
 DOMAIN-SUFFIX,toutiao.com
-# > Google
-DOMAIN-SUFFIX,googletraveladservices.com
-DOMAIN,dl.google.com
-DOMAIN,mtalk.google.com
-DOMAIN,safebrowsing.googleapis.com
 # > JD
 DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.hk
