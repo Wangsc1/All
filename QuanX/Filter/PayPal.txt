@@ -1,0 +1,4 @@
+# > PayPal
+user-agent, PayPal*, Domestic
+host-suffix, paypal.com, Domestic
+host-suffix, paypalobjects.com, Domestic
