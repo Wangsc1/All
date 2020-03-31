@@ -1,6 +1,6 @@
 # Global.list
 # (DNS Cache Pollution Protection)
-# > Google
+# Google
 host-suffix, ampproject.org, Global
 host-suffix, appspot.com, Global
 host-suffix, blogger.com, Global
@@ -9,43 +9,13 @@ host-suffix, googleapis.cn, Global
 host-suffix, gvt0.com, Global
 host-suffix, gvt1.com, Global
 host-suffix, gvt3.com, Global
-host-suffix, xn--ngstr-lra8j.com, Global
+host-suffix, xn—ngstr-lra8j.com, Global
 host-keyword, google, Global
 host-keyword, blogspot, Global
-# > PayPal
-user-agent, PayPal*, Global
-host-suffix, paypal.com, Global
-host-suffix, paypalobjects.com, Global
-# > Microsoft
+# Microsoft
 host-suffix, onedrive.live.com, Global
 host-suffix, xboxlive.com, Global
-# > Facebook
-host-suffix, cdninstagram.com, Global
-host-suffix, fb.com, Global
-host-suffix, fb.me, Global
-host-suffix, fbaddins.com, Global
-host-suffix, fbcdn.net, Global
-host-suffix, fbsbx.com, Global
-host-suffix, fbworkmail.com, Global
-host-suffix, instagram.com, Global
-host-suffix, m.me, Global
-host-suffix, messenger.com, Global
-host-suffix, oculus.com, Global
-host-suffix, oculuscdn.com, Global
-host-suffix, rocksdb.org, Global
-host-suffix, whatsapp.com, Global
-host-suffix, whatsapp.net, Global
-host-keyword, facebook, Global
-ip-cidr, 3.123.36.126/32, Global
-ip-cidr, 35.157.215.84/32, Global
-ip-cidr, 35.157.217.255/32, Global
-ip-cidr, 52.58.209.134/32, Global
-ip-cidr, 54.93.124.31/32, Global
-ip-cidr, 54.162.243.80/32, Global
-ip-cidr, 54.173.34.141/32, Global
-ip-cidr, 54.235.23.242/32, Global
-ip-cidr, 169.45.248.118/32, Global
-# > Twitter
+# Twitter
 host-suffix, pscp.tv, Global
 host-suffix, periscope.tv, Global
 host-suffix, t.co, Global
@@ -54,7 +24,7 @@ host-suffix, twimg.com, Global
 host-suffix, twitpic.com, Global
 host-suffix, vine.co, Global
 host-keyword, twitter, Global
-# > Telegram
+# Telegram
 host-suffix, t.me, Global
 host-suffix, tdesktop.com, Global
 host-suffix, telegra.ph, Global
@@ -66,16 +36,7 @@ ip-cidr, 91.108.12.0/22, Global
 ip-cidr, 91.108.16.0/22, Global
 ip-cidr, 91.108.56.0/22, Global
 ip-cidr, 149.154.160.0/20, Global
-# > Line
-host-suffix, line.me, Global
-host-suffix, line-apps.com, Global
-host-suffix, line-scdn.net, Global
-host-suffix, naver.jp, Global
-ip-cidr, 103.2.30.0/23, Global
-ip-cidr, 125.209.208.0/20, Global
-ip-cidr, 147.92.128.0/17, Global
-ip-cidr, 203.104.144.0/21, Global
-# > Other
+# Other
 host-suffix, 4shared.com, Global
 host-suffix, 520cc.cc, Global
 host-suffix, 881903.com, Global
@@ -364,8 +325,8 @@ host-suffix, worldcat.org, Global
 host-suffix, wsj.com, Global
 host-suffix, wsj.net, Global
 host-suffix, xhamster.com, Global
-host-suffix, xn--90wwvt03e.com, Global
-host-suffix, xn--i2ru8q2qg.com, Global
+host-suffix, xn—90wwvt03e.com, Global
+host-suffix, xn—i2ru8q2qg.com, Global
 host-suffix, xnxx.com, Global
 host-suffix, xvideos.com, Global
 host-suffix, yahoo.com, Global
@@ -437,7 +398,7 @@ host-suffix, zattoo.com, Global
 user-agent, Roam*, Global
 
 # (The Most Popular Sites)
-# > Google
+# Google
 host-suffix, abc.xyz, Global
 host-suffix, android.com, Global
 host-suffix, androidify.com, Global
@@ -483,7 +444,7 @@ host-suffix, x.company, Global
 host-suffix, youtu.be, Global
 host-suffix, yt.be, Global
 host-suffix, ytimg.com, Global
-# > Microsoft
+# Microsoft
 # >> Microsoft OneDrive
 host-suffix, 1drv.com, Global
 host-suffix, 1drv.ms, Global
@@ -493,7 +454,7 @@ host-suffix, onedrive.com, Global
 host-suffix, storage.live.com, Global
 host-suffix, storage.msn.com, Global
 host, oneclient.sfx.ms, Global
-# > Other
+# Other
 host-suffix, 0rz.tw, Global
 host-suffix, 4bluestones.biz, Global
 host-suffix, 9bis.net, Global

@@ -113,7 +113,7 @@ ip-cidr, 39.107.15.115/32, AdBlock
 ip-cidr, 47.89.59.182/32, AdBlock
 ip-cidr, 103.49.209.27/32, AdBlock
 ip-cidr, 123.56.152.96/32, AdBlock
-# > ChinaTelecom
+# ChinaTelecom
 ip-cidr, 61.160.200.223/32, AdBlock
 ip-cidr, 61.160.200.242/32, AdBlock
 ip-cidr, 61.160.200.252/32, AdBlock
@@ -132,16 +132,16 @@ ip-cidr, 222.186.61.91/32, AdBlock
 ip-cidr, 222.186.61.95/32, AdBlock
 ip-cidr, 222.186.61.96/32, AdBlock
 ip-cidr, 222.186.61.97/32, AdBlock
-# > ChinaUnicom
+# ChinaUnicom
 ip-cidr, 106.75.231.48/32, AdBlock
 ip-cidr, 119.4.249.166/32, AdBlock
 ip-cidr, 220.196.52.141/32, AdBlock
 ip-cidr, 221.6.4.148/32, AdBlock
-# > ChinaMobile
+# ChinaMobile
 ip-cidr, 114.247.28.96/32, AdBlock
 ip-cidr, 221.179.131.72/32, AdBlock
 ip-cidr, 221.179.140.145/32, AdBlock
-# > Dr.Peng
+# Dr.Peng
 # ip-cidr, 10.72.25.0/24
 ip-cidr, 115.182.16.79/32, AdBlock
 ip-cidr, 118.144.88.126/32, AdBlock
@@ -156,7 +156,7 @@ ip-cidr, 220.115.251.25/32, AdBlock
 ip-cidr, 222.73.156.235/32, AdBlock
 
 # Analytics 数据收集
-# > Ali
+# Ali
 host, acs4baichuan.m.taobao.com, AdBlock
 host, adash.m.taobao.com, AdBlock
 host, adashbc.m.taobao.com, AdBlock
@@ -189,22 +189,22 @@ host, w.m.taobao.com, AdBlock
 host-suffix, umeng.com, AdBlock
 host-suffix, umengcloud.com, AdBlock
 host-suffix, umsns.com, AdBlock
-# > Appsflyer
+# Appsflyer
 host-suffix, appsflyer.com, AdBlock
-# > Baidu
+# Baidu
 host, hpd.baidu.com, AdBlock
 host, hm.baidu.com, AdBlock
 host-suffix, pos.baidu.com, AdBlock
-# > crashlytics
+# crashlytics
 host-suffix, crashlytics.com, AdBlock
-# > Tencent
+# Tencent
 host, ios.bugly.qq.com, AdBlock
 host, pingma.qq.com, AdBlock
-# > Other
+# Other
 host-suffix, mob.com, AdBlock
 
 # Advertising 广告
-# > General
+# General
 host-keyword, adservice, AdBlock
 host-suffix, ad.cmvideo.cn, AdBlock
 host-suffix, ad.daum.net, AdBlock
@@ -337,15 +337,13 @@ host, nativeadv.dftoutiao.com, AdBlock
 host, oset-api.open-adx.com, AdBlock
 host, sdkauth.hpplay.cn, AdBlock
 
-# (0~9)
-# > 58 同城
-# (A)
-# > Apple
+# A
+# Apple
 host-suffix, iadsdk.apple.com, AdBlock
 host-suffix, ads.internal.unity3d.com, AdBlock
 host-suffix, ads.prd.ie.internal.unity3d.com, AdBlock
 host-suffix, unityads.unity3d.com, AdBlock
-# > Alibaba
+# Alibaba
 host, amdc.m.taobao.com, AdBlock
 host, optimus-ads.amap.com, AdBlock
 host, optimus-ads.amap.com.w.alikunlun.com, AdBlock
@@ -353,15 +351,15 @@ host, tunion-api.m.taobao.com, AdBlock
 ip-cidr, 112.29.211.120/32, AdBlock
 ip-cidr, 203.119.206.64/32, AdBlock
 ip-cidr, 203.119.211.219/32, AdBlock
-# > AutoHome
+# AutoHome
 host, adproxy.autohome.com.cn, AdBlock
 host, rd.autohome.com.cn, AdBlock
 host, al.autohome.com.cn, AdBlock
 host, applogapi.autohome.com.cn, AdBlock
 ip-cidr, 103.75.152.210/32, AdBlock
 ip-cidr, 103.75.153.3/32, AdBlock
-# (B)
-# > Baidu
+# B
+# Baidu
 host-suffix, cpro.baidu.com, AdBlock
 host, afd.baidu.com, AdBlock
 host, als.baidu.com, AdBlock
@@ -369,153 +367,25 @@ host, duclick.baidu.com, AdBlock
 host, mobads.baidu.com, AdBlock
 host, mobads-logs.baidu.com, AdBlock
 host, nsclick.baidu.com, AdBlock
-# > ByteDance
+# ByteDance
 host, ad.toutiao.com, AdBlock
-# > BitAuto
-host, adx.yiche.com, AdBlock
-host, log.ycapp.yiche.com, AdBlock
-# > bika
-host, ads.wakamoment.tk, AdBlock
-host, ad-display.wikawika.xyz, AdBlock
-# > 百词斩
-host, advertise.baicizhan.com, AdBlock
-host, advertise.baicizhan.org, AdBlock
-# (C)
-# > CNTV
-host, galaxy.bjcathay.com, AdBlock
-host, mdrecv.app.cntvwb.cn, AdBlock
-host, sdapprecv.app.cntvwb.cn, AdBlock
-host, vdapprecv.app.cntvwb.cn, AdBlock
-# > ChinaTelecom
-host, ad.21cn.com, AdBlock
-host, ad.k.21cn.com, AdBlock
-host, admarket.21cn.com, AdBlock
-host, adshows.21cn.com, AdBlock
-# > 车来了
-host, atrace.chelaile.net.cn, AdBlock
-host, logs.chelaile.net.cn, AdBlock
-# (D)
-# > 懂球帝
+# D
+# 懂球帝
 host, ap.dongqiudi.com, AdBlock
-# (G)
-# > Google
+# G
+# Google
 host-suffix, doubleclick.net, AdBlock
 host-suffix, googleadservices.com, AdBlock
 host-suffix, googleadsserving.cn, AdBlock
 host-suffix, googlesyndication.com, AdBlock
-# (H)
-# > HunanTV
-host-suffix, da.mgtv.com, AdBlock
-host-suffix, da.hunantv.com, AdBlock
-# > Hupu
-host, adx.hupu.com, AdBlock
-host, adx-api.hupu.com, AdBlock
-host, goblin.hupu.com, AdBlock
-# (I)
-# > iQiyi
-host, t7z.cupid.iqiyi.com, AdBlock
-ip-cidr, 101.227.97.240/32, AdBlock
-ip-cidr, 101.227.200.11/32, AdBlock
-ip-cidr, 101.227.200.28/32, AdBlock
-ip-cidr, 124.192.153.42/32, AdBlock
-# > Ifeng
-host-suffix, deliver.ifeng.com, AdBlock
-host, api.newad.ifeng.com, AdBlock
-host, ifengad.3g.ifeng.com, AdBlock
-# (K)
-# > KuGou and Kuwo
-host, adserviceretry.kugou.com, AdBlock
-host, ads.service.kugou.com, AdBlock
-host, adsfile.bssdlbig.kugou.com, AdBlock
-host, g.koowo.com, AdBlock
-host, kgmobilestat.kugou.com, AdBlock
-host, kgmobilestatbak.kugou.com, AdBlock
-host, mobilelog.kugou.com, AdBlock
-host, mobilead.kuwo.cn, AdBlock
-host, rich.kuwo.cn, AdBlock
-# > Kingsoft
-host, ad-stat.ksosoft.com, AdBlock
-host, img.auction-ads.wpscdn.cn, AdBlock
-host, counter.kingsoft.com, AdBlock
-host, counter.ksosoft.com, AdBlock
-host, minfo.wps.cn, AdBlock
-host, mobad.ijinshan.com, AdBlock
-host, ups.ksmobile.net, AdBlock
-host, ws.ksmobile.net, AdBlock
-# (L)
-# > Le
-host-suffix, webp2p.letv.com, AdBlock
-host, ark.letv.com, AdBlock
-host, emma-414870e223.huodonghezi.com, AdBlock
-host, g3.letv.com, AdBlock
-host, n.mark.letv.com, AdBlock
-# > 乐播投屏
-host, ad.hpplay.cn, AdBlock
-host, adcdn.hpplay.cn, AdBlock
-host, adeng.hpplay.cn, AdBlock
-host, rp.hpplay.cn, AdBlock
-# (M)
-# > MI
+# M
+# MI
 host-suffix, ad.intl.xiaomi.com, AdBlock
 host-suffix, ad.xiaomi.com, AdBlock
 host-suffix, admob.xiaomi.com, AdBlock
 host, adv.sec.intl.miui.com, AdBlock
-# > 墨迹天气
-host, ad.api.moji.com, AdBlock
-host, adlaunch.moji.com, AdBlock
-host, ads.mojicdn.com, AdBlock
-host, v1.log.moji.com, AdBlock
-# (N)
-# > NetEase
-host, ad.bn.netease.com, AdBlock
-host, ad.yixin.im, AdBlock
-host, admusicpic.music.126.net, AdBlock
-host, gorgon.youdao.com, AdBlock
-host, iadmat.nosdn.127.net, AdBlock
-host, iadmusicmat.music.126.net, AdBlock
-host, iadmusicmatvideo.music.126.net, AdBlock
-host, impservice.dictapp.youdao.com, AdBlock
-host, impservice.youdao.com, AdBlock
-host, log.yex.youdao.com, AdBlock
-host, log-yex.youdao.com, AdBlock
-host, n.3g.163.com, AdBlock
-host, nex.163.com, AdBlock
-host, yt-adp.nosdn.127.net, AdBlock
-host, yt-adp.ws.126.net, AdBlock
-# (P)
-# > PPTV
-host, ads.aplus.pptv.com, AdBlock
-host, ads.aplusapi.pptv.com, AdBlock
-host, asimgs.pplive.cn, AdBlock
-host, de.as.pptv.com, AdBlock
-# > Photoable
-host, regist.fotoable.com, AdBlock
-host, cdn.adapi.fotoable.com, AdBlock
-# > PeanutWiFiMpass
-host, adnew.wifi8.com, AdBlock
-host, adfile.wifi8.com, AdBlock
-# (R)
-# > 人人影视字幕组
-host, tu.cvnad.com, AdBlock
-host, tj.playcvn.com, AdBlock
-# (S)
-# > Sina
-host-suffix, beacon.sina.com.cn, AdBlock
-host, adimg.vue.weibo.com, AdBlock
-host, u1.img.mobile.sina.cn, AdBlock
-host, sax.sina.com.cn, AdBlock
-host, saxs.sina.com.cn, AdBlock
-host, saxn.sina.com.cn, AdBlock
-# > Sohu
-host-suffix, ad.sohu.com, AdBlock
-host-suffix, ads.sohu.com, AdBlock
-host-suffix, aty.sohu.com, AdBlock
-host, imp.optaim.com, AdBlock
-host, v2.reachmax.cn, AdBlock
-host, track.sohu.com, AdBlock
-host, hui.sohu.com, AdBlock
-# (T)
-# > Tencent
+# T
+# Tencent
 host-suffix, e.qq.com, AdBlock
 host-suffix, gdt.qq.com, AdBlock
 host-suffix, l.qq.com, AdBlock
@@ -530,56 +400,22 @@ host, splashqqlive.gtimg.com, AdBlock
 host, wa.gtimg.com, AdBlock
 host, wxsnsdy.wxs.qq.com, AdBlock
 host, wxsnsdythumb.wxs.qq.com, AdBlock
-# >>体育
-host, dp3.qq.com, AdBlock
-host, lives.l.qq.com, AdBlock
-# > The Paper
-host, admonitor.thepaper.cn, AdBlock
-host, adpai.thepaper.cn, AdBlock
-host, imgadpai.thepaper.cn, AdBlock
-# > Thunder
-host, adsp.xunlei.com, AdBlock
-host, etl.xlmc.sandai.net, AdBlock
-# > 同花顺
-host, adm.10jqka.com.cn, AdBlock
-host, stat.10jqka.com.cn, AdBlock
-# > 太平洋
-host, ad-analysis.pconline.com.cn, AdBlock
-host, iad0ssl.pcauto.com.cn, AdBlock
-host, iad0ssl.pconline.com.cn, AdBlock
-host, imgad0.pcauto.com.cn, AdBlock
-host, imgad0.pconline.com.cn, AdBlock
-host, ivy.pchouse.com.cn, AdBlock
-# (W)
-# > WiFi 万能钥匙
-host, a.wkanx.com, AdBlock
-host, cwx.lianwangtech.com, AdBlock
-host, c1wx.lianwangtech.com, AdBlock
-# (X)
-# > 喜马拉雅
+# X
+# 喜马拉雅
 host, ad.ximalaya.com, AdBlock
 host, adbs.ximalaya.com, AdBlock
 host, adse.ximalaya.com, AdBlock
 host, adse.wsa.ximalaya.com, AdBlock
 host, adbehavior.wsa.ximalaya.com, AdBlock
 host, adsebs.ximalaya.com, AdBlock
-# > 小红书
-host, ads-img-qc.xhscdn.com, AdBlock
-host, ads-video-qc.xhscdn.com, AdBlock
-host, t-ads.xiaohongshu.com, AdBlock
-# (Y)
-# > Youku
+# Y
+# Youku
 host-suffix, atm.youku.com, AdBlock
 host, ad.mobile.youku.com, AdBlock
 host, iyes.youku.com, AdBlock
-# > YouTube++
+# YouTube++
 host, ehg-youtube.hitbox.com, AdBlock
-# (Z)
-# > 知到
-host, app-advertise.zhihuishu.com, AdBlock
-# > 字节跳动
+# Z
+# 字节跳动
 host, sf3-ttcdn-tos.pstatp.com, AdBlock
 host, sf6-ttcdn-tos.pstatp.com, AdBlock
-# > ZOL
-host, apppv.zol.com.cn, AdBlock
-host, pvnapp.zol.com.cn, AdBlock
