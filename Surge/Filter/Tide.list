@@ -33,6 +33,7 @@ URL-REGEX,"^https?+:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid="
 # 百度
 # 百度地图
 URL-REGEX,"^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg"
+URL-REGEX,"^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads"
 
 # E
 # 饿了么 
