@@ -51,6 +51,7 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 # 百度
 # 百度地图
 ^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg url reject-200
+^https?+:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url reject-200
 
 # E
 # 饿了么 
