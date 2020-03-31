@@ -98,7 +98,7 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 ^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject-200
 # 苏宁
 ^https?+:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject-200
-^https?+:\/\/mpcs\.suning\.com\/mpcs\/dm\/ url reject-200getDmInfo
+^https?+:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject-200
 # 扫描全能王
 ^https?+:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ url reject-200
 
