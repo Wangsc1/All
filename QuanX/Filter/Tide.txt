@@ -64,7 +64,7 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 # J
 # 京东
 # > 京东
-^https?+:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts)$ url reject-200
+^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts)$ url reject-200
 ^https?+:\/\/b?dsp-x\.jd\.com\/adx\/ url reject-200
 ^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo url reject-200
 ^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject-200
