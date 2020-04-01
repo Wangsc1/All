@@ -1,4 +1,4 @@
-hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com, *.tiktokv.com, acs.m.taobao.com, api.jr.mi.com, api.m.jd.com, api.rr.tv, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, app.variflight.com, c.m.163.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com,gw.alicdn.com, heic.alicdn.com, jump2.bdimg.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, render.alipay.com, s*.zdmimg.com, image.suning.cn, mpcs.suning.com, ss0.bdstatic.com, newclient.map.baidu.com, *tieba.baidu.com, zhidao.baidu.com, www.zhihu.com
+hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com, *.tiktokv.com, acs.m.taobao.com, api.jr.mi.com, api.m.jd.com, api.rr.tv, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, app.variflight.com, c.m.163.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com,gw.alicdn.com, heic.alicdn.com, jump2.bdimg.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, render.alipay.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, *tieba.baidu.com, zhidao.baidu.com, www.zhihu.com
 
 
 # header-rewrite
@@ -97,9 +97,6 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 ^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject-200
 ^https?+:\/\/app-api\.smzdm\.com\/util\/loading url reject-200
 ^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject-200
-# 苏宁
-^https?+:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject-200
-^https?+:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject-200
 # 扫描全能王
 ^https?+:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ url reject-200
 
