@@ -184,16 +184,16 @@ host, temai.taobao.com, AdBlock
 host, tunion-api.m.taobao.com, AdBlock
 host, unitacs.m.taobao.com, AdBlock
 host, w.m.taobao.com, AdBlock
-# >> Umeng
+# Umeng
 host-suffix, umeng.com, AdBlock
 host-suffix, umengcloud.com, AdBlock
 host-suffix, umsns.com, AdBlock
 # Appsflyer
 host-suffix, appsflyer.com, AdBlock
 # Baidu
-host, hpd.baidu.com, AdBlock
-host, hm.baidu.com, AdBlock
 host-suffix, pos.baidu.com, AdBlock
+host, hm.baidu.com, AdBlock
+host, hpd.baidu.com, AdBlock
 # crashlytics
 host-suffix, crashlytics.com, AdBlock
 # Tencent
@@ -302,9 +302,9 @@ host-suffix, zu08e.cn, AdBlock
 host, abema-adx.ameba.jp, AdBlock
 host, ad-channel.woyeahgo.tk, AdBlock
 host, ad-cn.jovcloud.com, AdBlock
-host, ad.51wnl-cq.com, AdBlock
-host, ad.360in.com, AdBlock
 host, ad.12306.cn, AdBlock
+host, ad.360in.com, AdBlock
+host, ad.51wnl-cq.com, AdBlock
 host, ad.caiyunapp.com, AdBlock
 host, ad.huajiao.com, AdBlock
 host, ad.hzyoka.com, AdBlock
@@ -322,7 +322,6 @@ host, adserver.pandora.com, AdBlock
 host, adshow.58.com, AdBlock
 host, adui.tg.meitu.com, AdBlock
 host, adv.bandi.so, AdBlock
-host, api.adnet.mob.com, AdBlock
 host, app-ad.variflight.com, AdBlock
 host, appnext-a.akamaihd.net, AdBlock
 host, appnext.hs.llnwd.net, AdBlock
@@ -337,11 +336,6 @@ host, oset-api.open-adx.com, AdBlock
 host, sdkauth.hpplay.cn, AdBlock
 
 # A
-# Apple
-host-suffix, ads.internal.unity3d.com, AdBlock
-host-suffix, ads.prd.ie.internal.unity3d.com, AdBlock
-host-suffix, iadsdk.apple.com, AdBlock
-host-suffix, unityads.unity3d.com, AdBlock
 # Alibaba
 host, amdc.m.taobao.com, AdBlock
 host, optimus-ads.amap.com, AdBlock
@@ -350,6 +344,11 @@ host, tunion-api.m.taobao.com, AdBlock
 ip-cidr, 112.29.211.120/32, AdBlock
 ip-cidr, 203.119.206.64/32, AdBlock
 ip-cidr, 203.119.211.219/32, AdBlock
+# Apple
+host-suffix, ads.internal.unity3d.com, AdBlock
+host-suffix, ads.prd.ie.internal.unity3d.com, AdBlock
+host-suffix, iadsdk.apple.com, AdBlock
+host-suffix, unityads.unity3d.com, AdBlock
 # AutoHome
 host, adproxy.autohome.com.cn, AdBlock
 host, al.autohome.com.cn, AdBlock
@@ -382,6 +381,10 @@ host-suffix, doubleclick.net, AdBlock
 host-suffix, googleadservices.com, AdBlock
 host-suffix, googleadsserving.cn, AdBlock
 host-suffix, googlesyndication.com, AdBlock
+# J
+# 京东
+host, dns.jd.com, AdBlock
+host-suffix, 101.124.19.122/32, AdBlock
 # M
 # MI
 host-suffix, ad.intl.xiaomi.com, AdBlock
@@ -407,10 +410,10 @@ host, wxsnsdythumb.wxs.qq.com, AdBlock
 # X
 # 喜马拉雅
 host, ad.ximalaya.com, AdBlock
-host, adbs.ximalaya.com, AdBlock
-host, adse.ximalaya.com, AdBlock
-host, adse.wsa.ximalaya.com, AdBlock
 host, adbehavior.wsa.ximalaya.com, AdBlock
+host, adbs.ximalaya.com, AdBlock
+host, adse.wsa.ximalaya.com, AdBlock
+host, adse.ximalaya.com, AdBlock
 host, adsebs.ximalaya.com, AdBlock
 # Y
 # Youku
