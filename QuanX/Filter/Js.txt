@@ -1,4 +1,4 @@
-hostname = ios.prod.ftl.netflix.com,backend.getdrafts.com,ap*.intsig.net,api.diyidan.net,claritywallpaper.com
+hostname = ios.prod.ftl.netflix.com,backend.getdrafts.com,api.diyidan.net,claritywallpaper.com
 
 # 京东历史价格
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
@@ -13,9 +13,6 @@ hostname = ios.prod.ftl.netflix.com,backend.getdrafts.com,ap*.intsig.net,api.diy
 
 # Drafts
 ^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Drafts.js
-
-# 扫描全能王
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/CamScanner.js
 
 # 人人视频
 ^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/RRtv.js
