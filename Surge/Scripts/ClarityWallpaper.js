@@ -2,7 +2,7 @@
 克拉壁纸解锁付费壁纸
 
 Surge4：
-http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,max-size=262144,script-path=resources/js/clarity.js
+http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js
 QX：
 ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body clarity.js
 
