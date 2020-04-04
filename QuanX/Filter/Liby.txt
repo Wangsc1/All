@@ -337,13 +337,9 @@ host, sdkauth.hpplay.cn, AdBlock
 
 # A
 # Alibaba
-host, amdc.m.taobao.com, AdBlock
 host, optimus-ads.amap.com, AdBlock
 host, optimus-ads.amap.com.w.alikunlun.com, AdBlock
 host, tunion-api.m.taobao.com, AdBlock
-ip-cidr, 112.29.211.120/32, AdBlock
-ip-cidr, 203.119.206.64/32, AdBlock
-ip-cidr, 203.119.211.219/32, AdBlock
 # Apple
 host-suffix, ads.internal.unity3d.com, AdBlock
 host-suffix, ads.prd.ie.internal.unity3d.com, AdBlock
