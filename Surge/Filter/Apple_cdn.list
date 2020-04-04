@@ -1,4 +1,4 @@
-# Apple_CDN.list
+# Apple_cdn.list
 # > App Store
 USER-AGENT,com.apple.appstored*
 PROCESS-NAME,storedownloadd
