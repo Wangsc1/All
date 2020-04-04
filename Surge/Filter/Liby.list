@@ -380,6 +380,7 @@ DOMAIN-SUFFIX,googlesyndication.com
 # J
 # 京东
 DOMAIN,dns.jd.com
+IP-CIDR,101.124.19.122/32,no-resolve
 # M
 # MI
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
