@@ -1,6 +1,5 @@
 # Apple_cdn.list
 # Apple Music
-DOMAIN-SUFFIX,music.apple.com
 DOMAIN,aod.itunes.apple.com
 DOMAIN,api.smoot.apple.cn
 DOMAIN,mvod.itunes.apple.com
