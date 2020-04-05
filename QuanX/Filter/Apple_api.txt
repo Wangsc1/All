@@ -1,4 +1,4 @@
-# Apple_API.list
+# Apple_api.list
 host-suffix, aaplimg.com, Apple_API
 host-suffix, apple.co, Apple_API
 host-suffix, apple.com, Apple_API
