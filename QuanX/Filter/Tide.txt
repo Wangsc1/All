@@ -1,5 +1,8 @@
 hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com, *.tiktokv.com, acs.m.taobao.com, api.jr.mi.com, api.m.jd.com, api.rr.tv, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, app.variflight.com, c.m.163.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com,gw.alicdn.com, heic.alicdn.com, jump2.bdimg.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, render.alipay.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, *tieba.baidu.com, zhidao.baidu.com, www.zhihu.com
 
+# url-rewrite
+# Google Search
+^http:\/\/www\.google\.cn url 302 https://www.google.com
 
 # header-rewrite
 # 百度贴吧
@@ -9,12 +12,6 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 ^https?+:\/\/zhidao\.baidu\.com url request-header (\r\n)User-Agent:.+ request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
 # 知乎
 ^https?+:\/\/www\.zhihu\.com\/question url request-header (\r\n)User-Agent:.+ request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
-
-
-# url-rewrite
-# Google Search
-^http:\/\/www\.google\.cn url 302 https://www.google.com
-
 
 # Tide.list
 # Strong Stain Removal
