@@ -17,12 +17,9 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 # Strong Stain Removal
 # A
 # 阿里
-^https?+:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch url reject-200
 ^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
 # 1688
 ^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-200
-# 闲鱼
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject-200
 # 飞猪
 ^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
 # 淘宝
