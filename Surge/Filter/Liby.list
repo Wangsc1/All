@@ -363,14 +363,6 @@ DOMAIN,mobads.baidu.com
 DOMAIN,nsclick.baidu.com
 # ByteDance
 DOMAIN,ad.toutiao.com
-# ChinaTelecom
-DOMAIN,ad.21cn.com
-DOMAIN,ad.k.21cn.com
-DOMAIN,admarket.21cn.com
-DOMAIN,adshows.21cn.com
-# D
-# 懂球帝
-DOMAIN,ap.dongqiudi.com
 # G
 # Google
 DOMAIN-SUFFIX,doubleclick.net

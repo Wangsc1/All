@@ -363,14 +363,6 @@ host, mobads.baidu.com, AdBlock
 host, nsclick.baidu.com, AdBlock
 # ByteDance
 host, ad.toutiao.com, AdBlock
-# ChinaTelecom
-host, ad.21cn.com, AdBlock
-host, ad.k.21cn.com, AdBlock
-host, admarket.21cn.com, AdBlock
-host, adshows.21cn.com, AdBlock
-# D
-# 懂球帝
-host, ap.dongqiudi.com, AdBlock
 # G
 # Google
 host-suffix, doubleclick.net, AdBlock
