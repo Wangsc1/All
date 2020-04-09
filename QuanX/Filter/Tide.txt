@@ -1,4 +1,4 @@
-hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com, *.tiktokv.com, acs.m.taobao.com, api.jr.mi.com, api.m.jd.com, api.rr.tv, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, app.variflight.com, c.m.163.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com,gw.alicdn.com, heic.alicdn.com, jump2.bdimg.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, render.alipay.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, *tieba.baidu.com, zhidao.baidu.com, www.zhihu.com
+hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com, *.tiktokv.com, acs.m.taobao.com, api.jr.mi.com, api.m.jd.com, api.rr.tv, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, app.variflight.com, c.m.163.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com,gw.alicdn.com, heic.alicdn.com, jump2.bdimg.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, *tieba.baidu.com, zhidao.baidu.com, www.zhihu.com
 
 # url-rewrite
 # Google Search
@@ -18,19 +18,12 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 # A
 # 阿里
 ^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
-# 1688
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-200
-# 飞猪
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject-200
 # 淘宝
 ^https?+:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}+$ url reject-200
 ^https?+:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ url reject-200
 ^https?+:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ url reject-200
 # 淘票票
 ^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject-200
-# 口碑
-^https?+:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject-200
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject-200
 # 高德地图
 ^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 # 天猫
@@ -90,8 +83,6 @@ hostname = *.amemv.com, *.meituan.net, *.musical.ly, *.pstatp.com, *.snssdk.com,
 ^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject-200
 ^https?+:\/\/app-api\.smzdm\.com\/util\/loading url reject-200
 ^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject-200
-# 扫描全能王
-^https?+:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ url reject-200
 
 # T
 # 腾讯
