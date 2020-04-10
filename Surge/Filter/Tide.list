@@ -29,11 +29,6 @@ URL-REGEX,"^https?+:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads"
 URL-REGEX,"^https?+:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/"
 URL-REGEX,"^https?+:\/\/cube\.elemecdn\.com\/.*\.mp4\?$"
 
-# F
-# 飞常准
-URL-REGEX,"^https?+:\/\/app\.variflight\.com\/ad\/"
-URL-REGEX,"^https?+:\/\/app\.variflight\.com\/v\d\/advert\/"
-
 # J
 # 京东
 URL-REGEX,"^https?+:\/\/b?dsp-x\.jd\.com\/adx\/"
@@ -78,11 +73,6 @@ URL-REGEX,"^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|
 URL-REGEX,"^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad)"
 # QQ音乐
 URL-REGEX,"^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/"
-
-# W
-# 网易
-# 网易新闻
-URL-REGEX,"^https?+:\/\/c\.m\.163\.com\/nc\/gl\/"
 
 # X
 # 喜马拉雅
