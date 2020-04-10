@@ -88,7 +88,7 @@ URL-REGEX,"^https?+:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/c
 URL-REGEX,"^https?+:\/\/.+?\/img\/ad\.union\.api\/"
 # 中国银行
 URL-REGEX,"^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?"
-# 中国招商银行
+# 招商银行
 URL-REGEX,"^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/"
 # 中国移动
 URL-REGEX,"^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit"
