@@ -1,4 +1,4 @@
-hostname = mobwsa.ximalaya.com,h5.ele.me,api-hdcj.9w9.com,draw.jdfcloud.com
+hostname = mobwsa.ximalaya.com,h5.ele.me,api-hdcj.9w9.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -11,6 +11,3 @@ hostname = mobwsa.ximalaya.com,h5.ele.me,api-hdcj.9w9.com,draw.jdfcloud.com
 
 # 微信抽奖Cookie
 ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign url script-request-header https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery_new.js
-
-# 来客有礼Cookie
-^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
