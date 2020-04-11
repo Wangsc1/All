@@ -408,7 +408,3 @@ host, adsebs.ximalaya.com, AdBlock
 host-suffix, atm.youku.com, AdBlock
 host, ad.mobile.youku.com, AdBlock
 host, iyes.youku.com, AdBlock
-# Z
-# 字节跳动
-host, sf3-ttcdn-tos.pstatp.com, AdBlock
-host, sf6-ttcdn-tos.pstatp.com, AdBlock
