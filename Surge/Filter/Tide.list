@@ -79,13 +79,6 @@ URL-REGEX,"^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/"
 URL-REGEX,"^https?+:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime"
 URL-REGEX,"^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/"
 
-# Z
-# 字节跳动
-URL-REGEX,"^https?+:\/\/.+?\.pstatp\.com\/img\/ad"
-URL-REGEX,"^https?+:\/\/.+?\.(?>amemv|musical|snssdk|tiktokv)\.(?>com|ly)\/(?>api|motor)\/ad\/"
-URL-REGEX,"^https?+:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/"
-URL-REGEX,"^https?+:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/"
-URL-REGEX,"^https?+:\/\/.+?\/img\/ad\.union\.api\/"
 # 中国银行
 URL-REGEX,"^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?"
 # 招商银行
