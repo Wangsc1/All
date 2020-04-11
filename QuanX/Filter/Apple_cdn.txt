@@ -1,9 +1,4 @@
 # Apple_cdn.list
-# Apple Music
-host, aod.itunes.apple.com, Apple_cdn
-host, api.smoot.apple.cn, Apple_cdn
-host, music.apple.com, Apple_cdn
-host, mvod.itunes.apple.com, Apple_cdn
 # App Store
 user-agent, com.apple.appstored*, Apple_cdn
 host-suffix, mzstatic.com, Apple_cdn
