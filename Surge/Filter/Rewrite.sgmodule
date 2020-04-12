@@ -103,4 +103,4 @@
 ^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
 
 [MITM]
-hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com
+hostname = %APPEND% *.meituan.net, acs.m.taobao.com, api.jr.mi.com, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com
