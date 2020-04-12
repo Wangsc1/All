@@ -1,0 +1,107 @@
+#!name=Rewrite
+#!desc=重写
+#!system=ios
+
+[URL Rewrite]
+# GeoIp
+^(http|https)://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=Lxn9la8NsE4EW7Tj&suffix=tar.gz 302
+# Google Search
+^http:\/\/www\.google\.cn https://www.google.com 302
+# Tide.list
+# Strong Stain Removal
+# A
+# 阿里
+^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless
+# 高德地图
+^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/
+# 淘宝
+^https?+:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}+$
+^https?+:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$
+^https?+:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$
+# 淘票票
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/
+# 天猫
+^https?+:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4}
+# 优酷
+^https?+:\/\/.+?\.mp4\?ccode=0902
+^https?+:\/\/.+?\.mp4\?sid=
+^https?+:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid=
+
+# B
+# 百度
+# 百度地图
+^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg
+^https?+:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads
+
+# E
+# 饿了么 
+^https?+:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/
+^https?+:\/\/cube\.elemecdn\.com\/.*\.mp4\?$
+
+# J
+# 京东
+^https?+:\/\/b?dsp-x\.jd\.com\/adx\/
+^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
+^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
+
+# M
+# 小米
+^https?+:\/\/api\.m\.mi\.com\/v\d\/app\/start
+^https?+:\/\/api\.jr\.mi\.com\/v\d\/adv\/
+^https?+:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen
+^https?+:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\?
+# 美团
+^https?+:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$
+^https?+:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg
+^https?+:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp
+^https?+:\/\/s3plus\.meituan\.net\/.+?\/linglong\/.+?\.(?>gif|jpg|mp4)
+
+# P
+# 拼多多
+^https?+:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash
+
+# R
+# 人人视频
+^https?+:\/\/msspjh\.emarbox\.com\/getAdConfig
+^https?+:\/\/api\.videozhishi\.com\/api\/getAdvertising
+^https?+:\/\/api\.rr\.tv\/ad\/
+
+# S
+# 什么值得买
+^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading
+^https?+:\/\/app-api\.smzdm\.com\/util\/loading
+^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
+
+# T
+# 腾讯
+# 腾讯视频
+^https?+:\/\/btrace.qq.com
+^https?+:\/\/vv\.video\.qq\.com\/getvmind\?
+^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?
+# 微信
+^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad)
+# QQ音乐
+^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/
+
+# X
+# 喜马拉雅
+^https?+:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime
+^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/
+# Z
+# 中国银行
+^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
+# 招商银行
+^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
+# 中国移动
+^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit
+# 中国联通
+^https?+:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm
+^https?+:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)
+
+[Header Rewrite]
+# 知乎
+^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+
+[MITM]
+skip-server-cert-verify = true
+hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com
