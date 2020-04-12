@@ -1,0 +1,15 @@
+#!name=Cron
+#!desc=签到js
+#!system=ios
+
+[Script]
+# 来客有礼签到
+LKYL.js = type=cron,cronexp=7 0 * * *,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/LKYL.js,script-update-interval=0
+# 微信抽奖签到
+WeChatLottery_new.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery_new.js,cronexp=7 0 * * *,type=cron
+# 饿了么签到
+elemSign.js = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
+# 喜马拉雅签到
+ximalaya.js = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
+# 京东签到
+JD_DailyBonus.js = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
