@@ -8,9 +8,6 @@
 # Google Search
 ^http:\/\/www\.google\.cn https://www.google.com 302
 
-# Tide.list
-# Strong Stain Removal
-# A
 # 阿里
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless - reject
 # 高德地图
@@ -28,25 +25,20 @@
 ^https?:\/\/.+?\.mp4\?sid= - reject
 ^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid= - reject
 
-# B
-# 百度
 # 百度地图
 ^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg - reject
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
 
-# E
 # 饿了么 
 ^https?:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/ - reject
 ^https?:\/\/cube\.elemecdn\.com\/.*\.mp4\?$ - reject
 
-# J
 # 京东
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject-tinygif
 ^https?:\/\/b?dsp-x\.jd\.com\/adx\/ - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
 
-# M
 # 小米
 ^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start - reject
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ - reject
@@ -58,24 +50,19 @@
 ^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp - reject
 ^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/.+?\.(?>gif|jpg|mp4) - reject
 
-# P
 # 拼多多
 ^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash - reject
 
-# R
 # 人人视频
 ^https?:\/\/msspjh\.emarbox\.com\/getAdConfig - reject
 ^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising - reject
 ^https?:\/\/api\.rr\.tv\/ad\/ - reject
 
-# S
 # 什么值得买
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - reject
 
-# T
-# 腾讯
 # 腾讯视频
 ^https?:\/\/btrace.qq.com - reject
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
@@ -85,12 +72,10 @@
 # QQ音乐
 ^https?:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/ - reject
 
-# X
 # 喜马拉雅
 ^https?:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime - reject
 ^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/ - reject
 
-# Z
 # 中国银行
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? - reject
 # 招商银行
