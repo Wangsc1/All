@@ -1,5 +1,5 @@
 #!name=AdBlock
-#!desc=广告
+#!desc=广告屏蔽
 #!system=ios
 
 [Rule]

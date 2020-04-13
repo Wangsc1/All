@@ -1,5 +1,5 @@
 #!name=Cookie
-#!desc=缓存js
+#!desc=获取Cookie
 #!system=ios
 
 [Script]
