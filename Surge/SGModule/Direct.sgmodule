@@ -1,3 +1,8 @@
+#!name=Direct
+#!desc=直连规则
+#!system=ios
+
+[Rule]
 # Apple_cdn
 # App Store
 USER-AGENT,com.apple.appstored*
