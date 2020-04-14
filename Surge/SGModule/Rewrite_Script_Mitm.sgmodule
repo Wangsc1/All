@@ -1,20 +1,10 @@
-#!name=Rewrite_Script_Mitm
-#!desc=重写_脚本_主机名
+#!name=Script_Mitm
+#!desc=脚本_主机名
 #!system=ios
 
 [Rule]
 # 京东
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT-TINYGIF
-
-[URL Rewrite]
-# GeoIp
-^(http|https)://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=Lxn9la8NsE4EW7Tj&suffix=tar.gz 302
-# Google Search
-^http:\/\/www\.google\.cn https://www.google.com 302
-
-[Header Rewrite]
-# 知乎
-^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
 
 [Script]
 # 第一弹
