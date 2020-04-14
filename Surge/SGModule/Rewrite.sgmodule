@@ -1,5 +1,5 @@
 #!name=Rewrite
-#!desc=重写合集
+#!desc=重写规则
 #!system=ios
 
 [URL Rewrite]
