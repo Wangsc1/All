@@ -3,7 +3,73 @@
 #!system=ios
 
 [Rule]
+# 阿里
+URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless,REJECT
+# 高德地图
+URL-REGEX,^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/,REJECT
+# 淘宝
+URL-REGEX,^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}+$,REJECT
+URL-REGEX,^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$,REJECT
+URL-REGEX,^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$,REJECT
+# 淘票票
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/,REJECT
+# 天猫
+URL-REGEX,^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4},REJECT
+# 优酷
+URL-REGEX,^https?:\/\/.+?\.mp4\?ccode=0902,REJECT
+URL-REGEX,^https?:\/\/.+?\.mp4\?sid=,REJECT
+URL-REGEX,^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid=,REJECT
+# 百度地图
+URL-REGEX,^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg,REJECT
+URL-REGEX,^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads,REJECT
+# 饿了么 
+URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/,REJECT
+URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/.*\.mp4\?$,REJECT
+# 京东
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT-TINYGIF
+URL-REGEX,^https?:\/\/b?dsp-x\.jd\.com\/adx\/,REJECT
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo,REJECT
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture,REJECT
+# 小米
+URL-REGEX,^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start,REJECT
+URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/,REJECT
+URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen,REJECT
+URL-REGEX,^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\?,REJECT
+# 美团
+URL-REGEX,^https?:\/\/img\.meituan\.net\/(?>adunion|display|midas)\/.+?\.(gif|jpg|jpg\.webp)$,REJECT
+URL-REGEX,^https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg,REJECT
+URL-REGEX,^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp,REJECT
+URL-REGEX,^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/.+?\.(?>gif|jpg|mp4),REJECT
+# 拼多多
+URL-REGEX,^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash,REJECT
+# 人人视频
+URL-REGEX,^https?:\/\/msspjh\.emarbox\.com\/getAdConfig,REJECT
+URL-REGEX,^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising,REJECT
+URL-REGEX,^https?:\/\/api\.rr\.tv\/ad\/,REJECT
+# 什么值得买
+URL-REGEX,^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading,REJECT
+URL-REGEX,^https?:\/\/app-api\.smzdm\.com\/util\/loading,REJECT
+URL-REGEX,^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php,REJECT
+# 腾讯视频
+URL-REGEX,^https?:\/\/btrace.qq.com,REJECT
+URL-REGEX,^https?:\/\/vv\.video\.qq\.com\/getvmind\?,REJECT
+URL-REGEX,^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?,REJECT
+# 微信
+URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad),REJECT
+# QQ音乐
+URL-REGEX,^https?:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/,REJECT
+# 喜马拉雅
+URL-REGEX,^https?:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime,REJECT
+URL-REGEX,^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/,REJECT
+# 中国银行
+URL-REGEX,^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?,REJECT
+# 招商银行
+URL-REGEX,^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/,REJECT
+# 中国移动
+URL-REGEX,^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
+# 中国联通
+URL-REGEX,^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm,REJECT
+URL-REGEX,^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd),REJECT
 
 [URL Rewrite]
 # GeoIp
