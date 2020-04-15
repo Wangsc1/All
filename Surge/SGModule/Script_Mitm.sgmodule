@@ -7,8 +7,6 @@
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT-TINYGIF
 
 [Script]
-# 第一弹
-Diyidan.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Diyidan.js,script-update-interval=0
 # 人人视频
 RRtv.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/RRtv.js,script-update-interval=0
 # Drafts
@@ -23,4 +21,4 @@ nf_rating.js = type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.com/
 nf_rating.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% *.meituan.net, acs.m.taobao.com, api.jr.mi.com, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, api.m.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com, ios.prod.ftl.netflix.com, backend.getdrafts.com, api.rr.tv, api.diyidan.net
+hostname = %APPEND% *.meituan.net, acs.m.taobao.com, api.jr.mi.com, api.videozhishi.com, *api.smzdm.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, api.m.jd.com, msspjh.emarbox.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com, ios.prod.ftl.netflix.com, backend.getdrafts.com, api.rr.tv
