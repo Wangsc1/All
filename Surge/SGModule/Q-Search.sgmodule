@@ -6,7 +6,7 @@
 # 谷歌图片
 ^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
 # YouTube
-^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://m.youtube.com/results?search_query=$1 302
+^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://m.youtube.com/results?search_query=$1 302
 # Github
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 # 豆瓣
