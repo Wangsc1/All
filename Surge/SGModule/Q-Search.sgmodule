@@ -18,5 +18,7 @@
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
+^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://search.youku.com/search_video?keyword=$1 302
+
 [MITM]
 hostname = %APPEND% duckduckgo.com
