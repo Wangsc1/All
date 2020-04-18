@@ -36,7 +36,7 @@
 # 腾讯
 ^https:\/\/duckduckgo.com\/\?q=tx\+([^&]+).+ https://m.v.qq.com/search.html?act=0&keyWord=$1 302
 # 爱奇艺
-^https:\/\/duckduckgo.com\/\?q=iqi\+([^&]+).+ https://m.iqiyi.com/search.html?source=default&key=$1 302
+^https:\/\/duckduckgo.com\/\?q=iqi\+([^&]+).+ https://m.iqiyi.com/search.html?source=input&key=$1&pos=1&vfrm=2-3-0-1 302
 
 [MITM]
 hostname = %APPEND% duckduckgo.com
