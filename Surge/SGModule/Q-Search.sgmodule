@@ -10,7 +10,7 @@
 ^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
-^https:\/\/duckduckgo.com\/\?q=amzc\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+^https:\/\/duckduckgo.com\/\?q=amzz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 ^https:\/\/duckduckgo.com\/\?q=amzm\+([^&]+).+ https://www.amazon.com/gp/aw/s/?k=$1 302
 ^https:\/\/duckduckgo.com\/\?q=amzr\+([^&]+).+ https://www.amazon.co.jp/gp/aw/s/?k=$1 302
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
