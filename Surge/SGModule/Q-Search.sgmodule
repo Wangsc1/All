@@ -3,25 +3,39 @@
 #!system=ios
 
 [URL Rewrite]
-^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
-^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
-^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
-^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
-^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
-^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
-^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
-^https:\/\/duckduckgo.com\/\?q=amzz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
-^https:\/\/duckduckgo.com\/\?q=amzm\+([^&]+).+ https://www.amazon.com/gp/aw/s/?k=$1 302
-^https:\/\/duckduckgo.com\/\?q=amzr\+([^&]+).+ https://www.amazon.co.jp/gp/aw/s/?k=$1 302
-^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
-^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+# 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
-
+# 谷歌图片
+^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+# Github
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+# 豆瓣
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+# 知乎
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+# 微信公众号
+^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+# 有道翻译
+^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+# 值得买
+^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+# 亚马逊中国
+^https:\/\/duckduckgo.com\/\?q=amzz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+# 亚马逊美国
+^https:\/\/duckduckgo.com\/\?q=amzm\+([^&]+).+ https://www.amazon.com/gp/aw/s/?k=$1 302
+# 亚马逊日本
+^https:\/\/duckduckgo.com\/\?q=amzr\+([^&]+).+ https://www.amazon.co.jp/gp/aw/s/?k=$1 302
+# 京东
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+# 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+# 天猫
+^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+# 优酷
 ^https:\/\/duckduckgo.com\/\?q=yk\+([^&]+).+ https://search.youku.com/search_video?keyword=$1 302
-
+# 腾讯
 ^https:\/\/duckduckgo.com\/\?q=tx\+([^&]+).+ https://m.v.qq.com/search.html?act=0&keyWord=$1 302
-
+# 爱奇艺
 ^https:\/\/duckduckgo.com\/\?q=iqi\+([^&]+).+ https://m.iqiyi.com/search.html?source=default&key=$1 302
 
 [MITM]
