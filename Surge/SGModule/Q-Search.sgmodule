@@ -1,0 +1,13 @@
+#!name=Q-Search
+#!desc=Safari快捷搜索
+#!system=ios
+
+[URL Rewrite]
+^https:\/\/www.google.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/www.google.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/www.google.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/www.google.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+^https:\/\/www.google.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+
+[MITM]
+hostname = %APPEND% www.google.com
