@@ -161,3 +161,4 @@ function notify(notifys){
     console.log(notifys);
     $notify("AppMonitor","",notifys)
 }
+$done
