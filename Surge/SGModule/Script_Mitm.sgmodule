@@ -6,17 +6,17 @@
 # Fantastical
 Fantastical.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Fantastical.js
 # 人人视频
-RRtv.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/RRtv.js,script-update-interval=0
+RRtv.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/RRtv.js
 # Drafts
-Drafts.js = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/backend\.getdrafts\.com\/api\/.*\/verification*,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js,script-update-interval=0
+Drafts.js = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/backend\.getdrafts\.com\/api\/.*\/verification*,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js
 # 淘宝
-tb_price.js = type=http-request,requires-body=1,max-size=0,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,script-update-interval=0
-tb_price.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,script-update-interval=0
+tb_price.js = type=http-request,requires-body=1,max-size=0,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+tb_price.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 # 京东
-jd_price.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,script-update-interval=0
+jd_price.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 # Netflix
-nf_rating.js = type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,script-update-interval=0
-nf_rating.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,script-update-interval=0
+nf_rating.js = type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+nf_rating.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
 [MITM]
 hostname = %APPEND% ios.prod.ftl.netflix.com, backend.getdrafts.com, api.flexibits.com
