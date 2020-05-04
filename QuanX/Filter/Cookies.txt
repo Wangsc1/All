@@ -13,4 +13,4 @@ hostname = mobwsa.ximalaya.com, h5.ele.me, api-hdcj.9w9.com, draw.jdfcloud.com
 ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign url script-request-header https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery_new.js
 
 # 来客有礼Cookie
-https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/LKYL.js
+https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
