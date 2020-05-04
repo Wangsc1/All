@@ -41,6 +41,8 @@ ip-cidr, 109.239.140.0/24, Global
 ip-cidr, 149.154.160.0/20, Global
 
 # (Region-Restricted Access Denied)
+host-suffix, github.com, Global
+host-suffix, githubusercontent.com, Global
 host-suffix, apartmentratings.com, Global
 host-suffix, apartments.com, Global
 host-suffix, bankmobilevibe.com, Global
