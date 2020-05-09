@@ -361,8 +361,6 @@ host, duclick.baidu.com, AdBlock
 host, mobads-logs.baidu.com, AdBlock
 host, mobads.baidu.com, AdBlock
 host, nsclick.baidu.com, AdBlock
-# ByteDance
-host, ad.toutiao.com, AdBlock
 # G
 # Google
 host-suffix, doubleclick.net, AdBlock
