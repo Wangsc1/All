@@ -40,7 +40,7 @@ hostname = draw.jdfcloud.com
 ~~~~~~~~~~~~~~~~
 
 */
-const jdbean = "500" //兑换京豆数
+const jdbean = "200" //兑换京豆数
 const cookieName = '来客有礼小程序'
 const signurlKey = 'sy_signurl_lkyl'
 const signheaderKey = 'sy_signheader_lkyl'
