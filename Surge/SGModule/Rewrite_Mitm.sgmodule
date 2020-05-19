@@ -9,8 +9,6 @@ URL-REGEX,^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryM
 # GeoIp
 ^(http|https)://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=Lxn9la8NsE4EW7Tj&suffix=tar.gz 302
 
-# 1688
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject
 # 阿里
 ^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless - reject
 # 高德地图
@@ -65,8 +63,6 @@ URL-REGEX,^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryM
 ^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad) - reject
 # QQ音乐
 ^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/ - reject
-# 微店
-^https?+:\/\/thor\.weidian\.com\/ares\/home\.splash\/
 # 喜马拉雅
 ^https?+:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime - reject
 ^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/ - reject
