@@ -3,8 +3,6 @@
 #!system=ios
 
 [Script]
-# Fantastical
-Fantastical.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Fantastical.js
 # Drafts
 Drafts.js = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/backend\.getdrafts\.com\/api\/.*\/verification*,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js
 # 淘宝
@@ -17,4 +15,4 @@ nf_rating.js = type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.com/
 nf_rating.js = type=http-response,requires-body=1,max-size=0,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
 [MITM]
-hostname = %APPEND% ios.prod.ftl.netflix.com, backend.getdrafts.com, api.flexibits.com
+hostname = %APPEND% ios.prod.ftl.netflix.com, backend.getdrafts.com
