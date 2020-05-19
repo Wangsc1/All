@@ -1,6 +1,8 @@
 # Tide.list
 # Strong Stain Removal
 # A
+# 1688
+URL-REGEX,"^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv"
 # 阿里
 URL-REGEX,"^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless"
 # 高德地图
