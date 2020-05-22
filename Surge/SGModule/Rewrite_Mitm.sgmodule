@@ -59,9 +59,6 @@ URL-REGEX,^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryM
 ^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad) - reject
 # QQ音乐
 ^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/ - reject
-# 喜马拉雅
-^https?+:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime - reject
-^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/ - reject
 # 中国银行
 ^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? - reject
 # 招商银行
