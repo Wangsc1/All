@@ -3,12 +3,12 @@
 获取Cookie方法:
 1.将下方[rewrite_local]和[MITM]地址复制的相应的区域
 下，
-2.微信搜索'来客有礼'小程序,登陆京东账号，点击'发现',即可获取Cookie.
+2.微信搜索'来客有礼'小程序,登陆京东账号，点击'发现',即可获取Cookie，获取后请禁用或注释掉❗️
 3.非专业人士制作，欢迎各位大佬提出宝贵意见和指导
 4.5月17日增加自动兑换京豆，需设置兑换京豆数，现可根据100、200和500设置，不可设置随机兑换数，根据页面填写兑换数值，默认设置500，注意是京豆数❗️
 5.版本更新日志:
 05-19 v1.0: 变更通知方式
-
+05-25 v1.01 修复京豆兑换报错
 
 by Macsuny
 ~~~~~~~~~~~~~~~~
@@ -21,8 +21,8 @@ lkyl.js = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/
 ~~~~~~~~~~~~~~~~
 Loon 2.1.0+
 [Script]
-# 本地脚本
-cron "04 00 * * *" script-path=lkyl.js, enabled=true, tag=来客有礼
+
+cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, enabled=true, tag=来客有礼
 
 http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
@@ -82,7 +82,7 @@ async function all()
   await info();     // 账号信息
   await tasklist(); // 任务列表
   await total();    // 总计
-  await lottery();  // o元抽奖
+  await lottery();  // 0元抽奖
   await status();   // 视频抽奖
   await Daily();    // 日常任务
   await exChange(); // 银豆兑换
@@ -124,8 +124,10 @@ function lottery() {
       Incomplete = lotteryres.data.totalSteps - lotteryres.data.doneSteps
      if (Incomplete >0 ){
     for (k=0;task.data.homeActivities[k].participated==false&&k<Incomplete;k++){
+     if (k>=2){
        lotteryId = task.data.homeActivities[k].activityId
        cycleLucky()
+        }
        };
     detail +=  `\n【抽奖任务】: 🔕 ${Incomplete}个未完成`
      resolve()
@@ -148,17 +150,17 @@ function status() {
   //sy.log(`${cookieName}, data: ${data}`)
      taskstatus = JSON.parse(data)
       if (taskstatus.data.dailyTasks[1].status!='received'){
-    for (i=0;i<3;i++){
+    for (i=0;i<4;i++){
       video()} }
    else if (taskstatus.data.dailyTasks[1].status=='received'){
-   detail += `\n【视频任务】: ✅ 获得${taskstatus.data.dailyTasks[1].taskReward}个银豆` } 
-   weekresult = taskstatus.data.weeklyTasks[0].inviteAmount-taskstatus.data.weeklyTasks[0].finishedCount
+      detail += `\n【视频任务】: ✅ 获得${taskstatus.data.dailyTasks[1].taskReward}个银豆` } 
+      weekresult = taskstatus.data.weeklyTasks[0].inviteAmount-taskstatus.data.weeklyTasks[0].finishedCount
   if (weekresult >0){
       detail += `\n【每周任务】: 🔕 ${weekresult}个未完成`
       weektask()
     }
   else {
-     detail += `\n【每周任务】: ✅ 获得${taskstatus.data.weeklyTasks[0].taskReward}个银豆`
+      detail += `\n【每周任务】: ✅ 获得${taskstatus.data.weeklyTasks[0].taskReward}个银豆`
       }
     resolve()
    sy.msg(cookieName, '昵称: '+ uesername+' '+subTitle, detail)
@@ -283,19 +285,23 @@ function total() {
       let result = JSON.parse(data)
       const title = `${cookieName}`
    if (SilverBean >result.datas[0].salePrice) {
-    for (k=0; k < result.datas.length;k++){
-    if (result.datas[k].salePrice >= SilverBean && SilverBean > result.datas[k-1].salePrice)
-     {
-      detail= beantotal+ `${result.datas[k-1].salePrice}银豆兑换${result.datas[k-1].productName}`}
-
+  for (k=0; k < result.datas.length;k++){
+    if (SilverBean < result.datas[k].salePrice && SilverBean > result.datas[k-1].salePrice)
+     { 
+     detail += beantotal+ `${result.datas[k-1].salePrice}银豆兑换${result.datas[k-1].productName}`
+    }
+    else if (result.datas[k].salePrice == SilverBean)
+     { 
+      detail += beantotal+ `${result.datas[k].salePrice}银豆兑换${result.datas[k].productName}`
+     }
     }
    } else if (SilverBean < result.datas[0].salePrice) 
     { 
-       detail= beantotal+ `银豆不足以兑换京豆`
+       detail+= beantotal+ `银豆不足以兑换京豆`
     }
-else if (SilverBean = result.datas[0].salePrice) 
+else if (SilverBean == result.datas[0].salePrice) 
     { 
-       detail= beantotal+ `${result.datas[k-1].salePrice}银豆兑换${result.datas[k-1].productName}`
+       detail+= beantotal+ `${result.datas[0].salePrice}银豆兑换${result.datas[0].productName}`
        }
     resolve()
      })
