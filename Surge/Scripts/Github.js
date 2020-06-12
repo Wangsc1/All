@@ -18,16 +18,32 @@ const token = "0fd46c520f3a350d5b231254cf2c8e5b8738ae12";
 
 const repository = [
   {
-    name: "NZW9314 脚本",
-    url: "https://github.com/nzw9314/QuantumultX/tree/master",
+    name: "Github 脚本",
+    url: "https://github.com/Peng-YM/QuanX",
   },
   {
-    name: "ClashX",
-    url: "https://github.com/yichengchen/clashX/releases",
+    name: "Clash For Android",
+    url: "https://github.com/Kr328/ClashForAndroid/releases",
   },
   {
     name: "Chavy 脚本",
     url: "https://github.com/chavyleung/scripts",
+  },
+  {
+    name: "eHpo1 规则",
+    url: "https://github.com/eHpo1/Rules",
+  },
+  {
+    name: "NobyDa 脚本、规则",
+    url: "https://github.com/NobyDa/Script/tree/master",
+  },
+  {
+    name: "zZPiglet 脚本",
+    url: "https://github.com/zZPiglet/Task",
+  },
+  {
+    name: "Sunert 脚本",
+    url: "https://github.com/Sunert/Scripts/tree/master",
   }
 ];
 
