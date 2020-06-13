@@ -138,7 +138,7 @@ async function checkUpdate(item) {
             const { published_at, body } = releases[0];
             if (needUpdate(url, published_at)) {
               $notify(
-                `🎉🎉🎉 [${name}] 新版本发布`,
+                `🎉 [${name}] 新版本发布`,
                 `📦 版本: ${release_name}`,
                 `⏰ 发布于: ${formatTime(
                   published_at
@@ -165,7 +165,7 @@ async function checkUpdate(item) {
 
           if (needUpdate(url, published_at)) {
             $notify(
-              `🎉🎉🎉 [${name}] 新提交`,
+              `🎉 [${name}] 新提交`,
               "",
               `⏰ 提交于: ${formatTime(
                 published_at
