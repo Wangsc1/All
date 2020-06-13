@@ -142,7 +142,7 @@ async function checkUpdate(item) {
                 `📦 版本: ${release_name}`,
                 `⏰ 发布于: ${formatTime(
                   published_at
-                )}\n👨🏻‍💻 发布者: ${author}\n🔖 更新说明: \n${body}`
+                )}\n👨🏻‍💻 发布者: ${author}\n📑 更新说明: ${body}`
               );
               if (!debug){
                 $prefs.setValueForKey(published_at, url.hashCode());
@@ -169,7 +169,7 @@ async function checkUpdate(item) {
               "",
               `⏰ 提交于: ${formatTime(
                 published_at
-              )}\n👨🏻‍💻 发布者: ${author}\n🔖 更新说明: \n${body}`
+              )}\n👨🏻‍💻 发布者: ${author}\n📑 更新说明: ${body}`
             );
             // update stored timestamp
             if (!debug){
