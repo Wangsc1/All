@@ -1,17 +1,20 @@
 /**
- * 监控github仓库的commits和release。
- * @author: Peng-YM
+ * 2020年06月13日
+ * 1、监控github仓库的commits和release。
+ * 2、监控具体的文件或目录是否有更新。
+ * @author: Peng-YM， toulanboy
  * 更新地址：https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
  * 配置方法：
  * 1. 填写github token, 在github > settings > developer settings > personal access token 里面生成一个新token。
- * 默认TOKEN用的是我自己的，请不要请求过于频繁，每天一两次即可。例如：cron "0 9 * * *"
- * 2. 配置仓库地址，格式如下：
+ * 默认TOKEN用的是我自己的，请不要请求过于频繁，每天一两次即可。例如：cron "0 9 * * *"* 2. 配置仓库地址，格式如下：
  * {
- *  name: "仓库名称",
- *  url: "仓库的url"
+ *  name: "",//填写仓库名称，可自定义
+ *  file_name:[],//可选参数。若需要监控具体文件或目录。请填写对应的【一级目录】。
+ *  url: "" //仓库的url
  * }
  * 📌 如果希望监控某个分支的Commit，请切换到该分支，直接复制URL填入；
  * 📌 如果希望监控Release，请切换至Release界面，直接复制URL填入；
+ * 📌 若文件存在某个目录里面，请填写【一级目录】。如 JD-DailyBonus/JD-DailyBonus.js， 那么填写前面的JD-DailyBonus。
  */
 
 const token = "0fd46c520f3a350d5b231254cf2c8e5b8738ae12";
@@ -139,10 +142,10 @@ async function checkUpdate(item) {
             if (needUpdate(url, published_at)) {
               $notify(
                 `🎉 [${name}] 新版本发布`,
-                `🏷 版本: ${release_name}`,
-                `⏰ 发布于: ${formatTime(
+                `• 版本: ${release_name}`,
+                `• 发布于: ${formatTime(
                   published_at
-                )}\n👨🏻‍💻 发布者: ${author}\n📃 更新说明: ${body}`
+                )}\n• 发布者: ${author}\n• 更新说明: ${body}`
               );
               if (!debug){
                 $prefs.setValueForKey(published_at, url.hashCode());
@@ -162,19 +165,57 @@ async function checkUpdate(item) {
           const author = commit.committer.name;
           const body = commit.message;
           const published_at = commit.committer.date;
-
-          if (needUpdate(url, published_at)) {
-            $notify(
-              `🎉 [${name}] 新提交`,
-              "",
-              `⏰ 提交于: ${formatTime(
-                published_at
-              )}\n👨🏻‍💻 发布者: ${author}\n📃 更新说明: ${body}`
-            );
-            // update stored timestamp
-            if (!debug){
-              $prefs.setValueForKey(published_at, url.hashCode());
+          const file_url = commit.tree.url
+          //监控仓库是否有更新
+          if (!item.hasOwnProperty("file_name")) {
+            if (needUpdate(url, published_at)) {
+              $notify(
+                `🎉 [${name}] 新提交`,
+                "",
+                `• 提交于: ${formatTime(
+                  published_at
+                )}\n• 发布者: ${author}\n• 更新说明: ${body}`
+              );
+              // update stored timestamp
+              if (!debug){
+                $prefs.setValueForKey(published_at, url.hashCode());
+              }
             }
+          }
+          //找出具体的文件是否有更新
+          else {        
+            file_name = item.file_name;
+            $task
+            .fetch({
+              url: file_url,
+              headers,
+            })
+            .then((response) => {              
+              const file_detail = JSON.parse(response.body);
+              const file_list = file_detail.tree;
+              for (var i in file_list) {
+                for(var j in file_name){
+                  if (file_list[i].path == file_name[j]) {
+                    var file_hash = file_list[i].sha;
+                    last_sha = $prefs.valueForKey(file_name[j]);
+                    if (debug)
+                      last_sha = "111";
+                    if (file_hash != last_sha) { 
+                      $notify(
+                        `🐬 [${name}]`,
+                        "",
+                        `📌 ${file_name[j]}有更新`
+                      );
+                      if(!debug)
+                        $prefs.setValueForKey(file_hash, file_name[j]);
+                    }
+                    console.log(`🐬 ${file_name[j]}：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"}`);
+                      
+                  }
+                }
+              }       
+            })
+              .catch((e) => console.error(e));
           }
         })
         .catch((e) => console.error(e));
