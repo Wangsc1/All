@@ -38,7 +38,7 @@ hostname = draw.jdfcloud.com
 ~~~~~~~~~~~~~~~~
 
 */
-const challengebean= 200 //默认挑战赛100档
+const challengebean= 100 //默认挑战赛100档
 const jdbean = "500" //兑换京豆数
 const logs = 0   //响应日志开关,默认关闭
 const cookieName = '来客有礼小程序'
@@ -104,6 +104,7 @@ function sign() {
       subTitle = `签到失败，Cookie 失效❌`
       detail = `说明: ${result.errorMessage}`
       sy.msg(cookieName, subTitle, detail)
+      return
       }
      resolve()
      })
