@@ -165,7 +165,7 @@ async function checkUpdate(item) {
 
           if (needUpdate(url, published_at)) {
             $notify(
-              `❗️❗️❗️ [${name}] 新提交`,
+              `🎉🎉🎉 [${name}] 新提交`,
               "",
               `⏰ 提交于: ${formatTime(
                 published_at
