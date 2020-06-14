@@ -393,14 +393,6 @@ host, splashqqlive.gtimg.com, AdBlock
 host, wa.gtimg.com, AdBlock
 host, wxsnsdy.wxs.qq.com, AdBlock
 host, wxsnsdythumb.wxs.qq.com, AdBlock
-# X
-# 喜马拉雅
-host, ad.ximalaya.com, AdBlock
-host, adbehavior.wsa.ximalaya.com, AdBlock
-host, adbs.ximalaya.com, AdBlock
-host, adse.wsa.ximalaya.com, AdBlock
-host, adse.ximalaya.com, AdBlock
-host, adsebs.ximalaya.com, AdBlock
 # Y
 # Youku
 host-suffix, atm.youku.com, AdBlock
