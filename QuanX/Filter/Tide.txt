@@ -14,9 +14,6 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 # 知乎
 ^https?+:\/\/www\.zhihu\.com\/question url request-header (\r\n)User-Agent:.+ request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36$2
 
-# Tide.list
-# Strong Stain Removal
-# A
 # 阿里
 ^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless url reject-200
 # 淘宝
@@ -33,27 +30,17 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 ^https?+:\/\/.+?\.mp4\?ccode=0902 url reject-200
 ^https?+:\/\/.+?\.mp4\?sid= url reject-200
 ^https?+:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid= url reject-200
-
-# B
-# 百度
 # 百度地图
 ^https?+:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg url reject-200
 ^https?+:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url reject-200
-
-# E
 # 饿了么 
 ^https?+:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/ url reject-200
 ^https?+:\/\/cube\.elemecdn\.com\/.*\.mp4\?$ url reject-200
-
-# J
 # 京东
-# > 京东
 ^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ url reject-200
 ^https?+:\/\/b?dsp-x\.jd\.com\/adx\/ url reject-200
 ^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo url reject-200
 ^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject-200
-
-# M
 # 小米
 ^https?+:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
 ^https?+:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
@@ -64,25 +51,12 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 ^https?+:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+?\.jpg url reject-200
 ^https?+:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+?\.jpg\?may_covertWebp url reject-200
 ^https?+:\/\/s3plus\.meituan\.net\/.+?\/linglong\/.+?\.(?>gif|jpg|mp4) url reject-200
-
-# P
 # 拼多多
 ^https?+:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject-200
-
-# R
-# 人人视频
-^https?+:\/\/msspjh\.emarbox\.com\/getAdConfig url reject-200
-^https?+:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject-200
-^https?+:\/\/api\.rr\.tv\/ad\/ url reject-200
-
-# S
 # 什么值得买
 ^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject-200
 ^https?+:\/\/app-api\.smzdm\.com\/util\/loading url reject-200
 ^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject-200
-
-# T
-# 腾讯
 # 腾讯视频
 ^https?+:\/\/btrace.qq.com url reject-200
 ^https?+:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
@@ -91,12 +65,6 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 ^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad) url reject-200
 # QQ音乐
 ^https?+:\/\/[\s\S]*\/music\/common\/upload\/t_splash_info\/ url reject-200
-
-# X
-# 喜马拉雅
-^https?+:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime url reject-200
-^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/ url reject-200
-
 # 中国银行
 ^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? url reject-200
 # 招商银行
