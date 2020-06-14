@@ -19,3 +19,5 @@ ip-cidr, 144.178.48.0/20, Apple_API
 ip-cidr, 192.35.50.0/24, Apple_API
 ip-cidr, 198.183.17.0/24, Apple_API
 ip-cidr, 205.180.175.0/24, Apple_API
+# Apple News
+host-suffix, apple.news, Apple_API
