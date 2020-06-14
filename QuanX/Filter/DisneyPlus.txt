@@ -1,0 +1,7 @@
+# > Disney+
+user-agent, Disney+*, Global
+host-suffix, bamgrid.com, Global
+host-suffix, disney-plus.net, Global
+host-suffix, disneyplus.com, Global
+host-suffix, dssott.com, Global
+host, cdn.registerdisney.go.com, Global
