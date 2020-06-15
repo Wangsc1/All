@@ -14,10 +14,10 @@ const $ = new cmp()
 let point = "alipays://platformapi/startapp?appId=20000160&url=/www/myPoints.html"
 let mayi = "alipay://platformapi/startapp?appId=60000002"
 
-$.notify("📢 支付宝", "", "🎗 领积分啦", point)
+$.notify("📢 支付宝", "", "🍀 收能量啦", mayi)
 
 setTimeout(() => {
-    $.notify("📢 支付宝", "", "🍀 收能量啦", mayi)
+    $.notify("📢 支付宝", "", "🎗 领积分啦", point)
 }, delay)
 
 $done()
