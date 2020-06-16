@@ -25,7 +25,7 @@ const repositories = [
     url: "https://github.com/Peng-YM/QuanX",
   },
   {
-    name: "Clash For Android",
+    name: "ClashAndroid",
     url: "https://github.com/Kr328/ClashForAndroid/releases",
   },
   {
