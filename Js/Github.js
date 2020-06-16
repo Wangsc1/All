@@ -21,7 +21,7 @@ const token = "6b96bb5c312c1080400ebaab6d1b8dc6423beefb";
 
 const repositories = [
   {
-    name: "Github 脚本",
+    name: "Peng-YM",
     url: "https://github.com/Peng-YM/QuanX",
   },
   {
@@ -29,31 +29,31 @@ const repositories = [
     url: "https://github.com/Kr328/ClashForAndroid/releases",
   },
   {
-    name: "Chavy 脚本",
+    name: "Chavyleung",
     url: "https://github.com/chavyleung/scripts",
   },
   {
-    name: "Qure 图标",
+    name: "Qure",
     url: "https://github.com/Koolson/Qure",
   },
   {
-    name: "Orz-mini 图标",
+    name: "Orz-3",
     url: "https://github.com/Orz-3/mini",
   },
   {
-    name: "eHpo1 规则",
+    name: "eHpo1",
     url: "https://github.com/eHpo1/Rules",
   },
   {
-    name: "NobyDa 脚本、规则",
+    name: "NobyDa",
     url: "https://github.com/NobyDa/Script/tree/master",
   },
   {
-    name: "zZPiglet 脚本",
+    name: "zZPiglet",
     url: "https://github.com/zZPiglet/Task",
   },
   {
-    name: "Sunert 脚本",
+    name: "Sunert",
     url: "https://github.com/Sunert/Scripts/tree/master",
   }
 ];
