@@ -9,7 +9,7 @@
  * 默认TOKEN用的是我自己的，请不要请求过于频繁，每天一两次即可。例如：cron "0 9 * * *"* 2. 配置仓库地址，格式如下：
  * {
  *  name: "",//填写仓库名称，可自定义
- *  file_name:[],//可选参数。若需要监控具体文件或目录。请填写对应的【一级目录】。
+ *  file_names:[],//可选参数。若需要监控具体文件或目录。请填写对应的【一级目录】。
  *  url: "" //仓库的url
  * }
  * 📌 如果希望监控某个分支的Commit，请切换到该分支，直接复制URL填入；
@@ -134,11 +134,11 @@ async function checkUpdate(item) {
             }
             if (needUpdate(url, published_at)) {
               $.notify(
-                `🎉 ${name} 新版本发布`,
-                `• 版本: ${release_name}`,
-                `• 发布于: ${formatTime(
+                `🎉🎉🎉 [${name}] 新版本发布`,
+                `📦 版本: ${release_name}`,
+                `⏰ 发布于: ${formatTime(
                   published_at
-                )}\n• 发布者: ${author}\n• 更新说明: ${body}`,
+                )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`,
                 notificationURL
               );
               $.write(published_at, hash(url));
@@ -173,11 +173,11 @@ async function checkUpdate(item) {
       if (!item.hasOwnProperty("file_names")) {
         if (needUpdate(url, published_at)) {
           $.notify(
-            `🎉 ${name} 新提交`,
+            `🎈🎈🎈 [${name}] 新提交`,
             "",
-            `• 提交于: ${formatTime(
+            `⏰ 提交于: ${formatTime(
               published_at
-            )}\n• 发布者: ${author}\n• 更新说明: ${body}`,
+            )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`,
             notificationURL
           );
           // update stored timestamp
