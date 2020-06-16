@@ -50,11 +50,8 @@ const repository = [
   }
 ];
 
-const debug = false;
+const $ = API("github");
 
-/******************** 转换器 ********************/
-let q=null!=$task,s=null!=$httpClient;var $task=q?$task:{},$httpClient=s?$httpClient:{},$prefs=q?$prefs:{},$persistentStore=s?$persistentStore:{},$notify=q?$notify:{},$notification=s?$notification:{};if(q){var errorInfo={error:""};$httpClient={get:(t,r)=>{var e;e="string"==typeof t?{url:t}:t,$task.fetch(e).then(t=>{r(void 0,t,t.body)},t=>{errorInfo.error=t.error,r(errorInfo,response,"")})},post:(t,r)=>{var e;e="string"==typeof t?{url:t}:t,t.method="POST",$task.fetch(e).then(t=>{r(void 0,t,t.body)},t=>{errorInfo.error=t.error,r(errorInfo,response,"")})}}}s&&($task={fetch:t=>new Promise((r,e)=>{"POST"==t.method?$httpClient.post(t,(t,e,o)=>{e?(e.body=o,r(e,{error:t})):r(null,{error:t})}):$httpClient.get(t,(t,e,o)=>{e?(e.body=o,r(e,{error:t})):r(null,{error:t})})})}),q&&($persistentStore={read:t=>$prefs.valueForKey(t),write:(t,r)=>$prefs.setValueForKey(t,r)}),s&&($prefs={valueForKey:t=>$persistentStore.read(t),setValueForKey:(t,r)=>$persistentStore.write(t,r)}),q&&($notification={post:(t,r,e)=>{$notify(t,r,e)}}),s&&($notify=function(t,r,e){$notification.post(t,r,e)});
-/******************** 转换器 ********************/
 const parser = {
   commits: new RegExp(
     /^https:\/\/github.com\/([\w|-]+)\/([\w|-]+)(\/tree\/([\w|-]+))?$/
@@ -62,62 +59,55 @@ const parser = {
   releases: new RegExp(/^https:\/\/github.com\/([\w|-]+)\/([\w|-]+)\/releases/),
 };
 
-const baseURL = "https://api.github.com";
-
-Object.defineProperty(String.prototype, "hashCode", {
-  value: function () {
-    var hash = 0,
+function hash(str) {
+  let hash = 0,
       i,
       chr;
-    for (i = 0; i < this.length; i++) {
-      chr = this.charCodeAt(i);
+    for (i = 0; i < str.length; i++) {
+      chr = str.charCodeAt(i);
       hash = (hash << 5) - hash + chr;
       hash |= 0; // Convert to 32bit integer
     }
     return String(hash);
-  },
-});
+}
 
 function parseURL(url) {
   try {
-    let repository = undefined;
+    let repo = undefined;
     if (url.indexOf("releases") !== -1) {
       const results = url.match(parser.releases);
-      repository = {
+      repo = {
         type: "releases",
         owner: results[1],
         repo: results[2],
       };
     } else {
       const results = url.match(parser.commits);
-      repository = {
+      repo = {
         type: "commits",
         owner: results[1],
         repo: results[2],
         branch: results[3] === undefined ? "HEAD" : results[4],
       };
     }
-    if (debug) {
-      console.log(repository);
-    }
-    return repository;
+    $.log(repo);
+    return repo;
   } catch (error) {
-    $notify("Github 监控", "", `❌ URL ${url} 解析错误！`);
+    $.notify("Github 监控", "", `❌ URL ${url} 解析错误！`);
     throw error;
   }
 }
 
 function needUpdate(url, timestamp) {
-  const storedTimestamp = $prefs.valueForKey(url.hashCode());
-  if (debug){
-    console.log(`Stored Timestamp for ${url.hashCode()}: ` + storedTimestamp);
-  }
+  const storedTimestamp = $.read(hash(url));
+  $.log(`Stored Timestamp for ${hash(url)}: ` + storedTimestamp);
   return storedTimestamp === undefined || storedTimestamp !== timestamp
     ? true
     : false;
 }
 
 async function checkUpdate(item) {
+  const baseURL = "https://api.github.com";
   const { name, url } = item;
   const headers = {
     Authorization: `token ${token}`,
@@ -127,11 +117,10 @@ async function checkUpdate(item) {
   try {
     const repository = parseURL(url);
     if (repository.type === "releases") {
-      await $task
-        .fetch({
-          url: `${baseURL}/repos/${repository.owner}/${repository.repo}/releases`,
-          headers,
-        })
+      await $.get({
+        url: `${baseURL}/repos/${repository.owner}/${repository.repo}/releases`,
+        headers,
+      })
         .then((response) => {
           const releases = JSON.parse(response.body);
           if (releases.length > 0) {
@@ -139,91 +128,105 @@ async function checkUpdate(item) {
             const release_name = releases[0].name;
             const author = releases[0].author.login;
             const { published_at, body } = releases[0];
+            const notificationURL = {
+              "open-url": `https://github.com/${repository.owner}/${repository.repo}/releases`,
+              "media-url": `https://raw.githubusercontent.com/Orz-3/task/master/github.png`
+            }
             if (needUpdate(url, published_at)) {
-              $notify(
+              $.notify(
                 `🎉 ${name} 新版本发布`,
                 `• 版本: ${release_name}`,
                 `• 发布于: ${formatTime(
                   published_at
-                )}\n• 发布者: ${author}\n• 更新说明: ${body}`
+                )}\n• 发布者: ${author}\n• 更新说明: ${body}`,
+                notificationURL
               );
-              if (!debug){
-                $prefs.setValueForKey(published_at, url.hashCode());
-              }
+              $.write(published_at, hash(url));
             }
           }
         })
-        .catch((e) => console.error(e));
+        .catch((e) => {
+          $.error(e);
+        });
     } else {
-      await $task
-        .fetch({
-          url: `${baseURL}/repos/${repository.owner}/${repository.repo}/commits/${repository.branch}`,
-          headers,
-        })
+      const { author, body, published_at, file_url } = await $.get({
+        url: `${baseURL}/repos/${repository.owner}/${repository.repo}/commits/${repository.branch}`,
+        headers,
+      })
         .then((response) => {
           const { commit } = JSON.parse(response.body);
           const author = commit.committer.name;
           const body = commit.message;
           const published_at = commit.committer.date;
-          const file_url = commit.tree.url
-          //监控仓库是否有更新
-          if (!item.hasOwnProperty("file_name")) {
-            if (needUpdate(url, published_at)) {
-              $notify(
-                `🎉 ${name} 新提交`,
-                "",
-                `• 提交于: ${formatTime(
-                  published_at
-                )}\n• 发布者: ${author}\n• 更新说明: ${body}`
-              );
-              // update stored timestamp
-              if (!debug){
-                $prefs.setValueForKey(published_at, url.hashCode());
+          const file_url = commit.tree.url;
+          return { author, body, published_at, file_url };
+        })
+        .catch((e) => {
+          $.error(e);
+        });
+      $.log({ author, body, published_at, file_url });
+      const notificationURL = {
+        "open-url": `https://github.com/${repository.owner}/${repository.repo}/commits/${repository.branch}`,
+        "media-url": `https://raw.githubusercontent.com/Orz-3/task/master/github.png`
+      }
+      //监控仓库是否有更新
+      if (!item.hasOwnProperty("file_names")) {
+        if (needUpdate(url, published_at)) {
+          $.notify(
+            `🎉 ${name} 新提交`,
+            "",
+            `• 提交于: ${formatTime(
+              published_at
+            )}\n• 发布者: ${author}\n• 更新说明: ${body}`,
+            notificationURL
+          );
+          // update stored timestamp
+          $.write(published_at, hasn(url));
+        }
+      }
+      //找出具体的文件是否有更新
+      else {
+        const file_names = item.file_names;
+        await $.get({
+          url: file_url,
+          headers,
+        })
+          .then((response) => {
+            const file_detail = JSON.parse(response.body);
+            const file_list = file_detail.tree;
+            for (let i in file_list) {
+              for (let j in file_names) {
+                if (file_list[i].path == file_names[j]) {
+                  let file_hash = file_list[i].sha;
+                  let last_sha = $.read(
+                    hash(item.name + file_names[j])
+                  );
+                  if (file_hash != last_sha) {
+                    $.notify(`🐬 [${name}]`, "", `📌 ${file_names[j]}有更新`, notificationURL);
+                    $.write(file_hash, hash(item.name + file_names[j]));
+                  }
+
+                  $.log(
+                    `🐬 ${
+                      file_names[j]
+                    }：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${
+                      file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"
+                    }`
+                  );
+                }
               }
             }
-          }
-          //找出具体的文件是否有更新
-          else {        
-            file_name = item.file_name;
-            $task
-            .fetch({
-              url: file_url,
-              headers,
-            })
-            .then((response) => {              
-              const file_detail = JSON.parse(response.body);
-              const file_list = file_detail.tree;
-              for (var i in file_list) {
-                for(var j in file_name){
-                  if (file_list[i].path == file_name[j]) {
-                    var file_hash = file_list[i].sha;
-                    last_sha = $prefs.valueForKey(file_name[j]);
-                    if (debug)
-                      last_sha = "111";
-                    if (file_hash != last_sha) { 
-                      $notify(
-                        `🐬 [${name}]`,
-                        "",
-                        `📌 ${file_name[j]}有更新`
-                      );
-                      if(!debug)
-                        $prefs.setValueForKey(file_hash, file_name[j]);
-                    }
-                    console.log(`🐬 ${file_name[j]}：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"}`);
-                      
-                  }
-                }
-              }       
-            })
-              .catch((e) => console.error(e));
-          }
-        })
-        .catch((e) => console.error(e));
+          })
+          .catch((e) => {
+            $.error(e);
+          });
+      }
     }
   } catch (e) {
-    console.log(`❌ 请求错误: ${e}`);
+    $.error(`❌ 请求错误: ${e}`);
     return;
   }
+  return;
 }
 
 function formatTime(timestamp) {
@@ -233,6 +236,11 @@ function formatTime(timestamp) {
   }月${date.getDate()}日${date.getHours()}时`;
 }
 
-Promise.all(repository.map(async (item) => await checkUpdate(item))).then(() =>
-  $done()
-);
+Promise.all(
+  repositories.map(async (item) => await checkUpdate(item))
+).finally(() => $.done());
+
+// prettier-ignore
+/*********************************** API *************************************/
+function API(t="untitled",i=!1){return new class{constructor(t,i){this.name=t,this.debug=i,this.isQX="undefined"!=typeof $task,this.isLoon="undefined"!=typeof $loon,this.isSurge="undefined"!=typeof $httpClient&&!this.isLoon,this.isNode="function"==typeof require,this.node=(()=>this.isNode?{request:require("request"),fs:require("fs")}:null)(),this.cache=this.initCache(),this.log(`INITIAL CACHE:\n${JSON.stringify(this.cache)}`),Promise.prototype.delay=function(t){return this.then(function(i){return((t,i)=>new Promise(function(e){setTimeout(e.bind(null,i),t)}))(t,i)})}}get(t){return this.isQX?("string"==typeof t&&(t={url:t,method:"GET"}),$task.fetch(t)):this.isLoon||this.isSurge?$httpClient.get(t):this.isNode?new Promise((i,e)=>{this.node.request(t,(t,s)=>{t?e(t):i(s)})}):void 0}post(t){return this.isQX?$task.fetch(t):this.isLoon||this.isSurge?$httpClient.post(t):this.isNode?new Promise((i,e)=>{this.node.request.post(t,(t,s)=>{t?e(t):i(s)})}):void 0}initCache(){if(this.isQX)return $prefs.valueForKey(this.name)||{};if(this.isLoon||this.isSurge)return $persistentStore.read(this.name)||{};if(this.isNode){const t=`${this.name}.json`;return this.node.fs.existsSync(t)?JSON.parse(this.node.fs.readFileSync(`${this.name}.json`)):(this.node.fs.writeFileSync(t,JSON.stringify({}),{flag:"wx"},t=>console.log(t)),{})}}persistCache(){const t=this.cache;this.isQX&&$prefs.setValueForKey(t,this.name),this.isSurge&&$persistentStore.write(t,this.name),this.isNode&&this.node.fs.writeFileSync(`${this.name}.json`,JSON.stringify(t),{flag:"w"},t=>console.log(t))}write(t,i){this.log(`SET ${i} = ${t}`),this.cache={...this.cache,[i]:t}}read(t){return this.log(`READ ${t}`),this.cache[t]}delete(t){this.log(`DELETE ${t}`),this.write(void 0,t)}notify(t,i,e,s){const o="string"==typeof s?s:void 0,n=e+(null==o?"":`\n${o}`);this.isQX&&(void 0!==o?$notify(t,i,e,{"open-url":o}):$notify(t,i,e,s)),this.isSurge&&$notification.post(t,i,n),this.isLoon&&$notification.post(t,i,e,o),this.isNode&&console.log(`${t}\n${i}\n${n}`)}log(t){this.debug&&console.log(t)}info(t){console.log(t)}error(t){this.log("ERROR: "+t)}wait(t){return new Promise(i=>setTimeout(i,t))}done(t={}){this.persistCache(),this.isQX&&$done(t),(this.isLoon||this.isSurge)&&$done(t)}formatTime(t){const i=new Date(t);return`${i.getFullYear()}年${i.getMonth()+1}月${i.getDate()}日${i.getHours()}时`}}(t,i)}
+/*****************************************************************************/
