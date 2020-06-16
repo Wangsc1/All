@@ -19,35 +19,37 @@
 
 const token = "0fd46c520f3a350d5b231254cf2c8e5b8738ae12";
 
-const repository = [
+const repositories = [
   {
-    name: "Github 脚本",
-    url: "https://github.com/Peng-YM/QuanX",
+    name: "NZW9314 脚本",
+    url: "https://github.com/nzw9314/QuantumultX/tree/master",
   },
   {
-    name: "Clash For Android",
-    url: "https://github.com/Kr328/ClashForAndroid/releases",
+    name: "ClashX",
+    url: "https://github.com/yichengchen/clashX/releases",
   },
   {
     name: "Chavy 脚本",
     url: "https://github.com/chavyleung/scripts",
   },
   {
-    name: "eHpo1 规则",
-    url: "https://github.com/eHpo1/Rules",
+    name: "Qure 图标",
+    url: "https://github.com/Koolson/Qure",
   },
   {
-    name: "NobyDa 脚本、规则",
+    name: "Orz-mini 图标",
+    url: "https://github.com/Orz-3/mini",
+  },
+  {
+    name: "yichahucha -- 微博广告",
+    file_names: ["wb_ad.js", "wb_launch.js"],
+    url: "https://github.com/yichahucha/surge/tree/master",
+  },
+  {
+    name: "NobyDa -- 京豆签到",
+    file_names: ["JD-DailyBonus"],
     url: "https://github.com/NobyDa/Script/tree/master",
   },
-  {
-    name: "zZPiglet 脚本",
-    url: "https://github.com/zZPiglet/Task",
-  },
-  {
-    name: "Sunert 脚本",
-    url: "https://github.com/Sunert/Scripts/tree/master",
-  }
 ];
 
 const $ = API("github");
