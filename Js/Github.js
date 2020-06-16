@@ -17,16 +17,16 @@
  * 📌 若文件存在某个目录里面，请填写【一级目录】。如 JD-DailyBonus/JD-DailyBonus.js， 那么填写前面的JD-DailyBonus。
  */
 
-const token = "784a03feb07989d3339dfa41c7eb41777436cbfa";
+const token = "6b96bb5c312c1080400ebaab6d1b8dc6423beefb";
 
 const repositories = [
   {
-    name: "NZW9314 脚本",
-    url: "https://github.com/nzw9314/QuantumultX/tree/master",
+    name: "Github 脚本",
+    url: "https://github.com/Peng-YM/QuanX",
   },
   {
-    name: "ClashX",
-    url: "https://github.com/yichengchen/clashX/releases",
+    name: "Clash For Android",
+    url: "https://github.com/Kr328/ClashForAndroid/releases",
   },
   {
     name: "Chavy 脚本",
@@ -41,15 +41,21 @@ const repositories = [
     url: "https://github.com/Orz-3/mini",
   },
   {
-    name: "yichahucha -- 微博广告",
-    file_names: ["wb_ad.js", "wb_launch.js"],
-    url: "https://github.com/yichahucha/surge/tree/master",
+    name: "eHpo1 规则",
+    url: "https://github.com/eHpo1/Rules",
   },
   {
-    name: "NobyDa -- 京豆签到",
-    file_names: ["JD-DailyBonus"],
+    name: "NobyDa 脚本、规则",
     url: "https://github.com/NobyDa/Script/tree/master",
   },
+  {
+    name: "zZPiglet 脚本",
+    url: "https://github.com/zZPiglet/Task",
+  },
+  {
+    name: "Sunert 脚本",
+    url: "https://github.com/Sunert/Scripts/tree/master",
+  }
 ];
 
 const $ = API("github");
