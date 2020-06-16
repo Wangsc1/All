@@ -142,7 +142,7 @@ async function checkUpdate(item) {
             }
             if (needUpdate(url, published_at)) {
               $.notify(
-                `🎉🎉🎉 [${name}] 新版本发布`,
+                `🎉 ${name} 新版本发布`,
                 `📦 版本: ${release_name}`,
                 `⏰ 发布于: ${formatTime(
                   published_at
@@ -181,7 +181,7 @@ async function checkUpdate(item) {
       if (!item.hasOwnProperty("file_names")) {
         if (needUpdate(url, published_at)) {
           $.notify(
-            `🎈🎈🎈 [${name}] 新提交`,
+            `🎉 ${name} 新提交`,
             "",
             `⏰ 提交于: ${formatTime(
               published_at
@@ -210,12 +210,12 @@ async function checkUpdate(item) {
                     hash(item.name + file_names[j])
                   );
                   if (file_hash != last_sha) {
-                    $.notify(`🐬 [${name}]`, "", `📌 ${file_names[j]}有更新`, notificationURL);
+                    $.notify(`🎉 ${name}`, "", `📌 ${file_names[j]}有更新`, notificationURL);
                     $.write(file_hash, hash(item.name + file_names[j]));
                   }
 
                   $.log(
-                    `🐬 ${
+                    `🎉 ${
                       file_names[j]
                     }：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${
                       file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"
