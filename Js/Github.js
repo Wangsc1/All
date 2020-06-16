@@ -146,7 +146,7 @@ async function checkUpdate(item) {
                 `📦 版本: ${release_name}`,
                 `⏰ 发布于: ${formatTime(
                   published_at
-                )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: ${body}`,
+                )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`,
                 notificationURL
               );
               $.write(published_at, hash(url));
@@ -185,7 +185,7 @@ async function checkUpdate(item) {
             "",
             `⏰ 提交于: ${formatTime(
               published_at
-            )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: ${body}`,
+            )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`,
             notificationURL
           );
           // update stored timestamp
