@@ -1,4 +1,4 @@
-hostname = h5.ele.me, draw.jdfcloud.com
+hostname = h5.ele.me, draw.jdfcloud.com, api.inews.qq.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -8,3 +8,6 @@ hostname = h5.ele.me, draw.jdfcloud.com
 
 # 来客有礼Cookie
 https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+
+# 腾讯新闻Cookie
+https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js
