@@ -7,7 +7,7 @@ qx 及 loon 最新 tf 可用。
 自用 by zZPiglet
 */
 
-const delay = 8000 //设置两个通知之前的延迟，单位毫秒
+const delay = 10000 //设置两个通知之前的延迟，单位毫秒
 
 const $ = new cmp()
 
