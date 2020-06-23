@@ -1,0 +1,16 @@
+各种脚本、规则均取自各位大佬，感谢：
+@NobyDa
+@Choler
+@langkach
+@yichahucha
+@onewayticket
+@chavyleung
+@ehpo1
+@syzzzf
+@barrymchen
+@connershua
+@lhie1
+@eHpo1
+@Sunert
+@zZPiglet
+@Neurogram

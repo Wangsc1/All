@@ -1,0 +1,8 @@
+# > Spotify
+user-agent, Spotify*, Global
+host-suffix, pscdn.co, Global
+host-suffix, scdn.co, Global
+host-suffix, spotify.com, Global
+host-suffix, spoti.fi, Global
+host-keyword, spotify.com, Global
+host-keyword, -spotify-com, Global
