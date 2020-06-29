@@ -229,7 +229,7 @@ async function checkUpdate(item) {
 function findFile(name, tree_url, paths, current_pos) {
     if (current_pos == paths.length) {
         $.notify(
-            `🎉 ${name}`,
+            `‼️ ${name}`,
             "",
             `🚫 仓库中没有该文件：${paths[paths.length - 1]}`
         );
@@ -280,7 +280,7 @@ function findFile(name, tree_url, paths, current_pos) {
                             $.write(file_hash, hash(name + paths[current_pos]));
                         }
                         $.log(
-                            `🎉 ${
+                            `🐬 ${
                                 paths[current_pos]
                             }：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${
                                 file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"
@@ -295,7 +295,7 @@ function findFile(name, tree_url, paths, current_pos) {
             }
             if (isFind == false) {
                 $.notify(
-                    `🎉 ${name}`,
+                    `‼️ ${name}`,
                     "",
                     `🚫 仓库中没有该文件：${
                         paths[paths.length - 1]
