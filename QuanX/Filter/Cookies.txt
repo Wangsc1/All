@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com
+hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.gaoqingdianshi.com, *.youth.cn, ios.baertt.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -8,3 +8,18 @@ hostname = h5.ele.me, api.inews.qq.com
 
 # 腾讯新闻Cookie
 https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-request-header https://raw.githubusercontent.com/Wangsc1/All/master/Js/txnews.js
+
+# 趣头条Cookie
+^https:\/\/api\.1sapp\.com\/sign\/info? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+^https:\/\/api\.1sapp\.com\/content\/readV2? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+
+# 电视家Cookie
+http:\/\/act\.gaoqingdianshi\.com\/\/api\/v4\/sign\/signin url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
+http:\/\/api\.gaoqingdianshi\.com\/api\/v2\/cash\/withdrawal url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
+
+# 中青看点Cookie
+https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign) url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+https?:\/\/ios\.baertt\.com\/v5\/article\/complete url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+https:\/\/ios\.baertt\.com\/v5\/article\/red_packet url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
