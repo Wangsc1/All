@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.gaoqingdianshi.com, *.youth.cn, ios.baertt.com
+hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
