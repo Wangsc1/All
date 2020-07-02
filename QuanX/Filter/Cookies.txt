@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com
+hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -23,3 +23,6 @@ https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign) url script-request-header h
 https?:\/\/ios\.baertt\.com\/v5\/article\/complete url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 https:\/\/ios\.baertt\.com\/v5\/article\/red_packet url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+
+# 惠头条
+https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/htt_cookie.js
