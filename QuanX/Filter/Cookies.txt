@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, nebula.kuaishou.com
+hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, nebula.kuaishou.com, appv8.qukantianxia.com,appv7.qukantx.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -29,3 +29,6 @@ https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubuserco
 
 # 快手
 https:\/\/nebula\.kuaishou\.com\/rest\/n\/nebula\/activity\/earn\/overview url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+
+# 趣看天下
+https:\/\/(appv8\.qukantianxia|appv7\.qukantx)\.com url script-request-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/qktx_cookie.js
