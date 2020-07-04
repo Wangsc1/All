@@ -55,6 +55,10 @@ let repositories = [
   {
     name: "Sunert",
     url: "https://github.com/Sunert/Scripts/tree/master",
+  },
+  {
+    name: "lxk0301",
+    url: "https://github.com/lxk0301/QuantumultX/tree/master",
   }
 ];
 
