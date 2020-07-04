@@ -25,10 +25,10 @@ https:\/\/ios\.baertt\.com\/v5\/article\/red_packet url script-request-body http
 https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 
 # 惠头条
-https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/htt_cookie.js
+https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/Wangsc1/All/master/Js/htt_cookie.js
 
 # 快手
 https:\/\/nebula\.kuaishou\.com\/rest\/n\/nebula\/activity\/earn\/overview url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
 
 # 趣看天下
-https:\/\/(appv8\.qukantianxia\.com|appv7\.qukantx\.com) url script-request-header https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/qktx_cookie.js
+https:\/\/(appv8\.qukantianxia\.com|appv7\.qukantx\.com) url script-request-header https://raw.githubusercontent.com/Wangsc1/All/master/Js/qktx_cookie.js
