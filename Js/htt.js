@@ -26,7 +26,7 @@ cron "0 21,31,50 0-22 * * ?" script-path=htt_task.js, tag=惠头条
 //以上是配置说明
 
 
-const Notice=90;//设置运行多少次才通知。
+const Notice=0;//设置运行多少次才通知。
 
 
 
