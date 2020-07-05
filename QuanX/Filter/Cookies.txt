@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, nebula.kuaishou.com, appv8.qukantianxia.com,appv7.qukantx.com
+hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, appv8.qukantianxia.com,appv7.qukantx.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -14,10 +14,6 @@ https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-reque
 ^https:\/\/api\.1sapp\.com\/content\/readV2? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
 ^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
 
-# 电视家Cookie
-http:\/\/act\.gaoqingdianshi\.com\/\/api\/v4\/sign\/signin url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
-http:\/\/api\.gaoqingdianshi\.com\/api\/v2\/cash\/withdrawal url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
-
 # 中青看点Cookie
 https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign) url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 https?:\/\/ios\.baertt\.com\/v5\/article\/complete url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
@@ -26,9 +22,6 @@ https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body htt
 
 # 惠头条
 https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/Wangsc1/All/master/Js/htt_cookie.js
-
-# 快手
-https:\/\/nebula\.kuaishou\.com\/rest\/n\/nebula\/activity\/earn\/overview url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
 
 # 趣看天下
 https:\/\/(appv8\.qukantianxia\.com|appv7\.qukantx\.com) url script-request-header https://raw.githubusercontent.com/Wangsc1/All/master/Js/qktx_cookie.js
