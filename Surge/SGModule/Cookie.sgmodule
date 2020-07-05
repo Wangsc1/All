@@ -3,12 +3,26 @@
 #!system=ios
 
 [Script]
-# 腾讯新闻
-txnews.js = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Js/txnews.js
-# 饿了么签到
-elemGetCookies.js = type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
 # 京东签到
-JD_DailyBonus.js = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-
+京东cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+# 饿了么签到
+饿了么cookie = type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
+# 腾讯新闻
+腾讯新闻cookie = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Js/txnews.js
+# 趣头条
+趣头条cookie = type=http-request,pattern=^https:\/\/api\.1sapp\.com\/sign\/info?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+趣头条cookie = type=http-request,pattern=^https:\/\/api\.1sapp\.com\/content\/readV2?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+趣头条cookie = type=http-request,pattern=^https:\/\/api\.1sapp\.com\/x\/feed\/getReward?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+# 中青看点
+中青看点cookie = type=http-request,pattern=https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign),script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+中青看点cookie = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/article\/complete,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, requires-body=true
+中青看点cookie = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/article\/red_packet,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, requires-body=true
+中青看点cookie = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, requires-body=true
+# 惠头条
+惠肉条cookie = type=http-request,pattern=https:\/\/api\.cashtoutiao\.com,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Js/htt_cookie.js,requires-body=true
+# 快手
+快手cookie = type=http-request,pattern=https:\/\/nebula\.kuaishou\.com\/rest\/n\/nebula\/activity\/earn\/overview,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+# 趣看天下
+趣看天下cookie = type=http-request,pattern=https:\/\/(appv8\.qukantianxia\.com|appv7\.qukantx\.com) script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Js/qktx_cookie.js,requires-body=true
 [MITM]
-hostname = %APPEND% h5.ele.me, api.inews.qq.com
+hostname = %APPEND% h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, nebula.kuaishou.com, appv8.qukantianxia.com,appv7.qukantx.com
