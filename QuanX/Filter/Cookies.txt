@@ -1,4 +1,4 @@
-hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
+hostname = h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -8,11 +8,6 @@ hostname = h5.ele.me, api.inews.qq.com, api.1sapp.com, *.youth.cn, ios.baertt.co
 
 # 腾讯新闻Cookie
 https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-request-header https://raw.githubusercontent.com/Wangsc1/All/master/Js/txnews.js
-
-# 趣头条Cookie
-^https:\/\/api\.1sapp\.com\/sign\/info? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
-^https:\/\/api\.1sapp\.com\/content\/readV2? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
-^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
 
 # 中青看点Cookie
 https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign) url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
