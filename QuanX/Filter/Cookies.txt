@@ -1,7 +1,4 @@
-hostname = weather-data.apple.com, h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
-
-# 彩云天气Cookie
-https://weather-data.apple.com url script-request-header https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+hostname = h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
 
 # 京东Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
