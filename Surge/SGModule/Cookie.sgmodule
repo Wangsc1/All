@@ -16,6 +16,8 @@
 中青看点cookie = type=http-request,pattern=https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, requires-body=true
 # 惠头条
 惠肉条cookie = type=http-request,pattern=https:\/\/api\.cashtoutiao\.com,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Js/htt_cookie.js,requires-body=true
+# 微信抽奖
+微信抽奖cookie = type=http-request,pattern=^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign,script-path=https://raw.githubusercontent.com/lxk0301/QuantumultX/master/Task/WeChatLottery_new.js
 
 [MITM]
-hostname = %APPEND% h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com
+hostname = %APPEND% h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, api-hdcj.9w9.com
