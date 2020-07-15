@@ -1,4 +1,4 @@
-hostname = daojia.jd.com, h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api.cashtoutiao.com, api-hdcj.9w9.com
+hostname = daojia.jd.com, h5.ele.me, api.inews.qq.com, *.youth.cn, ios.baertt.com, api-hdcj.9w9.com
 
 # 京东京豆Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -13,7 +13,5 @@ https:\/\/\w+\.youth\.cn\/TaskCenter\/(sign|getSign) url script-request-header h
 https?:\/\/ios\.baertt\.com\/v5\/article\/complete url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 https:\/\/ios\.baertt\.com\/v5\/article\/red_packet url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
 https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
-# 惠头条Cookie
-https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/Wangsc1/All/master/Js/htt_cookie.js
 # 微信抽奖Cookie
 ^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign url script-request-header https://raw.githubusercontent.com/lxk0301/QuantumultX/master/Task/WeChatLottery_new.js
