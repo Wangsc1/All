@@ -1,4 +1,4 @@
-hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.weidian.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, api.m.jd.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com, duckduckgo.com
+hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.weidian.com, api.yangkeduo.com, api-mifit*.huami.com, cube.elemecdn.com, gateway.shouqiev.com, clientaccess.10086.cn, guide-acs.m.taobao.com, trade-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, m*.amap.com, m.client.10010.com, mlife.jf365.boc.cn, mp.weixin.qq.com, ms.jr.jd.com, api.m.jd.com, pic1cdn.cmbchina.com, s*.zdmimg.com, ss0.bdstatic.com, newclient.map.baidu.com, www.zhihu.com, duckduckgo.com
 
 # url-rewrite
 # Q-Search
@@ -69,6 +69,8 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 # 饿了么 
 ^https?+:\/\/cube\.elemecdn\.com\/.*h_\d{4}\/ url reject-200
 ^https?+:\/\/cube\.elemecdn\.com\/.*\.mp4\?$ url reject-200
+# Gofun
+^https?+:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json url reject-200
 # 京东
 ^https?+:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ url reject-200
 ^https?+:\/\/b?dsp-x\.jd\.com\/adx\/ url reject-200
