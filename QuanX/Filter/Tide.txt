@@ -34,12 +34,6 @@ hostname = *.meituan.net, acs.m.taobao.com, api.jr.mi.com, *api.smzdm.com, thor.
 ^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ url 302  https://s.m.taobao.com/h5?q=$2
 # 天猫
 ^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ url 302  https://s.m.tmall.com/m/search.htm?q=$2
-# 优酷
-^https:\/\/duckduckgo.com\/\?q=yk(\+|%20)([^&]+).+ url 302  https://search.youku.com/search_video?keyword=$2
-# 腾讯
-^https:\/\/duckduckgo.com\/\?q=tx(\+|%20)([^&]+).+ url 302  https://m.v.qq.com/search.html?act=0&keyWord=$2
-# 爱奇艺
-^https:\/\/duckduckgo.com\/\?q=iqi(\+|%20)([^&]+).+ url 302  https://m.iqiyi.com/search.html?source=input&key=$2
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
 

@@ -35,12 +35,6 @@
 ^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ https://s.m.taobao.com/h5?q=$2 302
 # 天猫
 ^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$2 302
-# 优酷
-^https:\/\/duckduckgo.com\/\?q=yk(\+|%20)([^&]+).+ https://search.youku.com/search_video?keyword=$2 302
-# 腾讯
-^https:\/\/duckduckgo.com\/\?q=tx(\+|%20)([^&]+).+ https://m.v.qq.com/search.html?act=0&keyWord=$2 302
-# 爱奇艺
-^https:\/\/duckduckgo.com\/\?q=iqi(\+|%20)([^&]+).+ https://m.iqiyi.com/search.html?source=input&key=$2 302
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
