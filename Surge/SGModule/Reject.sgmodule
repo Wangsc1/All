@@ -2,6 +2,7 @@
 #!desc=广告拦截
 #!system=ios
 
+[Rule]
 # Liby.list
 # Internet Service Providers Hijacking 运营商劫持
 DOMAIN-SUFFIX,17gouwuba.com,REJECT
