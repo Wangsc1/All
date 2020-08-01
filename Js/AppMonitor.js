@@ -80,19 +80,19 @@ async function post_data(d) {
                     if (x.version !== app_monitor[x.trackId].v) {
                       notifys.push(
                         `📲 ${x.trackName}
-                       🏷 版本更新：${x.version}`
+🏷 版本更新：${x.version}`
                       );
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
                       notifys.push(
                         `📲 ${x.trackName}
-                        〽️ 价格变化：${x.formattedPrice}`
+〽️ 价格变化：${x.formattedPrice}`
                       );
                     }
                   }
                 } else {
                   notifys.push(`📲 ${x.trackName}
-                  🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`);
+🏷 版本：${x.version}  /  〽️ 价格：${x.formattedPrice}`);
                 }
               });
             }
