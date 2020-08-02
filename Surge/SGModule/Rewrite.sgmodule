@@ -1,5 +1,5 @@
-#!name=Rewrite-Mitm
-#!desc=重写-主机名
+#!name=Rewrite
+#!desc=重写
 #!system=ios
 
 [Rule]

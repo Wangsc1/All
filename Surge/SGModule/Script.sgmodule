@@ -1,5 +1,5 @@
-#!name=Script-Mitm
-#!desc=脚本-主机名
+#!name=Script
+#!desc=脚本
 #!system=ios
 
 [Script]
