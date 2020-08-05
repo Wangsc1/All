@@ -1,5 +1,5 @@
 #!name=Reject
-#!desc=广告拦截
+#!desc=屏蔽
 #!system=ios
 
 [Rule]
