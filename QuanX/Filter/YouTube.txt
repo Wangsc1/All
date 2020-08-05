@@ -1,6 +1,6 @@
 # > YouTube
-user-agent, com.google.ios.youtube*, Global
-user-agent, YouTube*, Global
-host-suffix, googlevideo.com, Global
-host-suffix, youtube.com, Global
-host, youtubei.googleapis.com, Global
+USER-AGENT,com.google.ios.youtube*,YouTube
+USER-AGENT,YouTube*,YouTube
+DOMAIN-SUFFIX,googlevideo.com,YouTube
+DOMAIN-SUFFIX,youtube.com,YouTube
+DOMAIN,youtubei.googleapis.com,YouTube
