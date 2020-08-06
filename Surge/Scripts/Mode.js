@@ -41,7 +41,7 @@ function manager() {
 
     // no network connection
     if (!config.silence && !v4_ip) {
-        $notification.post("Surge 运行模式", "❌ 当前无网络", "");
+        $notification.post("运行模式", "❌ 当前无网络", "");
         return;
     }
 
@@ -53,9 +53,9 @@ function manager() {
 
     if (!config.silence)
         $notification.post(
-            "Surge 运行模式",
+            "运行模式",
             `当前网络：${ssid ? ssid : "蜂窝数据"}`,
-            `Surge已切换至${lookupOutbound(mode)[1]}`
+            `切换至${lookupOutbound(mode)[1]}`
         );
 }
 
