@@ -55,7 +55,7 @@ function manager() {
         $notification.post(
             "运行模式",
             `当前网络：${ssid ? ssid : "蜂窝数据"}`,
-            `切换至${lookupOutbound(mode)[1]}`
+            `已切换至：${lookupOutbound(mode)[1]}`
         );
 }
 
@@ -70,8 +70,8 @@ function lookupSSID(ssid) {
 
 function lookupOutbound(mode) {
     return {
-        "RULE": ["rule", "🌀 规则模式"],
-        "PROXY": ["global-proxy", "☁️ 全局代理模式"],
-        "DIRECT": ["direct", "🎯 全局直连模式"]
+        "RULE": ["rule", "规则模式"],
+        "PROXY": ["global-proxy", "全局代理"],
+        "DIRECT": ["direct", "全局直连"]
     }[mode];
 }
