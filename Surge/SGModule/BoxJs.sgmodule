@@ -3,4 +3,4 @@
 #!system=ios
 
 [Script]
-Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.com(/api|/home|/sub|/my|/app|/log|/revert)?($|\/),script-path=https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js, requires-body=true, timeout=120
+BoxJs = type=http-request,pattern=^https?://boxjs.com(/api|/home|/sub|/my|/app|/log|/revert)?($|\/),script-path=https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js, requires-body=true, timeout=120
