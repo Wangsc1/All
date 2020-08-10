@@ -43,7 +43,7 @@
 
 [Header Rewrite]
 # 知乎
-^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "(\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows Phone 10)$2"   
+^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)$2"   
 
 [MITM]
 hostname = %APPEND% duckduckgo.com,www.zhihu.com
