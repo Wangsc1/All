@@ -1,0 +1,49 @@
+#!name=Search
+#!desc=搜索
+#!system=ios
+
+[URL Rewrite]
+# GeoIp
+^(http|https)://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=Lxn9la8NsE4EW7Tj&suffix=tar.gz 302
+
+# 百度
+^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ https://www.baidu.com/s?wd=$2 302
+# 谷歌图片
+^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)([^&]+).+ https://www.google.com/search?&tbm=isch&q=$2 302
+# 谷歌网盘
+^https:\/\/duckduckgo.com\/\?q=dr(\+|%20)([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$2 302
+# YouTube
+^https:\/\/duckduckgo.com\/\?q=ytb(\+|%20)([^&]+).+ https://m.youtube.com/results?search_query=$2 302
+# Github
+^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ https://github.com/search?q=$2 302
+# 豆瓣
+^https:\/\/duckduckgo.com\/\?q=db(\+|%20)([^&]+).+ https://m.douban.com/search/?query=$2 302
+# 知乎
+^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ https://www.zhihu.com/search?type=content&q=$2 302
+# 公众号
+^https:\/\/duckduckgo.com\/\?q=wx(\+|%20)([^&]+).+ https://weixin.sogou.com/weixinwap?query=$2 302
+# 有道翻译
+^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ http://dict.youdao.com/search?q=$2 302
+# 值得买
+^https:\/\/duckduckgo.com\/\?q=zdm(\+|%20)([^&]+).+ https://search.m.smzdm.com/?v=b&s=$2 302
+# 中亚
+^https:\/\/duckduckgo.com\/\?q=amzz(\+|%20)([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$2 302
+# 美亚
+^https:\/\/duckduckgo.com\/\?q=amzm(\+|%20)([^&]+).+ https://www.amazon.com/gp/aw/s/?k=$2 302
+# 日亚
+^https:\/\/duckduckgo.com\/\?q=amzr(\+|%20)([^&]+).+ https://www.amazon.co.jp/gp/aw/s/?k=$2 302
+# 京东
+^https:\/\/duckduckgo.com\/\?q=jd(\+|%20)([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$2 302
+# 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ https://s.m.taobao.com/h5?q=$2 302
+# 天猫
+^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$2 302
+# 谷歌
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+[Header Rewrite]
+# 知乎
+^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36$2"   
+
+[MITM]
+hostname = %APPEND% duckduckgo.com,www.zhihu.com
