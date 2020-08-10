@@ -1,4 +1,4 @@
-hostname = duckduckgo.com,www.zhihu.com
+hostname = duckduckgo.com
 
 # url-rewrite
 # Q-Search
@@ -36,10 +36,3 @@ hostname = duckduckgo.com,www.zhihu.com
 ^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ url 302  https://s.m.tmall.com/m/search.htm?q=$2
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
-
-# header-rewrite
-# 知乎
-// 先重写到桌面版
-^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows Phone 10)$2
-// 再注入 CSS 进行优化
-^https:\/\/www\.zhihu\.com\/question url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
