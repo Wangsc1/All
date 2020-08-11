@@ -1,6 +1,10 @@
-hostname = duckduckgo.com
+hostname = duckduckgo.com,www.google.cn
 
 # url-rewrite
+# Google Map
+^https?:\/\/(www.)?g\.cn url 302 https:\/\/www.google.com
+^https?:\/\/(www.)?google\.cn url 302 https:\/\/www.google.com
+
 # Q-Search
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ url 302  https://www.baidu.com/s?wd=$2
