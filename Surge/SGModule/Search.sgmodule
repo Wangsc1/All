@@ -35,12 +35,6 @@
 ^https:\/\/duckduckgo.com\/\?q=amzm(\+|%20)([^&]+).+ https://www.amazon.com/gp/aw/s/?k=$2 302
 # 日亚
 ^https:\/\/duckduckgo.com\/\?q=amzr(\+|%20)([^&]+).+ https://www.amazon.co.jp/gp/aw/s/?k=$2 302
-# 京东
-^https:\/\/duckduckgo.com\/\?q=jd(\+|%20)([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$2 302
-# 淘宝
-^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ https://s.m.taobao.com/h5?q=$2 302
-# 天猫
-^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$2 302
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 

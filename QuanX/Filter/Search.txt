@@ -32,11 +32,5 @@ hostname = duckduckgo.com,www.google.cn
 ^https:\/\/duckduckgo.com\/\?q=amzm(\+|%20)([^&]+).+ url 302  https://www.amazon.com/gp/aw/s/?k=$2
 # 日亚
 ^https:\/\/duckduckgo.com\/\?q=amzr(\+|%20)([^&]+).+ url 302  https://www.amazon.co.jp/gp/aw/s/?k=$2
-# 京东
-^https:\/\/duckduckgo.com\/\?q=jd(\+|%20)([^&]+).+ url 302  https://so.m.jd.com/ware/search.action?keyword=$2
-# 淘宝
-^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ url 302  https://s.m.taobao.com/h5?q=$2
-# 天猫
-^https:\/\/duckduckgo.com\/\?q=tm(\+|%20)([^&]+).+ url 302  https://s.m.tmall.com/m/search.htm?q=$2
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
