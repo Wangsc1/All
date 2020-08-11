@@ -1,4 +1,4 @@
-hostname = ios.prod.ftl.netflix.com,trade-acs.m.taobao.com,backend.getdrafts.com
+hostname = api.m.jd.com,trade-acs.m.taobao.com,ios.prod.ftl.netflix.com
 
 # 京东历史价格
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
@@ -10,6 +10,3 @@ hostname = ios.prod.ftl.netflix.com,trade-acs.m.taobao.com,backend.getdrafts.com
 # Netflix评分
 ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-request-header https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-
-# Drafts
-^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Drafts.js

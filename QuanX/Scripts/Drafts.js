@@ -1,3 +1,7 @@
+/*
+^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/Drafts.js
+*/
+
 var obj = JSON.parse($response.body);
 
 obj= {
