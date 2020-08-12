@@ -1,0 +1,11 @@
+#!name=TikTok
+#!desc=台湾
+#!system=ios
+
+[URL Rewrite]
+(?<=_region=)CN(?=&) TW 307
+(?<=&app_version=)1(6|7)..(?=.?.?&) 1 307
+(?<=\?version_code=)1(6|7)..(?=.?.?&) 1 307
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
