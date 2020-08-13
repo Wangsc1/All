@@ -17,4 +17,4 @@
 腾讯新闻cookie = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% daojia.jd.com,h5.ele.me,as.xiaojukeji.com,maicai.api.ddxq.mobi,api.inews.qq.com
+hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,as.xiaojukeji.com,maicai.api.ddxq.mobi,api.inews.qq.com

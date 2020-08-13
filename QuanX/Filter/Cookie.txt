@@ -1,4 +1,4 @@
-hostname = daojia.jd.com, h5.ele.me, as.xiaojukeji.com, maicai.api.ddxq.mobi, api.inews.qq.com
+hostname = api.m.jd.com,daojia.jd.com, h5.ele.me, as.xiaojukeji.com, maicai.api.ddxq.mobi, api.inews.qq.com
 
 # 京东京豆Cookie
 ^https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
