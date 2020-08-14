@@ -78,6 +78,11 @@ DOMAIN-SUFFIX,visualstudio.com,DIRECT
 DOMAIN-SUFFIX,windows.com,DIRECT
 DOMAIN-SUFFIX,windowsupdate.com,DIRECT
 # DOMAIN-KEYWORD,-microsoft-com.akamaized.net,DIRECT
+# > PayPal
+USER-AGENT,PayPal*,PayPal
+DOMAIN-SUFFIX,paypal.com,PayPal
+DOMAIN-SUFFIX,paypal.me,PayPal
+DOMAIN-SUFFIX,paypalobjects.com,PayPal
 # > Sina
 DOMAIN-SUFFIX,sina.com,DIRECT
 DOMAIN-SUFFIX,weibo.com,DIRECT
