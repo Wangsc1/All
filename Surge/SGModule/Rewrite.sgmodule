@@ -49,7 +49,6 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 # A
-# --- (Alibaba) ---
 # > Taobao - gw.alicdn.com,heic.alicdn.com
 ^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
 # > Xianyu - acs.m.taobao.com
@@ -71,7 +70,6 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 ^(http|https):\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
 
 # B
-# ---(Baidu)---
 # > Baidu NetDisk - issuecdn.baidupcs.com
 ^(http|https):\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
 ^(http|https):\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
@@ -92,11 +90,9 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 # > ChinaMobile - clientaccess.10086.cn
 ^(http|https):\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
 ^(http|https):\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
-# ---
 # > ChinaUnicom - m.client.10010.com
 ^(http|https):\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
 ^(http|https):\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
-# ---(ChinaTelecom)---
 # > Cloud189 - cloud.189.cn
 ^(http|https):\/\/cloud\.189\.cn\/include\/splash\/ - reject
 
@@ -148,7 +144,6 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 ^(http|https):\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
 
 # T
-# ---(Tencent)---
 # > Tencent Game - ssl.kohsocialapp.qq.com
 ^(http|https):\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons - reject
 ^(http|https):\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - reject

@@ -35,7 +35,6 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
 
 # A
-# --- (Alibaba) ---
 # > Taobao - gw.alicdn.com,heic.alicdn.com
 ^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject-200
 # > Xianyu - acs.m.taobao.com
@@ -57,7 +56,6 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^(http|https):\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject-200
 
 # B
-# ---(Baidu)---
 # > Baidu NetDisk - issuecdn.baidupcs.com
 ^(http|https):\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx url reject-200
 ^(http|https):\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
@@ -78,11 +76,9 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 # > ChinaMobile - clientaccess.10086.cn
 ^(http|https):\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
 ^(http|https):\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject-200
-# ---
 # > ChinaUnicom - m.client.10010.com
 ^(http|https):\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject-200
 ^(http|https):\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject-200
-# ---(ChinaTelecom)---
 # > Cloud189 - cloud.189.cn
 ^(http|https):\/\/cloud\.189\.cn\/include\/splash\/ url reject-200
 
@@ -134,7 +130,6 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^(http|https):\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject-200
 
 # T
-# ---(Tencent)---
 # > Tencent Game - ssl.kohsocialapp.qq.com
 ^(http|https):\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons url reject-200
 ^(http|https):\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info url reject-200
