@@ -25,20 +25,12 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 ^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)([^&]+).+ https://www.google.com/search?&tbm=isch&q=$2 302
 # 谷歌网盘
 ^https:\/\/duckduckgo.com\/\?q=dr(\+|%20)([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$2 302
-# YouTube
-^https:\/\/duckduckgo.com\/\?q=ytb(\+|%20)([^&]+).+ https://m.youtube.com/results?search_query=$2 302
 # Github
 ^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ https://github.com/search?q=$2 302
-# 豆瓣
-^https:\/\/duckduckgo.com\/\?q=db(\+|%20)([^&]+).+ https://m.douban.com/search/?query=$2 302
 # 知乎
 ^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ https://www.zhihu.com/search?type=content&q=$2 302
-# 公众号
-^https:\/\/duckduckgo.com\/\?q=wx(\+|%20)([^&]+).+ https://weixin.sogou.com/weixinwap?query=$2 302
 # 有道翻译
 ^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ http://dict.youdao.com/search?q=$2 302
-# 值得买
-^https:\/\/duckduckgo.com\/\?q=zdm(\+|%20)([^&]+).+ https://search.m.smzdm.com/?v=b&s=$2 302
 # 中亚
 ^https:\/\/duckduckgo.com\/\?q=amzz(\+|%20)([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$2 302
 # 美亚

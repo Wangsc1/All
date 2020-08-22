@@ -11,20 +11,12 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)([^&]+).+ url 302  https://www.google.com/search?&tbm=isch&q=$2
 # 谷歌网盘
 ^https:\/\/duckduckgo.com\/\?q=dr(\+|%20)([^&]+).+ url 302  https://www.google.com/search?q=%22Google+Drive%22+$2
-# YouTube
-^https:\/\/duckduckgo.com\/\?q=ytb(\+|%20)([^&]+).+ url 302  https://m.youtube.com/results?search_query=$2
 # Github
 ^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ url 302  https://github.com/search?q=$2
-# 豆瓣
-^https:\/\/duckduckgo.com\/\?q=db(\+|%20)([^&]+).+ url 302  https://m.douban.com/search/?query=$2
 # 知乎
 ^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ url 302  https://www.zhihu.com/search?type=content&q=$2
-# 公众号
-^https:\/\/duckduckgo.com\/\?q=wx(\+|%20)([^&]+).+ url 302  https://weixin.sogou.com/weixinwap?query=$2
 # 有道翻译
 ^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ url 302  http://dict.youdao.com/search?q=$2
-# 值得买
-^https:\/\/duckduckgo.com\/\?q=zdm(\+|%20)([^&]+).+ url 302  https://search.m.smzdm.com/?v=b&s=$2
 # 中亚
 ^https:\/\/duckduckgo.com\/\?q=amzz(\+|%20)([^&]+).+ url 302  https://www.amazon.cn/gp/aw/s/?k=$2
 # 美亚
