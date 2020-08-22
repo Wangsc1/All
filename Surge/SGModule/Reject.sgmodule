@@ -595,7 +595,6 @@ DOMAIN,track.tiara.daum.net,REJECT
 DOMAIN,track.tiara.kakao.com,REJECT
 DOMAIN,trackapp.guahao.cn,REJECT
 DOMAIN,zgsdk.zhugeio.com,REJECT
-
 # > 58
 DOMAIN,track.58.com,REJECT
 DOMAIN,tracklog.58.com,REJECT
@@ -614,3 +613,8 @@ DOMAIN,pingma.qq.com,REJECT
 DOMAIN,btrace.qq.com,REJECT
 DOMAIN,mtrace.qq.com,REJECT
 DOMAIN,safebrowsing.urlsec.qq.com,REJECT
+# > ZhiHu
+DOMAIN,appcloud2.zhihu.com,REJECT
+DOMAIN,118.89.204.198,REJECT
+USER-AGENT,AVOS*,REJECT
+AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
