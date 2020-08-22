@@ -1,12 +1,4 @@
 hostname = www.zhihu.com,api.zhihu.com,link.zhihu.com,118.89.204.198,duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,issuecdn.baidupcs.com,newclient.map.baidu.com,mime.baidu.com,app.api.ke.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,maicai.api.ddxq.mobi,cube.elemecdn.com,gateway.shouqiev.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,ap*.smzdm.com,mpcs.suning.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com,thor.weidian.com,api.xiachufang.com
-
-# Zhihu
-^https://api.zhihu.com/people/ url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js
-^https://api.zhihu.com/moments/recommend url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js
-^https://api.zhihu.com/topstory/recommend url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20recommend.js
-^https://api.zhihu.com/v4/questions url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20answer.js
-^https?://link.zhihu.com/\?target= url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20link.js
-https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
         
 # URL Rewrite
 # Google Map
@@ -156,3 +148,13 @@ https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|pre
 # X
 # > Xiachufang - api.xiachufang.com
 ^(http|https):\/\/api\.xiachufang\.com\/v\d\/ad/ url reject-200
+
+# Z
+# > Zhihu
+https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
+
+^https://api.zhihu.com/people/ url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js
+^https://api.zhihu.com/moments/recommend url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js
+^https://api.zhihu.com/topstory/recommend url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20recommend.js
+^https://api.zhihu.com/v4/questions url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20answer.js
+^https?://link.zhihu.com/\?target= url script-response-body https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20link.js
