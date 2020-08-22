@@ -273,7 +273,7 @@ DOMAIN,nativeadv.dftoutiao.com,REJECT
 DOMAIN,toots-a.akamaihd.net,REJECT
 
 # (A)
-# --- (Alibaba) ---
+# > Alibaba
 DOMAIN,tunion-api.m.taobao.com,REJECT
 # > YOUKU
 DOMAIN-SUFFIX,atm.youku.com,REJECT
@@ -294,7 +294,7 @@ DOMAIN,adm2.autoimg.cn,REJECT
 DOMAIN,adm3.autoimg.cn,REJECT
 
 # (B)
-# --- (Baidu) ---
+# > Baidu
 DOMAIN-SUFFIX,cpro.baidu.com,REJECT
 DOMAIN-SUFFIX,pos.baidu.com,REJECT
 DOMAIN,afd.baidu.com,REJECT
@@ -320,7 +320,7 @@ DOMAIN,adv.sec.intl.miui.com,REJECT
 DOMAIN,adv.sec.miui.com,REJECT
 
 # (T)
-# --- (Tencent) ---
+# > Tencent
 DOMAIN-SUFFIX,e.qq.com,REJECT
 DOMAIN-SUFFIX,gdt.qq.com,REJECT
 DOMAIN-SUFFIX,l.qq.com,REJECT
