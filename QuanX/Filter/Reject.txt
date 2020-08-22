@@ -1,7 +1,6 @@
 # Advertising
 # > General
 DOMAIN-KEYWORD,adservice,REJECT
-
 DOMAIN-SUFFIX,1phads.com,REJECT
 DOMAIN-SUFFIX,1rtb.com,REJECT
 DOMAIN-SUFFIX,1xl.co.uk,REJECT
@@ -229,11 +228,9 @@ DOMAIN-SUFFIX,zu08e.cn,REJECT
 DOMAIN-SUFFIX,zucks.co.jp,REJECT
 DOMAIN-SUFFIX,zucks.net,REJECT
 DOMAIN-SUFFIX,zumobi.com,REJECT
-
 DOMAIN-SUFFIX,ad.cmvideo.cn,REJECT
 DOMAIN-SUFFIX,ad.daum.net,REJECT
 DOMAIN-SUFFIX,aiseet.atianqi.com,REJECT
-
 DOMAIN,abema-adx.ameba.jp,REJECT
 DOMAIN,ad.12306.cn,REJECT
 DOMAIN,ad.360in.com,REJECT
@@ -276,11 +273,6 @@ DOMAIN,nativeadv.dftoutiao.com,REJECT
 DOMAIN,toots-a.akamaihd.net,REJECT
 
 # (A)
-# > Apple
-DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
-DOMAIN-SUFFIX,ads.internal.unity3d.com,REJECT
-DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com,REJECT
-DOMAIN-SUFFIX,unityads.unity3d.com,REJECT
 # --- (Alibaba) ---
 DOMAIN,tunion-api.m.taobao.com,REJECT
 # > YOUKU
@@ -291,7 +283,6 @@ DOMAIN,pl.cp31.ott.cibntv.net,REJECT
 # > AMap
 DOMAIN,optimus-ads.amap.com,REJECT
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
-# ------
 # > Autohome
 DOMAIN,adproxy.autohome.com.cn,REJECT
 DOMAIN,rd.autohome.com.cn,REJECT
@@ -319,18 +310,6 @@ DOMAIN,ad.21cn.com,REJECT
 DOMAIN,ad.k.21cn.com,REJECT
 DOMAIN,admarket.21cn.com,REJECT
 DOMAIN,adshows.21cn.com,REJECT
-# > Chelaile
-DOMAIN,atrace.chelaile.net.cn,REJECT
-DOMAIN,logs.chelaile.net.cn,REJECT
-
-# (G)
-# > Google
-DOMAIN-SUFFIX,doubleclick.net,REJECT
-DOMAIN-SUFFIX,googleadservices.com,REJECT
-DOMAIN-SUFFIX,googleadsserving.cn,REJECT
-DOMAIN-SUFFIX,googlesyndication.com,REJECT
-DOMAIN-SUFFIX,googletagservices.com,REJECT
-DOMAIN,ads.youtube.com,REJECT
 
 # (M)
 # > MI
@@ -366,10 +345,6 @@ DOMAIN,kgmobilestatbak.kugou.com,REJECT
 DOMAIN,mobilelog.kugou.com,REJECT
 DOMAIN,mobilead.kuwo.cn,REJECT
 DOMAIN,rich.kuwo.cn,REJECT
-# ------
-# > TongHuaShun
-DOMAIN,adm.10jqka.com.cn,REJECT
-DOMAIN,stat.10jqka.com.cn,REJECT
 
 # (X)
 # > Xiaohongshu
