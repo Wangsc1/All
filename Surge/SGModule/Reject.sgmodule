@@ -278,7 +278,6 @@ DOMAIN,mads.suning.com,REJECT
 DOMAIN,mobileads.msn.com,REJECT
 DOMAIN,mopnativeadv.037201.com,REJECT
 DOMAIN,nativeadv.dftoutiao.com,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
 DOMAIN,toots-a.akamaihd.net,REJECT
 
 # (A)
@@ -382,11 +381,6 @@ DOMAIN,stat.10jqka.com.cn,REJECT
 DOMAIN,ads-img-qc.xhscdn.com,REJECT
 DOMAIN,ads-video-qc.xhscdn.com,REJECT
 DOMAIN,t-ads.xiaohongshu.com,REJECT
-
-# (Z)
-# > Zhihu
-DOMAIN,sugar.zhihu.com,REJECT
-IP-CIDR,118.89.204.198/32,no-resolve,REJECT
 
 # Internet Service Providers Hijacking
 DOMAIN-SUFFIX,17gouwuba.com,REJECT
@@ -554,18 +548,15 @@ IP-CIDR,222.73.156.235/32,no-resolve,REJECT
 # > Huawei AspiegelBot
 IP-CIDR,114.119.160.0/21,no-resolve,REJECT
 # > KuaiZip
-# https://zhuanlan.zhihu.com/p/39534279
 DOMAIN-SUFFIX,kuaizip.com,REJECT
 # > MacKeeper
 # https://www.lizhi.io/blog/40002904
 DOMAIN-SUFFIX,mackeeper.com,REJECT
 DOMAIN-SUFFIX,zryydi.com,REJECT
 # > Adobe Flash China Special Edition
-# https://www.zhihu.com/question/281163698/answer/441388130
 DOMAIN-SUFFIX,flash.cn,REJECT
 DOMAIN,geo2.adobe.com,REJECT
 # > C&J Marketing
-# https://www.zhihu.com/question/46746200
 DOMAIN-SUFFIX,4009997658.com,REJECT
 DOMAIN-SUFFIX,abbyychina.com,REJECT
 DOMAIN-SUFFIX,bartender.cc,REJECT
