@@ -276,13 +276,6 @@ DOMAIN,nativeadv.dftoutiao.com,REJECT
 DOMAIN,sugar.zhihu.com,REJECT
 DOMAIN,toots-a.akamaihd.net,REJECT
 
-# (0~9)
-# > 51wnl
-DOMAIN,ad.51wnl-cq.com,REJECT
-DOMAIN,adextra.51wnl-cq.com,REJECT
-DOMAIN,log.51wnl-cq.com,REJECT
-DOMAIN,r.51wnl-cq.com,REJECT
-
 # (A)
 # > Apple
 DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
@@ -320,26 +313,8 @@ DOMAIN,duclick.baidu.com,REJECT
 DOMAIN,mobads.baidu.com,REJECT
 DOMAIN,mobads-logs.baidu.com,REJECT
 DOMAIN,nsclick.baidu.com,REJECT
-# > iQIYI
-DOMAIN,t7z.cupid.iqiyi.com,REJECT
-IP-CIDR,101.227.97.240/32,REJECT
-IP-CIDR,101.227.200.11/32,REJECT
-IP-CIDR,101.227.200.28/32,REJECT
-IP-CIDR,124.192.153.42/32,REJECT
-# ------
-# > baicizhan
-DOMAIN,advertise.baicizhan.com,REJECT
-DOMAIN,advertise.baicizhan.org,REJECT
-# > BitAuto
-DOMAIN,adx.yiche.com,REJECT
-DOMAIN,log.ycapp.yiche.com,REJECT
 
 # (C)
-# > CNTV
-DOMAIN,galaxy.bjcathay.com,REJECT
-DOMAIN,mdrecv.app.cntvwb.cn,REJECT
-DOMAIN,sdapprecv.app.cntvwb.cn,REJECT
-DOMAIN,vdapprecv.app.cntvwb.cn,REJECT
 # > ChinaTelecom
 DOMAIN,ad.21cn.com,REJECT
 DOMAIN,ad.k.21cn.com,REJECT
@@ -358,17 +333,6 @@ DOMAIN-SUFFIX,googlesyndication.com,REJECT
 DOMAIN-SUFFIX,googletagservices.com,REJECT
 DOMAIN,ads.youtube.com,REJECT
 
-# (J)
-# > Kingsoft
-DOMAIN,ad-stat.ksosoft.com,REJECT
-DOMAIN,img.auction-ads.wpscdn.cn,REJECT
-DOMAIN,counter.kingsoft.com,REJECT
-DOMAIN,counter.ksosoft.com,REJECT
-DOMAIN,minfo.wps.cn,REJECT
-DOMAIN,mobad.ijinshan.com,REJECT
-DOMAIN,ups.ksmobile.net,REJECT
-DOMAIN,ws.ksmobile.net,REJECT
-
 # (M)
 # > MI
 DOMAIN-SUFFIX,ad.intl.xiaomi.com,REJECT
@@ -376,40 +340,6 @@ DOMAIN-SUFFIX,ad.xiaomi.com,REJECT
 DOMAIN-SUFFIX,admob.xiaomi.com,REJECT
 DOMAIN,adv.sec.intl.miui.com,REJECT
 DOMAIN,adv.sec.miui.com,REJECT
-# > MojiWeather
-DOMAIN,ad.api.moji.com,REJECT
-DOMAIN,adlaunch.moji.com,REJECT
-DOMAIN,ads.mojicdn.com,REJECT
-DOMAIN,v1.log.moji.com,REJECT
-
-# (N)
-# > NetEase
-DOMAIN-SUFFIX,dsp.youdao.com,REJECT
-DOMAIN-SUFFIX,union.youdao.com,REJECT
-DOMAIN,ad.bn.netease.com,REJECT
-DOMAIN,ad.yixin.im,REJECT
-DOMAIN,admusicpic.music.126.net,REJECT
-DOMAIN,gorgon.youdao.com,REJECT
-DOMAIN,iad.g.163.com,REJECT
-DOMAIN,iadmat.nosdn.127.net,REJECT
-DOMAIN,iadmusicmat.music.126.net,REJECT
-DOMAIN,iadmusicmatvideo.music.126.net,REJECT
-DOMAIN,impservice.dictapp.youdao.com,REJECT
-DOMAIN,impservice.youdao.com,REJECT
-DOMAIN,n.3g.163.com,REJECT
-DOMAIN,nex.163.com,REJECT
-DOMAIN,yt-adp.nosdn.127.net,REJECT
-DOMAIN,yt-adp.ws.126.net,REJECT
-
-# (S)
-# > Sina
-DOMAIN-SUFFIX,beacon.sina.com.cn,REJECT
-DOMAIN,adimg.uve.weibo.com,REJECT
-DOMAIN,adimg.vue.weibo.com,REJECT
-DOMAIN,u1.img.mobile.sina.cn,REJECT
-DOMAIN,sax.sina.com.cn,REJECT
-DOMAIN,saxs.sina.com.cn,REJECT
-DOMAIN,saxn.sina.com.cn,REJECT
 
 # (T)
 # --- (Tencent) ---
@@ -441,23 +371,8 @@ DOMAIN,rich.kuwo.cn,REJECT
 # > TongHuaShun
 DOMAIN,adm.10jqka.com.cn,REJECT
 DOMAIN,stat.10jqka.com.cn,REJECT
-# > The Paper
-DOMAIN,admonitor.thepaper.cn,REJECT
-DOMAIN,adpai.thepaper.cn,REJECT
-DOMAIN,imgadpai.thepaper.cn,REJECT
-# > Thunder
-DOMAIN,adsp.xunlei.com,REJECT
-DOMAIN,etl.xlmc.sandai.net,REJECT
 
 # (X)
-# > Ximalaya
-DOMAIN,ad.ximalaya.com,REJECT
-DOMAIN,adbs.ximalaya.com,REJECT
-DOMAIN,adse.ximalaya.com,REJECT
-DOMAIN,adse.wsa.ximalaya.com,REJECT
-DOMAIN,adbehavior.wsa.ximalaya.com,REJECT
-DOMAIN,adbehavior.ximalaya.com,REJECT
-DOMAIN,adsebs.ximalaya.com,REJECT
 # > Xiaohongshu
 DOMAIN,ads-img-qc.xhscdn.com,REJECT
 DOMAIN,ads-video-qc.xhscdn.com,REJECT
@@ -467,9 +382,6 @@ DOMAIN,t-ads.xiaohongshu.com,REJECT
 # > Zhihu
 DOMAIN,sugar.zhihu.com,REJECT
 IP-CIDR,118.89.204.198/32,REJECT
-# > ZOL
-DOMAIN,apppv.zol.com.cn,REJECT
-DOMAIN,pvnapp.zol.com.cn,REJECT
 
 # Internet Service Providers Hijacking
 DOMAIN-SUFFIX,17gouwuba.com,REJECT
