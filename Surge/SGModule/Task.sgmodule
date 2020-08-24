@@ -13,11 +13,10 @@
 京东加速 = type=cron,cronexp=2 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js
 # 京东宠汪汪
 京东宠汪汪 = type=cron,cronexp=4 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js
-京东宠汪汪兑换 = type=cron,cronexp="1 0-16/8,23 * * *",script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js
 # 京东种豆得豆
 京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
 # 京东京小超
-京东种豆得豆 = type=cron,cronexp=11 1-23/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
+京东京小超 = type=cron,cronexp=11 1-23/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 # 饿了么红包
 饿了么红包 = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
 # 滴滴出行
