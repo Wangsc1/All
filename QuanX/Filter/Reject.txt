@@ -589,18 +589,18 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 # Privacy
 DOMAIN,track.tiara.daum.net,REJECT
 DOMAIN,track.tiara.kakao.com,REJECT
-DOMAIN,trackapp.guahao.cn,REJECT
 DOMAIN,zgsdk.zhugeio.com,REJECT
 # > 58
 DOMAIN,track.58.com,REJECT
 DOMAIN,tracklog.58.com,REJECT
-# > Facebook
-# DOMAIN,graph.facebook.com,REJECT
+# > Baidu
+DOMAIN,hm.baidu.com,REJECT
+DOMAIN,hmma.baidu.com,REJECT
 # > Google
 DOMAIN-SUFFIX,googletagmanager.com,REJECT
-DOMAIN,ssl.google-analytics.com,REJECT
-DOMAIN,www.google-analytics.com,REJECT
-# > MI
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN,safebrowsing.googleapis.com,REJECT
+#> MI
 DOMAIN-SUFFIX,tracking.miui.com,REJECT
 DOMAIN,data.mistat.xiaomi.com,REJECT
 DOMAIN,tracking.intl.miui.com,REJECT
@@ -609,6 +609,9 @@ DOMAIN,pingma.qq.com,REJECT
 DOMAIN,btrace.qq.com,REJECT
 DOMAIN,mtrace.qq.com,REJECT
 DOMAIN,safebrowsing.urlsec.qq.com,REJECT
+# > Umeng
+DOMAIN-KEYWORD,logs.umeng.com,REJECT
+DOMAIN-KEYWORD,logs.umengcloud.com,REJECT
 # > ZhiHu
 DOMAIN,appcloud2.zhihu.com,REJECT
 DOMAIN,118.89.204.198,REJECT
