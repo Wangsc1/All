@@ -261,9 +261,7 @@ DOMAIN,ad-cn.jovcloud.com,REJECT
 DOMAIN,adextra.51wnl-cq.com,REJECT
 DOMAIN,ads.adadapted.com,REJECT
 DOMAIN,ads.chinadaily.com.cn,REJECT
-DOMAIN,ads.daydaycook.com.cn,REJECT
 DOMAIN,ads.weilitoutiao.net,REJECT
-DOMAIN,adsapi.manhuaren.com,REJECT
 DOMAIN,adsdk.dmzj.com,REJECT
 DOMAIN,adserver.pandora.com,REJECT
 DOMAIN,adshow.58.com,REJECT
@@ -271,14 +269,12 @@ DOMAIN,adui.tg.meitu.com,REJECT
 DOMAIN,adv.bandi.so,REJECT
 DOMAIN,adv.ettoday.net,REJECT
 DOMAIN,api.adnet.mob.com,REJECT
-DOMAIN,app-ad.variflight.com,REJECT
 DOMAIN,appnext.hs.llnwd.net,REJECT
 DOMAIN,appnext-a.akamaihd.net,REJECT
 DOMAIN,business-cdn.shouji.sogou.com,REJECT
 DOMAIN,g.ousns.net,REJECT
 DOMAIN,ggs.myzaker.com,REJECT
 DOMAIN,ggx.cmvideo.cn,REJECT
-DOMAIN,itad.linetv.tw,REJECT
 DOMAIN,ja.chushou.tv,REJECT
 DOMAIN,mads.suning.com,REJECT
 DOMAIN,mobileads.msn.com,REJECT
