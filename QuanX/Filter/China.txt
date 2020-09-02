@@ -34,15 +34,10 @@ DOMAIN-KEYWORD,icloud.com.akadns.net,DIRECT
 # > Baidu
 DOMAIN-SUFFIX,baidu.com,DIRECT
 DOMAIN-SUFFIX,baidubcr.com,DIRECT
+DOMAIN-SUFFIX,baidupan.com,DIRECT
+DOMAIN-SUFFIX,baidupcs.com,DIRECT
 DOMAIN-SUFFIX,bdstatic.com,DIRECT
 DOMAIN-SUFFIX,yunjiasu-cdn.net,DIRECT
-# > bilibili
-DOMAIN-SUFFIX,acgvideo.com,DIRECT
-DOMAIN-SUFFIX,biliapi.com,DIRECT
-DOMAIN-SUFFIX,biliapi.net,DIRECT
-DOMAIN-SUFFIX,bilibili.com,DIRECT
-DOMAIN-SUFFIX,bilibili.tv,DIRECT
-DOMAIN-SUFFIX,hdslb.com,DIRECT
 # > ByteDance
 DOMAIN-SUFFIX,feiliao.com,DIRECT
 DOMAIN-SUFFIX,pstatp.com,DIRECT
@@ -69,6 +64,7 @@ DOMAIN-SUFFIX,miwifi.com,DIRECT
 DOMAIN-SUFFIX,xiaomi.com,DIRECT
 DOMAIN-SUFFIX,xiaomi.net,DIRECT
 # > Microsoft
+DOMAIN-SUFFIX,hotmail.com,DIRECT
 DOMAIN-SUFFIX,microsoft.com,DIRECT
 DOMAIN-SUFFIX,msecnd.net,DIRECT
 DOMAIN-SUFFIX,office365.com,DIRECT
@@ -126,24 +122,26 @@ DOMAIN,ip.istatmenus.app,DIRECT
 DOMAIN-SUFFIX,netspeedtestmaster.com,DIRECT
 DOMAIN,speedtest.macpaw.com,DIRECT
 # > Private Tracker
+DOMAIN-SUFFIX,acg.rip,DIRECT
 DOMAIN-SUFFIX,animebytes.tv,DIRECT
 DOMAIN-SUFFIX,awesome-hd.me,DIRECT
 DOMAIN-SUFFIX,broadcasthe.net,DIRECT
 DOMAIN-SUFFIX,chdbits.co,DIRECT
 DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+DOMAIN-SUFFIX,comicat.org,DIRECT
 DOMAIN-SUFFIX,empornium.me,DIRECT
 DOMAIN-SUFFIX,gazellegames.net,DIRECT
+DOMAIN-SUFFIX,hdbits.org,DIRECT
 DOMAIN-SUFFIX,hdchina.org,DIRECT
 DOMAIN-SUFFIX,hddolby.com,DIRECT
 DOMAIN-SUFFIX,hdsky.me,DIRECT
 DOMAIN-SUFFIX,hdhome.org,DIRECT
-DOMAIN-SUFFIX,hdbits.org,DIRECT
 DOMAIN-SUFFIX,icetorrent.org,DIRECT
 DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
 DOMAIN-SUFFIX,keepfrds.com,DIRECT
 DOMAIN-SUFFIX,madsrevolution.net,DIRECT
-DOMAIN-SUFFIX,myanonamouse.net,DIRECT
 DOMAIN-SUFFIX,m-team.cc,DIRECT
+DOMAIN-SUFFIX,myanonamouse.net,DIRECT
 DOMAIN-SUFFIX,morethan.tv,DIRECT
 DOMAIN-SUFFIX,nanyangpt.com,DIRECT
 DOMAIN-SUFFIX,ncore.cc,DIRECT
@@ -158,7 +156,6 @@ DOMAIN-SUFFIX,tjupt.org,DIRECT
 DOMAIN-SUFFIX,totheglory.im,DIRECT
 # > Other
 DOMAIN-SUFFIX,cn,DIRECT
-# DOMAIN-SUFFIX,vmware.com,DIRECT
 DOMAIN-SUFFIX,115.com,DIRECT
 DOMAIN-SUFFIX,360in.com,DIRECT
 DOMAIN-SUFFIX,51ym.me,DIRECT

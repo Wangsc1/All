@@ -34,15 +34,10 @@ DOMAIN-KEYWORD,icloud.com.akadns.net
 # > Baidu
 DOMAIN-SUFFIX,baidu.com
 DOMAIN-SUFFIX,baidubcr.com
+DOMAIN-SUFFIX,baidupan.com
+DOMAIN-SUFFIX,baidupcs.com
 DOMAIN-SUFFIX,bdstatic.com
 DOMAIN-SUFFIX,yunjiasu-cdn.net
-# > bilibili
-DOMAIN-SUFFIX,acgvideo.com
-DOMAIN-SUFFIX,biliapi.com
-DOMAIN-SUFFIX,biliapi.net
-DOMAIN-SUFFIX,bilibili.com
-DOMAIN-SUFFIX,bilibili.tv
-DOMAIN-SUFFIX,hdslb.com
 # > ByteDance
 DOMAIN-SUFFIX,feiliao.com
 DOMAIN-SUFFIX,pstatp.com
@@ -69,6 +64,7 @@ DOMAIN-SUFFIX,miwifi.com
 DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,xiaomi.net
 # > Microsoft
+DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,office365.com
@@ -126,24 +122,26 @@ DOMAIN,ip.istatmenus.app
 DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN,speedtest.macpaw.com
 # > Private Tracker
+DOMAIN-SUFFIX,acg.rip
 DOMAIN-SUFFIX,animebytes.tv
 DOMAIN-SUFFIX,awesome-hd.me
 DOMAIN-SUFFIX,broadcasthe.net
 DOMAIN-SUFFIX,chdbits.co
 DOMAIN-SUFFIX,classix-unlimited.co.uk
+DOMAIN-SUFFIX,comicat.org
 DOMAIN-SUFFIX,empornium.me
 DOMAIN-SUFFIX,gazellegames.net
+DOMAIN-SUFFIX,hdbits.org
 DOMAIN-SUFFIX,hdchina.org
 DOMAIN-SUFFIX,hddolby.com
 DOMAIN-SUFFIX,hdsky.me
 DOMAIN-SUFFIX,hdhome.org
-DOMAIN-SUFFIX,hdbits.org
 DOMAIN-SUFFIX,icetorrent.org
 DOMAIN-SUFFIX,jpopsuki.eu
 DOMAIN-SUFFIX,keepfrds.com
 DOMAIN-SUFFIX,madsrevolution.net
-DOMAIN-SUFFIX,myanonamouse.net
 DOMAIN-SUFFIX,m-team.cc
+DOMAIN-SUFFIX,myanonamouse.net
 DOMAIN-SUFFIX,morethan.tv
 DOMAIN-SUFFIX,nanyangpt.com
 DOMAIN-SUFFIX,ncore.cc
@@ -158,7 +156,6 @@ DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
 # > Other
 DOMAIN-SUFFIX,cn
-# DOMAIN-SUFFIX,vmware.com
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,360in.com
 DOMAIN-SUFFIX,51ym.me
