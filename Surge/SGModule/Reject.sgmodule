@@ -618,9 +618,3 @@ DOMAIN,safebrowsing.urlsec.qq.com,REJECT
 # > Umeng
 DOMAIN-KEYWORD,logs.umeng.com,REJECT
 DOMAIN-KEYWORD,logs.umengcloud.com,REJECT
-# > ZhiHu
-DOMAIN,appcloud2.zhihu.com,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
-IP-CIDR,118.89.204.198/32,no-resolve,REJECT
-USER-AGENT,AVOS*,REJECT
-AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
