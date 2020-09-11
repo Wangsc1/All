@@ -1,4 +1,5 @@
 # Apple
+DOMAIN,testflight.apple.com,Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple
 DOMAIN-SUFFIX,apple.co,Apple
 DOMAIN-SUFFIX,apple.com,Apple
