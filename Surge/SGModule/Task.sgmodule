@@ -18,6 +18,8 @@
 宠汪汪偷好友积分与狗粮 = type=cron,cronexp=0 0,6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js
 # 京东种豆得豆
 京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
+# 京东进店领豆
+京东进店领豆 = type=cron,cronexp=9 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js
 # 京东京小超
 京东京小超 = type=cron,cronexp=11 1-23/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 京东京小超蓝币 = type=cron,cronexp=11 5 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
