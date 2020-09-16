@@ -2,6 +2,9 @@
 #!desc=重写
 #!system=ios
 
+[Rule]
+URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
+
 [URL Rewrite]
 # GeoIp
 ^(http|https)://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=Lxn9la8NsE4EW7Tj&suffix=tar.gz 302
@@ -93,7 +96,7 @@
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
+# ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
