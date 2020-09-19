@@ -59,17 +59,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/(guanggao|ts_ad)\/ - reject
-# > Baidu Tieba
-^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule - reject
-^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo - reject
-^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) - reject
 # > Baidu Map - newclient.map.baidu.com
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
-# > Baidu InputMethod - mime.baidu.com
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ - reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
-# > Beike - app.api.ke.com
-^https?:\/\/app\.api\.ke\.com\/config\/config\/bootpage - reject
 
 # C
 # > ChinaMobile - clientaccess.10086.cn
@@ -80,19 +71,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
 # > Cloud189 - cloud.189.cn
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
-
-# D
-# > DingDongMaiCai - maicai.api.ddxq.mobi
-^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ - reject
-
-# E
-# > eleme - cube.elemecdn.com
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - reject
-
-# G
-# > Gofun - gateway.shouqiev.com
-^https?:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json - reject
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
@@ -124,9 +102,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - reject
-# > Suning - mpcs.suning.com
-^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ - reject
-^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
 
 # T
 # > Tencent Game - ssl.kohsocialapp.qq.com
@@ -148,13 +123,5 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # > Tencent WeChat - mp.weixin.qq.com
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 
-# W
-# > Weidian - thor.weidian.com
-^https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/ - reject
-
-# X
-# > Xiachufang - api.xiachufang.com
-^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
-
 [MITM]
-hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,mime.baidu.com,app.api.ke.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,maicai.api.ddxq.mobi,cube.elemecdn.com,gateway.shouqiev.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,ap*.smzdm.com,mpcs.suning.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com,thor.weidian.com,api.xiachufang.com
+hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,ap*.smzdm.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com
