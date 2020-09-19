@@ -86,16 +86,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ - reject
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
-# > Meituan-Dianping - img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net
-^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
-^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) - reject
-^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg - reject
-^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp - reject
-
-# P
-# > Pinduoduo - api.yangkeduo.com
-^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash - reject
-^https?:\/\/t00img\.yangkeduo\.com\/goods\/[\d-]+\/[A-Za-z0-9]+\.jpeg\?imageView2\/format\/webp$ - reject
 
 # S
 # > SMZDM - ap*.smzdm.com
@@ -113,10 +103,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - reject
 ^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ - reject
-# > Tencent News - r.inews.qq.com
-^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
-# > Tencent Sports - news.ssp.qq.com
-^https?:\/\/news\.ssp\.qq\.com\/app - reject
 # > Tencent Music
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
@@ -124,4 +110,4 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 
 [MITM]
-hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,ap*.smzdm.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com
+hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,ap*.smzdm.com,ssl.kohsocialapp.qq.com,mp.weixin.qq.com
