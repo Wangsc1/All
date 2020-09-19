@@ -356,12 +356,6 @@ DOMAIN,mobilelog.kugou.com,REJECT
 DOMAIN,mobilead.kuwo.cn,REJECT
 DOMAIN,rich.kuwo.cn,REJECT
 
-# (X)
-# > Xiaohongshu
-DOMAIN,ads-img-qc.xhscdn.com,REJECT
-DOMAIN,ads-video-qc.xhscdn.com,REJECT
-DOMAIN,t-ads.xiaohongshu.com,REJECT
-
 # Internet Service Providers Hijacking
 DOMAIN-SUFFIX,17gouwuba.com,REJECT
 DOMAIN-SUFFIX,186078.com,REJECT
@@ -600,9 +594,6 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 DOMAIN,track.tiara.daum.net,REJECT
 DOMAIN,track.tiara.kakao.com,REJECT
 DOMAIN,zgsdk.zhugeio.com,REJECT
-# > 58
-DOMAIN,track.58.com,REJECT
-DOMAIN,tracklog.58.com,REJECT
 # > Baidu
 DOMAIN,hm.baidu.com,REJECT
 DOMAIN,hmma.baidu.com,REJECT
