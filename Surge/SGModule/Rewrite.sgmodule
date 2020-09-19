@@ -14,16 +14,12 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # Q-Search
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ https://www.baidu.com/s?wd=$2 302
-# 谷歌图片
-^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)([^&]+).+ https://www.google.com/search?&tbm=isch&q=$2 302
 # 谷歌网盘
 ^https:\/\/duckduckgo.com\/\?q=dr(\+|%20)([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$2 302
 # Github
 ^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ https://github.com/search?q=$2 302
 # 知乎
 ^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ https://www.zhihu.com/search?type=content&q=$2 302
-# 有道翻译
-^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ http://dict.youdao.com/search?q=$2 302
 # 中亚
 ^https:\/\/duckduckgo.com\/\?q=amzz(\+|%20)([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$2 302
 # 美亚
@@ -38,17 +34,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
 # > Xianyu - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ - reject
-# > Fliggy - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ - reject
-# > Taopiaopiao - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
-# > koubei - acs.m.taobao.com
-^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json - reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ - reject
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ - reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.exposure\.get\/ - reject
-# > Xiami Music - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # > YOUKU
@@ -94,20 +79,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - reject
 
 # T
-# > Tencent Game - ssl.kohsocialapp.qq.com
-^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons - reject
-^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - reject
-# > Tencent Video
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - reject
-^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ - reject
-# > Tencent Music
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
 # > Tencent WeChat - mp.weixin.qq.com
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 
 [MITM]
-hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,ap*.smzdm.com,ssl.kohsocialapp.qq.com,mp.weixin.qq.com
+hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,ap*.smzdm.com,mp.weixin.qq.com
