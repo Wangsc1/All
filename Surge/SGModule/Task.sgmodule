@@ -7,8 +7,6 @@
 // 会话切换 = type=cron,cronexp=58 13 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
 # 京东京豆
 京东京豆 = type=cron,cronexp=4 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-# 京东到家
-京东到家 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
 # 京东加速
 京东加速 = type=cron,cronexp=2 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js
 # 京东宠汪汪
@@ -19,14 +17,12 @@
 # 京东种豆得豆
 京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
 # 京东进店领豆
-京东进店领豆 = type=cron,cronexp=9 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js
+京东进店领豆 = type=cron,cronexp=7 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js
 # 京东京小超
 京东京小超 = type=cron,cronexp=11 1-23/2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 京东京小超蓝币 = type=cron,cronexp=11 5 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
 # 饿了么红包
-饿了么红包 = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
+饿了么红包 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
 # 滴滴出行
-滴滴签到 = type=cron,cronexp=7 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+滴滴签到 = type=cron,cronexp=6 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
 滴滴福利金 = type=cron,cronexp=58 23 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
-# 叮咚买菜
-叮咚买菜 = type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js
