@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,as.xiaojukeji.com,maicai.api.ddxq.mobi,act.10010.com,m.client.10010.com,wx.10086.cn,clientaccess.10086.cn
+hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,as.xiaojukeji.com,maicai.api.ddxq.mobi,act.10010.com,m.client.10010.com,clientaccess.10086.cn
 
 [Script]
 # 京东京豆
@@ -21,7 +21,5 @@ hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,as.xiaojukeji.com,maica
 中国联通cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 中国联通cookie = type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 # 中国移动
-10086cookie = type=http-request,pattern=^http:\/\/wx.10086.cn\/website\/taskCenter\/index\?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
-10086cookie = type=http-request,pattern=^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
 中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
 中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
