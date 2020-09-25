@@ -1,0 +1,10 @@
+#!name=Block
+#!desc=更新
+#!system=ios
+
+[Rule]
+# Block iOS Update
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
