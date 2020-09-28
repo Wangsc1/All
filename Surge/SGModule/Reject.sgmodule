@@ -602,10 +602,10 @@ DOMAIN-SUFFIX,tracking.miui.com,REJECT
 DOMAIN,data.mistat.xiaomi.com,REJECT
 DOMAIN,tracking.intl.miui.com,REJECT
 # > Tencent
-DOMAIN,pingma.qq.com,REJECT
 DOMAIN,btrace.qq.com,REJECT
 DOMAIN,mtrace.qq.com,REJECT
 DOMAIN,safebrowsing.urlsec.qq.com,REJECT
 # > Umeng
+DOMAIN-KEYWORD,log.umeng.com,REJECT
 DOMAIN-KEYWORD,logs.umeng.com,REJECT
 DOMAIN-KEYWORD,logs.umengcloud.com,REJECT
