@@ -1,9 +1,0 @@
-#!name=Sub
-#!desc=订阅
-#!system=ios
-
-[MITM]
-hostname = %APPEND% sub.store
-
-[Script]
-Sub = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js,requires-body=true,timeout=120
