@@ -1,5 +1,5 @@
 #!name=BoxJs,Sub-Store
-#!desc=Cookie、订阅管理
+#!desc=Cookie,订阅管理
 #!system=ios
 
 [MITM]
