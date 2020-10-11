@@ -1,5 +1,5 @@
 #!name=Cookie
-#!desc=Cookie
+#!desc=获取Cookie
 #!system=ios
 
 [MITM]

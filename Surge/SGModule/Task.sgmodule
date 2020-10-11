@@ -1,5 +1,5 @@
 #!name=Task
-#!desc=任务
+#!desc=定时任务
 #!system=ios
 
 [Script]
