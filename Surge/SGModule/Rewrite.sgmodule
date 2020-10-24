@@ -38,6 +38,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
 # > Xianyu - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ - reject
+# > Taopiaopiao - acs.m.taobao.com
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 # > YOUKU
@@ -61,6 +63,11 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # > Cloud189 - cloud.189.cn
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
 
+# E
+# > eleme - cube.elemecdn.com
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - reject
+
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
 # ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
@@ -75,6 +82,11 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ - reject
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
+# > Meituan-Dianping - img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net
+^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) - reject
+^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg - reject
+^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp - reject
 
 # P
 # > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
@@ -90,5 +102,9 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # > Tencent WeChat - mp.weixin.qq.com
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 
+# X
+# > Xiachufang - api.xiachufang.com
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
+
 [MITM]
-hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,api.yangkeduo.com,api.pinduoduo.com,ap*.smzdm.com,mp.weixin.qq.com
+hostname = %APPEND% duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,ap*.smzdm.com,mp.weixin.qq.com,api.xiachufang.com
