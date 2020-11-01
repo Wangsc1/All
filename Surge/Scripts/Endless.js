@@ -1,10 +1,8 @@
 /*
 [Script]
 Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Endless.js
-
-[mitm]
+[Mitm]
 www.google.*
- 
 */
 
 let body = $response.body;
@@ -13,7 +11,6 @@ if (/<\/html>|<\/body>/.test(body)) {
   body = body.replace(
     '</body>',
     `
-
 <script>
 const elecJSPack = function(){// ==UserScript==
 // @name            Endless Google
@@ -157,7 +154,7 @@ function init() {
     document.head.appendChild(style);
     msg = document.createElement("div");
     msg.setAttribute("class", "endless-msg");
-    msg.innerText = "            Loading...";
+    msg.innerText = "Loading...";
     document.body.appendChild(msg);
 }
 
