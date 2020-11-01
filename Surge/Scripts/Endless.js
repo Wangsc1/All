@@ -157,7 +157,7 @@ function init() {
     document.head.appendChild(style);
     msg = document.createElement("div");
     msg.setAttribute("class", "endless-msg");
-    msg.innerText = "     Loading...";
+    msg.innerText = "            Loading...";
     document.body.appendChild(msg);
 }
 
