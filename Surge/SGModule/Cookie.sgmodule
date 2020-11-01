@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,i.meituan.com,api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,maicai.api.ddxq.mobi,act.10010.com,m.client.10010.com,clientaccess.10086.cn
+hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,i.meituan.com,api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,maicai.api.ddxq.mobi,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com
 
 [Script]
 # 京东京豆
@@ -28,3 +28,4 @@ hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,i.meituan.com,api.didia
 # 中国移动
 中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
 中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
+小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js
