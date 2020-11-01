@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,trade-acs.m.taobao.com,ios.prod.ftl.netflix.com,biz.caiyunapp.com,claritywallpaper.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.google.*
+hostname = %APPEND% api.m.jd.com,trade-acs.m.taobao.com,ios.prod.ftl.netflix.com,biz.caiyunapp.com,claritywallpaper.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.google.*,draw.jdfcloud.com
 
 [Script]
 # 京东比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
@@ -16,3 +16,4 @@ hostname = %APPEND% api.m.jd.com,trade-acs.m.taobao.com,ios.prod.ftl.netflix.com
 微博启动 = type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 微博广告 = type=http-response,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Endless.js
+宠汪汪强制为别人助力 = type=http-request,pattern=(^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\/h5\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js
