@@ -7,10 +7,12 @@ www.google.*
  
 */
 
-let body = $response.body
+let body = $response.body;
 
 if (/<\/html>|<\/body>/.test(body)) {
-  body = body.replace('</body>', `
+  body = body.replace(
+    '</body>',
+    `
 
 <script>
 const elecJSPack = function(){// ==UserScript==
@@ -42,6 +44,12 @@ const filtersCol = filtersAll.concat(["#extrares", "#imagebox_bigimages"]);
 let   msg = "";
 
 const css = \`
+#botstuff {
+  height: 18px;
+}
+#botstuff > div{
+  display:none;
+}
 .page-number {
   position: relative;
   display: flex;
@@ -73,7 +81,7 @@ const css = \`
 \`;
 
 let pageNumber = 1;
-let prevScrollY = 0;
+let prevScrollY = 120;
 let nextPageLoading = false;
 
 function requestNextPage() {
@@ -149,13 +157,14 @@ function init() {
     document.head.appendChild(style);
     msg = document.createElement("div");
     msg.setAttribute("class", "endless-msg");
-    msg.innerText = "       Loading next page...";
+    msg.innerText = "Loading next page...";
     document.body.appendChild(msg);
 }
 
-document.addEventListener("DOMContentLoaded", init);
-}()</script></body>`)
+document.addEventListener("DOMContentLoaded", init);}()</script></body>`
+  );
 
+  console.log('添加 tamperJS：endless.js');
 }
 
-$done({ body })
+$done({ body });
