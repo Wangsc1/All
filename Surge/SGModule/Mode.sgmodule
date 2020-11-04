@@ -1,6 +1,0 @@
-#!name=Mode
-#!desc=运行模式
-#!system=ios
-
-[Script]
-运行模式 = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Mode.js
