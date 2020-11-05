@@ -1,5 +1,5 @@
-#!name=Ads
-#!desc=广告屏蔽
+#!name=Rewrites
+#!desc=广告重写
 #!system=ios
 
 [URL Rewrite]
