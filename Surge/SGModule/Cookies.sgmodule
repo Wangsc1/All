@@ -6,28 +6,21 @@
 hostname = %APPEND% api.m.jd.com,daojia.jd.com,h5.ele.me,i.meituan.com,api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,maicai.api.ddxq.mobi,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com
 
 [Script]
-# 京东京豆
-京东京豆cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-# 京东到家
-京东到家cookie = type=http-request,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
-# 饿了么
-饿了么cookie = type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
-# 美团
-美团cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
-# 滴滴出行
-滴滴签到cookie = type=http-request,pattern=^https?:\/\/api\.didialift\.com\/beatles\/userapi\/user\/user\/getuserinfo?.*city_id=(\d+).*token=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行cookie = type=http-request,pattern=^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?.*location_cityid=(\d+).*&ticket=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行cookie = type=http-request,pattern=^https?:\/\/manhattan\.webapp\.xiaojukeji\.com\/marvel\/api\/manhattan\-signin\-task\/signIn\/execute,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴抽奖cookie = type=http-request,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/bosp-api\/lottery\/info?.*lid=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-# 叮咚买菜
-叮咚买菜cookie = type=http-request,pattern=^https:\/\/maicai.api.ddxq.mobi\/point\/home,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.cookie.js
-# 中国联通
-中国联通cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-中国联通cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-中国联通cookie = type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-# 中国移动
-中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
-中国移动cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
-小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js
-宠汪汪助力更新 = type=http-response,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+&, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js
-宠汪汪助力获取 = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js
+京东京豆Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+京东到家Cookie = type=http-request,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
+饿了么Cookie = type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
+美团Cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+滴滴签到Cookie = type=http-request,pattern=^https?:\/\/api\.didialift\.com\/beatles\/userapi\/user\/user\/getuserinfo?.*city_id=(\d+).*token=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
+滴滴出行Cookie = type=http-request,pattern=^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?.*location_cityid=(\d+).*&ticket=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
+滴滴出行Cookie = type=http-request,pattern=^https?:\/\/manhattan\.webapp\.xiaojukeji\.com\/marvel\/api\/manhattan\-signin\-task\/signIn\/execute,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
+滴滴抽奖Cookie = type=http-request,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/bosp-api\/lottery\/info?.*lid=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
+叮咚买菜Cookie = type=http-request,pattern=^https:\/\/maicai.api.ddxq.mobi\/point\/home,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.cookie.js
+中国联通Cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+中国联通Cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+中国联通Cookie = type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+中国移动Cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
+中国移动Cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
+小米运动Cookie = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js
+宠汪汪助力更新Cookie = type=http-response,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+&, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js
+宠汪汪助力获取Cookie = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js
+来客有礼Cookie = type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
