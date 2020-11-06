@@ -1,4 +1,4 @@
-const $ = new Env('🤝 京东互助码')
+const $ = new Env('🐶 京东互助码')
 const shareCodes = [
   {
     zd: $.getdata("zd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
