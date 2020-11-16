@@ -1,28 +1,23 @@
-hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,mime.baidu.com,app.api.ke.com,clientaccess.10086.cn,m.client.10010.com,cloud.189.cn,maicai.api.ddxq.mobi,cube.elemecdn.com,gateway.shouqiev.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,ap*.smzdm.com,mpcs.suning.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,mp.weixin.qq.com,thor.weidian.com,api.xiachufang.com
+hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,ap*.smzdm.com,mp.weixin.qq.com,api.xiachufang.com
         
 # URL Rewrite
-# Google Map
-^https?:\/\/(www.)?g\.cn url 302 https:\/\/www.google.com
-^https?:\/\/(www.)?google\.cn url 302 https:\/\/www.google.com
 # Q-Search
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ url 302  https://www.baidu.com/s?wd=$2
-# 谷歌图片
-^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)([^&]+).+ url 302  https://www.google.com/search?&tbm=isch&q=$2
 # 谷歌网盘
-^https:\/\/duckduckgo.com\/\?q=dr(\+|%20)([^&]+).+ url 302  https://www.google.com/search?q=%22Google+Drive%22+$2
-# Github
-^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ url 302  https://github.com/search?q=$2
-# 知乎
-^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ url 302  https://www.zhihu.com/search?type=content&q=$2
-# 有道翻译
-^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ url 302  http://dict.youdao.com/search?q=$2
+^https:\/\/duckduckgo.com\/\?q=gd(\+|%20)([^&]+).+ url 302  https://www.google.com/search?q=%22Google+Drive%22+$2
+# tgd xxx(t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=tgd(\+|%20)([^&]+).+ url 302  https://t.me/s/gdurl?q=$2
+# 谷歌资源
+^https:\/\/duckduckgo.com\/\?q=gdz(\+|%20)([^&]+).+ url 302  https://zhao.pp.ua/?q=$2
+# Testflight
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ url 302  https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com
 # 中亚
-^https:\/\/duckduckgo.com\/\?q=amzz(\+|%20)([^&]+).+ url 302  https://www.amazon.cn/gp/aw/s/?k=$2
+^https:\/\/duckduckgo.com\/\?q=zy(\+|%20)([^&]+).+ url 302  https://www.amazon.cn/gp/aw/s/?k=$2
 # 美亚
-^https:\/\/duckduckgo.com\/\?q=amzm(\+|%20)([^&]+).+ url 302  https://www.amazon.com/gp/aw/s/?k=$2
+^https:\/\/duckduckgo.com\/\?q=my(\+|%20)([^&]+).+ url 302  https://www.amazon.com/gp/aw/s/?k=$2
 # 日亚
-^https:\/\/duckduckgo.com\/\?q=amzr(\+|%20)([^&]+).+ url 302  https://www.amazon.co.jp/gp/aw/s/?k=$2
+^https:\/\/duckduckgo.com\/\?q=ry(\+|%20)([^&]+).+ url 302  https://www.amazon.co.jp/gp/aw/s/?k=$2
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
 
@@ -31,17 +26,6 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject
 # > Xianyu - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
-# > Fliggy - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject
-# > Taopiaopiao - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject
-# > koubei - acs.m.taobao.com
-^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.exposure\.get\/ url reject
-# > Xiami Music - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ url reject
 # > AMap - m*.amap.com
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 # > YOUKU
@@ -52,17 +36,8 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx url reject
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/(guanggao|ts_ad)\/ url reject
-# > Baidu Tieba
-^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule url reject
-^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo url reject
-^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) url reject
 # > Baidu Map - newclient.map.baidu.com
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url reject
-# > Baidu InputMethod - mime.baidu.com
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ url reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement url reject
-# > Beike - app.api.ke.com
-^https?:\/\/app\.api\.ke\.com\/config\/config\/bootpage url reject
 
 # C
 # > ChinaMobile - clientaccess.10086.cn
@@ -71,21 +46,11 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 # > ChinaUnicom - m.client.10010.com
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject
-# > Cloud189 - cloud.189.cn
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
-
-# D
-# > DingDongMaiCai - maicai.api.ddxq.mobi
-^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
 
 # E
 # > eleme - cube.elemecdn.com
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ url reject
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ url reject
-
-# G
-# > Gofun - gateway.shouqiev.com
-^https?:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json url reject
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
@@ -108,42 +73,18 @@ hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taob
 ^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp url reject
 
 # P
-# > Pinduoduo - api.yangkeduo.com
-^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject
-^https?:\/\/t00img\.yangkeduo\.com\/goods\/[\d-]+\/[A-Za-z0-9]+\.jpeg\?imageView2\/format\/webp$ url reject
+# > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 
 # S
 # > SMZDM - ap*.smzdm.com
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
-# > Suning - mpcs.suning.com
-^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject
-^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
 
 # T
-# > Tencent Game - ssl.kohsocialapp.qq.com
-^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons url reject
-^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info url reject
-# > Tencent Video
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 url reject
-^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ url reject
-# > Tencent News - r.inews.qq.com
-^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) url reject
-# > Tencent Sports - news.ssp.qq.com
-^https?:\/\/news\.ssp\.qq\.com\/app url reject
-# > Tencent Music
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ url reject
 # > Tencent WeChat - mp.weixin.qq.com
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) url reject
-
-# W
-# > Weidian - thor.weidian.com
-^https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/ url reject
 
 # X
 # > Xiachufang - api.xiachufang.com
