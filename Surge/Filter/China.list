@@ -112,10 +112,6 @@ DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,whatismyip.com
 DOMAIN,ip.istatmenus.app
 DOMAIN,sms.imagetasks.com
-# > Speed Test
-# DOMAIN-SUFFIX,speedtest.net
-DOMAIN-SUFFIX,netspeedtestmaster.com
-DOMAIN,speedtest.macpaw.com
 # > Private Tracker
 DOMAIN-SUFFIX,acg.rip
 DOMAIN-SUFFIX,animebytes.tv
