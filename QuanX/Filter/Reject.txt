@@ -352,6 +352,14 @@ DOMAIN,mobilelog.kugou.com,Reject
 DOMAIN,mobilead.kuwo.cn,Reject
 DOMAIN,rich.kuwo.cn,Reject
 
+# (Z)
+# > Zhihu
+USER-AGENT,AVOS*,Reject
+DOMAIN,appcloud2.zhihu.com,Reject
+DOMAIN,appcloud2.in.zhihu.com,Reject
+DOMAIN,sugar.zhihu.com,Reject
+IP-CIDR,118.89.204.198/32,Reject        
+    
 # Internet Service Providers Hijacking
 DOMAIN-SUFFIX,17gouwuba.com,Reject
 DOMAIN-SUFFIX,186078.com,Reject

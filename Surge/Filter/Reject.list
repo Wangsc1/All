@@ -353,6 +353,14 @@ DOMAIN,mobilelog.kugou.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
 
+# (Z)
+# > Zhihu
+USER-AGENT,AVOS*
+DOMAIN,appcloud2.zhihu.com
+DOMAIN,appcloud2.in.zhihu.com
+DOMAIN,sugar.zhihu.com
+IP-CIDR,118.89.204.198/32,no-resolve
+
 # Internet Service Providers Hijacking
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com
