@@ -1,23 +1,31 @@
-hostname = duckduckgo.com,www.google.cn,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,ap*.smzdm.com,mp.weixin.qq.com,api.xiachufang.com
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,ap*.smzdm.com,mp.weixin.qq.com,api.xiachufang.com
         
 # URL Rewrite
 # Q-Search
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ url 302  https://www.baidu.com/s?wd=$2
+
 # 谷歌网盘
 ^https:\/\/duckduckgo.com\/\?q=gd(\+|%20)([^&]+).+ url 302  https://www.google.com/search?q=%22Google+Drive%22+$2
+
 # tgd xxx(t.me/gdurl 搜索 Google Drive 资源)
 ^https:\/\/duckduckgo.com\/\?q=tgd(\+|%20)([^&]+).+ url 302  https://t.me/s/gdurl?q=$2
+
 # 谷歌资源
 ^https:\/\/duckduckgo.com\/\?q=gdz(\+|%20)([^&]+).+ url 302  https://zhao.pp.ua/?q=$2
+
 # Testflight
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ url 302  https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com
+
 # 中亚
 ^https:\/\/duckduckgo.com\/\?q=zy(\+|%20)([^&]+).+ url 302  https://www.amazon.cn/gp/aw/s/?k=$2
+
 # 美亚
 ^https:\/\/duckduckgo.com\/\?q=my(\+|%20)([^&]+).+ url 302  https://www.amazon.com/gp/aw/s/?k=$2
+
 # 日亚
 ^https:\/\/duckduckgo.com\/\?q=ry(\+|%20)([^&]+).+ url 302  https://www.amazon.co.jp/gp/aw/s/?k=$2
+
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
 
