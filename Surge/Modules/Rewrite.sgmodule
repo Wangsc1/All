@@ -1,5 +1,5 @@
-#!name=Rewrites
-#!desc=广告重写
+#!name=Rewrite
+#!desc=重写
 #!system=ios
 
 [URL Rewrite]
