@@ -309,6 +309,7 @@ DOMAIN,duclick.baidu.com,Reject
 DOMAIN,mobads.baidu.com,Reject
 DOMAIN,mobads-logs.baidu.com,Reject
 DOMAIN,nsclick.baidu.com,Reject
+DOMAIN,dss0.bdstatic.com,Reject
 
 # (C)
 # > ChinaTelecom
