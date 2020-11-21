@@ -17,7 +17,7 @@
         "15 10 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js, tag=京东宠汪汪邀请助力与赛跑, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true",
         "1 0,6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=京东宠汪汪偷好友积分与狗粮, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true",
         "11 1-23/5 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京东京小超, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true",
-        "0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京东京小超领蓝币, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true",
+        "59 59 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京东京小超领蓝币, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true",
         "12 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js, tag=京东养猪猪, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyz.png, enabled=true",
         "0 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js, tag=京东天天提鹅, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdte.png, enabled=true",
         "4 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=京东进店领豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true",
