@@ -1,4 +1,4 @@
-各种脚本、规则均取自各位大佬，感谢：
+各种脚本、规则、图片均取自各位大佬，感谢：
 @NobyDa
 @Choler
 @langkach
@@ -19,3 +19,7 @@
 @GideonSenku
 @toulanboy
 @evilbutcher
+@yangtingxiao
+@whyour
+@58xinian
+@Orz-3
