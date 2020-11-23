@@ -33,6 +33,6 @@
 // 京东手机狂欢城 = type=cron,cronexp=1 0-18/6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_818.js
 饿了么 = type=cron,cronexp=5 0 * * *,timeout=20,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
 美团 = type=cron,cronexp=6 0 * * *,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js
-滴滴出行 = type=cron,cronexp=0 1,20 * * *,timeout=120,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行 = type=cron,cronexp="0 1,20 * * *",timeout=120,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 小米运动 = type=cron,cronexp=12 17 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js
 云闪付 = type=cron,cronexp=8 0 * * *,wake-system=1,timeout=20,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
