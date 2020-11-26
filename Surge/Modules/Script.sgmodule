@@ -2,6 +2,9 @@
 #!desc=脚本
 #!system=ios
 
+[General]
+compatibility-mode = 3
+
 [MITM]
 hostname = %APPEND% sub.store,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
 
