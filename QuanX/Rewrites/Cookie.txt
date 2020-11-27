@@ -45,4 +45,4 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 ^https://youhui.95516.com/newsign/public/app/index.html url script-request-header https://gitee.com/passerby-b/javascript/raw/master/unipay.js
 
 # 支付宝天天挖矿Cookie
-^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/xingliuchao/jd/main/alipayswk.js
+^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Alittwk.js
