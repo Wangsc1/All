@@ -1,4 +1,4 @@
-const $ = new Env('互助码')
+const $ = new Env('🤝 京东互助码')
 $.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
 
 $.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/'
