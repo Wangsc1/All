@@ -24,7 +24,7 @@ function setSignData() {
     $.setdata($request.url,'alipayswksignurl')
     $.setdata(JSON.stringify($request.headers),'alipayswksignheader')
     $.setdata($request.body,'alipayswksignbody')
-    $.msg($.name,"","[获取签到数据]✅成功，请禁用获取Cookie脚本！")
+    $.msg($.name,"","🎉 获取Cookie成功")
   }
 }
 
