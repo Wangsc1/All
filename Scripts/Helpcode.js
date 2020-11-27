@@ -1,7 +1,13 @@
 const $ = new Env('互助码')
-$.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/olmijoxgmjutzr2rlylpnfhsdfcqe2scndhws3i/'
-$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/11702238f4624a9a92e7494483515a00/'
-$.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMjAwMDAwMDAyNzIyNzE1Mw==/'
+$.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
+
+$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/'
+
+$.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==/'
+
+$.ddgcUrl = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N/'
+
+$.jxgcUrl = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=/'
 $.result = []
 
 !(async () => {
@@ -55,6 +61,44 @@ function createNc() {
 function createMc() {
   return new Promise((resolve) => {
     const url = { url: $.mcUrl }
+    $.get(url, (err, resp, data) => {
+      try {
+        const _data = JSON.parse(data)
+        if (_data) {
+          $.result.push(_data.message)
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve()
+      }
+    })
+  })
+}
+
+// 东东工厂
+function createDDgc() {
+  return new Promise((resolve) => {
+    const url = { url: $.ddgcUrl }
+    $.get(url, (err, resp, data) => {
+      try {
+        const _data = JSON.parse(data)
+        if (_data) {
+          $.result.push(_data.message)
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve()
+      }
+    })
+  })
+}
+
+// 京喜工厂
+function createJXgc() {
+  return new Promise((resolve) => {
+    const url = { url: $.jxgcUrl }
     $.get(url, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
