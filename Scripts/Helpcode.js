@@ -14,6 +14,8 @@ $.result = []
   await createZd()
   await createNc()
   await createMc()
+  await createDDgc()
+  await createJXgc()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
