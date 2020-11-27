@@ -1,4 +1,5 @@
-const $ = new Env('🤝 京东互助码')
+const $ = new Env('🚗 互助码上车')
+
 $.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
 
 $.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/'
@@ -8,6 +9,7 @@ $.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMD
 $.ddgcUrl = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N/'
 
 $.jxgcUrl = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=/'
+
 $.result = []
 
 !(async () => {
