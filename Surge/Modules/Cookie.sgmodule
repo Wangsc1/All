@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,youhui.95516.com
+hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,youhui.95516.com,operation-api.jimistore.com
 
 [Script]
 # 京东签到Cookie
@@ -48,3 +48,6 @@ hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyo
 
 # 云闪付Cookie
 云闪付 = type=http-request,pattern=https://youhui.95516.com/newsign/public/app/index.html,requires-body=1,max-size=0,script-path=https://gitee.com/passerby-b/javascript/raw/master/unipay.js
+
+# 支付宝天天挖矿Cookie
+# 支付宝天天挖矿 = type=http-request,pattern=^https:\/\/operation-api\.jimistore\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xingliuchao/jd/main/alipayswk.js
