@@ -1,4 +1,4 @@
-const $ = new Env('🚗 互助码上车')
+const $ = new Env('🚗 互助上车')
 
 $.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
 
