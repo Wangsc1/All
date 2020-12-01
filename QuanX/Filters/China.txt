@@ -186,7 +186,6 @@ DOMAIN-SUFFIX,amd.com,China
 DOMAIN-SUFFIX,b612.net,China
 DOMAIN-SUFFIX,bdatu.com,China
 DOMAIN-SUFFIX,beitaichufang.com,China
-DOMAIN-SUFFIX,bjango.com,China
 DOMAIN-SUFFIX,booking.com,China
 DOMAIN-SUFFIX,bstatic.com,China
 DOMAIN-SUFFIX,cailianpress.com,China
