@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,youhui.95516.com,operation-api.jimistore.com
+hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,youhui.95516.com,operation-api.jimistore.com,huodong.fanli.com
 
 [Script]
 # 京东签到Cookie
@@ -51,3 +51,6 @@ hostname = %APPEND% api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyo
 
 # 支付宝天天挖矿Cookie
 支付宝天天挖矿 = type=http-request,pattern=^https:\/\/operation-api\.jimistore\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Alittwk.js
+    
+# 返利网Cookie
+返利网 = type=http-request,pattern=https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxDoTask76728,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js
