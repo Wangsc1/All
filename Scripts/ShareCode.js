@@ -14,13 +14,6 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
     jxgc: $.getdata("jx_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
   },
-  {
-    zd: $.getdata("zd_shareCode2") || "",
-    nc: $.getdata("nc_shareCode2") || "",
-    mc: $.getdata("mc_shareCode2") || "",
-    ddgc: $.getdata("dd_shareCode2") || "",
-    jxgc: $.getdata("jx_shareCode2") || "",
-  },
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 3);
