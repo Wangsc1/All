@@ -1,4 +1,7 @@
-hostname = biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
+hostname = sub.store,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
+
+# Sub-Store
+^https?:\/\/sub\.store url script-analyze-echo-response https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
 
 # 彩云SVIP
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
