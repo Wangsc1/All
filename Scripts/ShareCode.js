@@ -8,36 +8,36 @@
 const $ = new Env("🚗 互助上车");
 const shareCodes = [
   {
-    zd: $.getdata("zd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
-    nc: $.getdata("nc_shareCode1") || "55ddb354f2b54a50a35af9267e6a9582",
-    mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
+    zddd: $.getdata("zd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
+    ddnc: $.getdata("nc_shareCode1") || "55ddb354f2b54a50a35af9267e6a9582",
+    ddmc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
     jxgc: $.getdata("jx_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
   },
 ];
 $.result = [];
-$.random = Math.floor(Math.random() * 3);
+$.random = Math.floor(Math.random() * 1);
 
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc } = shareCodes[i];
+    const { zddd, ddnc, ddmc, ddgc, jxgc } = shareCodes[i];
     await $.wait($.random);
-    zd &&
+    zddd &&
       (await create(
-        `http://api.turinglabs.net/api/v1/jd/bean/create/${zd}/`,
+        `http://api.turinglabs.net/api/v1/jd/bean/create/${zddd}/`,
         "种豆得豆"
       ));
     await $.wait($.random);
-    nc &&
+    ddnc &&
       (await create(
-        `http://api.turinglabs.net/api/v1/jd/farm/create/${nc}/`,
+        `http://api.turinglabs.net/api/v1/jd/farm/create/${ddnc}/`,
         "东东农场"
       ));
     await $.wait($.random);
-    mc &&
+    ddmc &&
       (await create(
-        `http://api.turinglabs.net/api/v1/jd/pet/create/${mc}/`,
+        `http://api.turinglabs.net/api/v1/jd/pet/create/${ddmc}/`,
         "东东萌宠"
       ));
     await $.wait($.random);
