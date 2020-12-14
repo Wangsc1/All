@@ -132,7 +132,7 @@ const headers = {
 const body = ``;
 
 var msg = "";
-var name = {"bean":"种豆：","farm":"农场：","pet":"萌宠：","ddfactory"："京喜:","jxfactory":"东东："}
+var name = {"bean":"种豆：","farm":"农场：","pet":"萌宠：","ddfactory":"京喜：","jxfactory":"东东："}
 
 function Task(url) {
     const myRequest = {
