@@ -1,8 +1,5 @@
 hostname = biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
 
-# BoxJs
-^https?://boxjs.net url script-analyze-echo-response https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js
-
 # 彩云SVIP
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
