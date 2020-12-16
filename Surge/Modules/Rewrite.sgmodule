@@ -31,9 +31,6 @@
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
-# DeepL翻译
-^https:\/\/duckduckgo.com\/\?q=tr\+([^&]+).+ https://www.deepl.com/zh/translator#en/zh/$1 302
-
 # A
 # > Taobao - gw.alicdn.com,heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
