@@ -1,10 +1,10 @@
 const $ = new Env('🚗 互助上车')
 
-$.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
+$.zdddUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/'
 
-$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/'
+$.ddncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/'
 
-$.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==/'
+$.ddmcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==/'
 
 $.ddgcUrl = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N/'
 
@@ -15,21 +15,21 @@ $.jdzzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/AWGoIyP7Pk2LfusIgfP2S
 $.result = []
 
 !(async () => {
-  await createZd()
-  await createNc()
-  await createMc()
-  await createDDgc()
-  await createJXgc()
-  await createJDzz()
+  await createzddd()
+  await createddnc()
+  await createddmc()
+  await createddgc()
+  await createjxgc()
+  await createjdzz()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done())
 
 // 种豆得豆
-function createZd() {
+function createzddd() {
   return new Promise((resolve) => {
-    const url = { url: $.zdUrl }
+    const url = { url: $.zdddUrl }
     $.get(url, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
@@ -46,9 +46,9 @@ function createZd() {
 }
 
 // 京东农场
-function createNc() {
+function createddnc() {
   return new Promise((resolve) => {
-    const url = { url: $.ncUrl }
+    const url = { url: $.ddncUrl }
     $.get(url, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
@@ -65,9 +65,9 @@ function createNc() {
 }
 
 // 京东萌宠
-function createMc() {
+function createddmc() {
   return new Promise((resolve) => {
-    const url = { url: $.mcUrl }
+    const url = { url: $.ddmcUrl }
     $.get(url, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
@@ -84,7 +84,7 @@ function createMc() {
 }
 
 // 东东工厂
-function createDDgc() {
+function createddgc() {
   return new Promise((resolve) => {
     const url = { url: $.ddgcUrl }
     $.get(url, (err, resp, data) => {
@@ -103,7 +103,7 @@ function createDDgc() {
 }
 
 // 京喜工厂
-function createJXgc() {
+function createjxgc() {
   return new Promise((resolve) => {
     const url = { url: $.jxgcUrl }
     $.get(url, (err, resp, data) => {
@@ -122,7 +122,7 @@ function createJXgc() {
 }
 
 // 京东赚赚
-function createJDzz() {
+function createjdzz() {
   return new Promise((resolve) => {
     const url = { url: $.jdzzUrl }
     $.get(url, (err, resp, data) => {
