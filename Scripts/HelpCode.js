@@ -34,7 +34,7 @@ function createzddd() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push('种豆得豆：' + _data.message)
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -45,7 +45,7 @@ function createzddd() {
   })
 }
 
-// 京东农场
+// 东东农场
 function createddnc() {
   return new Promise((resolve) => {
     const url = { url: $.ddncUrl }
@@ -53,7 +53,7 @@ function createddnc() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push('东东农场：' + _data.message)
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -64,7 +64,7 @@ function createddnc() {
   })
 }
 
-// 京东萌宠
+// 东东萌宠
 function createddmc() {
   return new Promise((resolve) => {
     const url = { url: $.ddmcUrl }
@@ -72,7 +72,7 @@ function createddmc() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push('东东萌宠：' + _data.message)
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -91,7 +91,7 @@ function createddgc() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push('东东工厂：' + _data.message)
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -110,7 +110,7 @@ function createjxgc() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push('京喜工厂：' + _data.message)
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -129,7 +129,7 @@ function createjdzz() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.msg)
+          $.result.push('京东赚赚：' + _data.msg)
         }
       } catch (e) {
         $.logErr(e, resp)

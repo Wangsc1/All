@@ -17,37 +17,30 @@ const shareCodes = [
   },
 ];
 $.result = [];
-$.random = Math.floor(Math.random() * 1);
 
 !(async () => {
-  console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
     const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz } = shareCodes[i];
-    await $.wait($.random);
     zddd &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/bean/create/${zddd}/`,
         "种豆得豆"
       ));
-    await $.wait($.random);
     ddnc &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/farm/create/${ddnc}/`,
         "东东农场"
       ));
-    await $.wait($.random);
     ddmc &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/pet/create/${ddmc}/`,
         "东东萌宠"
       ));
-    await $.wait($.random);
     ddgc &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/ddfactory/create/${ddgc}/`,
         "东东工厂"
       ));
-    await $.wait($.random);
     jxgc &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
@@ -76,7 +69,7 @@ function create(path, name) {
       try {
         const needAgain = await checkWhetherNeedAgain(resp, create, path, name);
         if (needAgain) return;
-        const { message, msg} = JSON.parse(data);
+        const { message, msg } = JSON.parse(data);
         $.log(`\n${message}${msg}\n${data}`);
         $.result.push(`${name}： ${message ? message : msg}`);
       } catch (e) {
