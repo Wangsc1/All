@@ -53,7 +53,7 @@ $.random = Math.floor(Math.random() * 1);
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
       ));
-      jdzz &&
+    jdzz &&
       (await create(
         `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
