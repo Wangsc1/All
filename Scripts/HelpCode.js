@@ -10,6 +10,8 @@ $.ddgcUrl = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYa
 
 $.jxgcUrl = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=/'
 
+$.jdzzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/AWGoIyP7Pk2LfusIgfP2SNN4/'
+
 $.result = []
 
 !(async () => {
@@ -18,6 +20,7 @@ $.result = []
   await createMc()
   await createDDgc()
   await createJXgc()
+  await createJDzz()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
@@ -103,6 +106,25 @@ function createDDgc() {
 function createJXgc() {
   return new Promise((resolve) => {
     const url = { url: $.jxgcUrl }
+    $.get(url, (err, resp, data) => {
+      try {
+        const _data = JSON.parse(data)
+        if (_data) {
+          $.result.push(_data.message)
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve()
+      }
+    })
+  })
+}
+
+// 京东赚赚
+function createJDzz() {
+  return new Promise((resolve) => {
+    const url = { url: $.jdzzUrl }
     $.get(url, (err, resp, data) => {
       try {
         const _data = JSON.parse(data)
