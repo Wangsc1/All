@@ -129,7 +129,7 @@ function createJDzz() {
       try {
         const _data = JSON.parse(data)
         if (_data) {
-          $.result.push(_data.message)
+          $.result.push(_data.msg)
         }
       } catch (e) {
         $.logErr(e, resp)
