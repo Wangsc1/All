@@ -13,6 +13,7 @@ const shareCodes = [
     ddmc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
     jxgc: $.getdata("jx_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
+    jdzz: $.getdata("jx_shareCode1") || "AWGoIyP7Pk2LfusIgfP2SNN4",
   },
 ];
 $.result = [];
@@ -21,7 +22,7 @@ $.random = Math.floor(Math.random() * 1);
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zddd, ddnc, ddmc, ddgc, jxgc } = shareCodes[i];
+    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz } = shareCodes[i];
     await $.wait($.random);
     zddd &&
       (await create(
@@ -51,6 +52,11 @@ $.random = Math.floor(Math.random() * 1);
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
+      ));
+      jdzz &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
+        "京东赚赚"
       ));
   }
   await showMsg();
