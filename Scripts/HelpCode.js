@@ -39,7 +39,7 @@ function createzddd() {
 		if(obj.code == 400) {
           $.result.push("种豆得豆：已经存在 ☑️")
         }else{
-          $.result.push("种豆得豆：添加异常 ❗️")
+          $.result.push("种豆得豆：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -63,7 +63,7 @@ function createddnc() {
 		if(obj.code == 400) {
           $.result.push("东东农场：已经存在 ☑️")
         }else{
-          $.result.push("东东农场：添加异常 ❗️")
+          $.result.push("东东农场：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -87,7 +87,7 @@ function createddmc() {
 		if(obj.code == 400) {
           $.result.push("东东萌宠：已经存在 ☑️")
         }else{
-          $.result.push("东东萌宠：添加异常 ❗️")
+          $.result.push("东东萌宠：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -111,7 +111,7 @@ function createddgc() {
 		if(obj.code == 400) {
           $.result.push("东东工厂：已经存在 ☑️")
         }else{
-          $.result.push("东东工厂：添加异常 ❗️")
+          $.result.push("东东工厂：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -135,7 +135,7 @@ function createjxgc() {
 		if(obj.code == 400) {
           $.result.push("惊喜工厂：已经存在 ☑️")
         }else{
-          $.result.push("惊喜工厂：添加异常 ❗️")
+          $.result.push("惊喜工厂：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -159,7 +159,7 @@ function createjdzz() {
 		if(obj.code == 400) {
           $.result.push("京东赚赚：已经存在 ☑️")
         }else{
-          $.result.push("京东赚赚：添加异常 ❗️")
+          $.result.push("京东赚赚：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
