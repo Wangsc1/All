@@ -34,12 +34,12 @@ function createzddd() {
       try {
         const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("种豆得豆：添加成功✅")
+          $.result.push("种豆得豆：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("种豆得豆：已经存在☑️")
+          $.result.push("种豆得豆：已经存在 ☑️")
         }else{
-          $.result.push("种豆得豆：添加异常❌")
+          $.result.push("种豆得豆：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -58,12 +58,12 @@ function createddnc() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("东东农场：添加成功✅")
+          $.result.push("东东农场：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("东东农场：已经存在☑️")
+          $.result.push("东东农场：已经存在 ☑️")
         }else{
-          $.result.push("东东农场：添加异常❌")
+          $.result.push("东东农场：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -82,12 +82,12 @@ function createddmc() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("东东萌宠：添加成功✅")
+          $.result.push("东东萌宠：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("东东萌宠：已经存在☑️")
+          $.result.push("东东萌宠：已经存在 ☑️")
         }else{
-          $.result.push("东东萌宠：添加异常❌")
+          $.result.push("东东萌宠：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -106,12 +106,12 @@ function createddgc() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("东东工厂：添加成功✅")
+          $.result.push("东东工厂：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("东东工厂：已经存在☑️")
+          $.result.push("东东工厂：已经存在 ☑️")
         }else{
-          $.result.push("东东工厂：添加异常❌")
+          $.result.push("东东工厂：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -130,12 +130,12 @@ function createjxgc() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("惊喜工厂：添加成功✅")
+          $.result.push("惊喜工厂：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("惊喜工厂：已经存在☑️")
+          $.result.push("惊喜工厂：已经存在 ☑️")
         }else{
-          $.result.push("惊喜工厂：添加异常❌")
+          $.result.push("惊喜工厂：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
@@ -154,12 +154,12 @@ function createjdzz() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("京东赚赚：添加成功✅")
+          $.result.push("京东赚赚：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("京东赚赚：已经存在☑️")
+          $.result.push("京东赚赚：已经存在 ☑️")
         }else{
-          $.result.push("京东赚赚：添加异常❌")
+          $.result.push("京东赚赚：添加异常 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
