@@ -12,6 +12,8 @@ $.jxgcUrl = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQ
 
 $.jdzzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/AWGoIyP7Pk2LfusIgfP2SNN4/'
 
+$.jdjoyUrl = 'https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/uS4NKph99zkHWxmKafRgJ9avlGZ0Z1Fq/'
+
 $.result = []
 
 !(async () => {
@@ -21,6 +23,7 @@ $.result = []
   await createddgc()
   await createjxgc()
   await createjdzz()
+  await createjdjoy()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
@@ -160,6 +163,30 @@ function createjdzz() {
           $.result.push("京东赚赚：已经存在 ☑️")
         }else{
           $.result.push("京东赚赚：添加失败 ❗️")
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve()
+      }
+    })
+  })
+}
+
+// 京东 joy
+function createjdjoy() {
+  return new Promise((resolve) => {
+    const url = { url: $.jdjoyUrl }
+    $.get(url, (err, resp, data) => {
+      try {
+         const obj = JSON.parse(data)
+        if (obj.code == 200) {
+          $.result.push("京东Joy：添加成功 🎉")
+        }else
+		if(obj.code == 400) {
+          $.result.push("京东Joy：已经存在 ☑️")
+        }else{
+          $.result.push("京东Joy：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)

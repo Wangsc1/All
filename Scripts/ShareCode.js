@@ -8,19 +8,20 @@
 const $ = new Env("🚗 互助上车");
 const shareCodes = [
   {
-    zddd: $.getdata("zd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
-    ddnc: $.getdata("nc_shareCode1") || "55ddb354f2b54a50a35af9267e6a9582",
-    ddmc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
-    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
-    jxgc: $.getdata("jx_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
-    jdzz: $.getdata("jx_shareCode1") || "AWGoIyP7Pk2LfusIgfP2SNN4",
+    zddd: $.getdata("zddd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
+    ddnc: $.getdata("ddnc_shareCode1") || "55ddb354f2b54a50a35af9267e6a9582",
+    ddmc: $.getdata("ddmc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
+    ddgc: $.getdata("ddgc_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
+    jxgc: $.getdata("jxgc_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
+    jdzz: $.getdata("jdzz_shareCode1") || "AWGoIyP7Pk2LfusIgfP2SNN4",
+   jdjoy: $.getdata("jdjoy_shareCode1") || "uS4NKph99zkHWxmKafRgJ9avlGZ0Z1Fq",
   },
 ];
 $.result = [];
 
 !(async () => {
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz } = shareCodes[i];
+    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz jdjoy } = shareCodes[i];
     zddd &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/bean/create/${zddd}/`,
@@ -50,6 +51,11 @@ $.result = [];
       (await create(
         `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
+      ));
+   jdjoy &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jdjoy}/`,
+        "京东Joy"
       ));
   }
   await showMsg();
