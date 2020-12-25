@@ -55,7 +55,7 @@ $.result = [];
    jdjoy &&
       (await create(
         `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jdjoy}/`,
-        "京东Joy"
+        "京东 Joy"
       ));
   }
   await showMsg();

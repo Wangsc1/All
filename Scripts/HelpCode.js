@@ -181,12 +181,12 @@ function createjdjoy() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("京东Joy：添加成功 🎉")
+          $.result.push("京东 Joy：添加成功 🎉")
         }else
 		if(obj.code == 400) {
-          $.result.push("京东Joy：已经存在 ☑️")
+          $.result.push("京东 Joy：已经存在 ☑️")
         }else{
-          $.result.push("京东Joy：添加失败 ❗️")
+          $.result.push("京东 Joy：添加失败 ❗️")
         }
       } catch (e) {
         $.logErr(e, resp)
