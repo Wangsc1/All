@@ -1,11 +1,4 @@
-/*
- * @Author: whyour
- * @Github: https://github.com/whyour
- * @Date: 2020-11-20 10:42:06
- * @LastEditors: whyour
- * @LastEditTime: 2020-11-30 13:12:39
- */
-const $ = new Env("🚗 互助上车");
+const $ = new Env("互助上车 🚗️");
 const shareCodes = [
   {
     zddd: $.getdata("zddd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
@@ -75,9 +68,15 @@ function create(path, name) {
       try {
         const needAgain = await checkWhetherNeedAgain(resp, create, path, name);
         if (needAgain) return;
-        const { message, msg } = JSON.parse(data);
-        $.log(`\n${message}${msg}\n${data}`);
-        $.result.push(`${name}： ${message ? message : msg}`);
+        const obj = JSON.parse(data);
+        if (obj.code == 200) {
+          $.result.push(`${name}：添加成功 🎉`)
+        }else
+		if(obj.code == 400) {
+          $.result.push(`${name}：已经存在 ☑️`)
+        }else{
+          $.result.push(`${name}：添加失败 ❗️`)
+        };
       } catch (e) {
         $.logErr(e, resp);
       } finally {
