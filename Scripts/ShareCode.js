@@ -21,7 +21,7 @@ $.result = [];
 
 !(async () => {
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz jdjoy } = shareCodes[i];
+    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz, jdjoy } = shareCodes[i];
     zddd &&
       (await create(
         `http://api.turinglabs.net/api/v1/jd/bean/create/${zddd}/`,
