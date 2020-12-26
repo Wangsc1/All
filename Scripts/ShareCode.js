@@ -1,56 +1,36 @@
 const $ = new Env("互助上车 🚗️");
-const shareCodes = [
-  {
-    zddd: $.getdata("zddd_shareCode1") || "i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi",
-    ddnc: $.getdata("ddnc_shareCode1") || "55ddb354f2b54a50a35af9267e6a9582",
-    ddmc: $.getdata("ddmc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==",
-    ddgc: $.getdata("ddgc_shareCode1") || "P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N",
-    jxgc: $.getdata("jxgc_shareCode1") || "hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=",
-    jdzz: $.getdata("jdzz_shareCode1") || "AWGoIyP7Pk2LfusIgfP2SNN4",
-   jdjoy: $.getdata("jdjoy_shareCode1") || "uS4NKph99zkHWxmKafRgJ9avlGZ0Z1Fq",
-  },
-];
+
 $.result = [];
 
 !(async () => {
-  for (let i = 0; i < shareCodes.length; i++) {
-    const { zddd, ddnc, ddmc, ddgc, jxgc, jdzz, jdjoy } = shareCodes[i];
-    zddd &&
-      (await create(
-        `http://api.turinglabs.net/api/v1/jd/bean/create/${zddd}/`,
+      await create(
+        `http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/`,
         "种豆得豆"
-      ));
-    ddnc &&
-      (await create(
-        `http://api.turinglabs.net/api/v1/jd/farm/create/${ddnc}/`,
+      );
+      await create(
+        `http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/`,
         "东东农场"
-      ));
-    ddmc &&
-      (await create(
-        `http://api.turinglabs.net/api/v1/jd/pet/create/${ddmc}/`,
+      );
+      await create(
+        `http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==/`,
         "东东萌宠"
-      ));
-    ddgc &&
-      (await create(
-        `http://api.turinglabs.net/api/v1/jd/ddfactory/create/${ddgc}/`,
+      );
+      await create(
+        `http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N/`,
         "东东工厂"
-      ));
-    jxgc &&
-      (await create(
-        `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
+      );
+      await create(
+        `http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=/`,
         "京喜工厂"
-      ));
-    jdzz &&
-      (await create(
-        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
+      );
+      await create(
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/AWGoIyP7Pk2LfusIgfP2SNN4/`,
         "京东赚赚"
-      ));
-   jdjoy &&
-      (await create(
-        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jdjoy}/`,
+      );
+      await create(
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/uS4NKph99zkHWxmKafRgJ9avlGZ0Z1Fq/`,
         "京东  Joy"
-      ));
-  }
+      );
   await showMsg();
 })()
   .catch((e) => $.logErr(e))
