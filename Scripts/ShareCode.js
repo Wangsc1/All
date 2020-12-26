@@ -45,7 +45,7 @@ function create(name, path) {
         if (obj.code == 200) {
           $.result.push(`${name}：添加成功 🎉`)
         }else
-		if(obj.code == 400) {
+		if (obj.code == 400) {
           $.result.push(`${name}：已经存在 ☑️`)
         }else{
           $.result.push(`${name}：添加失败 ❗️`)
