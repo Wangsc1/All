@@ -129,6 +129,7 @@ DOMAIN-SUFFIX,brightcom.com,Reject
 DOMAIN-SUFFIX,bulldogcpi.com,Reject
 DOMAIN-SUFFIX,bxsnews.com,Reject
 DOMAIN-SUFFIX,carbonads.net,Reject
+DOMAIN-SUFFIX,cdj99d.cn,Reject
 DOMAIN-SUFFIX,clotfun.mobi,Reject
 DOMAIN-SUFFIX,clotfun.online,Reject
 DOMAIN-SUFFIX,cloudmobi.net,Reject
@@ -246,7 +247,6 @@ DOMAIN,ad.flurry.com,Reject
 DOMAIN,ad.huajiao.com,Reject
 DOMAIN,ad.hzyoka.com,Reject
 DOMAIN,ad.jiemian.com,Reject
-DOMAIN,ad.toutiao.com,Reject
 DOMAIN,ad.wappalyzer.com,Reject
 DOMAIN,ad-cn.jovcloud.com,Reject
 DOMAIN,ads.adadapted.com,Reject

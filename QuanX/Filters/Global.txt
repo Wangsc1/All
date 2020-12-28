@@ -478,4 +478,5 @@ DOMAIN-SUFFIX,inkbunny.net,Global
 DOMAIN-SUFFIX,metapix.net,Global
 DOMAIN-SUFFIX,s3.amazonaws.com,Global
 DOMAIN-SUFFIX,zaobao.com.sg,Global
+DOMAIN,international-gfe.download.nvidia.com,Global
 DOMAIN,ocsp.apple.com,Global

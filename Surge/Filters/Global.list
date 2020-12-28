@@ -392,6 +392,7 @@ DOMAIN-SUFFIX,yes-news.com
 DOMAIN-SUFFIX,yomiuri.co.jp
 DOMAIN-SUFFIX,you-get.org
 DOMAIN-SUFFIX,zaobao.com
+DOMAIN,international-gfe.download.nvidia.com
 DOMAIN,ocsp.apple.com
 DOMAIN-SUFFIX,zb.com
 DOMAIN-SUFFIX,zello.com
