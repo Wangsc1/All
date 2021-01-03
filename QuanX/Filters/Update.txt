@@ -1,0 +1,5 @@
+# Block iOS Update
+DOMAIN,mesu.apple.com,Reject
+DOMAIN,gdmf.apple.com,Reject
+DOMAIN,updates-http.cdn-apple.com,Reject
+DOMAIN,xp.apple.com,Reject
