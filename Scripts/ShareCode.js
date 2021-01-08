@@ -17,7 +17,7 @@ $.result = []
       );
       await create(
         "东东工厂",
-        `http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5mZXVjergiIdQnwWVswlkq4N/`
+        `http://api.turinglabs.net/api/v1/jd/ddfactory/create/T0237aItF01GqwMAkrgsNXbS1cYCjVWnYaS5kRrbA/`
       );
       await create(
         "京喜工厂",
@@ -25,7 +25,7 @@ $.result = []
       );
       await create(
         "京东赚赚",
-        `https://code.chiang.fun/api/v1/jd/jdzz/create/AWGoIyP7Pk2LfusIgfP2SNN4/`
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/S7aItF01GqwMAkrgsNXbS1cY/`
       );
       await create(
         "京东  Joy",
