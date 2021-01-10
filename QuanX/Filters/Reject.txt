@@ -190,6 +190,7 @@ DOMAIN-SUFFIX,shuzilm.cn,Reject
 DOMAIN-SUFFIX,smaato.net,Reject
 DOMAIN-SUFFIX,smartadserver.com,Reject
 DOMAIN-SUFFIX,smartnews-ads.com,Reject
+DOMAIN-SUFFIX,socdm.com,Reject
 DOMAIN-SUFFIX,supersonic.com,Reject
 DOMAIN-SUFFIX,supersonicads.com,Reject
 DOMAIN-SUFFIX,tagtic.cn,Reject
@@ -238,7 +239,6 @@ DOMAIN-SUFFIX,zumobi.com,Reject
 
 DOMAIN-SUFFIX,ad.cmvideo.cn,Reject
 DOMAIN-SUFFIX,ad.daum.net,Reject
-DOMAIN-SUFFIX,aiseet.atianqi.com,Reject
 
 DOMAIN,abema-adx.ameba.jp,Reject
 DOMAIN,ad.12306.cn,Reject

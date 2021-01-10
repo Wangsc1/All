@@ -250,6 +250,7 @@ DOMAIN-SUFFIX,myzaker.com,China
 DOMAIN-SUFFIX,nim-lang-cn.org,China
 DOMAIN-SUFFIX,nvidia.com,China
 DOMAIN-SUFFIX,oracle.com,China
+DOMAIN-SUFFIX,originlab.com,China
 DOMAIN-SUFFIX,plex.tv,China
 DOMAIN-SUFFIX,qdaily.com,China
 DOMAIN-SUFFIX,qidian.com,China

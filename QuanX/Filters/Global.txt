@@ -481,3 +481,4 @@ DOMAIN-SUFFIX,s3.amazonaws.com,Global
 DOMAIN-SUFFIX,zaobao.com.sg,Global
 DOMAIN,international-gfe.download.nvidia.com,Global
 DOMAIN,ocsp.apple.com,Global
+DOMAIN,store-images.s-microsoft.com,Global
