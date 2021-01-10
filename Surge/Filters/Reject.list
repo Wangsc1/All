@@ -342,17 +342,6 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-# > Tencent Music (TME)
-DOMAIN,ad.tencentmusic.com
-DOMAIN,adserviceretry.kugou.com
-DOMAIN,ads.service.kugou.com
-DOMAIN,adsfile.bssdlbig.kugou.com
-DOMAIN,g.koowo.com
-DOMAIN,kgmobilestat.kugou.com
-DOMAIN,kgmobilestatbak.kugou.com
-DOMAIN,mobilelog.kugou.com
-DOMAIN,mobilead.kuwo.cn
-DOMAIN,rich.kuwo.cn
 
 # (Z)
 # > Zhihu

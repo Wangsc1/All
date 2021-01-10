@@ -236,10 +236,8 @@ DOMAIN-SUFFIX,zu08e.cn,Reject
 DOMAIN-SUFFIX,zucks.co.jp,Reject
 DOMAIN-SUFFIX,zucks.net,Reject
 DOMAIN-SUFFIX,zumobi.com,Reject
-
 DOMAIN-SUFFIX,ad.cmvideo.cn,Reject
 DOMAIN-SUFFIX,ad.daum.net,Reject
-
 DOMAIN,abema-adx.ameba.jp,Reject
 DOMAIN,ad.12306.cn,Reject
 DOMAIN,ad.caiyunapp.com,Reject
@@ -341,17 +339,6 @@ DOMAIN,splashqqlive.gtimg.com,Reject
 DOMAIN,wa.gtimg.com,Reject
 DOMAIN,wxsnsdy.wxs.qq.com,Reject
 DOMAIN,wxsnsdythumb.wxs.qq.com,Reject
-# > Tencent Music (TME)
-DOMAIN,ad.tencentmusic.com,Reject
-DOMAIN,adserviceretry.kugou.com,Reject
-DOMAIN,ads.service.kugou.com,Reject
-DOMAIN,adsfile.bssdlbig.kugou.com,Reject
-DOMAIN,g.koowo.com,Reject
-DOMAIN,kgmobilestat.kugou.com,Reject
-DOMAIN,kgmobilestatbak.kugou.com,Reject
-DOMAIN,mobilelog.kugou.com,Reject
-DOMAIN,mobilead.kuwo.cn,Reject
-DOMAIN,rich.kuwo.cn,Reject
 
 # (Z)
 # > Zhihu

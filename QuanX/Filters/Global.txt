@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,appspot.com,Global
 DOMAIN-SUFFIX,blogger.com,Global
 DOMAIN-SUFFIX,getoutline.org,Global
 DOMAIN-SUFFIX,gvt0.com,Global
+DOMAIN-SUFFIX,gvt1.com,Global
 DOMAIN-SUFFIX,gvt3.com,Global
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Global
 DOMAIN-SUFFIX,ytimg.com,Global
