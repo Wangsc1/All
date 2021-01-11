@@ -87,7 +87,7 @@ DOMAIN-SUFFIX,bloglovin.com,Global
 DOMAIN-SUFFIX,bloomberg.cn,Global
 DOMAIN-SUFFIX,bloomberg.com,Global
 DOMAIN-SUFFIX,blubrry.com,Global
-DOMAIN-SUFFIX,book.com,Global.tw,Global
+DOMAIN-SUFFIX,book.com.tw,Global
 DOMAIN-SUFFIX,booklive.jp,Global
 DOMAIN-SUFFIX,books.com.tw,Global
 DOMAIN-SUFFIX,boslife.net,Global
