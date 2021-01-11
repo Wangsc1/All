@@ -401,7 +401,7 @@ DOMAIN-SUFFIX,zb.com,Global
 DOMAIN-SUFFIX,zello.com,Global
 DOMAIN-SUFFIX,zeronet.io,Global
 DOMAIN-SUFFIX,zoom.us,Global
-DOMAIN,cc.tv,Globalbs.com.tw,Global
+DOMAIN,cc.tvbs.com.tw,Global
 DOMAIN,ocsp.int-x3.letsencrypt.org,Global
 DOMAIN,search.avira.com,Global
 DOMAIN,us.weibo.com,Global
