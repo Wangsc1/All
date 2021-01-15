@@ -1,0 +1,7 @@
+DOMAIN,118.89.204.198,Reject
+DOMAIN-KEYWORD,118.89.204.198,Reject
+IP-CIDR,118.89.204.198/32,Reject
+DOMAIN,appcloud2.in.zhihu.com,Reject
+DOMAIN,mqtt.zhihu.com,Reject
+DOMAIN,sugar.zhihu.com,Reject
+USER-AGENT,AVOS*,Reject
