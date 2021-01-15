@@ -5,9 +5,8 @@
 [MITM]
 hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,homepage-api.smzdm.com,haojia-api.smzdm.com,article-api.smzdm.com,haojia.m.smzdm.com,app-api.smzdm.com,s-api.smzdm.com
 
-
-# 什么值得买去广告
 [URL Rewrite]
+# 什么值得买去广告
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
