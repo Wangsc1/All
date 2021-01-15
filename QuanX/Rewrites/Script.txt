@@ -34,5 +34,6 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 ^https?:\/\/s-api\.smzdm\.com\/sou\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 # 其他
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner url reject-dict
-^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) url reject-dict
-^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject-dict
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) url reject
+^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject
+^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
