@@ -5,6 +5,13 @@
 [MITM]
 hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,homepage-api.smzdm.com,haojia-api.smzdm.com,article-api.smzdm.com,haojia.m.smzdm.com,app-api.smzdm.com,s-api.smzdm.com
 
+
+# 什么值得买去广告
+[URL Rewrite]
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
+^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
+
 [Script]
 # BoxJs
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js,requires-body=true,timeout=120
@@ -31,12 +38,6 @@ Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*
 微信内屏蔽链接跳转 = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
 
 # 什么值得买去广告
-[URL Rewrite]
-^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
-^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
-^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
-
-[Script]
 首页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/homepage-api\.smzdm\.com\/home,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 去浮动广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 好价去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
