@@ -1,2 +1,2 @@
 
-IP-CIDR,118.89.204.198/32,Reject
+ip-cidr, 118.89.204.198/32, reject
