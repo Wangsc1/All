@@ -13,7 +13,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
 
 # 京东粉丝专享
-https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign url script-request-header https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+^https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign url script-request-header https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
 
 # 饿了么Cookie
 ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ url script-request-header https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
