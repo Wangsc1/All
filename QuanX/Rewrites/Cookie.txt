@@ -1,4 +1,4 @@
-hostname = api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,wq.jd.com
+hostname = api.m.jd.com,h5.ele.me,i.meituan.com,as.xiaojukeji.com,zhiyou.smzdm.com,user-api.smzdm.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn,account.huami.com,draw.jdfcloud.com,wq.jd.com,api.tuhu.cn
 
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -43,3 +43,6 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 
 # 小米运动Cookie
 ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/LXK9301/jd_scripts/master/backUp/xmSports.js
+
+# 途虎Cookie
+https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-header https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
