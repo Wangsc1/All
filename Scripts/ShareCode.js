@@ -4,24 +4,12 @@ $.result = []
 
 !(async () => {
       await create(
-        "种豆得豆",
-        `http://api.turinglabs.net/api/v1/jd/bean/create/i7puu7zw7db5xrlm2qlglc5k3btnhjk5d5ae7pi/`
+        "京东现金",
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/cERpO7_tOKvxQ8wNavLLd-U/`
       );
       await create(
-        "东东农场",
-        `http://api.turinglabs.net/api/v1/jd/farm/create/55ddb354f2b54a50a35af9267e6a9582/`
-      );
-      await create(
-        "东东萌宠",
-        `http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMDAwMDAwMDAyODcwMzIyOQ==/`
-      );
-      await create(
-        "东东工厂",
-        `http://api.turinglabs.net/api/v1/jd/ddfactory/create/T0237aItF01GqwMAkrgsNXbS1cYCjVWnYaS5kRrbA/`
-      );
-      await create(
-        "京喜工厂",
-        `http://api.turinglabs.net/api/v1/jd/jxfactory/create/hUF7NMdl5xMngQwU-s29_h7CJ9BXzu1aH3bp9pFXl68=/`
+        "京东年货",
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/7ad829349a55425795bfd625d239f82c/`
       );
       await create(
         "京东赚赚",
