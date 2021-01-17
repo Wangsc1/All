@@ -272,3 +272,6 @@ HOST,images-cn.ssl-images-amazon.com,Direct
 # Tencent
 IP-CIDR,119.28.28.28/32,Direct
 IP-CIDR,182.254.116.0/24,Direct
+    
+# GeoIp
+GeoIp, CN, Direct
