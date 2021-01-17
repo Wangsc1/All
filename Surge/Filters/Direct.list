@@ -266,3 +266,6 @@ DOMAIN,images-cn.ssl-images-amazon.com
 # Tencent
 IP-CIDR,119.28.28.28/32,no-resolve
 IP-CIDR,182.254.116.0/24,no-resolve
+
+# GeoIp
+GEOIP,CN
