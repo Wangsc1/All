@@ -340,6 +340,14 @@ HOST,wa.gtimg.com,Reject
 HOST,wxsnsdy.wxs.qq.com,Reject
 HOST,wxsnsdythumb.wxs.qq.com,Reject
 
+# (Z)
+# > ZhiHu
+USER-AGENT,AVOS*,Reject
+HOST,appcloud2.zhihu.com,Reject
+HOST,appcloud2.in.zhihu.com,Reject
+HOST,mqtt.zhihu.com,Reject
+HOST,sugar.zhihu.com,Reject
+
 # Internet Service Providers Hijacking
 HOST-SUFFIX,17gouwuba.com,Reject
 HOST-SUFFIX,186078.com,Reject
