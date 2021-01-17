@@ -1,8 +1,8 @@
 # > DisneyPlus
 USER-AGENT,Disney+*,DisneyPlus
-DOMAIN-SUFFIX,bamgrid.com,DisneyPlus
-DOMAIN-SUFFIX,disneyplus.com,DisneyPlus
-DOMAIN-SUFFIX,disney-plus.net,DisneyPlus
-DOMAIN-SUFFIX,disneystreaming.com,DisneyPlus
-DOMAIN-SUFFIX,dssott.com,DisneyPlus
-DOMAIN,cdn.registerdisney.go.com,DisneyPlus
+HOST-SUFFIX,bamgrid.com,DisneyPlus
+HOST-SUFFIX,disneyplus.com,DisneyPlus
+HOST-SUFFIX,disney-plus.net,DisneyPlus
+HOST-SUFFIX,disneystreaming.com,DisneyPlus
+HOST-SUFFIX,dssott.com,DisneyPlus
+HOST,cdn.registerdisney.go.com,DisneyPlus

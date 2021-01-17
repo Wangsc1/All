@@ -1,5 +1,5 @@
 USER-AGENT,SpeedTest*,SpeedTest
-DOMAIN-SUFFIX,fast.com,SpeedTest
-DOMAIN-SUFFIX,ooklaserver.net,SpeedTest
-DOMAIN-SUFFIX,speed.cloudflare.com,SpeedTest
-DOMAIN-KEYWORD,speedtest,SpeedTest
+HOST-SUFFIX,fast.com,SpeedTest
+HOST-SUFFIX,ooklaserver.net,SpeedTest
+HOST-SUFFIX,speed.cloudflare.com,SpeedTest
+HOST-KEYWORD,speedtest,SpeedTest

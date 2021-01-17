@@ -1,18 +1,18 @@
 # Apple
-DOMAIN-SUFFIX,aaplimg.com,Apple
-DOMAIN-SUFFIX,apple.co,Apple
-DOMAIN-SUFFIX,apple.com,Apple
-DOMAIN-SUFFIX,apple.com.cn,Apple
-DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-DOMAIN-SUFFIX,appstore.com,Apple
-DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,icloud.com.cn,Apple
-DOMAIN-SUFFIX,icloud-content.com,Apple
-DOMAIN-SUFFIX,me.com,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
-DOMAIN-KEYWORD,apple.com.akadns.net,Apple
-DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+HOST-SUFFIX,aaplimg.com,Apple
+HOST-SUFFIX,apple.co,Apple
+HOST-SUFFIX,apple.com,Apple
+HOST-SUFFIX,apple.com.cn,Apple
+HOST-SUFFIX,apple-cloudkit.com,Apple
+HOST-SUFFIX,appstore.com,Apple
+HOST-SUFFIX,cdn-apple.com,Apple
+HOST-SUFFIX,icloud.com,Apple
+HOST-SUFFIX,icloud.com.cn,Apple
+HOST-SUFFIX,icloud-content.com,Apple
+HOST-SUFFIX,me.com,Apple
+HOST-SUFFIX,mzstatic.com,Apple
+HOST-KEYWORD,apple.com.akadns.net,Apple
+HOST-KEYWORD,icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
 IP-CIDR,63.92.224.0/19,Apple
 IP-CIDR,65.199.22.0/23,Apple
@@ -23,55 +23,55 @@ IP-CIDR,198.183.17.0/24,Apple
 IP-CIDR,205.180.175.0/24,Apple
 # App Store
 # Store content such as apps, books, and music
-DOMAIN-SUFFIX,apps.apple.com,Apple
-DOMAIN-SUFFIX,itunes.apple.com,Apple
-DOMAIN-SUFFIX,itunes-apple.com.akadns.net,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
-DOMAIN,ppq.apple.com,Apple
+HOST-SUFFIX,apps.apple.com,Apple
+HOST-SUFFIX,itunes.apple.com,Apple
+HOST-SUFFIX,itunes-apple.com.akadns.net,Apple
+HOST-SUFFIX,mzstatic.com,Apple
+HOST,ppq.apple.com,Apple
 # > App Store Connect
-DOMAIN,appstoreconnect.apple.com,App Store Connect
-DOMAIN,iosapps-ssl.itunes.apple.com,App Store Connect
-DOMAIN,itcmobile.itunes.apple.com,App Store Connect
+HOST,appstoreconnect.apple.com,App Store Connect
+HOST,iosapps-ssl.itunes.apple.com,App Store Connect
+HOST,itcmobile.itunes.apple.com,App Store Connect
 # Find My
-DOMAIN,fmfmobile.icloud.com,Apple
-DOMAIN,fmipmobile.icloud.com,Apple
-DOMAIN,statici.icloud.com,Apple
+HOST,fmfmobile.icloud.com,Apple
+HOST,fmipmobile.icloud.com,Apple
+HOST,statici.icloud.com,Apple
 # > iCloud email
-DOMAIN-SUFFIX,mail.icloud.com.cn,iCloudMail
-DOMAIN-SUFFIX,mail.me.com,iCloudMail
+HOST-SUFFIX,mail.icloud.com.cn,iCloudMail
+HOST-SUFFIX,mail.me.com,iCloudMail
 # > Apple Music
 USER-AGENT,Music*,Apple
-DOMAIN-SUFFIX,music.apple.com,Apple
-DOMAIN,aod.itunes.apple.com,Apple
-DOMAIN,audio.itunes.apple.com,Apple
-DOMAIN,audio-ssl.itunes.apple.com,Apple
-DOMAIN,mvod.itunes.apple.com,Apple
-DOMAIN,streamingaudio.itunes.apple.com,Apple
-DOMAIN-SUFFIX,blobstore.apple.com,Apple
+HOST-SUFFIX,music.apple.com,Apple
+HOST,aod.itunes.apple.com,Apple
+HOST,audio.itunes.apple.com,Apple
+HOST,audio-ssl.itunes.apple.com,Apple
+HOST,mvod.itunes.apple.com,Apple
+HOST,streamingaudio.itunes.apple.com,Apple
+HOST-SUFFIX,blobstore.apple.com,Apple
 # Siri
-DOMAIN,guzzoni.apple.com,Apple
+HOST,guzzoni.apple.com,Apple
 # Software Update
 # > iOS updates
-DOMAIN,appldnld.apple.com,Apple
-DOMAIN,ns.itunes.apple.com,Apple
+HOST,appldnld.apple.com,Apple
+HOST,ns.itunes.apple.com,Apple
 # > iOS, tvOS, and macOS
-DOMAIN,mesu.apple.com,Apple
-DOMAIN,updates.cdn-apple.com,Apple
-DOMAIN,updates-http.cdn-apple.com,Apple
-DOMAIN,xp.apple.com,Apple
+HOST,mesu.apple.com,Apple
+HOST,updates.cdn-apple.com,Apple
+HOST,updates-http.cdn-apple.com,Apple
+HOST,xp.apple.com,Apple
 # TV
 USER-AGENT,AppleTV*,Apple
 USER-AGENT,com.apple.tv*,Apple
-DOMAIN-SUFFIX,tv.apple.com,Apple
-DOMAIN,hls.itunes.apple.com,Apple
-DOMAIN,hls-amt.itunes.apple.com,Apple
-DOMAIN,play-edge.itunes.apple.com,Apple
+HOST-SUFFIX,tv.apple.com,Apple
+HOST,hls.itunes.apple.com,Apple
+HOST,hls-amt.itunes.apple.com,Apple
+HOST,play-edge.itunes.apple.com,Apple
 # TestFlight
-DOMAIN,beta.apple.com,Apple
-DOMAIN,testflight.apple.com,Apple
+HOST,beta.apple.com,Apple
+HOST,testflight.apple.com,Apple
 # iCloud
-DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,icloud.com.cn,Apple
-DOMAIN-SUFFIX,icloud-content.com,Apple
-DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+HOST-SUFFIX,apple-cloudkit.com,Apple
+HOST-SUFFIX,icloud.com,Apple
+HOST-SUFFIX,icloud.com.cn,Apple
+HOST-SUFFIX,icloud-content.com,Apple
+HOST,www-cdn.icloud.com.akadns.net,Apple
