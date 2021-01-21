@@ -1,11 +1,14 @@
 hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,pan.baidu.com,issuecdn.baidupcs.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com
 
 # Q-Search
-# 百度
-^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ url 302  https://www.baidu.com/s?wd=$2
+# 汇率
+^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ url 302 https://www.google.com/search?q=$2+cny
 
 # Testflight
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ url 302  https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com
+
+# 百度
+^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ url 302  https://www.baidu.com/s?wd=$2
 
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
