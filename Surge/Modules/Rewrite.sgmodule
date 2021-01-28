@@ -39,6 +39,10 @@
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
 
+# D
+# > douban - api.douban.com
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ - reject
+
 # E
 # > eleme - cube.elemecdn.com
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
@@ -78,4 +82,4 @@
 ^https?:\/\/static\.122\.gov\.cn\/\/group1\/M00\/ - reject
 
 [MITM]
-hostname = %APPEND% duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,static.122.gov.cn
+hostname = %APPEND% duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,api.douban.com,cube.elemecdn.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,static.122.gov.cn
