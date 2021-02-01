@@ -173,6 +173,7 @@ HOST-SUFFIX,chuimg.com,Direct
 HOST-SUFFIX,chunyu.mobi,Direct
 HOST-SUFFIX,cmbDirect.com,Direct
 HOST-SUFFIX,cmbimg.com,Direct
+HOST-SUFFIX,coolapk.com,Direct
 HOST-SUFFIX,ctrip.com,Direct
 HOST-SUFFIX,dfcfw.com,Direct
 HOST-SUFFIX,dji.net,Direct
@@ -226,7 +227,7 @@ HOST-SUFFIX,myzaker.com,Direct
 HOST-SUFFIX,nim-lang-cn.org,Direct
 HOST-SUFFIX,nvidia.com,Direct
 HOST-SUFFIX,oracle.com,Direct
-HOST-SUFFIX,originlab.com,Direct
+HOST-SUFFIX,pcbeta.com,Direct
 HOST-SUFFIX,plex.tv,Direct
 HOST-SUFFIX,qdaily.com,Direct
 HOST-SUFFIX,qidian.com,Direct
