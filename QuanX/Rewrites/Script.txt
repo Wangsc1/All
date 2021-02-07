@@ -16,7 +16,7 @@ https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response
 https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
 
 # 宠汪汪强制助力
-^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin url script-request-header https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_help.js
+^https:\/\/draw\.jdfcloud\.com\/\/common\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin url script-request-header https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_help.js
 
 # 微信内屏蔽链接跳转
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
