@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,nobyda
+hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
 
 [Script]
 # BoxJs
@@ -29,6 +29,3 @@ Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*
 
 # 微信内屏蔽链接跳转
 微信内屏蔽链接跳转 = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
-
-# IPA应用安装
-IPA应用安装 = type=http-request,pattern=^https:\/\/nobyda/(install|download)(\/jsbox)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/IPA_install.js
