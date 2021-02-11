@@ -42,6 +42,10 @@ hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap
 ^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ url reject
 ^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? url reject
 
+# H
+# > HanjuTV
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? url reject
+
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start url reject
