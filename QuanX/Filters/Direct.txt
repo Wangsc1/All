@@ -154,6 +154,7 @@ HOST-SUFFIX,8686c.com,Direct
 HOST-SUFFIX,99.com,Direct
 HOST-SUFFIX,abDirect.com,Direct
 HOST-SUFFIX,accuweather.com,Direct
+HOST-SUFFIX,agora.io,Direct
 HOST-SUFFIX,aicoinstorge.com,Direct
 HOST-SUFFIX,air-matters.com,Direct
 HOST-SUFFIX,air-matters.io,Direct
@@ -225,6 +226,7 @@ HOST-SUFFIX,moke.com,Direct
 HOST-SUFFIX,mubu.com,Direct
 HOST-SUFFIX,myzaker.com,Direct
 HOST-SUFFIX,nim-lang-cn.org,Direct
+HOST-SUFFIX,ntp.org,Direct
 HOST-SUFFIX,nvidia.com,Direct
 HOST-SUFFIX,oracle.com,Direct
 HOST-SUFFIX,pcbeta.com,Direct
@@ -269,10 +271,6 @@ HOST-SUFFIX,zhimg.com,Direct
 HOST-SUFFIX,zhuihd.com,Direct
 HOST,download.jetbrains.com,Direct
 HOST,images-cn.ssl-images-amazon.com,Direct
-
-# Tencent
-IP-CIDR,119.28.28.28/32,Direct
-IP-CIDR,182.254.116.0/24,Direct
     
 # GeoIp
 GeoIp, CN, Direct
