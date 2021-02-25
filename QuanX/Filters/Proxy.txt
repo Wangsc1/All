@@ -11,11 +11,6 @@ HOST-SUFFIX,xn--ngstr-lra8j.com,Proxy
 HOST-SUFFIX,ytimg.com,Proxy
 HOST-KEYWORD,google,Proxy
 HOST-KEYWORD,.blogspot.,Proxy
-# > Microsoft
-HOST-SUFFIX,aka.ms,Proxy
-HOST-SUFFIX,onedrive.live.com,Proxy
-HOST,az416426.vo.msecnd.net,Proxy
-HOST,az668014.vo.msecnd.net,Proxy
 # > Twitter
 HOST-SUFFIX,pscp.tv,Proxy
 HOST-SUFFIX,periscope.tv,Proxy
@@ -38,12 +33,6 @@ IP-CIDR,149.154.160.0/20,Proxy
 IP6-CIDR,2001:b28:f23d::/48,Proxy
 IP6-CIDR,2001:b28:f23f::/48,Proxy
 IP6-CIDR,2001:67c:4e8::/48,Proxy
-# > Amazon
-HOST-SUFFIX,amazon.co.jp,Proxy
-HOST,d3c33hcgiwev3.cloudfront.net,Proxy
-HOST,payments-jp.amazon.com,Proxy
-HOST,s3-ap-northeast-1.amazonaws.com,Proxy
-HOST,s3-ap-southeast-2.amazonaws.com,Proxy
 # > Others
 HOST-SUFFIX,4shared.com,Proxy
 HOST-SUFFIX,9cache.com,Proxy

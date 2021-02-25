@@ -48,25 +48,6 @@ DOMAIN-SUFFIX,dianping.com
 DOMAIN-SUFFIX,dpfile.com
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
-# > MI
-DOMAIN-SUFFIX,duokan.com
-DOMAIN-SUFFIX,mi.com
-DOMAIN-SUFFIX,mi-img.com
-DOMAIN-SUFFIX,miui.com
-DOMAIN-SUFFIX,miwifi.com
-DOMAIN-SUFFIX,xiaomi.com
-DOMAIN-SUFFIX,xiaomi.net
-# > Microsoft
-DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,microsoft.com
-DOMAIN-SUFFIX,msecnd.net
-DOMAIN-SUFFIX,office365.com
-DOMAIN-SUFFIX,outlook.com
-DOMAIN-SUFFIX,s-microsoft.com
-DOMAIN-SUFFIX,visualstudio.com
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windowsupdate.com
-# DOMAIN-KEYWORD,-microsoft-com.akamaized.net
 # > PayPal
 USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com

@@ -48,25 +48,6 @@ HOST-SUFFIX,dianping.com,Direct
 HOST-SUFFIX,dpfile.com,Direct
 HOST-SUFFIX,meituan.com,Direct
 HOST-SUFFIX,meituan.net,Direct
-# > MI
-HOST-SUFFIX,duokan.com,Direct
-HOST-SUFFIX,mi.com,Direct
-HOST-SUFFIX,mi-img.com,Direct
-HOST-SUFFIX,miui.com,Direct
-HOST-SUFFIX,miwifi.com,Direct
-HOST-SUFFIX,xiaomi.com,Direct
-HOST-SUFFIX,xiaomi.net,Direct
-# > Microsoft
-HOST-SUFFIX,hotmail.com,Direct
-HOST-SUFFIX,microsoft.com,Direct
-HOST-SUFFIX,msecnd.net,Direct
-HOST-SUFFIX,office365.com,Direct
-HOST-SUFFIX,outlook.com,Direct
-HOST-SUFFIX,s-microsoft.com,Direct
-HOST-SUFFIX,visualstudio.com,Direct
-HOST-SUFFIX,windows.com,Direct
-HOST-SUFFIX,windowsupdate.com,Direct
-# HOST-KEYWORD,-microsoft-com.akamaized.net,Direct
 # > PayPal
 USER-AGENT,PayPal*,Direct
 HOST-SUFFIX,paypal.com,Direct
