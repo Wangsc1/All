@@ -358,13 +358,6 @@ HOST,lookup-api.apple.com,Proxy
 HOST-SUFFIX,smoot.apple.com,Proxy
 # > Apple Music Web
 HOST,beta.music.apple.com,Proxy
-# ----
-# > Others
-HOST-SUFFIX,bing.com,Proxy
-HOST-SUFFIX,cccat.io,Proxy
-HOST-SUFFIX,ifixit.com,Proxy
-HOST-SUFFIX,mangakakalot.com,Proxy
-HOST-SUFFIX,shopeemobile.com,Proxy
 
 # (Network Jitter)
 # > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
