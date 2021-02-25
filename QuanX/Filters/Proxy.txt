@@ -38,13 +38,7 @@ HOST-SUFFIX,abc.com,Proxy
 HOST-SUFFIX,abc.net.au,Proxy
 HOST-SUFFIX,abebooks.com,Proxy
 HOST-SUFFIX,apigee.com,Proxy
-HOST-SUFFIX,apkcombo.com,Proxy
-HOST-SUFFIX,apk-dl.com,Proxy
-HOST-SUFFIX,apkfind.com,Proxy
 HOST-SUFFIX,apkmirror.com,Proxy
-HOST-SUFFIX,apkmonk.com,Proxy
-HOST-SUFFIX,apkpure.com,Proxy
-HOST-SUFFIX,aptoide.com,Proxy
 HOST-SUFFIX,archive.is,Proxy
 HOST-SUFFIX,archive.org,Proxy
 HOST-SUFFIX,archiveofourown.com,Proxy
@@ -56,7 +50,6 @@ HOST-SUFFIX,ask.com,Proxy
 HOST-SUFFIX,avg.com,Proxy
 HOST-SUFFIX,avgle.com,Proxy
 HOST-SUFFIX,badoo.com,Proxy
-HOST-SUFFIX,bandwagonhost.com,Proxy
 HOST-SUFFIX,bangkokpost.com,Proxy
 HOST-SUFFIX,bbc.com,Proxy
 HOST-SUFFIX,behance.net,Proxy
@@ -64,7 +57,6 @@ HOST-SUFFIX,bibox.com,Proxy
 HOST-SUFFIX,biggo.com.tw,Proxy
 HOST-SUFFIX,binance.com,Proxy
 HOST-SUFFIX,bit.ly,Proxy
-HOST-SUFFIX,bitcointalk.org,Proxy
 HOST-SUFFIX,bitfinex.com,Proxy
 HOST-SUFFIX,bitmex.com,Proxy
 HOST-SUFFIX,bit-z.com,Proxy
@@ -75,12 +67,10 @@ HOST-SUFFIX,blubrry.com,Proxy
 HOST-SUFFIX,book.com.tw,Proxy
 HOST-SUFFIX,booklive.jp,Proxy
 HOST-SUFFIX,books.com.tw,Proxy
-HOST-SUFFIX,boslife.net,Proxy
 HOST-SUFFIX,box.com,Proxy
 HOST-SUFFIX,brave.com,Proxy
 HOST-SUFFIX,businessinsider.com,Proxy
 HOST-SUFFIX,buzzfeed.com,Proxy
-HOST-SUFFIX,bwh1.net,Proxy
 HOST-SUFFIX,castbox.fm,Proxy
 HOST-SUFFIX,cbc.ca,Proxy
 HOST-SUFFIX,cdw.com,Proxy
@@ -109,7 +99,6 @@ HOST-SUFFIX,disconnect.me,Proxy
 HOST-SUFFIX,discordapp.com,Proxy
 HOST-SUFFIX,discordapp.net,Proxy
 HOST-SUFFIX,disqus.com,Proxy
-HOST-SUFFIX,dlercloud.com,Proxy
 HOST-SUFFIX,dmhy.org,Proxy
 HOST-SUFFIX,dns2go.com,Proxy
 HOST-SUFFIX,dowjones.com,Proxy
@@ -117,7 +106,6 @@ HOST-SUFFIX,dropbox.com,Proxy
 HOST-SUFFIX,dropboxapi.com,Proxy
 HOST-SUFFIX,dropboxusercontent.com,Proxy
 HOST-SUFFIX,duckduckgo.com,Proxy
-HOST-SUFFIX,duyaoss.com,Proxy
 HOST-SUFFIX,dw.com,Proxy
 HOST-SUFFIX,dynu.com,Proxy
 HOST-SUFFIX,earthcam.com,Proxy
@@ -203,7 +191,6 @@ HOST-SUFFIX,kodingen.com,Proxy
 HOST-SUFFIX,lemonde.fr,Proxy
 HOST-SUFFIX,lepoint.fr,Proxy
 HOST-SUFFIX,lihkg.com,Proxy
-HOST-SUFFIX,limbopro.xyz,Proxy
 HOST-SUFFIX,listennotes.com,Proxy
 HOST-SUFFIX,livestream.com,Proxy
 HOST-SUFFIX,logimg.jp,Proxy
@@ -291,7 +278,6 @@ HOST-SUFFIX,resilio.com,Proxy
 HOST-SUFFIX,reuters.com,Proxy
 HOST-SUFFIX,reutersmedia.net,Proxy
 HOST-SUFFIX,rfi.fr,Proxy
-HOST-SUFFIX,rixcloud.com,Proxy
 HOST-SUFFIX,roadshow.hk,Proxy
 HOST-SUFFIX,rsshub.app,Proxy
 HOST-SUFFIX,scmp.com,Proxy
@@ -300,11 +286,9 @@ HOST-SUFFIX,seatguru.com,Proxy
 HOST-SUFFIX,shadowsocks.org,Proxy
 HOST-SUFFIX,shindanmaker.com,Proxy
 HOST-SUFFIX,shopee.tw,Proxy
-HOST-SUFFIX,sina.com.hk,Proxy
 HOST-SUFFIX,slideshare.net,Proxy
 HOST-SUFFIX,softfamous.com,Proxy
 HOST-SUFFIX,spiegel.de,Proxy
-HOST-SUFFIX,ssrcloud.org,Proxy
 HOST-SUFFIX,startpage.com,Proxy
 HOST-SUFFIX,steamcommunity.com,Proxy
 HOST-SUFFIX,steemit.com,Proxy
@@ -386,7 +370,6 @@ HOST-SUFFIX,zoom.us,Proxy
 HOST,cc.tvbs.com.tw,Proxy
 HOST,ocsp.int-x3.letsencrypt.org,Proxy
 HOST,search.avira.com,Proxy
-HOST,us.weibo.com,Proxy
 HOST-KEYWORD,.pinterest.,Proxy
 HOST-SUFFIX,edu,Proxy
 HOST-SUFFIX,gov,Proxy
