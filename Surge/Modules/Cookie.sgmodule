@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,118.89.204.198,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com
+hostname = %APPEND% api.m.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com
 
 [Script]
 # 京东签到Cookie
