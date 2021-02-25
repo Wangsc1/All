@@ -33,13 +33,9 @@ IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
 # > Others
-DOMAIN-SUFFIX,4shared.com
-DOMAIN-SUFFIX,9cache.com
-DOMAIN-SUFFIX,9gag.com
 DOMAIN-SUFFIX,abc.com
 DOMAIN-SUFFIX,abc.net.au
 DOMAIN-SUFFIX,abebooks.com
-DOMAIN-SUFFIX,ao3.org
 DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,apkcombo.com
 DOMAIN-SUFFIX,apk-dl.com
@@ -89,7 +85,6 @@ DOMAIN-SUFFIX,cbc.ca
 DOMAIN-SUFFIX,cdw.com
 DOMAIN-SUFFIX,change.org
 DOMAIN-SUFFIX,channelnewsasia.com
-DOMAIN-SUFFIX,ck101.com
 DOMAIN-SUFFIX,clarionproject.org
 DOMAIN-SUFFIX,cloudcone.com
 DOMAIN-SUFFIX,clyp.it
@@ -331,7 +326,6 @@ DOMAIN-SUFFIX,tineye.com
 DOMAIN-SUFFIX,tiny.cc
 DOMAIN-SUFFIX,tinyurl.com
 DOMAIN-SUFFIX,torproject.org
-DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,turbobit.net
 DOMAIN-SUFFIX,tutanota.com
 DOMAIN-SUFFIX,tvboxnow.com
@@ -350,7 +344,6 @@ DOMAIN-SUFFIX,voachinese.com
 DOMAIN-SUFFIX,voanews.com
 DOMAIN-SUFFIX,voxer.com
 DOMAIN-SUFFIX,vzw.com
-DOMAIN-SUFFIX,w3schools.com
 DOMAIN-SUFFIX,washingtonpost.com
 DOMAIN-SUFFIX,wattpad.com
 DOMAIN-SUFFIX,whoer.net

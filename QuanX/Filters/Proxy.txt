@@ -34,13 +34,9 @@ IP6-CIDR,2001:b28:f23d::/48,Proxy
 IP6-CIDR,2001:b28:f23f::/48,Proxy
 IP6-CIDR,2001:67c:4e8::/48,Proxy
 # > Others
-HOST-SUFFIX,4shared.com,Proxy
-HOST-SUFFIX,9cache.com,Proxy
-HOST-SUFFIX,9gag.com,Proxy
 HOST-SUFFIX,abc.com,Proxy
 HOST-SUFFIX,abc.net.au,Proxy
 HOST-SUFFIX,abebooks.com,Proxy
-HOST-SUFFIX,ao3.org,Proxy
 HOST-SUFFIX,apigee.com,Proxy
 HOST-SUFFIX,apkcombo.com,Proxy
 HOST-SUFFIX,apk-dl.com,Proxy
@@ -90,7 +86,6 @@ HOST-SUFFIX,cbc.ca,Proxy
 HOST-SUFFIX,cdw.com,Proxy
 HOST-SUFFIX,change.org,Proxy
 HOST-SUFFIX,channelnewsasia.com,Proxy
-HOST-SUFFIX,ck101.com,Proxy
 HOST-SUFFIX,clarionproject.org,Proxy
 HOST-SUFFIX,cloudcone.com,Proxy
 HOST-SUFFIX,clyp.it,Proxy
@@ -332,7 +327,6 @@ HOST-SUFFIX,tineye.com,Proxy
 HOST-SUFFIX,tiny.cc,Proxy
 HOST-SUFFIX,tinyurl.com,Proxy
 HOST-SUFFIX,torproject.org,Proxy
-HOST-SUFFIX,tumblr.com,Proxy
 HOST-SUFFIX,turbobit.net,Proxy
 HOST-SUFFIX,tutanota.com,Proxy
 HOST-SUFFIX,tvboxnow.com,Proxy
@@ -351,7 +345,6 @@ HOST-SUFFIX,voachinese.com,Proxy
 HOST-SUFFIX,voanews.com,Proxy
 HOST-SUFFIX,voxer.com,Proxy
 HOST-SUFFIX,vzw.com,Proxy
-HOST-SUFFIX,w3schools.com,Proxy
 HOST-SUFFIX,washingtonpost.com,Proxy
 HOST-SUFFIX,wattpad.com,Proxy
 HOST-SUFFIX,whoer.net,Proxy
