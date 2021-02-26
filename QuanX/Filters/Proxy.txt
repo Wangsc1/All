@@ -1,4 +1,13 @@
 # (DNS Cache Pollution)
+# > Apple
+HOST,books.itunes.apple.com,Proxy
+HOST,apps.apple.com,Proxy
+HOST,itunes.apple.com,Proxy
+HOST,api-glb-sea.smoot.apple.com,Proxy
+HOST,lookup-api.apple.com,Proxy
+HOST,beta.music.apple.com,Proxy
+HOST-SUFFIX,appsto.re,Proxy
+HOST-SUFFIX,smoot.apple.com,Proxy
 # > Google
 HOST-SUFFIX,appspot.com,Proxy
 HOST-SUFFIX,blogger.com,Proxy
@@ -123,23 +132,6 @@ HOST-SUFFIX,noxinfluencer.com,Proxy
 HOST-SUFFIX,smartmailcloud.com,Proxy
 HOST-SUFFIX,weebly.com,Proxy
 HOST-SUFFIX,twitter.jp,Proxy
-
-# (Region-Restricted Access Denied)
-# --(Apple)--
-# > Apple URL Shortener
-HOST-SUFFIX,appsto.re,Proxy
-# > iBooks Store download
-HOST,books.itunes.apple.com,Proxy
-# > App Store Preview
-HOST,apps.apple.com,Proxy
-HOST,itunes.apple.com,Proxy
-# > Spotlight
-HOST,api-glb-sea.smoot.apple.com,Proxy
-# > Look Up
-HOST,lookup-api.apple.com,Proxy
-HOST-SUFFIX,smoot.apple.com,Proxy
-# > Apple Music Web
-HOST,beta.music.apple.com,Proxy
 
 # (Network Jitter)
 # > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
