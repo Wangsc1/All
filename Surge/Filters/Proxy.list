@@ -6,6 +6,9 @@ DOMAIN,itunes.apple.com
 DOMAIN,api-glb-sea.smoot.apple.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,beta.music.apple.com
+DOMAIN,appleid.apple.com
+DOMAIN,developer.apple.com
+DOMAIN,xp.apple.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,smoot.apple.com
 # > Google

@@ -6,6 +6,9 @@ HOST,itunes.apple.com,Proxy
 HOST,api-glb-sea.smoot.apple.com,Proxy
 HOST,lookup-api.apple.com,Proxy
 HOST,beta.music.apple.com,Proxy
+HOST,appleid.apple.com,Proxy
+HOST,developer.apple.com,Proxy
+HOST,xp.apple.com,Proxy
 HOST-SUFFIX,appsto.re,Proxy
 HOST-SUFFIX,smoot.apple.com,Proxy
 # > Google
