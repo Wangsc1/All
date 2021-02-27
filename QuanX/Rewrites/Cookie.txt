@@ -1,4 +1,4 @@
-hostname = api.m.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com
+hostname = api.m.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com, m.client.10010.com,clientaccess.10086.cn
 
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -28,3 +28,12 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 
 # 支付宝挖矿Cookie
 ^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js
+
+# 中国联通Cookie
+^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
+^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
+^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
+
+# 中国移动Cookie
+^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
