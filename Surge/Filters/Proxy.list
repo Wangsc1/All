@@ -1,18 +1,4 @@
 # (DNS Cache Pollution)
-# > Apple
-DOMAIN,books.itunes.apple.com
-DOMAIN,apps.apple.com
-DOMAIN,itunes.apple.com
-DOMAIN,api-glb-sea.smoot.apple.com
-DOMAIN,lookup-api.apple.com
-DOMAIN,beta.music.apple.com
-DOMAIN,appleid.apple.com
-DOMAIN,developer.apple.com
-DOMAIN,xp.apple.com
-DOMAIN,www.icloud.com
-DOMAIN,ocsp.apple.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,smoot.apple.com
 # > Google
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,blogger.com
