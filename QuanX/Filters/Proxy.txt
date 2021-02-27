@@ -9,6 +9,8 @@ HOST,beta.music.apple.com,Proxy
 HOST,appleid.apple.com,Proxy
 HOST,developer.apple.com,Proxy
 HOST,xp.apple.com,Proxy
+HOST,www.icloud.com,Proxy
+HOST,ocsp.apple.com,Proxy
 HOST-SUFFIX,appsto.re,Proxy
 HOST-SUFFIX,smoot.apple.com,Proxy
 # > Google
@@ -71,7 +73,6 @@ HOST-SUFFIX,wikiwand.com,Proxy
 HOST-SUFFIX,workflow.is,Proxy
 HOST-SUFFIX,xnxx.com,Proxy
 HOST-SUFFIX,xvideos.com,Proxy
-HOST,ocsp.apple.com,Proxy
 
 # (IP Blackhole)
 # > Google

@@ -9,6 +9,8 @@ DOMAIN,beta.music.apple.com
 DOMAIN,appleid.apple.com
 DOMAIN,developer.apple.com
 DOMAIN,xp.apple.com
+DOMAIN,www.icloud.com
+DOMAIN,ocsp.apple.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,smoot.apple.com
 # > Google
@@ -71,7 +73,6 @@ DOMAIN-SUFFIX,wikiwand.com
 DOMAIN-SUFFIX,workflow.is
 DOMAIN-SUFFIX,xnxx.com
 DOMAIN-SUFFIX,xvideos.com
-DOMAIN,ocsp.apple.com
 
 # (IP Blackhole)
 # > Google
