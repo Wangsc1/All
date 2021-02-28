@@ -1,6 +1,5 @@
 #!name=Script
 #!desc=脚本
-#!system=ios
 
 [MITM]
 hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
