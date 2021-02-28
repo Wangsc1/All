@@ -2,7 +2,7 @@
 #!desc=Cookie
 
 [MITM]
-hostname = %APPEND% me-api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com, m.client.10010.com,clientaccess.10086.cn
+hostname = %APPEND% me-api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com,clientaccess.10086.cn
 
 [Script]
 # 京东多账号Cookie
@@ -37,7 +37,6 @@ hostname = %APPEND% me-api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.hua
 # 中国联通Cookie
 中国联通Cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 中国联通Cookie = type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-中国联通Cookie = type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 
 # 中国移动Cookie
 中国移动Cookie = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
