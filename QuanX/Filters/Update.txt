@@ -1,5 +1,5 @@
 # Block iOS Update
-HOST,mesu.apple.com,Reject
-HOST,gdmf.apple.com,Reject
-HOST,updates-http.cdn-apple.com,Reject
-HOST,xp.apple.com,Reject
+host,mesu.apple.com,reject
+host,gdmf.apple.com,reject
+host,updates-http.cdn-apple.com,reject
+host,xp.apple.com,reject

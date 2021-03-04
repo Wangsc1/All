@@ -1,9 +1,9 @@
 # > YouTube
-USER-AGENT,com.google.ios.youtube*,YouTube
-USER-AGENT,YouTube*,YouTube
-HOST-SUFFIX,googlevideo.com,YouTube
-HOST-SUFFIX,youtube.com,YouTube
-HOST-SUFFIX,ytimg.com,YouTube
-HOST,youtubei.googleapis.com,YouTube
-HOST,yt3.ggpht.com,YouTube
-HOST,youtubei.googleapis.com,YouTube
+user-agent,com.google.ios.youtube*,youtube
+user-agent,YouTube*,youtube
+host-suffix,googlevideo.com,youtube
+host-suffix,youtube.com,youtube
+host-suffix,ytimg.com,youtube
+host,youtubei.googleapis.com,youtube
+host,yt3.ggpht.com,youtube
+host,youtubei.googleapis.com,youtube

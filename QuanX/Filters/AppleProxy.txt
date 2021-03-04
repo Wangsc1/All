@@ -1,14 +1,14 @@
 # > Apple（屏蔽地址）
-HOST,books.itunes.apple.com,Proxy
-HOST,apps.apple.com,Proxy
-HOST,itunes.apple.com,Proxy
-HOST,api-glb-sea.smoot.apple.com,Proxy
-HOST,lookup-api.apple.com,Proxy
-HOST,beta.music.apple.com,Proxy
-HOST,appleid.apple.com,Proxy
-HOST,developer.apple.com,Proxy
-HOST,xp.apple.com,Proxy
-HOST,www.icloud.com,Proxy
-HOST,ocsp.apple.com,Proxy
-HOST-SUFFIX,appsto.re,Proxy
-HOST-SUFFIX,smoot.apple.com,Proxy
+host,books.itunes.apple.com,proxy
+host,apps.apple.com,proxy
+host,itunes.apple.com,proxy
+host,api-glb-sea.smoot.apple.com,proxy
+host,lookup-api.apple.com,proxy
+host,beta.music.apple.com,proxy
+host,appleid.apple.com,proxy
+host,developer.apple.com,proxy
+host,xp.apple.com,proxy
+host,www.icloud.com,proxy
+host,ocsp.apple.com,proxy
+host-suffix,appsto.re,proxy
+host-suffix,smoot.apple.com,proxy

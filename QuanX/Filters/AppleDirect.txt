@@ -1,11 +1,11 @@
 # Apple（未屏蔽服务）
-HOST-SUFFIX,aaplimg.com,Apple
-HOST-SUFFIX,apple.co,Apple
-HOST-SUFFIX,apple.com,Apple
-HOST-SUFFIX,apple-cloudkit.com,Apple
-HOST-SUFFIX,appstore.com,Apple
-HOST-SUFFIX,cdn-apple.com,Apple
-HOST-SUFFIX,icloud.com,Apple
-HOST-SUFFIX,icloud-content.com,Apple
-HOST-SUFFIX,me.com,Apple
-HOST-SUFFIX,mzstatic.com,Apple
+host-suffix,aaplimg.com,apple
+host-suffix,apple.co,apple
+host-suffix,apple.com,apple
+host-suffix,apple-cloudkit.com,apple
+host-suffix,appstore.com,apple
+host-suffix,cdn-apple.com,apple
+host-suffix,icloud.com,apple
+host-suffix,icloud-content.com,apple
+host-suffix,me.com,apple
+host-suffix,mzstatic.com,apple

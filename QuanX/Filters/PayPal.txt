@@ -1,5 +1,5 @@
 # > PayPal
-USER-AGENT,PayPal*,PayPal
-HOST-SUFFIX,paypal.com,PayPal
-HOST-SUFFIX,paypal.me,PayPal
-HOST-SUFFIX,paypalobjects.com,PayPal
+user-agent,PayPal*,paypal
+host-suffix,paypal.com,paypal
+host-suffix,paypal.me,paypal
+host-suffix,paypalobjects.com,paypal

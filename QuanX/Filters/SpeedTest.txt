@@ -1,5 +1,6 @@
-USER-AGENT,SpeedTest*,SpeedTest
-HOST-SUFFIX,fast.com,SpeedTest
-HOST-SUFFIX,ooklaserver.net,SpeedTest
-HOST-SUFFIX,speed.cloudflare.com,SpeedTest
-HOST-KEYWORD,speedtest,SpeedTest
+# > SpeedTest
+user-agent,SpeedTest*,speedtest
+host-suffix,fast.com,speedtest
+host-suffix,ooklaserver.net,speedtest
+host-suffix,speed.cloudflare.com,speedtest
+host-keyword,speedtest,speedtest
