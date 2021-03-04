@@ -4,7 +4,7 @@
 [URL Rewrite]
 # Q-Search
 # 汇率
-^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ https://www.google.com/search?q=$2+rmb 302
+^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ https://www.google.com/search?q=$2+cny 302
 
 # Testflight
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
