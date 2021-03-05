@@ -306,6 +306,7 @@ host,als.baidu.com,reject
 host,duclick.baidu.com,reject
 host,mobads.baidu.com,reject
 host,mobads-logs.baidu.com,reject
+host,nadvideo2.baidu.com,reject
 host,nsclick.baidu.com,reject
 host,dss0.bdstatic.com,reject
 
