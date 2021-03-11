@@ -4,7 +4,6 @@ host-suffix,appspot.com,proxy
 host-suffix,blogger.com,proxy
 host-suffix,getoutline.org,proxy
 host-suffix,gvt0.com,proxy
-host-suffix,gvt1.com,proxy
 host-suffix,gvt3.com,proxy
 host-suffix,xn--ngstr-lra8j.com,proxy
 host-suffix,ytimg.com,proxy
@@ -35,13 +34,11 @@ ip6-cidr,2001:67c:4e8::/48,proxy
 
 # (IP Blackhole)
 # > Google
-host-suffix,google,proxy
 host-suffix,abc.xyz,proxy
 host-suffix,advertisercommunity.com,proxy
 host-suffix,ampproject.org,proxy
 host-suffix,android.com,proxy
 host-suffix,androidify.com,proxy
-host-suffix,dialogflow.com,proxy
 host-suffix,autodraw.com,proxy
 host-suffix,capitalg.com,proxy
 host-suffix,certificate-transparency.org,proxy
@@ -52,6 +49,7 @@ host-suffix,chromium.org,proxy
 host-suffix,creativelab5.com,proxy
 host-suffix,debug.com,proxy
 host-suffix,deepmind.com,proxy
+host-suffix,dialogflow.com,proxy
 host-suffix,firebaseio.com,proxy
 host-suffix,getmdl.io,proxy
 host-suffix,ggpht.com,proxy
@@ -67,7 +65,6 @@ host-suffix,madewithcode.com,proxy
 host-suffix,material.io,proxy
 host-suffix,page.link,proxy
 host-suffix,polymer-project.org,proxy
-host-suffix,admin.recaptcha.net,proxy
 host-suffix,recaptcha.net,proxy
 host-suffix,shattered.io,proxy
 host-suffix,synergyse.com,proxy
@@ -90,13 +87,3 @@ host-suffix,t.me,proxy
 host-suffix,tdesktop.com,proxy
 host-suffix,telegram.me,proxy
 host-suffix,telesco.pe,proxy
-
-# (Network Jitter)
-# > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
-host-keyword,buy.itunes.apple.com,proxy
-host-suffix,cloudcone.com.cn,proxy
-# host-suffix,evernote.com,proxy
-host-suffix,inkbunny.net,proxy
-host-suffix,metapix.net,proxy
-host-suffix,s3.amazonaws.com,proxy
-host-suffix,zaobao.com.sg,proxy

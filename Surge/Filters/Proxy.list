@@ -4,7 +4,6 @@ DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,gvt0.com
-DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,ytimg.com
@@ -35,13 +34,11 @@ IP-CIDR6,2001:67c:4e8::/48,no-resolve
 
 # (IP Blackhole)
 # > Google
-DOMAIN-SUFFIX,google
 DOMAIN-SUFFIX,abc.xyz
 DOMAIN-SUFFIX,advertisercommunity.com
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
-DOMAIN-SUFFIX,dialogflow.com
 DOMAIN-SUFFIX,autodraw.com
 DOMAIN-SUFFIX,capitalg.com
 DOMAIN-SUFFIX,certificate-transparency.org
@@ -52,6 +49,7 @@ DOMAIN-SUFFIX,chromium.org
 DOMAIN-SUFFIX,creativelab5.com
 DOMAIN-SUFFIX,debug.com
 DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,dialogflow.com
 DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,getmdl.io
 DOMAIN-SUFFIX,ggpht.com
@@ -67,7 +65,6 @@ DOMAIN-SUFFIX,madewithcode.com
 DOMAIN-SUFFIX,material.io
 DOMAIN-SUFFIX,page.link
 DOMAIN-SUFFIX,polymer-project.org
-DOMAIN-SUFFIX,admin.recaptcha.net
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,shattered.io
 DOMAIN-SUFFIX,synergyse.com
@@ -90,13 +87,3 @@ DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telesco.pe
-
-# (Network Jitter)
-# > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
-DOMAIN-KEYWORD,buy.itunes.apple.com
-DOMAIN-SUFFIX,cloudcone.com.cn
-# DOMAIN-SUFFIX,evernote.com
-DOMAIN-SUFFIX,inkbunny.net
-DOMAIN-SUFFIX,metapix.net
-DOMAIN-SUFFIX,s3.amazonaws.com
-DOMAIN-SUFFIX,zaobao.com.sg
