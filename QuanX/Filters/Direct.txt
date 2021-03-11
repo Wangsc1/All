@@ -53,6 +53,15 @@ user-agent,PayPal*,direct
 host-suffix,paypal.com,direct
 host-suffix,paypal.me,direct
 host-suffix,paypalobjects.com,direct
+# > Spotify
+user-agent,Spotify*,direct
+host-suffix,pscdn.co,direct
+host-suffix,scdn.co,direct
+host-suffix,spotify.com,direct
+host-suffix,spoti.fi,direct
+host-suffix,spotifycdn.com,direct
+host-keyword,spotify.com,direct
+host-keyword,-spotify-com,direct
 # > Sina
 host-suffix,sina.com,direct
 host-suffix,weibo.com,direct
