@@ -1,15 +1,4 @@
 # China Area Network
-# Apple
-host-suffix,aaplimg.com,direct
-host-suffix,apple.co,direct
-host-suffix,apple.com,direct
-host-suffix,apple-cloudkit.com,direct
-host-suffix,appstore.com,direct
-host-suffix,cdn-apple.com,direct
-host-suffix,icloud.com,direct
-host-suffix,icloud-content.com,direct
-host-suffix,me.com,direct
-host-suffix,mzstatic.com,direct
 # > Alibaba
 user-agent,%E4%BC%98%E9%85%B7*,direct
 host-suffix,alibaba.com,direct

@@ -1,0 +1,11 @@
+# Apple（未屏蔽服务）
+host-suffix,aaplimg.com,apple
+host-suffix,apple.co,apple
+host-suffix,apple.com,apple
+host-suffix,apple-cloudkit.com,apple
+host-suffix,appstore.com,apple
+host-suffix,cdn-apple.com,apple
+host-suffix,icloud.com,apple
+host-suffix,icloud-content.com,apple
+host-suffix,me.com,apple
+host-suffix,mzstatic.com,apple
