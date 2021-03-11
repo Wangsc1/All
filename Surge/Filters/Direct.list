@@ -1,4 +1,15 @@
 # China Area Network
+# Apple
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mzstatic.com
 # > Alibaba
 USER-AGENT,%E4%BC%98%E9%85%B7*
 DOMAIN-SUFFIX,alibaba.com
@@ -128,37 +139,3 @@ DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
 # > Other
 DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,accuweather.com
-DOMAIN-SUFFIX,bdatu.com
-DOMAIN-SUFFIX,bstatic.com
-DOMAIN-SUFFIX,cmbchina.com
-DOMAIN-SUFFIX,cmbimg.com
-DOMAIN-SUFFIX,coolapk.com
-DOMAIN-SUFFIX,dfcfw.com
-DOMAIN-SUFFIX,dji.net
-DOMAIN-SUFFIX,feng.com
-DOMAIN-SUFFIX,geilicdn.com
-DOMAIN-SUFFIX,getpricetag.com
-DOMAIN-SUFFIX,ithome.com
-DOMAIN-SUFFIX,java.com
-DOMAIN-SUFFIX,jianshu.io
-DOMAIN-SUFFIX,maoyan.com
-DOMAIN-SUFFIX,pcbeta.com
-DOMAIN-SUFFIX,plex.tv
-DOMAIN-SUFFIX,qidian.com
-DOMAIN-SUFFIX,scomper.me
-DOMAIN-SUFFIX,sm.ms
-DOMAIN-SUFFIX,smzdm.com
-DOMAIN-SUFFIX,sspai.com
-DOMAIN-SUFFIX,weather.com
-DOMAIN-SUFFIX,weidian.com
-DOMAIN-SUFFIX,xiachufang.com
-DOMAIN-SUFFIX,yangkeduo.com
-DOMAIN-SUFFIX,zhihu.com
-DOMAIN-SUFFIX,zhimg.com
-DOMAIN-SUFFIX,zhuihd.com
-DOMAIN,download.jetbrains.com
-DOMAIN,images-cn.ssl-images-amazon.com
-
-# GeoIp
-GEOIP,CN

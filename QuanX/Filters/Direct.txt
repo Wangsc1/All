@@ -1,4 +1,15 @@
 # China Area Network
+# Apple
+host-suffix,aaplimg.com,direct
+host-suffix,apple.co,direct
+host-suffix,apple.com,direct
+host-suffix,apple-cloudkit.com,direct
+host-suffix,appstore.com,direct
+host-suffix,cdn-apple.com,direct
+host-suffix,icloud.com,direct
+host-suffix,icloud-content.com,direct
+host-suffix,me.com,direct
+host-suffix,mzstatic.com,direct
 # > Alibaba
 user-agent,%E4%BC%98%E9%85%B7*,direct
 host-suffix,alibaba.com,direct
@@ -128,37 +139,3 @@ host-suffix,tjupt.org,direct
 host-suffix,totheglory.im,direct
 # > Other
 host-suffix,cn,direct
-host-suffix,accuweather.com,direct
-host-suffix,bdatu.com,direct
-host-suffix,bstatic.com,direct
-host-suffix,cmbchina.com,direct
-host-suffix,cmbimg.com,direct
-host-suffix,coolapk.com,direct
-host-suffix,dfcfw.com,direct
-host-suffix,dji.net,direct
-host-suffix,feng.com,direct
-host-suffix,geilicdn.com,direct
-host-suffix,getpricetag.com,direct
-host-suffix,ithome.com,direct
-host-suffix,java.com,direct
-host-suffix,jianshu.io,direct
-host-suffix,maoyan.com,direct
-host-suffix,pcbeta.com,direct
-host-suffix,plex.tv,direct
-host-suffix,qidian.com,direct
-host-suffix,scomper.me,direct
-host-suffix,sm.ms,direct
-host-suffix,smzdm.com,direct
-host-suffix,sspai.com,direct
-host-suffix,weather.com,direct
-host-suffix,weidian.com,direct
-host-suffix,xiachufang.com,direct
-host-suffix,yangkeduo.com,direct
-host-suffix,zhihu.com,direct
-host-suffix,zhimg.com,direct
-host-suffix,zhuihd.com,direct
-host,download.jetbrains.com,direct
-host,images-cn.ssl-images-amazon.com,direct
-    
-# GeoIp
-geoip, cn, direct

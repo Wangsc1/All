@@ -1,4 +1,18 @@
 # (DNS Cache Pollution)
+# > Apple
+host,books.itunes.apple.com,proxy
+host,apps.apple.com,proxy
+host,itunes.apple.com,proxy
+host,api-glb-sea.smoot.apple.com,proxy
+host,lookup-api.apple.com,proxy
+host,beta.music.apple.com,proxy
+host,appleid.apple.com,proxy
+host,developer.apple.com,proxy
+host,xp.apple.com,proxy
+host,www.icloud.com,proxy
+host,ocsp.apple.com,proxy
+host-suffix,appsto.re,proxy
+host-suffix,smoot.apple.com,proxy
 # > Google
 host-suffix,appspot.com,proxy
 host-suffix,blogger.com,proxy
@@ -32,33 +46,6 @@ ip-cidr,149.154.160.0/20,proxy
 ip6-cidr,2001:b28:f23d::/48,proxy
 ip6-cidr,2001:b28:f23f::/48,proxy
 ip6-cidr,2001:67c:4e8::/48,proxy
-# > Others
-host-suffix,apkmirror.com,proxy
-host-suffix,avgle.com,proxy
-host-suffix,github.com,proxy
-host-suffix,github.io,proxy
-host-suffix,githubusercontent.com,proxy
-host-suffix,pixiv.net,proxy
-host-suffix,steamcommunity.com,proxy
-host-suffix,steemit.com,proxy
-host-suffix,steemitwallet.com,proxy
-host-suffix,straitstimes.com,proxy
-host-suffix,streamable.com,proxy
-host-suffix,streema.com,proxy
-host-suffix,t66y.com,proxy
-host-suffix,textnow.me,proxy
-host-suffix,tiny.cc,proxy
-host-suffix,tinyurl.com,proxy
-host-suffix,wikileaks.org,proxy
-host-suffix,wikimapia.org,proxy
-host-suffix,wikimedia.org,proxy
-host-suffix,wikinews.org,proxy
-host-suffix,wikipedia.org,proxy
-host-suffix,wikiquote.org,proxy
-host-suffix,wikiwand.com,proxy
-host-suffix,workflow.is,proxy
-host-suffix,xnxx.com,proxy
-host-suffix,xvideos.com,proxy
 
 # (IP Blackhole)
 # > Google
@@ -117,11 +104,6 @@ host-suffix,t.me,proxy
 host-suffix,tdesktop.com,proxy
 host-suffix,telegram.me,proxy
 host-suffix,telesco.pe,proxy
-# > Others
-host-suffix,noxinfluencer.com,proxy
-host-suffix,smartmailcloud.com,proxy
-host-suffix,weebly.com,proxy
-host-suffix,twitter.jp,proxy
 
 # (Network Jitter)
 # > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
