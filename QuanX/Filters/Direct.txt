@@ -93,14 +93,6 @@ host-suffix,tencent-cloud.net,direct
 host-suffix,tenpay.com,direct
 host-suffix,wechat.com,direct
 host,file-igamecj.akamaized.net,direct
-# > Content Delivery Network
-host-suffix,ccgslb.com,direct
-host-suffix,ccgslb.net,direct
-host-suffix,chinanetcenter.com,direct
-host-suffix,meixincdn.com,direct
-host-suffix,ourdvs.com,direct
-host-suffix,staticdn.net,direct
-host-suffix,wangsu.com,direct
 # > IP Query
 host-suffix,ipip.net,direct
 host-suffix,ip.la,direct
@@ -112,38 +104,5 @@ host-suffix,test-ipv6.com,direct
 host-suffix,whatismyip.com,direct
 host,ip.istatmenus.app,direct
 host,sms.imagetasks.com,direct
-# > Private Tracker
-host-suffix,acg.rip,direct
-host-suffix,animebytes.tv,direct
-host-suffix,awesome-hd.me,direct
-host-suffix,broadcasthe.net,direct
-host-suffix,chdbits.co,direct
-host-suffix,classix-unlimited.co.uk,direct
-host-suffix,comicat.org,direct
-host-suffix,empornium.me,direct
-host-suffix,gazellegames.net,direct
-host-suffix,hdbits.org,direct
-host-suffix,hdchina.org,direct
-host-suffix,hddolby.com,direct
-host-suffix,hdhome.org,direct
-host-suffix,hdsky.me,direct
-host-suffix,icetorrent.org,direct
-host-suffix,jpopsuki.eu,direct
-host-suffix,keepfrds.com,direct
-host-suffix,madsrevolution.net,direct
-host-suffix,morethan.tv,direct
-host-suffix,m-team.cc,direct
-host-suffix,myanonamouse.net,direct
-host-suffix,nanyangpt.com,direct
-host-suffix,ncore.cc,direct
-host-suffix,open.cd,direct
-host-suffix,ourbits.club,direct
-host-suffix,passthepopcorn.me,direct
-host-suffix,privatehd.to,direct
-host-suffix,pterclub.com,direct
-host-suffix,redacted.ch,direct
-host-suffix,springsunday.net,direct
-host-suffix,tjupt.org,direct
-host-suffix,totheglory.im,direct
 # > Other
 host-suffix,cn,direct
