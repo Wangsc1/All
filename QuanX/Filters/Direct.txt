@@ -1,5 +1,6 @@
 # China Area Network
-# Apple（未屏蔽服务）
+# Apple
+host,testflight.apple.com,direct
 host-suffix,aaplimg.com,direct
 host-suffix,apple.co,direct
 host-suffix,apple.com,direct
