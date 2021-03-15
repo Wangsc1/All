@@ -426,6 +426,8 @@ host,pgdt.gtimg.com,reject
 host,pgdt.ugdtimg.com,reject
 host,splashqqlive.gtimg.com,reject
 host,wa.gtimg.com,reject
+host,wxsnsdy.wxs.qq.com,reject
+host,wxsnsdythumb.wxs.qq.com,reject
 
 # Internet Service Providers Hijacking
 host-suffix,17gouwuba.com,reject
