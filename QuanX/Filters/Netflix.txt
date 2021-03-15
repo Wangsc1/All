@@ -1,33 +1,33 @@
 # > Netflix
-user-agent,Argo*,netflix
-host-suffix,netflix.com,netflix
-host-suffix,netflix.net,netflix
-host-suffix,nflxext.com,netflix
-host-suffix,nflximg.com,netflix
-host-suffix,nflximg.net,netflix
-host-suffix,nflxso.net,netflix
-host-suffix,nflxvideo.net,netflix
-host-suffix,netflixdnstest0.com,netflix
-host-suffix,netflixdnstest1.com,netflix
-host-suffix,netflixdnstest2.com,netflix
-host-suffix,netflixdnstest3.com,netflix
-host-suffix,netflixdnstest4.com,netflix
-host-suffix,netflixdnstest5.com,netflix
-host-suffix,netflixdnstest6.com,netflix
-host-suffix,netflixdnstest7.com,netflix
-host-suffix,netflixdnstest8.com,netflix
-host-suffix,netflixdnstest9.com,netflix
-host-keyword,dualstack.apiproxy-device-prod-nlb-,netflix
-host-keyword,dualstack.ichnaea-web-,netflix
-ip-cidr,23.246.0.0/18,netflix
-ip-cidr,37.77.184.0/21,netflix
-ip-cidr,45.57.0.0/17,netflix
-ip-cidr,64.120.128.0/17,netflix
-ip-cidr,66.197.128.0/17,netflix
-ip-cidr,108.175.32.0/20,netflix
-ip-cidr,192.173.64.0/18,netflix
-ip-cidr,198.38.96.0/19,netflix
-ip-cidr,198.45.48.0/20,netflix
-ip-cidr,34.210.42.111/32,netflix
-ip-cidr,52.89.124.203/32,netflix
-ip-cidr,54.148.37.5/32,netflix
+user-agent, Argo*, netflix
+host-suffix, netflix.com, netflix
+host-suffix, netflix.net, netflix
+host-suffix, nflxext.com, netflix
+host-suffix, nflximg.com, netflix
+host-suffix, nflximg.net, netflix
+host-suffix, nflxso.net, netflix
+host-suffix, nflxvideo.net, netflix
+host-suffix, netflixdnstest0.com, netflix
+host-suffix, netflixdnstest1.com, netflix
+host-suffix, netflixdnstest2.com, netflix
+host-suffix, netflixdnstest3.com, netflix
+host-suffix, netflixdnstest4.com, netflix
+host-suffix, netflixdnstest5.com, netflix
+host-suffix, netflixdnstest6.com, netflix
+host-suffix, netflixdnstest7.com, netflix
+host-suffix, netflixdnstest8.com, netflix
+host-suffix, netflixdnstest9.com, netflix
+host-keyword, dualstack.apiproxy-device-prod-nlb-, netflix
+host-keyword, dualstack.ichnaea-web-, netflix
+ip-cidr, 23.246.0.0/18, netflix
+ip-cidr, 37.77.184.0/21, netflix
+ip-cidr, 45.57.0.0/17, netflix
+ip-cidr, 64.120.128.0/17, netflix
+ip-cidr, 66.197.128.0/17, netflix
+ip-cidr, 108.175.32.0/20, netflix
+ip-cidr, 192.173.64.0/18, netflix
+ip-cidr, 198.38.96.0/19, netflix
+ip-cidr, 198.45.48.0/20, netflix
+ip-cidr, 34.210.42.111/32, netflix
+ip-cidr, 52.89.124.203/32, netflix
+ip-cidr, 54.148.37.5/32, netflix

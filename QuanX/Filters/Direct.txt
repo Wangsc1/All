@@ -1,108 +1,108 @@
 # China Area Network
 # Apple
-host,testflight.apple.com,direct
-host-suffix,aaplimg.com,direct
-host-suffix,apple.co,direct
-host-suffix,apple.com,direct
-host-suffix,apple-cloudkit.com,direct
-host-suffix,appstore.com,direct
-host-suffix,cdn-apple.com,direct
-host-suffix,icloud.com,direct
-host-suffix,icloud-content.com,direct
-host-suffix,me.com,direct
-host-suffix,mzstatic.com,direct
+host, testflight.apple.com, direct
+host-suffix, aaplimg.com, direct
+host-suffix, apple.co, direct
+host-suffix, apple.com, direct
+host-suffix, apple-cloudkit.com, direct
+host-suffix, appstore.com, direct
+host-suffix, cdn-apple.com, direct
+host-suffix, icloud.com, direct
+host-suffix, icloud-content.com, direct
+host-suffix, me.com, direct
+host-suffix, mzstatic.com, direct
 # > Alibaba
-user-agent,%E4%BC%98%E9%85%B7*,direct
-host-suffix,alibaba.com,direct
-host-suffix,alibabausercontent.com,direct
-host-suffix,alicdn.com,direct
-host-suffix,alikunlun.com,direct
-host-suffix,alipay.com,direct
-host-suffix,amap.com,direct
-host-suffix,autonavi.com,direct
-host-suffix,dingtalk.com,direct
-host-suffix,mxhichina.com,direct
-host-suffix,soku.com,direct
-host-suffix,taobao.com,direct
-host-suffix,tmall.com,direct
-host-suffix,tmall.hk,direct
-host-suffix,ykimg.com,direct
-host-suffix,youku.com,direct
-host-suffix,xiami.com,direct
-host-suffix,xiami.net,direct
+user-agent, %E4%BC%98%E9%85%B7*, direct
+host-suffix, alibaba.com, direct
+host-suffix, alibabausercontent.com, direct
+host-suffix, alicdn.com, direct
+host-suffix, alikunlun.com, direct
+host-suffix, alipay.com, direct
+host-suffix, amap.com, direct
+host-suffix, autonavi.com, direct
+host-suffix, dingtalk.com, direct
+host-suffix, mxhichina.com, direct
+host-suffix, soku.com, direct
+host-suffix, taobao.com, direct
+host-suffix, tmall.com, direct
+host-suffix, tmall.hk, direct
+host-suffix, ykimg.com, direct
+host-suffix, youku.com, direct
+host-suffix, xiami.com, direct
+host-suffix, xiami.net, direct
 # > Baidu
-host-suffix,baidu.com,direct
-host-suffix,baidubcr.com,direct
-host-suffix,baidupan.com,direct
-host-suffix,baidupcs.com,direct
-host-suffix,bdimg.com,direct
-host-suffix,bdstatic.com,direct
-host-suffix,yunjiasu-cdn.net,direct
+host-suffix, baidu.com, direct
+host-suffix, baidubcr.com, direct
+host-suffix, baidupan.com, direct
+host-suffix, baidupcs.com, direct
+host-suffix, bdimg.com, direct
+host-suffix, bdstatic.com, direct
+host-suffix, yunjiasu-cdn.net, direct
 # > ByteDance
-host-suffix,feiliao.com,direct
-host-suffix,pstatp.com,direct
-host-suffix,snssdk.com,direct
-host-suffix,iesdouyin.com,direct
-host-suffix,toutiao.com,direct
+host-suffix, feiliao.com, direct
+host-suffix, pstatp.com, direct
+host-suffix, snssdk.com, direct
+host-suffix, iesdouyin.com, direct
+host-suffix, toutiao.com, direct
 # > DiDi
-host-suffix,didialift.com,direct
-host-suffix,didiglobal.com,direct
-host-suffix,udache.com,direct
+host-suffix, didialift.com, direct
+host-suffix, didiglobal.com, direct
+host-suffix, udache.com, direct
 # > JD
-host-suffix,jd.com,direct
-host-suffix,jd.hk,direct
-host-suffix,jdpay.com,direct
-host-suffix,360buyimg.com,direct
+host-suffix, jd.com, direct
+host-suffix, jd.hk, direct
+host-suffix, jdpay.com, direct
+host-suffix, 360buyimg.com, direct
 # > Meituan
-host-suffix,dianping.com,direct
-host-suffix,dpfile.com,direct
-host-suffix,meituan.com,direct
-host-suffix,meituan.net,direct
+host-suffix, dianping.com, direct
+host-suffix, dpfile.com, direct
+host-suffix, meituan.com, direct
+host-suffix, meituan.net, direct
 # > PayPal
-user-agent,PayPal*,direct
-host-suffix,paypal.com,direct
-host-suffix,paypal.me,direct
-host-suffix,paypalobjects.com,direct
+user-agent, PayPal*, direct
+host-suffix, paypal.com, direct
+host-suffix, paypal.me, direct
+host-suffix, paypalobjects.com, direct
 # > Spotify
-user-agent,Spotify*,direct
-host-suffix,pscdn.co,direct
-host-suffix,scdn.co,direct
-host-suffix,spotify.com,direct
-host-suffix,spoti.fi,direct
-host-suffix,spotifycdn.com,direct
-host-keyword,spotify.com,direct
-host-keyword,-spotify-com,direct
+user-agent, Spotify*, direct
+host-suffix, pscdn.co, direct
+host-suffix, scdn.co, direct
+host-suffix, spotify.com, direct
+host-suffix, spoti.fi, direct
+host-suffix, spotifycdn.com, direct
+host-keyword, spotify.com, direct
+host-keyword, -spotify-com, direct
 # > Sina
-host-suffix,sina.com,direct
-host-suffix,weibo.com,direct
-host-suffix,weibocdn.com,direct
+host-suffix, sina.com, direct
+host-suffix, weibo.com, direct
+host-suffix, weibocdn.com, direct
 # > Tencent
-user-agent,MicroMessenger%20Client,direct
-user-agent,WeChat*,direct
-user-agent,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*,direct
-host-suffix,gtimg.com,direct
-host-suffix,idqqimg.com,direct
-host-suffix,igamecj.com,direct
-host-suffix,myapp.com,direct
-host-suffix,myqcloud.com,direct
-host-suffix,qq.com,direct
-host-suffix,qqmail.com,direct
-host-suffix,servicewechat.com,direct
-host-suffix,tencent.com,direct
-host-suffix,tencent-cloud.net,direct
-host-suffix,tenpay.com,direct
-host-suffix,wechat.com,direct
-host,file-igamecj.akamaized.net,direct
+user-agent, MicroMessenger%20Client, direct
+user-agent, WeChat*, direct
+user-agent, %E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*, direct
+host-suffix, gtimg.com, direct
+host-suffix, idqqimg.com, direct
+host-suffix, igamecj.com, direct
+host-suffix, myapp.com, direct
+host-suffix, myqcloud.com, direct
+host-suffix, qq.com, direct
+host-suffix, qqmail.com, direct
+host-suffix, servicewechat.com, direct
+host-suffix, tencent.com, direct
+host-suffix, tencent-cloud.net, direct
+host-suffix, tenpay.com, direct
+host-suffix, wechat.com, direct
+host, file-igamecj.akamaized.net, direct
 # > IP Query
-host-suffix,ipip.net,direct
-host-suffix,ip.la,direct
-host-suffix,ip.sb,direct
-host-suffix,ip-cdn.com,direct
-host-suffix,ipv6-test.com,direct
-host-suffix,myip.la,direct
-host-suffix,test-ipv6.com,direct
-host-suffix,whatismyip.com,direct
-host,ip.istatmenus.app,direct
-host,sms.imagetasks.com,direct
+host-suffix, ipip.net, direct
+host-suffix, ip.la, direct
+host-suffix, ip.sb, direct
+host-suffix, ip-cdn.com, direct
+host-suffix, ipv6-test.com, direct
+host-suffix, myip.la, direct
+host-suffix, test-ipv6.com, direct
+host-suffix, whatismyip.com, direct
+host, ip.istatmenus.app, direct
+host, sms.imagetasks.com, direct
 # > Other
-host-suffix,cn,direct
+host-suffix, cn, direct
