@@ -429,11 +429,11 @@ host,wa.gtimg.com,reject
 
 # (Z)
 # > ZhiHu
-user-agent,AVOS*,reject
-host,appcloud2.zhihu.com,reject
-host,appcloud2.in.zhihu.com,reject
+host,118.89.204.198,reject
 host,mqtt.zhihu.com,reject
 host,sugar.zhihu.com,reject
+host,appcloud2.in.zhihu.com,reject
+user-agent,AVOS*,reject
 
 # Internet Service Providers Hijacking
 host-suffix,17gouwuba.com,reject
