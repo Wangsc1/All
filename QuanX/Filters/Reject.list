@@ -669,9 +669,38 @@ host-suffix, zbrushcn.com, reject
 host-suffix, zhzzx.com, reject
 
 # Privacy
+host-suffix, adjust.com, reject
+host-suffix, cpatrk.net, reject
+host-suffix, kochava.com, reject
+host-suffix, marketo.com, reject
+host-suffix, mobileapptracking.com, reject
+host-suffix, rtbasia.com, reject
+host-suffix, scorecardresearch.com, reject
+host-suffix, sumologic.com, reject
+host-suffix, survicate.com, reject
+host-suffix, tagcommander.com, reject
+host-suffix, tailtarget.com, reject
+host-suffix, talkingdata.net, reject
+host-suffix, tapad.com, reject
+host-suffix, tapfiliate.com, reject
+host-suffix, tapinfluence.com, reject
+host-suffix, tapstream.com, reject
+host-suffix, tealiumiq.com, reject
+host-suffix, tend.io, reject
+host-suffix, tpctrust.com, reject
+host-suffix, trackingio.com, reject
+host-suffix, tremormedia.com, reject
+host-suffix, woopra.com, reject
+host-suffix, wootric.com, reject
+host-suffix, wowanalytics.co.uk, reject
+host-suffix, zoomanalytics.co, reject
+host, track.tenjin.com, reject
+host, track.tenjin.io, reject
+host, api.talkingdata.com, reject
 host, track.tiara.daum.net, reject
 host, track.tiara.kakao.com, reject
 host, zgsdk.zhugeio.com, reject
+
 # > Baidu
 host, hm.baidu.com, reject
 host, hmma.baidu.com, reject
@@ -689,7 +718,3 @@ host, btrace.qq.com, reject
 host, btrace.video.qq.com, reject
 host, mtrace.qq.com, reject
 host, safebrowsing.urlsec.qq.com, reject
-# > Umeng
-host-keyword, log.umeng.com, reject
-host-keyword, logs.umeng.com, reject
-host-keyword, logs.umengcloud.com, reject
