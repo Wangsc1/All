@@ -17,7 +17,7 @@ host-suffix, netflixdnstest6.com, netflix
 host-suffix, netflixdnstest7.com, netflix
 host-suffix, netflixdnstest8.com, netflix
 host-suffix, netflixdnstest9.com, netflix
-host-keyword, dualstack.apiproxy-device-prod-nlb-, netflix
+host-keyword, dualstack.apiproxy-, netflix
 host-keyword, dualstack.ichnaea-web-, netflix
 ip-cidr, 23.246.0.0/18, netflix
 ip-cidr, 37.77.184.0/21, netflix
