@@ -3,7 +3,7 @@
 
 [URL Rewrite]
 # 京东会员注销
-^(https://shopmember.m.jd.com/)(shopcard/\?)(venderId=[0-9]+).* $1member/memberCloseAccount?$3 302
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
 
 # Q-Search
 # 汇率

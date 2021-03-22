@@ -2,7 +2,7 @@ hostname = duckduckgo.com,shopmember.m.jd.com,gw.alicdn.com,heic.alicdn.com,acs.
 
 # url rewrite
 # 京东会员注销
-^(https://shopmember.m.jd.com/)(shopcard/\?)(venderId=[0-9]+).* url 302 $1member/memberCloseAccount?$3
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url 302 https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1
 
 # Q-Search
 # 汇率
