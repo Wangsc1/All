@@ -24,6 +24,7 @@ hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 # > YOUKU
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
 
 # B
 # > Baidu Map - newclient.map.baidu.com
