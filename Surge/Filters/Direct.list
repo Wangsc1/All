@@ -11,53 +11,6 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
-# > Alibaba
-USER-AGENT,%E4%BC%98%E9%85%B7*
-DOMAIN-SUFFIX,alibaba.com
-DOMAIN-SUFFIX,alibabausercontent.com
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,alikunlun.com
-DOMAIN-SUFFIX,alipay.com
-DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,autonavi.com
-DOMAIN-SUFFIX,dingtalk.com
-DOMAIN-SUFFIX,mxhichina.com
-DOMAIN-SUFFIX,soku.com
-DOMAIN-SUFFIX,taobao.com
-DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,tmall.hk
-DOMAIN-SUFFIX,ykimg.com
-DOMAIN-SUFFIX,youku.com
-DOMAIN-SUFFIX,xiami.com
-DOMAIN-SUFFIX,xiami.net
-# > Baidu
-DOMAIN-SUFFIX,baidu.com
-DOMAIN-SUFFIX,baidubcr.com
-DOMAIN-SUFFIX,baidupan.com
-DOMAIN-SUFFIX,baidupcs.com
-DOMAIN-SUFFIX,bdimg.com
-DOMAIN-SUFFIX,bdstatic.com
-DOMAIN-SUFFIX,yunjiasu-cdn.net
-# > ByteDance
-DOMAIN-SUFFIX,feiliao.com
-DOMAIN-SUFFIX,pstatp.com
-DOMAIN-SUFFIX,snssdk.com
-DOMAIN-SUFFIX,iesdouyin.com
-DOMAIN-SUFFIX,toutiao.com
-# > DiDi
-DOMAIN-SUFFIX,didialift.com
-DOMAIN-SUFFIX,didiglobal.com
-DOMAIN-SUFFIX,udache.com
-# > JD
-DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,jd.hk
-DOMAIN-SUFFIX,jdpay.com
-DOMAIN-SUFFIX,360buyimg.com
-# > Meituan
-DOMAIN-SUFFIX,dianping.com
-DOMAIN-SUFFIX,dpfile.com
-DOMAIN-SUFFIX,meituan.com
-DOMAIN-SUFFIX,meituan.net
 # > PayPal
 USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com
@@ -72,37 +25,5 @@ DOMAIN-SUFFIX,spoti.fi
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-KEYWORD,spotify.com
 DOMAIN-KEYWORD,-spotify-com
-# > Sina
-DOMAIN-SUFFIX,sina.com
-DOMAIN-SUFFIX,weibo.com
-DOMAIN-SUFFIX,weibocdn.com
-# > Tencent
-USER-AGENT,MicroMessenger%20Client
-USER-AGENT,WeChat*
-USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
-DOMAIN-SUFFIX,gtimg.com
-DOMAIN-SUFFIX,idqqimg.com
-DOMAIN-SUFFIX,igamecj.com
-DOMAIN-SUFFIX,myapp.com
-DOMAIN-SUFFIX,myqcloud.com
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,qqmail.com
-DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,tencent.com
-DOMAIN-SUFFIX,tencent-cloud.net
-DOMAIN-SUFFIX,tenpay.com
-DOMAIN-SUFFIX,wechat.com
-DOMAIN,file-igamecj.akamaized.net
-# > IP Query
-DOMAIN-SUFFIX,ipip.net
-DOMAIN-SUFFIX,ip.la
-DOMAIN-SUFFIX,ip.sb
-DOMAIN-SUFFIX,ip-cdn.com
-DOMAIN-SUFFIX,ipv6-test.com
-DOMAIN-SUFFIX,myip.la
-DOMAIN-SUFFIX,test-ipv6.com
-DOMAIN-SUFFIX,whatismyip.com
-DOMAIN,ip.istatmenus.app
-DOMAIN,sms.imagetasks.com
 # > Other
 DOMAIN-SUFFIX,cn
