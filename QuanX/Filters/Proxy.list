@@ -9,28 +9,6 @@ host-suffix, xn--ngstr-lra8j.com, proxy
 host-suffix, ytimg.com, proxy
 host-keyword, google, proxy
 host-keyword, .blogspot., proxy
-# > Twitter
-host-suffix, pscp.tv, proxy
-host-suffix, periscope.tv, proxy
-host-suffix, t.co, proxy
-host-suffix, twimg.co, proxy
-host-suffix, twimg.com, proxy
-host-suffix, twitpic.com, proxy
-host-suffix, twitter.com, proxy
-host-suffix, vine.co, proxy
-# > Telegram
-host-suffix, telegra.ph, proxy
-host-suffix, telegram.org, proxy
-ip-cidr, 91.108.4.0/22, proxy
-ip-cidr, 91.108.8.0/22, proxy
-ip-cidr, 91.108.12.0/22, proxy
-ip-cidr, 91.108.16.0/22, proxy
-ip-cidr, 91.108.20.0/22, proxy
-ip-cidr, 91.108.56.0/22, proxy
-ip-cidr, 149.154.160.0/20, proxy
-ip6-cidr, 2001:b28:f23d::/48, proxy
-ip6-cidr, 2001:b28:f23f::/48, proxy
-ip6-cidr, 2001:67c:4e8::/48, proxy
 
 # (IP Blackhole)
 # > Google
@@ -82,8 +60,3 @@ host-suffix, x.company, proxy
 host-suffix, youtu.be, proxy
 host-suffix, yt.be, proxy
 host-suffix, ytimg.com, proxy
-# > Telegram
-host-suffix, t.me, proxy
-host-suffix, tdesktop.com, proxy
-host-suffix, telegram.me, proxy
-host-suffix, telesco.pe, proxy
