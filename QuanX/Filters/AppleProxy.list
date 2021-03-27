@@ -1,4 +1,4 @@
-# > Apple（屏蔽地址）
+# > AppleProxy（屏蔽地址）
 host-suffix, appsto.re, proxy
 host, books.itunes.apple.com, proxy
 host, apps.apple.com, proxy

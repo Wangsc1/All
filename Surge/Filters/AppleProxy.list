@@ -1,4 +1,4 @@
-# > Apple（屏蔽地址）
+# > AppleProxy（屏蔽地址）
 DOMAIN-SUFFIX,appsto.re
 DOMAIN,books.itunes.apple.com
 DOMAIN,apps.apple.com
