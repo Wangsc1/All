@@ -1,3 +1,12 @@
+/*
+Surge：
+Bear = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Bear.js
+
+QuanX：
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Bear.js
+
+hostname=buy.itunes.apple.com
+*/
 var obj = JSON.parse($response.body);
 var bundle_id = obj.receipt["bundle_id"];
 if (bundle_id == "net.shinyfrog.bear-iOS") {
