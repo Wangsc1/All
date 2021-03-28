@@ -1,5 +1,11 @@
 /*
+Surge：
 Drafts = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/backend\.getdrafts\.com\/api\/.*\/verification*,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js
+
+QuanX：
+https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Drafts.js
+
+hostname = backend.getdrafts.com
 */
 var obj = JSON.parse($response.body);
 

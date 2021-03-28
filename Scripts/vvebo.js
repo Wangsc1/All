@@ -1,5 +1,9 @@
 /*
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/vvebo.js
+Surge：
+彩云SVIP = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/vvebo.js
+
+QuanX：
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/vvebo.js
 
 hostname=buy.itunes.apple.com
 */
