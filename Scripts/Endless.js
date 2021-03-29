@@ -1,8 +1,11 @@
 /*
-[Script]
+Surge：
 Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Endless.js
-[Mitm]
-www.google.*
+
+QuanX：
+https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
+
+hostname=www.google.*
 */
 
 let body = $response.body;

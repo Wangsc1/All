@@ -1,3 +1,13 @@
+/*
+Surge：
+Receipt = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Receipt.js
+
+QuanX：
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Receipt.js
+
+hostname=buy.itunes.apple.com
+*/
+
 let body= $response.body;
 var obj = JSON.parse(body);
 if (body.indexOf("expires") !=-1) {

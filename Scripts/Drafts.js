@@ -7,6 +7,7 @@ https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-bo
 
 hostname = backend.getdrafts.com
 */
+
 var obj = JSON.parse($response.body);
 
 obj= {
