@@ -1,6 +1,6 @@
 /*
 Surge：
-Documents&PDFExpert = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/license\.pdfexpert\.com\/api\/.*\/(documents|pdfexpert6)\/subscription\/(refresh$|check$),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Documents&PDFExpert.js
+Documents&PDFExpert = type=http-response,pattern=https:\/\/license\.pdfexpert\.com\/api\/.*\/(documents|pdfexpert6)\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Documents&PDFExpert.js
 
 QuanX：
 ^https:\/\/license\.pdfexpert\.com\/api\/.*\/(documents|pdfexpert6)\/subscription\/(refresh$|check$) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Documents&PDFExpert.js

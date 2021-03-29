@@ -1,6 +1,6 @@
 /*
 Surge：
-彩云SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Caiyun.js
+彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Surge/Scripts/Caiyun.js
 
 QuanX：
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
