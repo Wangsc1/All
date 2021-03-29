@@ -1,6 +1,6 @@
 /*
 Surge：
-http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Scripts/ClarityWallpaper.js
+克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
 
 QuanX：
 ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body clarity.js

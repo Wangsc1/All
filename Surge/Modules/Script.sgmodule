@@ -6,25 +6,25 @@ hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,claritywallpaper.co
 
 [Script]
 # BoxJs
-BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js,requires-body=true,timeout=120
+BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
 # Sub-Store
-Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js,requires-body=true,timeout=120
+Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
 
 # Emby
 Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
 
 # 彩云SVIP
-彩云SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
+彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
 # 克拉壁纸
-克拉壁纸 = type=http-response,requires-body=1,max-size=262144,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
+克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
 
 # Endless
-Endless = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
+Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
 
 # 宠汪汪强制助力
 宠汪汪强制助力 = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/common\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin,requires-body=1,max-size=0,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_help.js
 
 # 微信内屏蔽链接跳转
-微信内屏蔽链接跳转 = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
+微信内屏蔽链接跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
