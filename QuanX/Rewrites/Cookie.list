@@ -1,4 +1,4 @@
-hostname = *api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn
+hostname = *api.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn
 
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -18,7 +18,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? url script-request-header https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 
 # 什么值得买Cookie
-^https?:\/\/zhiyou\.smzdm\.com\/user$ url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js
+^https:\/\/www\.smzdm\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
 
 # 小米运动Cookie
 ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js

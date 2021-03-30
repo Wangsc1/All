@@ -2,7 +2,7 @@
 #!desc=Cookie
 
 [MITM]
-hostname = %APPEND% *api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn
+hostname = %APPEND% *api.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,act.10010.com,m.client.10010.com,clientaccess.10086.cn
 
 [Script]
 # 京东签到Cookie
@@ -23,7 +23,7 @@ hostname = %APPEND% *api.jd.com,as.xiaojukeji.com,zhiyou.smzdm.com,account.huami
 滴滴出行Cookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 
 # 什么值得买Cookie
-什么值得买Cookie = type=http-request,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js
+什么值得买Cookie = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
 
 # 小米运动Cookie     
 小米运动Cookie = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login,requires-body=1,max-size=0,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
