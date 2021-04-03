@@ -9,9 +9,6 @@
 # Testflight
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
 
-# 百度
-^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ https://www.baidu.com/s?wd=$2 302
-
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
