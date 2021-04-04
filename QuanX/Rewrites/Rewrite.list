@@ -1,4 +1,4 @@
-hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap.com,newclient.map.baidu.com,clientaccess.10086.cn,m.client.10010.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,static.122.gov.cn
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,static.122.gov.cn
 
 # url rewrite
 # Q-Search
@@ -17,15 +17,9 @@ hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,m*.amap
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
 # > Xianyu - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
-# > AMap - m*.amap.com
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 # > YOUKU
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
 ^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
-
-# B
-# > Baidu Map - newclient.map.baidu.com
-^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url reject
 
 # C
 # > ChinaMobile - clientaccess.10086.cn
