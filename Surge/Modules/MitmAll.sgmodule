@@ -1,4 +1,4 @@
-#!name=MitM
+#!name=MitmAll
 #!desc=全局抓包
 
 [MITM]
