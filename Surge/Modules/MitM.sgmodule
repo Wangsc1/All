@@ -1,0 +1,5 @@
+#!name=MitM
+#!desc=全局抓包
+
+[MITM]
+hostname = -*.apple.com,-*.icloud.com,-*.mzstatic.com,-*.crashlytics.com,-*.facebook.com,-*.instagram.com,*
