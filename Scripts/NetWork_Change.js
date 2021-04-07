@@ -1,6 +1,7 @@
 //OutboundMode = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NetWork_Change.js
 //version: 2.2
 //auther: tempoblink
+//update:https://raw.githubusercontent.com/Tempoblink/Surge-Scripts/master/network-changed.js
 
 //The Notification Format.
 let TITLE = 'Surge运行模式';
