@@ -3,11 +3,11 @@
 //auther: tempoblink
 
 //The Notification Format.
-let TITLE = 'Outbound Changed!';
+let TITLE = 'Surge运行模式';
 let SUBTITLE_CELLULAR = '数据网络: ';
 let SUBTITLE_WIFI = '无线网络: ';
 let ABOUT_MODE = '运行模式: ';
-let ABOUT_IP = 'IP地址: ';
+let ABOUT_IP = '当前地址: ';
 let CHINA_MOBILE = "中国移动";
 let CHINA_UNICOM = "中国联通";
 let CHINA_TELECOM = "中国电信";
@@ -24,10 +24,10 @@ let BLOCKLIST = [
     ];
 
 //The default outbound: 'Direct' or 'Rule' or 'Global-proxy'.
-let BlockList = "Direct";
-let AllowList = "Rule";
-let Others = "Rule";
-let Cellular = "Rule";
+let BlockList = "直接连接";
+let AllowList = "规则模式";
+let Others = "规则模式";
+let Cellular = "规则模式";
 
 function changeOutboundMode(mode) {
     ABOUT_IP += $network.v4.primaryAddress;
