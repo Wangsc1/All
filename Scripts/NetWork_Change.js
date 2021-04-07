@@ -4,14 +4,14 @@
 
 //The Notification Format.
 let TITLE = 'Outbound Changed!';
-let SUBTITLE_CELLULAR = 'Cellular: ';
-let SUBTITLE_WIFI = 'Wi-Fi: ';
-let ABOUT_MODE = 'Outbound mode: ';
-let ABOUT_IP = 'New IP address: ';
-let CHINA_MOBILE = "China Mobile";
-let CHINA_UNICOM = "China Unicom";
-let CHINA_TELECOM = "China Telecom";
-let CHINA_TIETONG = "China Tietong";
+let SUBTITLE_CELLULAR = '数据网络: ';
+let SUBTITLE_WIFI = '无线网络: ';
+let ABOUT_MODE = '运行模式: ';
+let ABOUT_IP = 'IP地址: ';
+let CHINA_MOBILE = "中国移动";
+let CHINA_UNICOM = "中国联通";
+let CHINA_TELECOM = "中国电信";
+let CHINA_TIETONG = "中国铁通";
 
 //white ssid and black ssid.
 let ALLOWLIST = [
