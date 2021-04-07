@@ -43,9 +43,9 @@ if (boxConfig) {
 const isLoon = typeof $loon !== "undefined";
 const isSurge = typeof $httpClient !== "undefined" && !isLoon;
 const MODE_NAMES = {
-  RULE: "🚦规则分流",
-  PROXY: "☁️全局代理",
-  DIRECT: "🎯全局直连",
+  RULE: "规则模式",
+  PROXY: "全局代理",
+  DIRECT: "直接连接",
 };
 
 manager();
@@ -59,7 +59,7 @@ function manager() {
     const v4_ip = $network.v4.primaryAddress;
     // no network connection
     if (!config.silence && !v4_ip) {
-      notify("Surge运行模式", "🚫 当前无网络", "");
+      notify("Surge运行模式", "当前无网络", "");
       return;
     }
     ssid = $network.wifi.ssid;

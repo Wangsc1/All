@@ -15,8 +15,8 @@ let CHINA_TIETONG = "中国铁通";
 
 //white ssid and black ssid.
 let ALLOWLIST = [
-            "home_ssid1",
-            "home_ssid2"
+            "Wang_2.4G",
+            "Wang_5G"
     ];
 let BLOCKLIST = [
             "free_ssid1",
@@ -52,7 +52,7 @@ if ($network.v4.primaryInterface == "en0") {
     else if(CARRIER == "460-01" || CARRIER == "460-06" || CARRIER == "460-09") SUBTITLE_CELLULAR += CHINA_UNICOM;
     else if(CARRIER == "460-03" || CARRIER == "460-05" || CARRIER == "460-11") SUBTITLE_CELLULAR += CHINA_TELECOM;
     else if(CARRIER == "460-20") SUBTITLE_CELLULAR += CHINA_TIETONG;
-    NETWORK += SUBTITLE_CELLULAR + " " + $network['cellular-data'].radio;
+    NETWORK += SUBTITLE_CELLULAR + $network['cellular-data'].radio;
     changeOutboundMode(Cellular);
 }
 
