@@ -1,4 +1,4 @@
-# 京东开卡注销
+# 京东店铺注销
 hostname = shopmember.m.jd.com
 
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url 302 https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1

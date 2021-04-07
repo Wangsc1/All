@@ -1,5 +1,5 @@
 #!name=JD_UnbindCard
-#!desc=京东开卡注销
+#!desc=京东店铺注销
 
 [URL Rewrite]
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1 302
