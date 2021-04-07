@@ -24,10 +24,10 @@ let BLOCKLIST = [
     ];
 
 //The default outbound: 'Direct' or 'Rule' or 'Global-proxy'.
-let BlockList = "直接连接";
-let AllowList = "规则模式";
-let Others = "规则模式";
-let Cellular = "规则模式";
+let BlockList = "Direct";
+let AllowList = "Rule";
+let Others = "Rule";
+let Cellular = "Rule";
 
 function changeOutboundMode(mode) {
     ABOUT_IP += $network.v4.primaryAddress;
