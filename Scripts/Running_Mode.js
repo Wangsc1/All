@@ -19,7 +19,7 @@ let config = {
   silence: false, // 是否静默运行，默认false
   cellular: "RULE", // 蜂窝数据下的模式，RULE代表规则模式，PROXY代表全局代理，DIRECT代表全局直连
   wifi: "DIRECT", // wifi下默认的模式
-  all_direct: ["Wang_2.4G", "Wang_5G"], // 指定全局直连的wifi名字
+  all_direct: ["Wang 2.4G", "Wang 5G"], // 指定全局直连的wifi名字
   all_proxy: [], // 指定全局代理的wifi名字
 };
 

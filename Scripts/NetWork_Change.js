@@ -16,8 +16,8 @@ let CHINA_TIETONG = "中国铁通";
 
 //white ssid and black ssid.
 let ALLOWLIST = [
-            "Wang_2.4G",
-            "Wang_5G"
+            "Wang 2.4G",
+            "Wang 5G"
     ];
 let BLOCKLIST = [
             "free_ssid1",
