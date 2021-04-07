@@ -26,7 +26,7 @@ let BLOCKLIST = [
 
 //The default outbound: 'Direct' or 'Rule' or 'Global-proxy'.
 let BlockList = "Direct";
-let AllowList = "Rule";
+let AllowList = "Direct";
 let Others = "Rule";
 let Cellular = "Rule";
 
