@@ -1,4 +1,4 @@
-//event network-changed script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
+//OutboundMode = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NetWork_Change.js
 //version: 2.2
 //auther: tempoblink
 

@@ -1,5 +1,4 @@
-/**
- * Surge & Loon 的运行模式，根据当前网络自动切换模式，此脚本思路来自于Quantumult X。
+/*
  * @author: Peng-YM
  * 更新地址: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
  *
@@ -8,14 +7,7 @@
  * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.sgmodule
  * 手动配置：
  * [Script]
- * event network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
- *
- *************** Loon配置 ***********************
- * 推荐使用插件：
- * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.plugin
- * 手动配置：
- * [Script]
- * network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
+ * 运行模式 = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Running_Mode.js
  *
  *************** 脚本配置 ***********************
  * 推荐使用BoxJS配置。
@@ -26,8 +18,8 @@
 let config = {
   silence: false, // 是否静默运行，默认false
   cellular: "RULE", // 蜂窝数据下的模式，RULE代表规则模式，PROXY代表全局代理，DIRECT代表全局直连
-  wifi: "RULE", // wifi下默认的模式
-  all_direct: ["WRT32X", "WRT32X Extreme"], // 指定全局直连的wifi名字
+  wifi: "DIRECT", // wifi下默认的模式
+  all_direct: ["Wang_2.4G", "Wang_5G"], // 指定全局直连的wifi名字
   all_proxy: [], // 指定全局代理的wifi名字
 };
 
