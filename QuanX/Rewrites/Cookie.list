@@ -32,5 +32,3 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 # 中国联通Cookie
 # dompling
 ^https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommon  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
-# Blackmatrix7
-^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.min.js
