@@ -124,7 +124,7 @@
 
 滴滴出行 = type=cron,cronexp="0 2,20,21 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 
-什么值得买签到 = type=cron,cronexp="1 2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js
+什么值得买签到 = type=cron,cronexp="1 2 * * *",wake-system=1,timeout=3600,script-path=smzdm/smzdm_signin.js
 
 什么值得买任务 = type=cron,cronexp="1 2 * * *",wake-system=1,timeout=3600,script-path=smzdm/smzdm_mission.js
 
