@@ -1,2 +1,3 @@
 USER-AGENT,Emby
 DOMAIN-KEYWORD,emby
+IP-CIDR,45.154.98.24/32,no-resolve
