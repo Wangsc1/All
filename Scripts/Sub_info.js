@@ -7,7 +7,7 @@ Surge显示机场的流量信息，url请求头中必须带有流量信息，并
 ExFlux = select, policy-path=http://t.tt?url=, update-interval=3600
 
 [Script]
-Sub_info = type=http-request,pattern=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
+Sub_info = type=http-request,pattern=http://t\.tt,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
 */
 
 let params = getUrlParams($request.url);
@@ -57,5 +57,6 @@ function formatTimestamp( timestamp ) {
     var month = dateObj.getMonth() + 1;
     month = month < 10 ? '0' + month : month
     var day = dateObj.getDate();
+    day = day < 10 ? '0' + day : day
     return year +"-"+ month +"-" + day;      
 }
