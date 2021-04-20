@@ -57,6 +57,5 @@ function formatTimestamp( timestamp ) {
     var month = dateObj.getMonth() + 1;
     month = month < 10 ? '0' + month : month
     var day = dateObj.getDate();
-    day = day < 10 ? '0' +  day : day
-    return year +"-"+ month +"-" + day;
+    return year +"-"+ month +"-" + day;      
 }
