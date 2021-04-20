@@ -4,10 +4,10 @@
 Surge显示机场的流量信息，url请求头中必须带有流量信息，并且需要urlencode
 
 [Proxy Group]
-DlerCloud = select, policy-path=http://t.tt?url=, update-interval=3600
+ExFlux = select, policy-path=http://t.tt?url=, update-interval=3600
 
 [Script]
-Sub_info = type=http-request,pattern=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
+sub_info = type=http-request,pattern=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
 */
 
 let params = getUrlParams($request.url);
