@@ -18,7 +18,8 @@ ExFlux = select, policy-path=http://t.tt?url=xxx, update-interval=3600
   let used = bytesToSize(usage.download + usage.upload);
   let total = bytesToSize(usage.total);
   let expire = usage.expire == undefined ? '' : ' ║ ' + formatTimestamp(usage.expire * 1000)
-  let body = `${used} ⇋ ${total}${expire}  = ss, 1.2.3.4, 1234, encrypt-method=aes-128-gcm,password=1234`;
+  let http = "http, localhost, 6152";
+  let body = `${used} ⇋ ${total}${expire} = ${http}`;
     $done({response: {body}});
 })();
 
@@ -51,6 +52,6 @@ function formatTimestamp( timestamp ) {
     var month = dateObj.getMonth() + 1;
     month = month < 10 ? '0' + month : month
     var day = dateObj.getDate();
-    day = day < 10 ? '0' + day : day
+    day = day < 10 ? '0' + day : day
     return year +"-"+ month +"-" + day;      
 }
