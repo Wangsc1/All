@@ -1,3 +1,11 @@
+/*
+Surge：
+京东直播间抽奖 = type=cron,cronexp="8 10 * * 3,7",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_social.js
+
+QuanX：
+8 10 * * 3,7 https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_social.js, tag=京东直播间抽奖, img-url=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Icon/JD.png, enabled=true
+*/
+
 const $ = new Env('京东直播间抽奖');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let cookiesArr = [
