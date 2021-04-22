@@ -40,7 +40,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     let url = rraUrl()
     console.log(`获取远程红包雨: ${url}`)
     let code = await redRainId(url)
-    console.log(`获取完成: ${codeList}`)
+    console.log(`获取完成`)
 
     if(!code){
         $.log(`目前没有红包雨直播，请改日再来吧 😊\n`)
