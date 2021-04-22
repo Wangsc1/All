@@ -48,7 +48,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     }
 
     let codeList = code.split(";")
-    //console.log(`红包雨就位: ${codeList}`)
+    console.log(`红包雨就位: ${codeList}`)
 
     for(let codeItem of codeList){
 
@@ -60,7 +60,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
         let hour = (new Date().getUTCHours() + 8) % 24
         if (ids[hour]) {
             $.activityId = ids[hour]
-           // $.log(`RRA: ${codeItem}`)
+            $.log(`RRA: ${codeItem}`)
         } else {
             $.log(`无法从本地读取配置，请检查运行时间`)
             return
