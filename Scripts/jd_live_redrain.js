@@ -49,7 +49,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     }
 
     let codeList = code.split(";")
-    console.log(`龙王就位: ${codeList}`)
+    console.log(`红包雨就位: ${codeList}`)
 
     for(let codeItem of codeList){
 
@@ -221,7 +221,7 @@ async function retryCdn(code, url) {
         let items = url.split("/")
         let fn = items[items.length-1]
         let cndUrl = `http://jd-1255594201.file.myqcloud.com/${fn}`
-        $.log(`获取红包雨失败, 召唤神龙: ${cndUrl}`)
+        $.log(`获取红包雨失败, ,,,: ${cndUrl}`)
         code = await redRainId(cndUrl)
     }
 
