@@ -14,6 +14,10 @@ ExFlux = select, policy-path=http://t.tt?url=xxx, update-interval=3600
   let params = getUrlParams($request.url);
   let info = await getUserInfo(params.url);
   console.log('info:' + info)
+    if (!info) {
+    $notification.post("sub_info","","链接响应头不带有流量信息")
+    $done();
+  }
   let usage = getDataUsage(info);
   let used = bytesToSize(usage.download + usage.upload);
   let total = bytesToSize(usage.total);
