@@ -1,12 +1,12 @@
 /*
 Surge：
-京东直播京豆 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js
+京东整点直播京豆 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js
 
 QuanX：
-0 * * * * https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js, tag=京东直播京豆, img-url=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Icon/JD.png, enabled=true
+0 * * * * https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js, tag=京东整点直播京豆, img-url=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Icon/JD.png, enabled=true
 */
 
-const $ = new Env('京东直播京豆');
+const $ = new Env('京东整点直播京豆');
 let allMessage = '';
 let bodyList = {
     '20': {
