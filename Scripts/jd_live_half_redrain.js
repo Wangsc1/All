@@ -1,23 +1,12 @@
 /*
- 半点京豆雨
- 已支持IOS双京东账号,Node.js支持N个京东账号
- 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
+Surge：
+京东半点直播京豆 = type=cron,cronexp="30 20-23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_half_redrain.js
 
-[task_local]
-#半点京豆雨
-30 20-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js, tag=半点京豆雨, enabled=true
+QuanX：
+30 20-23 * * * https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_half_redrain.js, tag=京东半点直播京豆, img-url=https://raw.githubusercontent.com/Wangsc1/All/master/QuanX/Icon/JD.png, enabled=true
+*/
 
-================Loon==============
-[Script]
-cron "30 20-23/1 * * *" script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js,tag=半点京豆雨
-
-===============Surge=================
- 半点京豆雨 = type=cron,cronexp="30 20-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js
-
-============小火箭=========
- 半点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js, cronexpr="30 20-23/1 * * *",timeout=200, enable=true
- */
-const $ = new Env('半点京豆雨');
+const $ = new Env('京东半点直播京豆');
 let allMessage = '';
 let bodyList = {
     '20': {
