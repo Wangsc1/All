@@ -94,7 +94,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     }
 
 
-    if (allMessage) {
+    if (allMessage && isNotify()) {
         if ($.isNode()) await notify.sendNotify(`${$.name}`, `${allMessage}`);
         $.msg($.name, '', allMessage);
     }
@@ -229,13 +229,22 @@ async function retryCdn(code, url) {
 }
 
 function rraUrl() {
-    let url = 'https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd-half-rain.json'
+    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_half_id.json'
     if($.isNode() && process.env.JD_HALF_RRA_URL){
         url = process.env.JD_HALF_RRA_URL
     }else if($.getdata('jdHalfRRAUrl')){
         url = $.getdata('jdHalfRRAUrl')
     }
     return url
+}
+
+function isNotify() {
+    if($.isNode() && process.env.RAIN_NOTIFY_CONTROL){
+        return process.env.RAIN_NOTIFY_CONTROL != 'false'
+    }else if($.getdata('rainNotifyControl')){
+        return $.getdata('rainNotifyControl') != 'false'
+    }
+    return true
 }
 
 function taskGetUrl(url, body) {
