@@ -1,7 +1,10 @@
-hostname = *api.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
+hostname = api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
 
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# 京东到家Cookie
+^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
 
 # 京东宠汪汪助力更新Cookie
 ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code= url script-response-body https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_run.js

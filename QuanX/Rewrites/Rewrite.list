@@ -1,4 +1,4 @@
-hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,static.122.gov.cn
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,api.xiachufang.com,static.122.gov.cn
 
 # url rewrite
 # Q-Search
@@ -69,6 +69,10 @@ hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clienta
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) url reject
 # > WeChat Official Account
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
+
+# X
+# > Xiachufang - api.xiachufang.com
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
 
 # 交管12123
 # > 12123 - static.122.gov.cn
