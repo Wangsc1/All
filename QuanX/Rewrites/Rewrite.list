@@ -1,4 +1,4 @@
-hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,api.yangkeduo.com,api.pinduoduo.com,mp.weixin.qq.com,api.xiachufang.com,static.122.gov.cn
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,mp.weixin.qq.com,api.xiachufang.com,static.122.gov.cn
 
 # url rewrite
 # Q-Search
@@ -59,10 +59,6 @@ hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clienta
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) url reject
 ^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg url reject
 ^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp url reject
-
-# P
-# > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 
 # T
 # > Tencent WeChat - mp.weixin.qq.com
