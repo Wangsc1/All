@@ -2,7 +2,7 @@
 #!desc=脚本
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,ap?.bilibili.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
 
 [Script]
 # BoxJs
@@ -17,9 +17,6 @@ Sub_info = type=http-request,pattern=http://exflux\.info,script-path=https://raw
 # 彩云SVIP
 彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
-# 克拉壁纸
-克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
-
 # Endless
 Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
 
@@ -28,8 +25,3 @@ Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,require
 
 # 微信内屏蔽链接跳转
 微信内屏蔽链接跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
-
-# Bilibili切换地区，豆瓣评分，搜索地区番剧
-Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-
-Bili Search = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js

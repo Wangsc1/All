@@ -3,7 +3,7 @@ Surge：
 克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
 
 QuanX：
-^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body clarity.js
+^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
 
 hostname = claritywallpaper.com
 */

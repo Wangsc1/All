@@ -1,13 +1,10 @@
-hostname = biz.caiyunapp.com,claritywallpaper.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,ap?.bilibili.com
+hostname = biz.caiyunapp.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
 
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
 # 彩云SVIP
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
-
-# 克拉壁纸
-^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/ClarityWallpaper.js
 
 # Endless
 https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
@@ -17,8 +14,3 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 
 # 微信内屏蔽链接跳转
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
-
-# Bilibili切换地区，豆瓣评分，搜索地区番剧
-^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-
-^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
