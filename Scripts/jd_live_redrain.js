@@ -140,13 +140,13 @@ function getRedRain() {
                                 $.ed = act.endTime
                                 console.log($.activityId)
 
-                                console.log(`🕒下一场红包雨开始时间：${new Date($.st)}`)
-                                console.log(`🕒下一场红包雨结束时间：${new Date($.ed)}`)
+                                console.log(`下一场红包雨开始时间：${new Date($.st)}`)
+                                console.log(`下一场红包雨结束时间：${new Date($.ed)}`)
                             } else {
-                                console.log(`🤔暂无红包雨`)
+                                console.log(`暂无红包雨`)
                             }
                         } else {
-                            console.log(`🤔暂无红包雨`)
+                            console.log(`暂无红包雨`)
                         }
                     }
                 }
@@ -171,15 +171,15 @@ function receiveRedRain() {
                     if (safeGet(data)) {
                         data = JSON.parse(data);
                         if (data.subCode === '0') {
-                            console.log(`🎉领取成功：获得${JSON.stringify(data.lotteryResult)}`)
-                            // message+= `🎉领取成功：获得${JSON.stringify(data.lotteryResult)}\n`
-                            message += `🎉领取成功：获得${(data.lotteryResult.jPeasList[0].quantity)}京豆`
-                            allMessage += `京东账号${$.index}：${$.nickName || $.UserName}\n🎉领取成功：获得${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
+                            console.log(`领取成功，获得${JSON.stringify(data.lotteryResult)}`)
+                            // message+= `领取成功，获得${JSON.stringify(data.lotteryResult)}\n`
+                            message += `领取成功，获得${(data.lotteryResult.jPeasList[0].quantity)}京豆`
+                            allMessage += `京东账号${$.index}：${$.nickName || $.UserName}\n领取成功，获得${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
                         } else if (data.subCode === '8') {
-                            console.log(`😏今日次数已满`)
-                            message += `😩领取失败：本场已领过`;
+                            console.log(`今日次数已满`)
+                            message += `领取失败，本场已领过`;
                         } else {
-                            console.log(`😓异常：${JSON.stringify(data)}`)
+                            console.log(`异常：${JSON.stringify(data)}`)
                         }
                     }
                 }
@@ -229,7 +229,7 @@ async function retryCdn(code, url) {
 }
 
 function rraUrl() {
-    let url = 'https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd-live-rain.json'
+    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_id.json'
     if($.isNode() && process.env.JD_RRA_URL){
         url = process.env.JD_RRA_URL
     }else if($.getdata('jdRRAUrl')){
