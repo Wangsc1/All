@@ -177,7 +177,7 @@ function receiveRedRain() {
                             allMessage += `京东账号${$.index}：${$.nickName || $.UserName}\n🎉领取成功：获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
                         } else if (data.subCode === '8') {
                             console.log(`今日次数已满`)
-                            message += `领取失败，本场已领过`;
+                            message += `😩领取失败：本场已领过`;
                         } else {
                             console.log(`异常：${JSON.stringify(data)}`)
                         }
