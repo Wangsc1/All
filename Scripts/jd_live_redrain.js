@@ -140,13 +140,13 @@ function getRedRain() {
                                 $.ed = act.endTime
                                 console.log($.activityId)
 
-                                console.log(`下一场红包雨开始时间：${new Date($.st)}`)
-                                console.log(`下一场红包雨结束时间：${new Date($.ed)}`)
+                                console.log(`🕒下一场红包雨开始时间：${new Date($.st)}`)
+                                console.log(`🕒下一场红包雨结束时间：${new Date($.ed)}`)
                             } else {
-                                console.log(`暂无红包雨`)
+                                console.log(`🤔暂无红包雨`)
                             }
                         } else {
-                            console.log(`暂无红包雨`)
+                            console.log(`🤔暂无红包雨`)
                         }
                     }
                 }
