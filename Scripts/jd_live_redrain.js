@@ -171,10 +171,10 @@ function receiveRedRain() {
                     if (safeGet(data)) {
                         data = JSON.parse(data);
                         if (data.subCode === '0') {
-                            console.log(`领取成功，获得${JSON.stringify(data.lotteryResult)}`)
-                            // message+= `领取成功，获得${JSON.stringify(data.lotteryResult)}\n`
-                            message += `领取成功，获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆`
-                            allMessage += `京东账号${$.index}：${$.nickName || $.UserName}\n领取成功，获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
+                            console.log(`🎉领取成功：获得${JSON.stringify(data.lotteryResult)}`)
+                            // message+= `🎉领取成功：获得${JSON.stringify(data.lotteryResult)}\n`
+                            message += `🎉领取成功：获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆`
+                            allMessage += `京东账号${$.index}：${$.nickName || $.UserName}\n🎉领取成功：获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
                         } else if (data.subCode === '8') {
                             console.log(`今日次数已满`)
                             message += `领取失败，本场已领过`;
