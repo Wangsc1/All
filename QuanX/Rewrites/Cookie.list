@@ -12,7 +12,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 # 京东宠汪汪助力获取Cookie
 ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId= url script-request-header https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_run.js
 
-# 京喜农场Cookie
+# 京喜Cookie
 ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 ^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 ^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
