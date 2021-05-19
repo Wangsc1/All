@@ -2,7 +2,7 @@
 #!desc=Cookie
 
 [MITM]
-hostname = %APPEND% api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
+hostname = %APPEND% api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
 
 [Script]
 # 京东签到Cookie
@@ -16,6 +16,9 @@ hostname = %APPEND% api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,accou
 
 # 京东宠汪汪助力获取Cookie
 京东宠汪汪助力获取Cookie = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId=, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_run.js
+
+# 京东金融Cookie
+京东金融Cookie = type=http-request,pattern=^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/uc\/newna\/m\/userstat,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_cookie.js
 
 # 京喜Cookie
 京喜Cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
