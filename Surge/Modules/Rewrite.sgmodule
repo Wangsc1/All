@@ -43,7 +43,7 @@
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
+# ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
