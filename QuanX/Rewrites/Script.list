@@ -1,4 +1,4 @@
-hostname = biz.caiyunapp.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com
+hostname = biz.caiyunapp.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
 
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
@@ -14,3 +14,6 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 
 # 微信内屏蔽链接跳转
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
+
+# 京粉转链
+^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Fokit/Quantumult-X/main/scripts/jf_Convert.js
