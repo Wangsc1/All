@@ -21,7 +21,7 @@ ExFlux = select, policy-path=http://t.tt?url=xxx, update-interval=3600
   let usage = getDataUsage(info);
   let used = bytesToSize(usage.download + usage.upload);
   let total = bytesToSize(usage.total);
-  let expire = usage.expire == undefined ? '' : ' ║ ' + formatTimestamp(usage.expire * 1000)
+  let expire = usage.expire == undefined ? '' : '  ║  ' + formatTimestamp(usage.expire * 1000)
   let http = "http, localhost, 6152";
   let body = `${used} ⇋ ${total}${expire} = ${http}`;
     $done({response: {body}});

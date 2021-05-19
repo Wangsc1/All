@@ -27,4 +27,4 @@ Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,require
 微信内屏蔽链接跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
 
 # 京粉转链
-京粉转链 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fokit/Quantumult-X/main/scripts/jf_Convert.js
+京粉转链 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
