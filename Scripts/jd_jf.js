@@ -130,7 +130,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
             let msg = "";
             if (detail[1] == "useJXOrigin") detail[1] = detail[2];
             let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
-            msg += convertmsg ? convertmsg : "‼️该商品暂无返利信息";
+            msg += convertmsg ? convertmsg : "‼️ 该商品暂无返利信息";
             let oprnUrl = detail[1].convertURL ? detail[1].convertURL : "";
             $tool.notify("京粉佣金", "", msg, oprnUrl);
         })
@@ -198,13 +198,13 @@ function convert(url, isOriginJXURL) {
                         let r = {};
                         let scheme = autoChoose ? autoScheme : chooseScheme;
                         if (data.data.promotionUrl) {
-                            r.msg = `〽️返点比率 ➩ ${data.data.wlCommissionShare} % ║ 💴预计返利 ➩ ${data.data.wlCommission}`;
+                            r.msg = `〽️ 返点比率 ➩ ${data.data.wlCommissionShare} % ║ 💴 预计返利 ➩ ${data.data.wlCommission}`;
                             r.convertURL =
                                 scheme == "browser"
                                     ? chooseBrowser + data.data.promotionUrl
                                     : `${scheme}://virtual?params=%7B%22category%22:%22jump%22,%22des%22:%22m%22,%22sourceValue%22:%22babel-act%22,%22sourceType%22:%22babel%22,%22url%22:%22${data.data.promotionUrl}%22%7D`;
                         } else {
-                            r.msg = `‼️该商品暂无返利信息，${data.data.formatContext.trim()}`;
+                            r.msg = `‼️ 该商品暂无返利信息，${data.data.formatContext.trim()}`;
                             r.convertURL =
                                 scheme == "browser"
                                     ? chooseBrowser + data.data.originalContext
