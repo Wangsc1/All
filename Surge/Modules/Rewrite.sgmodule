@@ -65,6 +65,10 @@
 # > Tencent WeChat - mp.weixin.qq.com
 # ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 
+# U
+# > Umetrip
+^https:\/\/img\.umetrip\.com\/fs\/advert/ - reject
+
 # X
 # > Xiachufang - api.xiachufang.com
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
