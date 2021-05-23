@@ -1,4 +1,4 @@
-hostname = jcap.m.jd.com,*.360buyimg.com,biz.caiyunapp.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
+hostname = jcap.m.jd.com,*.360buyimg.com,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
 
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
@@ -9,6 +9,9 @@ hostname = jcap.m.jd.com,*.360buyimg.com,biz.caiyunapp.com,www.google.*,draw.jdf
 
 # 彩云SVIP
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
+
+# Emby
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embycrack.js
 
 # Endless
 https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js

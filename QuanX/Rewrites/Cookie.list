@@ -1,4 +1,4 @@
-hostname = *
+hostname = api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
 
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js

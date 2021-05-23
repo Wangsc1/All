@@ -2,7 +2,7 @@
 #!desc=Cookie
 
 [MITM]
-hostname = *
+hostname = %APPEND% api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
 
 [Script]
 # 京东签到Cookie
