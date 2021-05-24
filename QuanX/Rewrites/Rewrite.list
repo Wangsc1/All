@@ -1,4 +1,4 @@
-hostname = duckduckgo.com,www.zhihu.com,zhuanlan.zhihu.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,mp.weixin.qq.com,api.xiachufang.com,static.122.gov.cn
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,clientaccess.10086.cn,m.client.10010.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.com,api-mifit*.huami.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,mp.weixin.qq.com,api.xiachufang.com,static.122.gov.cn
 
 # url rewrite
 # Q-Search
@@ -10,19 +10,6 @@ hostname = duckduckgo.com,www.zhihu.com,zhuanlan.zhihu.com,gw.alicdn.com,heic.al
 
 # 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
-
-#知乎
-# 部分UA替换
-^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 Quark/604.1 T7/10.7 SearchCraft/2.7.7 (Baidu; P1 9.0.0)$2
-# 网页直接看
-^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
-^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
-# 网页去广告&推荐列表
-https://www\.zhihu\.com/api/v4/questions/\d+/related-readings url reject-200
-https://www\.zhihu\.com/api/v4/answers/\d+/related-readings url reject-200
-https://www\.zhihu\.com/api/v4/hot_recommendation url reject-200
-https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner url reject-200
-https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
 
 # A
 # > Taobao - gw.alicdn.com,heic.alicdn.com
