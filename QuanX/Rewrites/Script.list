@@ -1,10 +1,7 @@
-hostname = *.jd.com,*.jingxi.com,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
+hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,*.jd.com,*.jingxi.com
 
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
-
-# 京东登录辅助切换
-^https?:\/\/.*.(jd|jingxi).com.* url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
 
 # 彩云SVIP
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
@@ -23,3 +20,6 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 
 # 京粉佣金
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
+
+# 京东登录辅助切换
+^https?:\/\/.*.(jd|jingxi).com.* url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
