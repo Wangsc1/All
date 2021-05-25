@@ -22,4 +22,5 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
 
 # 京东登录辅助切换
-^https?:\/\/.*.(jd|jingxi).com.* url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
+^https?:\/\/home\.m\.jd\.com\/userinfom\/QueryUserInfoM url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
+^https?:\/\/plogin\.m\.jd\.com\/login\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
