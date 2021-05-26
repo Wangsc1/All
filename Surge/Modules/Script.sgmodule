@@ -9,7 +9,7 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.j
 BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
 # Sub_Store
-Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
+Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
 
 # Sub_info
 Sub_info = type=http-request,pattern=http://exflux\.info,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js

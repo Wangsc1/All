@@ -1,5 +1,3 @@
-hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,homepage-api.smzdm.com,haojia-api.smzdm.com,app-api.smzdm.com,article-api.smzdm.com,s-api.smzdm.com,www.zhihu.com,zhuanlan.zhihu.com
-
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
@@ -37,3 +35,5 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 # 网页直接看
 ^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
 ^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+
+hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,homepage-api.smzdm.com,haojia-api.smzdm.com,app-api.smzdm.com,article-api.smzdm.com,s-api.smzdm.com,www.zhihu.com,zhuanlan.zhihu.com
