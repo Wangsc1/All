@@ -2,7 +2,7 @@
 #!desc=脚本
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,plogin.m.jd.com,home.m.jd.com,st.jingxi.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,*.jd.com,*.jingxi.com
 
 [Script]
 # BoxJs
