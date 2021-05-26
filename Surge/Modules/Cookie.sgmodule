@@ -1,5 +1,5 @@
-#!name=2Cookie
-#!desc=Cookie
+#!name=3、Cookie
+#!desc=获取Cookie
 
 [MITM]
 hostname = %APPEND% api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,operation-api.jimistore.com,m.client.10010.com
