@@ -1,3 +1,5 @@
 hostname = *.jd.com
 
-^https:\/\/((?!(api|mapi|lbsapi|im\-x|hermes|uranus|saturn|ccf|ccflbs|ccfjma|perf|msg|lite\-msg|firevent|lbsgw|ex|policy|mars|blackhole|homepage\-gw|un|bh|orbit)\.).*\.?jd\.com\/?((?!\.(js|json|jpg|gif|png|webp|dpg)).)*)*$ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
+^https:\/\/((?!(api|mapi|lbsapi|im\-x|hermes|uranus|saturn|ccf|ccflbs|ccfjma|perf|msg|lite\-msg|firevent|lbsgw|lbsgd|ex|policy|mars|blackhole|homepage\-gw|un|bh|orbit|wlmonitor|fireactive)\.).*\.?jd\.com\/?((?!\.(js|json|jpg|gif|png|webp|dpg)).)*)*$ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
+
+^https:\/\/.*\.?jingxi.com\/?((?!\.(js|json|jpg|gif|png|webp|dpg)).)*$ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help.js
