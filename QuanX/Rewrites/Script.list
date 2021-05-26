@@ -1,6 +1,5 @@
 hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,homepage-api.smzdm.com,haojia-api.smzdm.com,app-api.smzdm.com,article-api.smzdm.com,s-api.smzdm.com,www.zhihu.com,zhuanlan.zhihu.com
 
-# script
 # BoxJs
 ^https?://boxjs.net url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
@@ -38,5 +37,3 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 # 网页直接看
 ^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
 ^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
-# 部分UA替换
-^https:\/\/www\.zhihu\.com\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 Quark/604.1 T7/10.7 SearchCraft/2.7.7 (Baidu; P1 9.0.0)$2

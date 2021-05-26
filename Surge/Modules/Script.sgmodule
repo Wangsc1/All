@@ -1,0 +1,44 @@
+#!name=3、Script
+#!desc=脚本
+
+[MITM]
+hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,homepage-api.smzdm.com,haojia-api.smzdm.com,app-api.smzdm.com,article-api.smzdm.com,s-api.smzdm.com,www.zhihu.com,zhuanlan.zhihu.com
+
+[Script]
+# BoxJs
+BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
+
+# Sub_Store
+Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
+
+# Sub_info
+Sub_info = type=http-request,pattern=http://exflux\.info,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
+
+# 彩云SVIP
+彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
+
+# Emby
+Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js
+
+# Endless
+Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
+
+# 宠汪汪强制助力
+宠汪汪强制助力 = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/common\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin,requires-body=1,max-size=0,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_help.js
+
+# 微信内屏蔽链接跳转
+微信内屏蔽链接跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
+
+# 京粉佣金
+京粉佣金 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
+
+# 什么值得买
+首页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/homepage-api\.smzdm\.com\/home,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+好价去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+去浮动广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+好文去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/article-api\.smzdm\.com\/article\/index_home_page,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+搜索去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+
+# 知乎
+网页直接看 = type=http-response,pattern=^https://www\.zhihu\.com/question/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+网页直接看 = type=http-response,pattern=^https://zhuanlan\.zhihu\.com/p/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
