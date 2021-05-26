@@ -1,0 +1,89 @@
+hostname = duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,static.122.gov.cn,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,haojia.m.smzdm.com,api.smzdm.com,app-api.smzdm.com,mp.weixin.qq.com,api.xiachufang.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,clientaccess.10086.cn,m.client.10010.com,www.zhihu.com,zhuanlan.zhihu.com,
+
+# 汇率
+^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ url 302 https://www.google.com/search?q=$2+cny
+
+# Testflight
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ url 302  https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com
+
+# 谷歌
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302  https://www.google.com/search?q=$1
+
+# A
+# > 淘宝
+^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}) url reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
+# > 闲鱼
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
+# > 优酷
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
+
+# E
+# > 饿了么
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ url reject
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ url reject
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ url reject
+^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? url reject
+
+# H
+# > 韩剧TV
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? url reject
+
+# J
+# > 京东
+# ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start url reject-img
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts url reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
+# 交管12123
+^https?:\/\/static\.122\.gov\.cn\/\/group1\/M00\/ url reject
+
+# M
+# > 美团
+^https?:\/\/img\.meituan\.net\/(adunion|display|dpmobile|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) url reject
+^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg url reject
+^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp url reject
+
+# S
+# > 什么值得买
+# 详情页去广告
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner url reject-dict
+# 其他
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) url reject-dict
+^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject-dict
+
+# T
+# > 腾讯
+# ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) url reject
+# > WeChat Official Account
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
+
+# U
+# > 航旅纵横
+^https:\/\/img\.umetrip\.com\/fs\/advert/ url reject
+
+# X
+# > 下厨房
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
+# > 小米
+^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject
+^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject
+^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject
+^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject
+
+# Z
+# > 中国移动
+^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
+# > 中国联通
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject
+# > 知乎
+https://www\.zhihu\.com/api/v4/questions/\d+/related-readings url reject-200
+https://www\.zhihu\.com/api/v4/answers/\d+/related-readings url reject-200
+https://www\.zhihu\.com/api/v4/hot_recommendation url reject-200
+https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner url reject-200
+https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
