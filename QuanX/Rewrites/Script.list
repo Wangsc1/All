@@ -19,21 +19,4 @@ https?:\/\/www\.google\.([a-z.]*)\/search.*(?<!start=\d{2}|\d{3})$ url script-re
 # 京粉佣金
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
 
-# 什么值得买
-# 首页去广告
-^https?:\/\/homepage-api\.smzdm\.com\/home url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-# 好价去广告
-^https?:\/\/haojia-api\.smzdm\.com\/home\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-# 去浮动广告
-^https?:\/\/app-api\.smzdm\.com\/util\/update url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-# 好文去广告
-^https?:\/\/article-api\.smzdm\.com\/article\/index_home_page url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-# 搜索去广告
-^https?:\/\/s-api\.smzdm\.com\/sou\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-
-# 知乎
-# 网页直接看
-^https://www\.zhihu\.com/question/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
-^https://zhuanlan\.zhihu\.com/p/ url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
-
-hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com,homepage-api.smzdm.com,haojia-api.smzdm.com,app-api.smzdm.com,article-api.smzdm.com,s-api.smzdm.com,www.zhihu.com,zhuanlan.zhihu.com
+hostname = biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
