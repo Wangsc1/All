@@ -78,4 +78,4 @@
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/WeChat.json"
 
 [MITM]
-hostname = %APPEND% duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,cube.elemecdn.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,static.122.gov.cn,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,mp.weixin.qq.com,api.xiachufang.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,clientaccess.10086.cn,m.client.10010.com
+hostname = %APPEND% duckduckgo.com,gw.alicdn.com,heic.alicdn.com,acs.m.taobao.com,api.hanju.koudaibaobao.com,api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com,static.122.gov.cn,img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net,mp.weixin.qq.com,api.xiachufang.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,clientaccess.10086.cn,m.client.10010.com
