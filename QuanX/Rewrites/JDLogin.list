@@ -6,7 +6,7 @@
 ^https:\/\/plogin\.m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 我的
-^https:\/\/home\.m\.jd\.com\/myJd\/newhome\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+^https:\/\/home\.m\.jd\.com\/userinfom\/ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 签到
 ^https:\/\/bean\.m\.jd\.com\/bean\/signIndex\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
@@ -16,9 +16,6 @@
 
 # 购物车
 ^https:\/\/p\.m\.jd\.com\/cart\/cart\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 分类
-^https:\/\/so\.m\.jd\.com\/webportal\/channel\/m_category url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 京豆明细
 ^https:\/\/bean\.m\.jd\.com\/beanDetail\/index\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
@@ -69,4 +66,4 @@
 # 工厂
 ^https:\/\/actst\.jingxi\.com\/pingou\/dream_factory url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-hostname = m.jd.com,plogin.m.jd.com,home.m.jd.com,bean.m.jd.com,wqs.jd.com,p.m.jd.com,so.m.jd.com,item.m.jd.com,shop.m.jd.com,shopmember.m.jd.com,cardpackage.jd.com,mpdz-isv.isvjcloud.com,coupon.m.jd.com,m.jingxi.com,st.jingxi.com,u.jingxi.com,actst.jingxi.com
+hostname = m.jd.com,plogin.m.jd.com,home.m.jd.com,bean.m.jd.com,wqs.jd.com,p.m.jd.com,item.m.jd.com,shop.m.jd.com,shopmember.m.jd.com,cardpackage.jd.com,mpdz-isv.isvjcloud.com,coupon.m.jd.com,m.jingxi.com,st.jingxi.com,u.jingxi.com,actst.jingxi.com
