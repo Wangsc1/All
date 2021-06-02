@@ -8,6 +8,9 @@
 # 我的
 ^https:\/\/home\.m\.jd\.com\/myJd\/newhome\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
+# 签到
+^https:\/\/bean\.m\.jd\.com\/bean\/signIndex\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
 # 订单
 ^https:\/\/wqs\.jd\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
