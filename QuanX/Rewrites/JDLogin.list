@@ -1,5 +1,78 @@
-^https:\/\/((?!(api|mapi|lbsapi|im\-x|hermes|uranus|saturn|ccf|ccflbs|ccfjma|perf|msg|lite\-msg|firevent|lbsgw|lbsgd|ex|policy|mars|blackhole|homepage\-gw|un|bh|orbit|wlmonitor|fireactive)\.).*\.?jd\.com\/?((?!\.(js|json|jpg|gif|png|webp|dpg)).)*)*$ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+#京东
+# 首页
+^https:\/\/m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-^https:\/\/.*\.?jingxi.com\/?((?!\.(js|json|jpg|gif|png|webp|dpg)).)*$ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+# 登录
+^https:\/\/plogin\.m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-hostname = *.jd.com
+# 我的
+^https:\/\/home\.m\.jd\.com\/myJd\/newhome\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 订单
+^https:\/\/wqs\.jd\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 购物车
+^https:\/\/p\.m\.jd\.com\/cart\/cart\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 分类
+^https:\/\/so\.m\.jd\.com\/webportal\/channel\/m_category url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 到家
+^https:\/\/daojia\.jd\.com\/html\/index url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 京豆明细
+^https:\/\/bean\.m\.jd\.com\/beanDetail\/index\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 商品
+^https:\/\/item\.m\.jd\.com\/product\/\s+\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 店铺
+^https:\/\/shop\.m\.jd\.com\/shopv2\/mzpage?venderId url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 入会
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/?venderId=\s+&shopId=\s+ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 退卡
+^https:\/\/cardpackage\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 多数活动
+^https:\/\/.*\.jd\.com/babelDiy/Zeus/.*/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 部分活动
+^https:\/\/mpdz-isv\.isvjcloud\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 领券中心
+^https:\/\/coupon\.m\.jd\.com\/center\/getCouponCenter\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 养鹅
+^https:\/\/active\.jd\.com\/forever\/btgoose url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 单张领券
+^https:\/\/coupon\.m\.jd\.com\/coupons\/show\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 京喜
+# 首页
+^https:\/\/m\.jingxi\.com\/mcoss\/wxmall\/home url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 分类
+^https:\/\/st\.jingxi\.com\/wxsq_project\/wqvue\/pingou_cate\/cate\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 购物车
+^https:\/\/u\.jingxi\.com\/cart\/mycart?fromnav url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 我的
+st\.jingxi\.com\/pingou\/account\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 订单
+^https:\/\/st\.jingxi\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 农场
+^https:\/\/actst\.jingxi\.com\/sns\/201912\/12\/jxnc\/detail\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 财富岛
+^https:\/\/st\.jingxi\.com\/fortune_island\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+# 工厂
+^https:\/\/actst\.jingxi\.com\/pingou\/dream_factory url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+hostname = *.jd.com, *.*.jd.com, *.jingxi.com, *.*.jingxi.com
