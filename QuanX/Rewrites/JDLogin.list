@@ -1,69 +1,54 @@
 #京东
-# 首页
+# 京东首页
 ^https:\/\/m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 登录
+# 京东登录
 ^https:\/\/plogin\.m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 我的
-^https:\/\/home\.m\.jd\.com\/userinfom\/ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+# 京东我的
+^https:\/\/home\.m\.jd\.com\/myJd\/newhome\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 签到
-^https:\/\/bean\.m\.jd\.com\/bean\/signIndex\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 订单
-^https:\/\/wqs\.jd\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 购物车
+# 京东购物
 ^https:\/\/p\.m\.jd\.com\/cart\/cart\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 京豆明细
 ^https:\/\/bean\.m\.jd\.com\/beanDetail\/index\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 商品
+# 京东商品
 ^https:\/\/item\.m\.jd\.com\/product\/\s+\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 店铺
+# 京东店铺
 ^https:\/\/shop\.m\.jd\.com\/shopv2\/mzpage?venderId url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 入会
+# 京东入会
 ^https:\/\/shopmember\.m\.jd\.com\/shopcard\/?venderId=\s+&shopId=\s+ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 退卡
+# 京东退卡
 ^https:\/\/cardpackage\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 部分活动
-^https:\/\/mpdz-isv\.isvjcloud\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 领券中心
 ^https:\/\/coupon\.m\.jd\.com\/center\/getCouponCenter\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 单张领券
-^https:\/\/coupon\.m\.jd\.com\/coupons\/show\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+# 京东签到
+^https:\/\/bean\.m\.jd\.com\/bean\/signIndex\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
 # 京喜
-# 首页
+# 京喜首页
 ^https:\/\/m\.jingxi\.com\/mcoss\/wxmall\/home url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 分类
-^https:\/\/st\.jingxi\.com\/wxsq_project\/wqvue\/pingou_cate\/cate\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 购物车
+# 京喜购物
 ^https:\/\/u\.jingxi\.com\/cart\/mycart?fromnav url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 我的
+# 京喜我的
 ^https:\/\/st\.jingxi\.com\/pingou\/account\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 订单
-^https:\/\/st\.jingxi\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
-# 农场
+# 京喜农场
 ^https:\/\/actst\.jingxi\.com\/sns\/201912\/12\/jxnc\/detail\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 财富岛
+# 京喜财富岛
 ^https:\/\/st\.jingxi\.com\/fortune_island\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 工厂
+# 京喜工厂
 ^https:\/\/actst\.jingxi\.com\/pingou\/dream_factory url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-hostname = m.jd.com,plogin.m.jd.com,home.m.jd.com,bean.m.jd.com,wqs.jd.com,p.m.jd.com,item.m.jd.com,shop.m.jd.com,shopmember.m.jd.com,cardpackage.jd.com,mpdz-isv.isvjcloud.com,coupon.m.jd.com,m.jingxi.com,st.jingxi.com,u.jingxi.com,actst.jingxi.com
+hostname = m.jd.com, plogin.m.jd.com, home.m.jd.com, p.m.jd.com, bean.m.jd.com, item.m.jd.com, shop.m.jd.com, shopmember.m.jd.com, cardpackage.jd.com, coupon.m.jd.com, m.jingxi.com, u.jingxi.com, st.jingxi.com, actst.jingxi.com
