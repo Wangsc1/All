@@ -45,10 +45,7 @@
 # 京喜农场
 ^https:\/\/actst\.jingxi\.com\/sns\/201912\/12\/jxnc\/detail\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-# 京喜财富岛
-^https:\/\/st\.jingxi\.com\/fortune_island\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
-
 # 京喜工厂
 ^https:\/\/actst\.jingxi\.com\/pingou\/dream_factory url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
 
-hostname = m.jd.com, plogin.m.jd.com, home.m.jd.com, p.m.jd.com, bean.m.jd.com, item.m.jd.com, shop.m.jd.com, shopmember.m.jd.com, cardpackage.jd.com, coupon.m.jd.com, m.jingxi.com, u.jingxi.com, st.jingxi.com, actst.jingxi.com
+hostname = m.jd.com,plogin.m.jd.com,home.m.jd.com,p.m.jd.com,bean.m.jd.com,item.m.jd.com,shop.m.jd.com,shopmember.m.jd.com,cardpackage.jd.com,coupon.m.jd.com,m.jingxi.com,u.jingxi.com,st.jingxi.com,actst.jingxi.com
