@@ -2,4 +2,4 @@
 
 # 35 1,22 * * * node /scripts/jd_nzmh.js |ts >> /scripts/logs/jd_nzmh.log 2>&1
 
-44 7 * * * node /https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js |ts >> /scripts/logs/jd_live_test.log 2>&1
+54 7 * * * node /https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_live_redrain.js |ts >> /scripts/logs/jd_live_test.log 2>&1
