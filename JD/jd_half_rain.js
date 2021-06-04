@@ -24,7 +24,7 @@ cron "30 16-23/1 * * *" script-path=https://raw.githubusercontent.com/nianyuguai
 ============小火箭=========
  半点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js, cronexpr="30 16-23/1 * * *",timeout=200, enable=true
  */
-const $ = new Env('半点京豆雨');
+const $ = new Env('京东半点京豆雨');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;

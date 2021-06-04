@@ -19,7 +19,7 @@ cron "25 9 * 5,6 *" script-path=https://raw.githubusercontent.com/monk-coder/dus
 ============小火箭=========
 赢一加新品手机 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js, cronexpr="25 9 * 5,6 *", timeout=3600, enable=true
 */
-const $ = new Env("赢一加新品手机");
+const $ = new Env("京东赢一加新品");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 const cp = $.isNode() ? require('child_process') : '';
