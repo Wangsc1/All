@@ -1,9 +1,6 @@
 # 京东签到Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
-# 京东到家Cookie
-^https:\/\/daojia\.jd\.com\/html\/index\.html url script-request-header https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js
-
 # 京东宠汪汪助力更新Cookie
 ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code= url script-response-body https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_run.js
 
@@ -34,4 +31,4 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 # dompling
 ^https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommon  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
 
-hostname = api.jd.com,daojia.jd.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,api.tuhu.cn,m.client.10010.com
+hostname = api.jd.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,api.tuhu.cn,m.client.10010.com
