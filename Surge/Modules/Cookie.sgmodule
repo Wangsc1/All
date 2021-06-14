@@ -2,7 +2,7 @@
 #!desc=获取Cookie
 
 [MITM]
-hostname = %APPEND% api.jd.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,api.tuhu.cn,m.client.10010.com
+hostname = %APPEND% api.jd.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,api.tuhu.cn,m.client.10010.com,game.xiaojukeji.com,daojia.jd.com
 
 [Script]
 # 京东签到Cookie
@@ -28,3 +28,7 @@ hostname = %APPEND% api.jd.com,draw.jdfcloud.com,ms.jr.jd.com,wq.jd.com,m.jingxi
 # 中国联通Cookie
 # dompling
 中国联通Cookie = type=http-request,pattern=^https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommon,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
+# 滴滴果园Cookie
+滴滴果园Cookie = type=http-request,pattern=^https:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/watering,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js
+# 京东到家Cookie
+京东到家Cookie = type=http-request,pattern=daojia.jd.com/html/index.html,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_getck.js
