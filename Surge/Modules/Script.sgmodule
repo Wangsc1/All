@@ -2,7 +2,7 @@
 #!desc=脚本
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,draw.jdfcloud.com,weixin110.qq.com,api.m.jd.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin110.qq.com,api.m.jd.com
 
 [Script]
 # 通用解锁！试用→恢复→取消,buy.itunes.apple.com
@@ -19,8 +19,6 @@ Sub_info = type=http-request,pattern=http://exflux\.info,script-path=https://raw
 Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
 # Endless
 Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
-# 宠汪汪强制助力
-宠汪汪强制助力 = type=http-request,pattern=^https:\/\/draw\.jdfcloud\.com\/\/common\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_joy_help.js
 # 微信内屏蔽链接跳转
 微信内屏蔽链接跳转 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
 # 京粉佣金
