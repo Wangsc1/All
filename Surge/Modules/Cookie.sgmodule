@@ -2,7 +2,7 @@
 #!desc=获取Cookie
 
 [MITM]
-hostname = %APPEND% api.jd.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji.com,*.smzdm.com,account.huami.com,api.tuhu.cn,m.client.10010.com,i.meituan.com,mall.meituan.com,h5.ele.me,m.client.10010.com,maicai.api.ddxq.mobi
+hostname = %APPEND% api.jd.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji.com,api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,pay.diditaxi.com.cn,*.smzdm.com,account.huami.com,api.tuhu.cn,m.client.10010.com,i.meituan.com,h5.ele.me,m.client.10010.com,maicai.api.ddxq.mobi
 
 [Script]
 # 京东签到Cookie
@@ -13,8 +13,14 @@ hostname = %APPEND% api.jd.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji
 京喜Cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜Cookie = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
 京喜Cookie = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-# 滴滴出行Cookie
+# 滴滴出行Cookie-zZpihlet
 滴滴出行Cookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/DiDi/DiDi_new.js
+# 滴滴出行Cookie- blackmatrix7
+滴滴出行Token = type=http-request,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/api\.didialift\.com\/beatles\/userapi\/user\/user\/getuserinfo?.*city_id=(\d+).*token=([^&]*)
+滴滴出行Ticket = type=http-request,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?.*location_cityid=(\d+).*&ticket=([^&]*)
+滴滴出行LotteryId = type=http-request,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/bosp-api\/lottery\/info?.*lid=([^&]*)
+滴滴金融ActivityId与ChannelId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/pay\.diditaxi\.com\.cn\/web_wallet\/v2\/wallet\/home
+滴滴出行GroupId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index
 # 什么值得买Cookie
 什么值得买Cookie = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
 # 小米运动Cookie     
@@ -27,8 +33,6 @@ hostname = %APPEND% api.jd.com,ms.jr.jd.com,wq.jd.com,m.jingxi.com,as.xiaojukeji
 联通签到Cookie = type=http-request,pattern=^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.min.js
 # 美团签到
 美团签到Cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
-# 美团买菜
-美团买菜Cookie = type=http-request,pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/getWeekCheckInProgressBar\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai_checkin.js
 # 饿了么签到
 饿了么签到Cookie = type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
 # 叮咚买菜
