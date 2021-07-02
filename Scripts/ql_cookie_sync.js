@@ -65,6 +65,15 @@ $.log(`账号：${account.username}`);
     await addCookies({name: 'JD_COOKIE', value: jd_cookie.cookie, remarks});
   }
 
+  const _cookiesRes = await getCookies();
+  const _ids = _cookiesRes.data.filter(
+    item => item.remarks.indexOf('已过期') > -1).
+    map(item => item._id);
+  if (_ids.length > 0) {
+    console.log(`过期账号：${_ids.join('；')}`);
+    await disabled(_ids);
+  }
+
   const cookieText = jd_cookies.map(item => item.userName).join(`\n`);
   return $.notify(title, '', `已同步账号： ${cookieText}`);
 })().catch((e) => {
@@ -99,6 +108,15 @@ function addCookies(cookies) {
 function delCookie(ids) {
   const opt = {url: getURL(urlStr), headers, body: JSON.stringify(ids)};
   return $.http.delete(opt).then((response) => JSON.parse(response.body));
+}
+
+function disabled(ids) {
+  const opt = {
+    url: getURL(`${urlStr}/disable`),
+    headers,
+    body: JSON.stringify(ids),
+  };
+  return $.http.put(opt).then((response) => JSON.parse(response.body));
 }
 
 function ENV() {
