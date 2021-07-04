@@ -65,7 +65,8 @@ async function start() {
       await change_step(app_token, user_id);
       if ($.changeStepRes && $.changeStepRes.code === 1) {
         console.log(`步数修改成功:${step}步`);
-        $.msg($.name, `${step}步🏃修改成功`, `时间：${timeFormat(localtime())}‍`, //{ "open-url": "alipays://platformapi/startapp?appId=20000869" })
+        // $.msg($.name, `${step}步🏃修改成功`, `时间：${timeFormat(localtime())}‍`, { "open-url": "alipays://platformapi/startapp?appId=20000869" })
+        $.msg($.name, `${step}步🏃修改成功`, `时间：${timeFormat(localtime())}‍`)
       } else {
         console.log(`修改运动步数失败`)
       }
