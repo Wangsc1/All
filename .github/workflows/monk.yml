@@ -1,0 +1,28 @@
+name: monk-coder-sync
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-monk-coder-dust
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync monk-coder-dust
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/monk-coder/dust.git"
+          source_branch: "dust"
+          destination_branch: "monk"
+          github_token: ${{ secrets.PAT }}

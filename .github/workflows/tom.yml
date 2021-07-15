@@ -1,0 +1,28 @@
+name: tom-sync
+on:
+  schedule:
+    - cron: '11 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-tom-JavaScript
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync tom-JavaScript
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/xl2101200/-.git"
+          source_branch: "main"
+          destination_branch: "Tom"
+          github_token: ${{ secrets.PAT }}
