@@ -2,19 +2,13 @@
 #!desc=获取Cookie
 
 [MITM]
-hostname = %APPEND% api.jd.com,ms.jr.jd.com,api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,*.diditaxi.com.cn,www.smzdm.com,account.huami.com,api.tuhu.cn,i.meituan.com,h5.ele.me,maicai.api.ddxq.mobi,www.52pojie.cn
+hostname = %APPEND% api.jd.com,ms.jr.jd.com,www.smzdm.com,account.huami.com,api.tuhu.cn,i.meituan.com,h5.ele.me,maicai.api.ddxq.mobi,www.52pojie.cn
 
 [Script]
 # 京东签到Cookie
 京东签到Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # 京东金融Cookie
 京东金融Cookie = type=http-request,pattern=^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/uc\/newna\/m\/userstat,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_cookie.js
-# 滴滴出行Cookie
-滴滴出行Token = type=http-request,pattern=^https?:\/\/api\.didialift\.com\/beatles\/userapi\/user\/user\/getuserinfo?.*city_id=(\d+).*token=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行Ticket = type=http-request,pattern=^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?.*location_cityid=(\d+).*&ticket=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行LotteryId = type=http-request,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/bosp-api\/lottery\/info?.*lid=([^&]*),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行ActivityId与ChannelId = type=http-request,pattern=^https?:\/\/pay\.diditaxi\.com\.cn\/web_wallet\/v2\/wallet\/home,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
-滴滴出行GroupId = type=http-request,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
 # 什么值得买Cookie
 什么值得买Cookie = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
 # 小米运动Cookie     
