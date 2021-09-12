@@ -4,10 +4,10 @@
 Surge显示机场的流量信息，url请求头中必须带有流量信息，并且需要urlencode
 
 [Proxy Group]
-ExFlux = select, policy-path=http://t.tt?url=xxx, update-interval=3600
+SSinfo = select, policy-path=http://ss.info?url=xxx, update-interval=-1
 
 [Script]
-机场流量 = type=http-request,pattern=http://t\.tt,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_info.js
+Sub_Info = type=http-request,pattern=http://ss\.info,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js
 */
 
 (async () => {
