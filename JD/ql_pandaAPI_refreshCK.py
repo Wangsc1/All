@@ -1,5 +1,5 @@
 """
-new Env('青龙全自动更新cookie');
+new Env('自动更新Cookie');
 """
 
 import requests
