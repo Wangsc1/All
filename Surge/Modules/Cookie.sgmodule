@@ -2,7 +2,7 @@
 #!desc=获取Cookie
 
 [MITM]
-hostname = %APPEND% me-api.jd.com,mars.jd.com,api.jd.com,www.smzdm.com,account.huami.com,api.tuhu.cn,maicai.api.ddxq.mobi,www.52pojie.cn
+hostname = %APPEND% me-api.jd.com,mars.jd.com,api.m.jd.com,www.smzdm.com,account.huami.com,api.tuhu.cn,maicai.api.ddxq.mobi,www.52pojie.cn
 
 [Script]
 # 京东Cookie
