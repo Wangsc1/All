@@ -1,4 +1,9 @@
 # ios Update
-DOMAIN,mesu.apple.com
+DOMAIN,appldnld.apple.com
+DOMAIN,ns.itunes.apple.com
+DOMAIN,gg.apple.com
 DOMAIN,gdmf.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,updates.cdn-apple.com
 DOMAIN,updates-http.cdn-apple.com
+DOMAIN,xp.apple.com
