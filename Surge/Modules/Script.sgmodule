@@ -1,5 +1,5 @@
 #!name=B、Script
-#!desc=脚本
+#!desc=脚本、任务
 
 [MITM]
 hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin110.qq.com,api.m.jd.com
