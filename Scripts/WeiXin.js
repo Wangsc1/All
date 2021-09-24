@@ -1,13 +1,3 @@
-/*
-Surge：
-WeiXin = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
-
-QuanX：
-^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/WeiXin.js
-
-hostname= weixin110.qq.com, security.wechat.com
-*/
-
 const notifyJump = true; //是否开启淘宝通知跳转
 const useGoogleCache = true; //是否在微信中用谷歌快照显示被封禁的链接
 const wechatExportKey = ""; //微信的一个 key，暂未研究如何生成，测试中仅 macOS 微信打开链接跳转浏览器时会缺失，导致无法解析原始链接
