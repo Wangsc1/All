@@ -2,7 +2,7 @@
 #!desc=脚本、任务
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com,www.google.cn
 
 [Script]
 # Cookie同步
@@ -21,3 +21,7 @@ Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,require
 微信内屏蔽链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
 # 京粉佣金
 京粉佣金 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
+
+[URL Rewrite]
+# 谷歌
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
