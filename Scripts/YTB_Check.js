@@ -2,7 +2,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 
 ;(async () => {
   let result = {
-    title: 'YouTube Premium 解锁检测',
+    title: 'YouTubePremium解锁检测',
     style: 'error',
     content: '检测失败，请刷新',
   }
@@ -16,7 +16,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
       }
 
       result['style'] = 'good'
-      result['content'] = '🎉 支持解锁Premium,解锁区域:' + code
+      result['content'] = '🎉 支持解锁Premium，解锁区域：' + code
     })
     .finally(() => {
       $done(result)
