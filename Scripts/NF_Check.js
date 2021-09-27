@@ -1,30 +1,40 @@
 const BASE_URL = 'https://www.netflix.com/title/'
 
 const FILM_ID = 81215567
+const AREA_TEST_FILM_ID = 80018499
 
 ;(async () => {
   let result = {
     title: 'Netflix 解锁检测',
     style: 'error',
-    content: '检测失败，请重试',
+    content: '检测失败，请刷新',
   }
 
   await test(FILM_ID)
     .then((code) => {
-      if (code === 'Not Available') {
-        result['style'] = 'error'
-        result['content'] = '您的 IP 不能解锁 Netflix 😭'
-        return
-      }
-
       if (code === 'Not Found') {
-        result['style'] = 'info'
-        result['content'] = '您的 IP 只解锁自制剧 🥲'
-        return
+        return test(AREA_TEST_FILM_ID)
       }
 
       result['style'] = 'good'
-      result['content'] = '您的 IP 完整解锁 Netflix 🎉'
+      result['content'] = '🎉 完整解锁 Netflix，解锁区域：' + code.toUpperCase()
+      return Promise.reject('BreakSignal')
+    })
+    .then((code) => {
+      if (code === 'Not Found') {
+        return Promise.reject('Not Available')
+      }
+
+      result['style'] = 'info'
+      result['content'] = '🥲 仅解锁自制剧，解锁区域：' + code.toUpperCase()
+      return Promise.reject('BreakSignal')
+    })
+    .catch((error) => {
+      if (error === 'Not Available') {
+        result['style'] = 'alert'
+        result['content'] = '😭 不支持解锁 Netflix'
+        return
+      }
     })
     .finally(() => {
       $done(result)
@@ -46,13 +56,13 @@ function test(filmId) {
         return
       }
 
-      if (response.status === 404) {
-        resolve('Not Found')
+      if (response.status === 403) {
+        reject('Not Available')
         return
       }
 
-      if (response.status === 403) {
-        resolve('Not Available')
+      if (response.status === 404) {
+        resolve('Not Found')
         return
       }
 
