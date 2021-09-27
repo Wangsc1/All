@@ -16,7 +16,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
       }
 
       result['style'] = 'good'
-      result['content'] = '🎉 支持解锁 Premium，解锁区域：' + code
+      result['content'] = '🎉 支持解锁 Premium，区域：' + code
     })
     .finally(() => {
       $done(result)
