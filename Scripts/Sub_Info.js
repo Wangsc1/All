@@ -34,14 +34,14 @@ Sub_info = script-name=Sub_info,update-interval=600
   let used = usage.download + usage.upload;
   let total = usage.total;
   let expire = usage.expire || params.expire;
-  let infoList = [`使用情况：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let infoList = [`⏳使用：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetLeft) {
-    infoList.push(`重置日期：剩余${resetLeft}天`);
+    infoList.push(`⏰重置：剩余${resetLeft}天`);
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    infoList.push(`到期日期：${formatTime(expire)}`);
+    infoList.push(`🕒到期：${formatTime(expire)}`);
   }
   let now = new Date();
   let hour = now.getHours();

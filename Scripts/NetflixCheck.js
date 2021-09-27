@@ -13,18 +13,18 @@ const FILM_ID = 81215567
     .then((code) => {
       if (code === 'Not Available') {
         result['style'] = 'error'
-        result['content'] = '您的 IP 不能解锁 Netflix 服务😭'
+        result['content'] = '您的 IP 不能解锁 Netflix 😭'
         return
       }
 
       if (code === 'Not Found') {
         result['style'] = 'info'
-        result['content'] = '您的 IP 仅支持解锁自制剧🥲'
+        result['content'] = '您的 IP 只解锁自制剧 🥲'
         return
       }
 
       result['style'] = 'good'
-      result['content'] = '您的 IP 完整解锁 Netflix🎉'
+      result['content'] = '您的 IP 完整解锁 Netflix 🎉'
     })
     .finally(() => {
       $done(result)
