@@ -2,7 +2,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 
 ;(async () => {
   let result = {
-    title: 'YouTubePremium 解锁检测',
+    title: 'YouTube Premium 解锁检测',
     style: 'error',
     content: '检测失败，请刷新',
   }
