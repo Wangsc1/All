@@ -2,7 +2,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 
 ;(async () => {
   let result = {
-    title: 'YouTubePrem 解锁检测',
+    title: 'YouTubePremium 解锁检测',
     style: 'error',
     content: '检测失败，请刷新',
   }
@@ -11,12 +11,12 @@ const BASE_URL = 'https://www.youtube.com/premium'
     .then((code) => {
       if (code === 'Not Available') {
         result['style'] = 'alert'
-        result['content'] = '😭 不支持解锁 Prem'
+        result['content'] = '😭 不支持解锁 Premium'
         return
       }
 
       result['style'] = 'good'
-      result['content'] = '🎉 支持解锁 Prem，解锁区域：' + code
+      result['content'] = '🎉 支持解锁 Premium，解锁区域：' + code
     })
     .finally(() => {
       $done(result)
