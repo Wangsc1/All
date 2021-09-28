@@ -24,7 +24,7 @@ Sub_info = script-name=Sub_info
   let used = usage.download + usage.upload;
   let total = usage.total;
   let expire = usage.expire || params.expire;
-  let infoList = [`使用：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let infoList = [`流量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetLeft) {
     infoList.push(`重置：剩余${resetLeft}天`);
@@ -36,7 +36,7 @@ Sub_info = script-name=Sub_info
 
   let body = infoList.join("\n");
   $done({
-		title: `${params.title} | ${formatTime(expire)}`,
+		title: `ExFlux | ${formatTime(expire)}`,
 		content: body,
                icon : params.icon || "airplane.circle.fill",
                "icon-color": params.color || "#C3291C",
@@ -108,5 +108,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + "年" + month + "月" + day + "日";
+  return year + "." + month + "." + day + ".";
 }
