@@ -16,7 +16,7 @@ YTB_Check = script-name=YTB_Check, update-interval=1
 Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,script-update-interval=0,timeout=10,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2FRXF2xj46tKFRYj8c%3Fsurge%3D4&title=ExFlux&icon=airplane.departure&color=#C3291C
 
 # NetflixCheck
-NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check_1.js?time=1632711865601,timeout=30
+NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check_2.js?time=1632711865601,timeout=30
 
 # YouTubeCheck
 YTB_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YTB_Check_1.js?version=1632728073,timeout=30
