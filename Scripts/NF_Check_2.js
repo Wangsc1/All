@@ -19,7 +19,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
       }
 
       result['style'] = 'alert'
-        result['content'] = '😤 垃圾节点看你个🐎'
+        result['content'] = '😤 垃圾节点看你个 🐎'
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -28,13 +28,13 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
       }
 
       result['style'] = 'alert'
-        result['content'] = '😤 垃圾节点看你个🐎'
+        result['content'] = '😤 垃圾节点看你个 🐎'
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
       if (error === 'Not Available') {
         result['style'] = 'alert'
-        result['content'] = '😤 垃圾节点看你个🐎'
+        result['content'] = '😤 垃圾节点看你个 🐎'
         return
       }
     })
