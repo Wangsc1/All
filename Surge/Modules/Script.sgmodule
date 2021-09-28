@@ -7,9 +7,9 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin
 [Panel]
 Sub_Info = script-name=Sub_Info, update-interval=1
 
-NF_Check = script-name=NF_Check, title="Netflix解锁检测", update-interval=1
+NF_Check = script-name=NF_Check, update-interval=1
 
-YTB_Check = script-name=YTB_Check, title="YouTube Premium 解锁检测", update-interval=1
+YTB_Check = script-name=YTB_Check, update-interval=1
 
 [Script]
 # SubInfo
