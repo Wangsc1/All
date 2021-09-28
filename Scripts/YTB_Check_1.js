@@ -18,7 +18,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
       }
 
       result['style'] = 'good'
-      result['content'] = '🎉 支持解锁 Premium，区域：' + flags.get(code.toUpperCase())
+      result['content'] = '🎉 支持解锁 Premium ➟ ' + flags.get(code.toUpperCase())
     })
     .finally(() => {
       $done(result)

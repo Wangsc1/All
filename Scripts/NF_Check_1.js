@@ -19,7 +19,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
       }
 
       result['style'] = 'good'
-      result['content'] = '🎉 完整解锁 Netflix，区域：' + flags.get(code.toUpperCase())
+      result['content'] = '🎉 完整解锁 Netflix ➟ ' + flags.get(code.toUpperCase())
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -28,7 +28,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
       }
 
       result['style'] = 'info'
-      result['content'] = '🥲 解锁 Netflix 自制剧，区域：' + flags.get(code.toUpperCase())
+      result['content'] = '🥲 解锁 Netflix 自制剧 ➟ ' + flags.get(code.toUpperCase())
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
