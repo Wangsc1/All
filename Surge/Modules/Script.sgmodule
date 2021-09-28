@@ -13,7 +13,7 @@ YTB_Check = script-name=YTB_Check, update-interval=1
 
 [Script]
 # SubInfo
-Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_1.js,timeout=10,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2FRXF2xj46tKFRYj8c%3Fsurge%3D4&title=ExFlux&icon=airplane.departure&color=#C3291C
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_1.js,timeout=10,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2FRXF2xj46tKFRYj8c%3Fsurge%3D4
 
 # NetflixCheck
 NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check_1.js?time=1632711865601,timeout=30

@@ -31,15 +31,15 @@ Sub_info = script-name=Sub_info
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    infoList.push(`到期：${formatTime(expire)}`);
+    // infoList.push(`到期：${formatTime(expire)}`);
   }
 
   let body = infoList.join("\n");
   $done({
 		title: `${params.title} | ${formatTime(expire)}`,
 		content: body,
-               icon : params.icon || "airplane.circle",
-               "icon-color": params.color || "#007aff",
+               icon : params.icon || "airplane.circle.fill",
+               "icon-color": params.color || "#C3291C",
 	});
 })();
 
