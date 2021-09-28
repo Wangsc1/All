@@ -51,7 +51,7 @@ Sub_info = script-name=Sub_info,update-interval=600
 
   let body = infoList.join("\n");
   $done({
-    title: `${params.title} | ${hour}:${minutes}`,
+    // title: `${params.title} | ${hour}:${minutes}`,
     content: body,
     icon: params.icon || "airplane.circle",
     "icon-color": params.color || "#007aff",
