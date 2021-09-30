@@ -28,14 +28,14 @@
         let emoji = getFlagEmoji(jsonData.countryCode)
         let city = jsonData.city
         let isp = jsonData.isp
-        result['title'] =  wifi.ssid ? wifi.ssid : "蜂窝网络"
-        result['content'] = (wifi.ssid ? `內部 IP：${ip} \n` : `內部 IP：${ip} \n`)
-                            + (wifi.ssid ? `路由地址：${router}\n` : "")
+        result['title'] =  wifi.ssid ? wifi.ssid : "蜂窝网络  |  中国联通"
+        result['content'] = (wifi.ssid ? `路由 IP：${router}\n` : "")
+                            + (wifi.ssid ? `內部 IP：${ip} \n` : `內部 IP：${ip} \n`)
                             + (wifi.ssid ? `外部 IP：${externalIP}\n` : `外部 IP：${externalIP}\n`)
                             + (wifi.ssid ? `节点 ISP : ${isp}\n` : `节点 ISP : ${isp}\n`)
-                            + (wifi.ssid ? `节点位置 : ${emoji} ${country} | ${city}` : `节点位置 : ${emoji} ${country} | ${city}`)
-        result['icon'] = wifi.ssid ? "wifi" : "simcard"
-        result['icon-color'] = wifi.ssid ? "#005CAF" : "#F9BF45"
+                            + (wifi.ssid ? `节点LOC : ${emoji} ${country} | ${city}` : `节点位置 : ${emoji} ${country} | ${city}`)
+        result['icon'] = wifi.ssid ? "wifi.circle.fill" : "antenna.radiowaves.left.and.right.circle.fill"
+        result['icon-color'] = wifi.ssid ? "#56A4D8" : "#65C466"
         $done(result)
         return
     })

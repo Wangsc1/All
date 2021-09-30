@@ -36,7 +36,7 @@ Sub_info = script-name=Sub_info
 
   let body = infoList.join("\n");
   $done({
-		title: `ExFlux  |  ${formatTime(expire)}`,
+		title: `Exflux  |  ${formatTime(expire)}`,
 		content: body,
                icon : params.icon || "airplane.circle.fill",
                "icon-color": params.color || "#C3291C",
