@@ -6,8 +6,8 @@ $httpClient.get("http://ip-api.com/json", function(error, response, data){
     let city = jsonData.city
     let isp = jsonData.isp
 	$done({
-		title: "当前节点",
-		content: `IP：    ${ip}\nISP：  ${isp}\nLOC：${country} - ${city}`,
+		title: `IP：    ${ip}`,
+		content: `ISP：  ${isp}\nLOC：${country} - ${city}`,
         icon: "antenna.radiowaves.left.and.right.circle.fill",
         "icon-color":"#56A4D8"
 	});
