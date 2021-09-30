@@ -7,7 +7,7 @@ $httpClient.get("http://ip-api.com/json", function(error, response, data){
     let isp = jsonData.isp
 	$done({
 		title: `IP：    ${ip}`,
-		content: `ISP：  ${isp}\nLOC：${country}-${city}`,
+		content: `ISP：  ${isp}\nLOC：${country} - ${city}`,
         icon: "antenna.radiowaves.left.and.right.circle.fill",
         "icon-color":"#56A4D8"
 	});
