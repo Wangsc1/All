@@ -7,9 +7,9 @@ $httpClient.get("http://ip-api.com/json", function(error, response, data){
     let isp = jsonData.isp
 	$done({
 		title: "当前代理",
-		content: `IP ➟ ${ip}\nISP ➟ ${isp}\nLOC ➟ ${emoji}${country} - ${city}`,
+		content: `IP：${ip}\nISP：${isp}\nLOC：${emoji}${country}-${city}`,
         icon: "antenna.radiowaves.left.and.right.circle.fill",
-        color:"#ED777B"
+        icon-color:"#ED777B"
 	});
 });
 
