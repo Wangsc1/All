@@ -1,4 +1,4 @@
-const { wifi, v4 } = $network;
+const { wifi, v4, v6 } = $network;
 
 // No network connection
 if (!v4.primaryAddress && !v6.primaryAddress) {
@@ -24,8 +24,10 @@ else {
     $done({
       title: wifi.ssid ? wifi.ssid : '蜂窝网络',
       content:
-(v4.primaryRouter && wifi.ssid ? `路由IP : ${v4.primaryRouter}\n` : '') +
         (v4.primaryAddress ? `本机IP : ${v4.primaryAddress} \n` : '') +
+        // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
+        (v4.primaryRouter && wifi.ssid ? `路由IP : ${v4.primaryRouter}\n` : '') +
+        // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
         `节点IP : ${info.query}\n` +
         `节点ISP : ${info.isp}\n` +
         `节点LOC : ${info.country} - ${info.city}`,
