@@ -13,12 +13,12 @@
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    // infoList.push(`到期 : ${formatTime(expire)}`);
+    infoList.push(`到期 : ${formatTime(expire)}`);
   }
 
   let body = infoList.join("\n");
   $done({
-		title: `Exflux | ${formatTime(expire)}`,
+		title: `Exflux`,
 		content: body,
                icon : params.icon || "airplane.circle.fill",
                "icon-color": params.color || "#C3291C",
