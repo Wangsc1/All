@@ -30,7 +30,7 @@ const DEFAULT_OPTIONS = {
   fullStyle: 'good',
   onlyOriginalContent: '🥲 解锁 Netflix 自制剧 ➟ #REGION_FLAG# #REGION_CODE#',
   onlyOriginalIcon: 'exclamationmark.circle.fill',
-  onlyOriginalIconColor: 'F7DE00',
+  onlyOriginalIconColor: 'FFDE00',
   onlyOriginalStyle: 'info',
   notAvailableContent: '😭 不支持解锁 Netflix',
   notAvailableIcon: 'multiply.circle.fill',
