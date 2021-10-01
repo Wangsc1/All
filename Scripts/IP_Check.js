@@ -19,7 +19,7 @@
      const carrierId = $network['cellular-data'].carrier;
      const radio = $network['cellular-data'].radio;
      if (carrierId && radio) {
-       carrierName = carrierNames[carrierId] ? ' - ' + carrierNames[carrierId] + ' ' + radio : ' - ' + radio;
+       carrierName = carrierNames[carrierId] ? ' | ' + carrierNames[carrierId] + ' ' + radio : ' - ' + radio;
      }
    }
    $httpClient.get('http://ip-api.com/json', function (error, response, data) {
