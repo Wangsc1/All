@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS = {
   title: 'YouTube Premium 解锁检测',
   availableContent: '🎉 支持解锁 Premium ➟ #REGION_FLAG# #REGION_CODE#',
   availableIcon: 'checkmark.circle.fill',
-  availableIconColor: '36C466',
+  availableIconColor: '36CE66',
   availableStyle: 'good',
   notAvailableContent: '😭 不支持解锁 Premium',
   notAvailableIcon: 'multiply.circle.fill',
