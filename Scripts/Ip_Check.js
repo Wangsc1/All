@@ -1,7 +1,7 @@
-const { wifi, v4, v6 } = $network;
+const { wifi, v4 } = $network;
 
 // No network connection
-if (!v4.primaryAddress && !v6.primaryAddress) {
+if (!v4.primaryAddress) {
     $done({
       title: "网络信息",
         content: "尚未连接网络\n请检查网络设置后重试",
@@ -15,15 +15,13 @@ else{
     $done({
       title: wifi.ssid ? wifi.ssid : '蜂窝网络',
       content:
-        (v4.primaryAddress ? `IPv4 : ${v4.primaryAddress} \n` : '') +
-        (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n`: '') +
-        (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
-        (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
+(v4.primaryRouter && wifi.ssid ? `路由IP : ${v4.primaryRouter}\n` : '') +
+        (v4.primaryAddress ? `本机IP : ${v4.primaryAddress} \n` : '') +
         `节点IP : ${jsonData.query}\n` +
         `节点ISP : ${jsonData.isp}\n` +
-        `节点LOC : ${getFlagEmoji(jsonData.countryCode)} | ${jsonData.country} - ${jsonData.city}`,
-      icon: wifi.ssid ? 'wifi' : 'simcard',
-      'icon-color': wifi.ssid ? '#005CAF' : '#F9BF45',
+        `节点LOC : ${jsonData.country} - ${jsonData.city}`,
+      icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
+      'icon-color': wifi.ssid ? '#3478F6' : '#65C466',
     });
   });
 };
