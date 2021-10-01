@@ -1,3 +1,6 @@
+ const { wifi, v4, v6 } = $network;
+
+ let carrierName = '';
  const carrierNames = {
    '460-03': '中国电信','460-05': '中国电信','460-11': '中国电信',
    '460-01': '中国联通','460-06': '中国联通','460-09': '中国联通',
@@ -34,16 +37,16 @@
        title: wifi.ssid ? wifi.ssid : '蜂窝数据' + carrierName,
        content:
          (v4.primaryAddress ? `IPv4 : ${v4.primaryAddress} \n` : '') +
-         // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
+        // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
          (v4.primaryRouter && wifi.ssid
            ? `Router IPv4 : ${v4.primaryRouter}\n`
            : '') +
-         // (v6.primaryRouter && wifi.ssid
+         (v6.primaryRouter && wifi.ssid
            ? `Router IPv6 : ${v6.primaryRouter}\n`
            : '') +
          `节点 IP : ${info.query}\n` +
          `节点 ISP : ${info.isp}\n` +
-         `节点LOC : ${getFlagEmoji(info.countryCode)} | ${info.country} - ${
+         `节点LOC : ${getFlagEmoji(info.countryCode)} ${info.countryCode} - ${
            info.city
          }`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
