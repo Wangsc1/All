@@ -28,7 +28,7 @@ else {
         (v4.primaryAddress ? `本机IP : ${v4.primaryAddress} \n` : '') +
         `节点IP : ${info.query}\n` +
         `节点ISP : ${info.isp}\n` +
-        `节点LOC : ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
+        `节点LOC : ${info.country} - ${info.city}`,
       icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
       'icon-color': wifi.ssid ? '#3478F6' : '#65C466',
     });
