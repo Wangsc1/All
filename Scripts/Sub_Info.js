@@ -6,14 +6,14 @@
   let used = usage.download + usage.upload;
   let total = usage.total;
   let expire = usage.expire || params.expire;
-  let infoList = [`⏳ 流量 : ${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let infoList = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetLeft) {
-    // infoList.push(`💡 重置 : 剩余${resetLeft}天`);
+    // infoList.push(`重置 : 剩余${resetLeft}天`);
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    infoList.push(`🕒 到期 : ${formatTime(expire)}`);
+    infoList.push(`${formatTime(expire)}`);
   }
 
   let body = infoList.join("\n");

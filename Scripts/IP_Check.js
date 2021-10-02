@@ -60,7 +60,7 @@ const radioGeneration = {
         // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
          `SVR IP : ${info.query}\n` +
          `SVR ISP : ${info.isp}\n` +
-         `SVR LOC : ${getFlagEmoji(info.countryCode)} ${info.countryCode} - ${
+         `SVR LOC : ${info.countryCode} - ${
            info.city
          }`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
