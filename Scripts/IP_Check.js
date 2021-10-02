@@ -64,7 +64,7 @@ const radioGeneration = {
            info.city
          }`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
-       'icon-color': wifi.ssid ? '#3478F6' : '#65C466',
+       'icon-color': wifi.ssid ? '#007BFF' : '#65C466',
      });
    });
  }
