@@ -5,7 +5,7 @@
 hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
 
 [Panel]
-Surge Pro = title=Surge Pro,content=2022-09-27,icon=crown.fill,icon-color=#D4AF37
+Surge Pro = title=Surge Pro,content=2022-09-27,icon=waveform.circle.fill,icon-color=#FF7909
 
 Ip_Check = script-name=Ip_Check, update-interval=1
 
