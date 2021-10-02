@@ -58,9 +58,9 @@ const radioGeneration = {
         // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
          (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
         // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
-         `节点 IP : ${info.query}\n` +
-         `节点 ISP : ${info.isp}\n` +
-         `节点LOC : ${getFlagEmoji(info.countryCode)} ${info.countryCode} - ${
+         `SVR IP : ${info.query}\n` +
+         `SVR ISP : ${info.isp}\n` +
+         `SVR LOC : ${getFlagEmoji(info.countryCode)} ${info.countryCode} - ${
            info.city
          }`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
