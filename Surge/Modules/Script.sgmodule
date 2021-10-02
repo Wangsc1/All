@@ -2,9 +2,13 @@
 #!desc=脚本,任务,重写
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,mb3admin.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
 
 [Panel]
+Surge Pro = title=Surge Pro,content=🕒 日期 : 2022-09-22,icon=crown.fill,icon-color=#D4AF37
+
+Ip_Check = script-name=Ip_Check, update-interval=1
+
 Sub_Info = script-name=Sub_Info, update-interval=1
 
 NF_Check = script-name=NF_Check, update-interval=1
@@ -12,17 +16,20 @@ NF_Check = script-name=NF_Check, update-interval=1
 YTB_Check = script-name=YTB_Check, update-interval=1
 
 [Script]
-# SubInfo
-Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_1.js,timeout=10,argument=url=订阅url encode
+# IP_Check
+Ip_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
 
-# NetflixCheck
-NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check_1.js?time=1632711865601,timeout=30
+# Sub_Info
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅url uncode
 
-# YouTubeCheck
-YTB_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YTB_Check_1.js?version=1632728073,timeout=30
+# NF_Check
+NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check.js,timeout=10
 
-# Cookie同步
-QL同步BoxJs = type=cron,cronexp=54 */12 * * *,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js,script-update-interval=-1
+# YTB_Check
+YTB_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YTB_Check.js,timeout=10
+
+# QL同步BoxJs
+QL同步BoxJs = type=cron,cronexp=54 */12 * * *,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
 
 # BoxJs
 BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
@@ -33,14 +40,11 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 # 彩云SVIP
 彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
-# Emby
-Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
-
 # Endless
 Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
 
-# 微信内屏蔽链接跳转
-微信内屏蔽链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
+# 微信屏蔽链接跳转
+微信屏蔽链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
 
 # 京粉佣金
 京粉佣金 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
