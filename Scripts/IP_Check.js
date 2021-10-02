@@ -56,7 +56,7 @@ const radioGeneration = {
        content:
          (v4.primaryAddress ? `IPv4 : ${v4.primaryAddress} \n` : '') +
         // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
-         (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
+        // (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
         // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
          `SVR IP : ${info.query}\n` +
          `SVR ISP : ${info.isp}\n` +
