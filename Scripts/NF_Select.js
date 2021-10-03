@@ -4,6 +4,9 @@ let params = getParams($argument)
 
 ;(async () => {
 let Group = params.Group
+//将策略组名称创建为持久化数据
+$persistentStore.write(Group,"NFGroupName");
+
 let proxy = await httpAPI("/v1/policy_groups");
 let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 let first = groupName;
@@ -17,59 +20,8 @@ for (var key in proxy){
    allGroup.push(key)
     }
 
-
-/**
-   * 遍历测试节点组
-   */
-
 var fullUnlock=[];
 var onlyOriginal=[];
-
-
-//仅自动更新时遍历
-
-if($trigger == "auto-interval"){
-
-for (let i = 0; i < proxyName.length; ++i) {
-//切换节点
-$surge.setSelectGroupPolicy(Group, proxyName[i]);
-//等待
-await timeout(1000).catch(() => {})
-//执行测试
-
-let { status, regionCode, policyName } = await testPolicy(proxyName[i]);
-
-//填充数据
-if(status===2){
-	if(fullUnlock.includes(proxyName[i])==false){
-	fullUnlock.push(proxyName[i])
-	console.log("全解锁: "+proxyName[i]+" | "+status)
-		}
-	}else if(status===1){
-		if(onlyOriginal.includes(proxyName[i])==false){
-		onlyOriginal.push(proxyName[i])
-		console.log("仅自制: "+proxyName[i]+" | "+status)
-		}
-	}
-  }
-
-//去除杂项
-for (let i = 0; i < fullUnlock.length; ++i){
-	if(onlyOriginal.includes(fullUnlock[i])==true){
-	fullUnlock.splice(fullUnlock.indexOf(fullUnlock[i]), 1)
-	}
-}
-
-for (let i = 0; i < onlyOriginal.length; ++i){
-	if(fullUnlock.includes(onlyOriginal[i])==true){
-	onlyOriginal.splice(onlyOriginal.indexOf(onlyOriginal[i]), 1)
-	}
-}
-
-// 创建持久化数据
-$persistentStore.write(fullUnlock.toString(),"fullUnlockNetflix");
-$persistentStore.write(onlyOriginal.toString(),"onlyOriginalNetflix")
-}
 
 //读取持久化数据
 fullUnlock = $persistentStore.read("fullUnlockNetflix").split(",");
@@ -79,10 +31,10 @@ onlyOriginal= $persistentStore.read("onlyOriginalNetflix").split(",");
 console.log("全解锁:"+fullUnlock.sort())
 console.log("仅自制:"+onlyOriginal.sort())
 
-
 /**
-   * 切换节点
+   * 过滤选择列表
    */
+
 
 //删除策略组外节点并更新持久化数据
 var select=[];
@@ -90,7 +42,6 @@ var select=[];
 if(fullUnlock.toString().length==0){
 fullUnlock.splice(fullUnlock.indexOf(fullUnlock[0]), 1)
 }
-
 if(onlyOriginal.toString().length==0){
 onlyOriginal.splice(onlyOriginal.indexOf(fullUnlock[0]), 1)
 }
@@ -117,14 +68,14 @@ if(fullUnlock.length>0){
 
 console.log("选择列表:"+select.sort())
 
+//手动切换
 
+if($trigger == "button"){
 
 //当前节点
 groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 console.log("当前节点:"+groupName)
 
-
-//轮循切换
 let index = select.indexOf(groupName)+1;
 
 if(index>=select.length){
@@ -134,13 +85,29 @@ console.log("目标节点:"+ select[index])
 
 $surge.setSelectGroupPolicy(Group, select[index]);
 
+}
+
+
+/**
+   * 自动刷新
+   */
+
 //测试当前选择
+
+//当前节点
+groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
+console.log("当前节点:"+groupName)
 
 await timeout(1000).catch(() => {})
 
-let { status, regionCode, policyName } = await testPolicy(select[index]);
+let { status, regionCode, policyName } = await testPolicy(groupName);
 
 console.log("节点状态:"+status)
+
+//当前节点解锁范围小于选择列表时，执行自动切换
+if(status!= 2 && fullUnlock.length>0){
+	$surge.setSelectGroupPolicy(Group, select[0]);
+}
 
 //获取根节点名
 let rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
@@ -160,11 +127,11 @@ let panel = {
 
   // 完整解锁
   if (status==2) {
-    panel['content'] = `完整解锁 Netflix`
+    panel['content'] = `完整解锁 Netflix ➟ ${regionCode}`
     panel['icon'] = 'checkmark.circle.fill'
 	 panel['icon-color'] = '36CE66'
   } else if (status==1) {
-      panel['content'] = `解锁 Netflix 自制剧`
+      panel['content'] = `解锁 Netflix 自制剧 ➟ ${regionCode}`
       panel['icon'] = 'exclamationmark.circle.fill'
 	   panel['icon-color'] = 'FFDE00'
     }else {
