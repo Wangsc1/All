@@ -16,7 +16,7 @@
     if (/^[\d]+$/.test(expire)) expire *= 1000;
     content.push(`${formatTime(expire)}`);
   }
-  
+
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
@@ -27,42 +27,9 @@
     title: `${args.title}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle.fill",
-               "icon-color": args.color || "#C3291C",
+    "icon-color": args.color || "#C3291C",
   });
 })();
-
-function getUrlParams(url) {
-  return Object.fromEntries(
-    url
-      .split("&")
-      .map((item) => item.split("="))
-      .map(([k, v]) => [k, decodeURIComponent(v)])
-  );
-}
-
-function getUserInfo(url) {
-  let request = { headers: { "User-Agent": "Quantumult%20X" }, url };
-  return new Promise((resolve, reject) =>
-    $httpClient.head(request, (err, resp) => {
-      if (err != null) {
-        reject(err);
-        return;
-      }
-      if (resp.status !== 200) {
-        reject("Not Available");
-        return;
-      }
-      let header = Object.keys(resp.headers).find(
-        (key) => key.toLowerCase() === "subscription-userinfo"
-      );
-      if (header) {
-        resolve(resp.headers[header]);
-        return;
-      }
-      reject("链接响应头不带有流量信息");
-    })
-  );
-}
 
 function getArgs() {
   return Object.fromEntries(
