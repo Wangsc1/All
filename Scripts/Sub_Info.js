@@ -1,21 +1,22 @@
 (async () => {
-  let params = getUrlParams($argument);
-  let resetDay = parseInt(params["reset_day"]);
-  let resetLeft = getRmainingDays(resetDay);
-  let usage = await getDataUsage(params.url);
-  if (!usage) $done();
-  let used = usage.download + usage.upload;
-  let total = usage.total;
-  let expire = params.expire || usage.expire;
-  let infoList = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let args = getArgs();
+  let info = await getDataInfo(args.url);
+  if (!info) $done();
+  let resetDayLeft = getRmainingDays(parseInt(args["reset_day"]));
 
-  if (resetLeft) {
-    // infoList.push(`剩余${resetLeft}天`);
+  let used = info.download + info.upload;
+  let total = info.total;
+  let expire = args.expire || info.expire;
+  let content = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
+
+  if (resetDayLeft) {
+    content.push(`剩余${resetDayLeft}天`);
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    infoList.push(`${formatTime(expire)}`);
+    content.push(`${formatTime(expire)}`);
   }
+  
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
@@ -23,10 +24,10 @@
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${params.title}`,
-    content: infoList.join("\n"),
-    icon: params.icon || "airplane.circle.fill",
-               "icon-color": params.color || "#C3291C",
+    title: `${args.title}`,
+    content: content.join("\n"),
+    icon: args.icon || "airplane.circle.fill",
+               "icon-color": args.color || "#C3291C",
   });
 })();
 
@@ -63,14 +64,50 @@ function getUserInfo(url) {
   );
 }
 
-async function getDataUsage(url) {
-  const [err, info] = await getUserInfo(url).then(info => [null, info] ).catch(err => [err, null])
-  if (err) {
-    console.log(err)
-    return
-  }
+function getArgs() {
   return Object.fromEntries(
-    info
+    $argument
+      .split("&")
+      .map((item) => item.split("="))
+      .map(([k, v]) => [k, decodeURIComponent(v)])
+  );
+}
+
+function getUserInfo(url) {
+  let request = { headers: { "User-Agent": "Quantumult%20X" }, url };
+  return new Promise((resolve, reject) =>
+    $httpClient.head(request, (err, resp) => {
+      if (err != null) {
+        reject(err);
+        return;
+      }
+      if (resp.status !== 200) {
+        reject("Not Available");
+        return;
+      }
+      let header = Object.keys(resp.headers).find(
+        (key) => key.toLowerCase() === "subscription-userinfo"
+      );
+      if (header) {
+        resolve(resp.headers[header]);
+        return;
+      }
+      reject("链接响应头不带有流量信息");
+    })
+  );
+}
+
+async function getDataInfo(url) {
+  const [err, data] = await getUserInfo(url)
+    .then((data) => [null, data])
+    .catch((err) => [err, null]);
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  return Object.fromEntries(
+    data
       .match(/\w+=\d+/g)
       .map((item) => item.split("="))
       .map(([k, v]) => [k, parseInt(v)])
@@ -78,14 +115,19 @@ async function getDataUsage(url) {
 }
 
 function getRmainingDays(resetDay) {
+  if (!resetDay) return;
+
   let now = new Date();
   let today = now.getDate();
   let month = now.getMonth();
   let year = now.getFullYear();
-  if (!resetDay) return 0;
-  let daysInMonth = new Date(year, month + 1, 0).getDate();
+  let daysInMonth;
 
-  if (resetDay > today) daysInMonth = 0;
+  if (resetDay > today) {
+    daysInMonth = 0;
+  } else {
+    daysInMonth = new Date(year, month + 1, 0).getDate();
+  }
 
   return daysInMonth - today + resetDay;
 }
