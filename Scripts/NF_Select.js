@@ -150,17 +150,17 @@ let panel = {
   // 完整解锁
   if (status==2) {
     panel['content'] = `完整解锁 Netflix ➟ ${regionCode}`
-    panel['icon'] = params.icon1
-	 panel['icon-color'] = params.color1
+    panel['icon'] = 'checkmark.circle.fill'
+	 panel['icon-color'] = '36CE66'
   } else if (status==1) {
       panel['content'] = `解锁 Netflix 自制剧 ➟ ${regionCode}`
-      panel['icon'] = params.icon2
-	   panel['icon-color'] = params.color2
+      panel['icon'] = 'exclamationmark.circle.fill'
+	   panel['icon-color'] = 'FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(netflixGroup, first);
   		panel['content'] = `不支持解锁 Netflix`
-  		panel['icon'] = params.icon3
-	 	panel['icon-color'] = params.color3
+  		panel['icon'] = 'multiply.circle.fill'
+	 	panel['icon-color'] = 'F52900'
 		return
 	}
 
