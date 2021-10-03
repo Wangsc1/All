@@ -1,28 +1,33 @@
 (async () => {
-  let params = getUrlParams($argument)
+  let params = getUrlParams($argument);
   let resetDay = parseInt(params["reset_day"]);
   let resetLeft = getRmainingDays(resetDay);
   let usage = await getDataUsage(params.url);
+  if (!usage) $done();
   let used = usage.download + usage.upload;
   let total = usage.total;
-  let expire = usage.expire || params.expire;
+  let expire = params.expire || usage.expire;
   let infoList = [`${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetLeft) {
-    // infoList.push(`重置 : 剩余${resetLeft}天`);
+    // infoList.push(`剩余${resetLeft}天`);
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
     infoList.push(`${formatTime(expire)}`);
   }
+  let now = new Date();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  hour = hour > 9 ? hour : "0" + hour;
+  minutes = minutes > 9 ? minutes : "0" + minutes;
 
-  let body = infoList.join("\n");
   $done({
-		title: `Exflux`,
-		content: body,
-               icon : params.icon || "airplane.circle.fill",
+    title: `${params.title}`,
+    content: infoList.join("\n"),
+    icon: params.icon || "airplane.circle.fill",
                "icon-color": params.color || "#C3291C",
-	});
+  });
 })();
 
 function getUrlParams(url) {
@@ -36,25 +41,33 @@ function getUrlParams(url) {
 
 function getUserInfo(url) {
   let request = { headers: { "User-Agent": "Quantumult%20X" }, url };
-  return new Promise((resolve) =>
-        $httpClient.head(request, (err, resp) => {
-          if (err) $done();
-          resolve(
-            resp.headers[
-              Object.keys(resp.headers).find(
-                (key) => key.toLowerCase() === "subscription-userinfo"
-              )
-            ]
-          );
-        }),
+  return new Promise((resolve, reject) =>
+    $httpClient.head(request, (err, resp) => {
+      if (err != null) {
+        reject(err);
+        return;
+      }
+      if (resp.status !== 200) {
+        reject("Not Available");
+        return;
+      }
+      let header = Object.keys(resp.headers).find(
+        (key) => key.toLowerCase() === "subscription-userinfo"
+      );
+      if (header) {
+        resolve(resp.headers[header]);
+        return;
+      }
+      reject("链接响应头不带有流量信息");
+    })
   );
 }
 
 async function getDataUsage(url) {
-  let info = await getUserInfo(url);
-  if (!info) {
-    $notification.post("SubInfo", "", "链接响应头不带有流量信息");
-    $done();
+  const [err, info] = await getUserInfo(url).then(info => [null, info] ).catch(err => [err, null])
+  if (err) {
+    console.log(err)
+    return
   }
   return Object.fromEntries(
     info
@@ -71,7 +84,7 @@ function getRmainingDays(resetDay) {
   let year = now.getFullYear();
   if (!resetDay) return 0;
   let daysInMonth = new Date(year, month + 1, 0).getDate();
-  
+
   if (resetDay > today) daysInMonth = 0;
 
   return daysInMonth - today + resetDay;
