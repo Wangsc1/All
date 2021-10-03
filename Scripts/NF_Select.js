@@ -3,12 +3,12 @@ const AREA_TEST_FILM_ID = 80018499
 let params = getParams($argument)
 
 ;(async () => {
-let netflixGroup = params.netflixGroup
+let Group = params.Group
 let proxy = await httpAPI("/v1/policy_groups");
-let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(netflixGroup)+"")).policy;
+let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 let first = groupName;
 var proxyName= [];//netflix节点组名称
-let arr = proxy[""+netflixGroup+""];
+let arr = proxy[""+Group+""];
 for (let i = 0; i < arr.length; ++i) {
 proxyName.push(arr[i].name);
 }
@@ -32,7 +32,7 @@ if($trigger == "auto-interval"){
 
 for (let i = 0; i < proxyName.length; ++i) {
 //切换节点
-$surge.setSelectGroupPolicy(netflixGroup, proxyName[i]);
+$surge.setSelectGroupPolicy(Group, proxyName[i]);
 //等待
 await timeout(1000).catch(() => {})
 //执行测试
@@ -109,7 +109,7 @@ console.log("选择列表:"+select.sort())
 
 
 //当前节点
-groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(netflixGroup)+"")).policy;
+groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 console.log("当前节点:"+groupName)
 
 
@@ -121,7 +121,7 @@ if(index>=select.length){
 }
 console.log("目标节点:"+ select[index])
 
-$surge.setSelectGroupPolicy(netflixGroup, select[index]);
+$surge.setSelectGroupPolicy(Group, select[index]);
 
 //测试当前选择
 
@@ -132,7 +132,7 @@ let { status, regionCode, policyName } = await testPolicy(select[index]);
 console.log("节点状态:"+status)
 
 //获取根节点名
-let rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(netflixGroup)+"")).policy;
+let rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 while(allGroup.includes(rootName)==true){
 	rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(rootName)+"")).policy;
 }
@@ -149,15 +149,15 @@ let panel = {
 
   // 完整解锁
   if (status==2) {
-    panel['content'] = `完整解锁 Netflix ➟ ${regionCode}`
+    panel['content'] = `完整解锁 Netflix`
     panel['icon'] = 'checkmark.circle.fill'
 	 panel['icon-color'] = '36CE66'
   } else if (status==1) {
-      panel['content'] = `解锁 Netflix 自制剧 ➟ ${regionCode}`
+      panel['content'] = `解锁 Netflix 自制剧`
       panel['icon'] = 'exclamationmark.circle.fill'
 	   panel['icon-color'] = 'FFDE00'
     }else {
- 		$surge.setSelectGroupPolicy(netflixGroup, first);
+ 		$surge.setSelectGroupPolicy(Group, first);
   		panel['content'] = `不支持解锁 Netflix`
   		panel['icon'] = 'multiply.circle.fill'
 	 	panel['icon-color'] = 'F52900'
