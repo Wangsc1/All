@@ -86,6 +86,17 @@ console.log("仅自制:"+onlyOriginal.sort())
 
 //删除策略组外节点并更新持久化数据
 var select=[];
+//清除空值
+if(fullUnlock.toString().length==0){
+fullUnlock.splice(fullUnlock.indexOf(fullUnlock[0]), 1)
+}
+
+if(onlyOriginal.toString().length==0){
+onlyOriginal.splice(onlyOriginal.indexOf(fullUnlock[0]), 1)
+}
+
+console.log(fullUnlock.length+" | "+ onlyOriginal.length)
+
 if(fullUnlock.length>0){
 	for (let i = 0; i < fullUnlock.length; ++i) {
 	if(proxyName.includes(fullUnlock[i])==false){
