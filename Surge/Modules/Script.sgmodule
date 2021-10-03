@@ -7,7 +7,7 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,se
 [Panel]
 Surge Pro = title=Surge Pro,content=2022-09-27,icon=waveform.circle.fill,icon-color=#FF7909
 
-Ip_Check = script-name=Ip_Check, update-interval=1
+IP_Check = script-name=IP_Check, update-interval=1
 
 Sub_Info = script-name=Sub_Info, update-interval=1
 
@@ -17,7 +17,7 @@ YTB_Check = script-name=YTB_Check, update-interval=1
 
 [Script]
 # IP_Check
-Ip_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
+IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
 
 # Sub_Info
 Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urluncode&title=Exflux
