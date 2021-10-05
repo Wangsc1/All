@@ -150,4 +150,3 @@ function timeout(delay = 5000) {
     }, delay)
   })
 }
-
