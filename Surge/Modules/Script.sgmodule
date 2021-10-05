@@ -6,7 +6,7 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,se
 
 [Panel]
 # Surge Pro
-Surge Pro = title=Surge Pro,content=2022-09-27,icon=waveform.circle.fill,icon-color=#FF7909
+Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # IP_Check
 IP_Check = script-name=IP_Check, update-interval=1
@@ -17,30 +17,18 @@ Sub_Info = script-name=Sub_Info, update-interval=1
 # NF_Select
 NF_Select = script-name=NF_Select, update-interval=3600
 
-# NF_Check
-// NF_Check = script-name=NF_Check, update-interval=1
-
-# YTB_Check
-// YTB_Check = script-name=YTB_Check, update-interval=1
-
 [Script]
+# Surge Pro
+Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=icon=waveform.circle.fill&color=#FF7909
+
 # IP_Check
 IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
 
 # Sub_Info
-Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux
-
-# NF_Cron
-NF_Cron = type=cron,cronexp=0 7-22/3 * * *,wake-system=1,timeout=3600,control-api=1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Cron.js
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2F1vjea7VuJULTsjgQ%3Fsurge%3D4&title=Exflux&icon=airplane.circle.fill&color=C3291C
 
 # NF_Select
 NF_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Select.js,argument=Group=Netflix
-
-# NF_Check
-// NF_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Check.js,timeout=10
-
-# YTB_Check
-// YTB_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YTB_Check.js,timeout=10
 
 # QL同步BoxJs
 QL同步BoxJs = type=cron,cronexp=54 */12 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
@@ -57,8 +45,8 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 # Endless
 Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
 
-# 微信屏蔽链接跳转
-微信屏蔽链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
+# 微信链接跳转
+微信链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
 
 # 京粉佣金
 京粉佣金 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
