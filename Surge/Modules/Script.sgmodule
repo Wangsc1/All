@@ -9,13 +9,19 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,se
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # IP_Check
-IP_Check = script-name=IP_Check, update-interval=1
+IP_Check = script-name=IP_Check,update-interval=1
 
 # Sub_Info
-Sub_Info = script-name=Sub_Info, update-interval=1
+Sub_Info = script-name=Sub_Info,update-interval=1
 
 # NF_Select
-NF_Select = script-name=NF_Select, update-interval=3600
+NF_Select = script-name=NF_Select,update-interval=3600
+
+# Update_Policy
+Update_Policy = script-name=Update_Policy,update-interval=5
+
+# Apple_Policy
+Apple_Policy = script-name=Apple_Policy,update-interval=5
 
 [Script]
 # Surge Pro
@@ -25,10 +31,19 @@ Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/A
 IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
 
 # Sub_Info
-Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2F1vjea7VuJULTsjgQ%3Fsurge%3D4&title=Exflux&icon=airplane.circle.fill&color=C3291C
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
+
+# NF_Cron
+NF_Cron = type=cron,cronexp=0 7-22/3 * * *,wake-system=1,timeout=3600,control-api=1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Cron.js
 
 # NF_Select
 NF_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Select.js,argument=Group=Netflix
+
+# Update_Policy
+Update_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=gear.circle.fill&color=#949499&Group=Update
+
+# Apple_Policy
+Apple_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=a.circle.fill&color=#3B78EB&Group=Apple
 
 # QL同步BoxJs
 QL同步BoxJs = type=cron,cronexp=54 */12 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
