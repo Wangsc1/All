@@ -1,7 +1,7 @@
 ;(async () => {
 
 let params = getParams($argument);
-let group=params.group;
+let group=params.Group;
 let proxy = await httpAPI("/v1/policy_groups");
 let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(group)+"")).policy;
 var proxyName= [];
