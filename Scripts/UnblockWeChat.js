@@ -64,6 +64,7 @@ if (cgiData.type === "newgray" || cgiData.type === "empty") {
                     ""
                 );
                 trueURL = trueURL.indexOf("http") == 0 ? trueURL : "http://" + trueURL;
+                notify("", "👉点击跳转到浏览器", trueURL, trueURL);
                 if (useGoogleCache) {
                     let googleCacheURL = googleCache + trueURL;
                     let redirect = {
@@ -75,7 +76,6 @@ if (cgiData.type === "newgray" || cgiData.type === "empty") {
                     if (isQuanX) redirect.body = respBody;
                     $done(redirect);
                 } else {
-                    notify("", "👉点击跳转到浏览器", trueURL, trueURL);
                     $done({});
                 }
                 resolve(trueURL);
