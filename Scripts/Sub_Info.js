@@ -7,14 +7,14 @@
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`流量使用 : ${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`流量使用 : ${bytesToSize(used)} ⇋ ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
     content.push(`重置天数 : 剩余${resetDayLeft}天`);
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    content.push(`到期时间 : ${formatTime(expire)}`);
+    content.push(`到期时间 : ${formatTime(expire)} | 流量使用 : ${bytesToSize(used)} ⇋ ${bytesToSize(total)}`);
   }
 
   let now = new Date();
@@ -25,7 +25,7 @@
 
   $done({
     title: `${args.title}`,
-    content: content.join("\n"),
+    content: (`${formatTime(expire)} | ${bytesToSize(used)} ⇋ ${bytesToSize(total)}`),
     icon: args.icon || "airplane.circle.fill",
     "icon-color": args.color || "#C3291C",
   });
