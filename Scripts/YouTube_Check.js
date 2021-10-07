@@ -26,15 +26,12 @@ const DEFAULT_OPTIONS = {
   availableContent: '支持解锁 Premium ➟ #REGION_NAME#',
   availableIcon: 'checkmark.circle.fill',
   availableIconColor: '36CE66',
-  availableStyle: 'good',
   notAvailableContent: '不支持解锁 Premium',
   notAvailableIcon: 'multiply.circle.fill',
   notAvailableIconColor: 'F52900',
-  notAvailableStyle: 'alert',
   errorContent: '检测失败，请重试',
   errorIcon: 'multiply.circle.fill',
   errorIconColor: 'F52900',
-  errorStyle: 'error',
 }
 
 let options = getOptions()

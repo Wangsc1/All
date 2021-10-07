@@ -27,19 +27,15 @@ const DEFAULT_OPTIONS = {
   fullContent: '完整解锁 Netflix ➟ #REGION_NAME#',
   fullIcon: 'checkmark.circle.fill',
   fullIconColor: '36CE66',
-  fullStyle: 'good',
   onlyOriginalContent: '解锁 Netflix 自制剧 ➟ #REGION_NAME#',
   onlyOriginalIcon: 'exclamationmark.circle.fill',
   onlyOriginalIconColor: 'FFDE00',
-  onlyOriginalStyle: 'info',
   notAvailableContent: '不支持解锁 Netflix',
   notAvailableIcon: 'multiply.circle.fill',
   notAvailableIconColor: 'F52900',
-  notAvailableStyle: 'alert',
   errorContent: '检测失败，请重试',
   errorIcon: 'multiply.circle.fill',
   errorIconColor: 'F52900',
-  errorStyle: 'error',
 }
 
 let options = getOptions()
