@@ -54,13 +54,13 @@ const radioGeneration = {
      $done({
        title: wifi.ssid ? wifi.ssid : cellularInfo,
        content:
-         (v4.primaryAddress ? `IP 地址 : ${v4.primaryAddress} | ${info.query}\n` : '') +
+         // (v4.primaryAddress ? `本机 IP : ${v4.primaryAddress}\n` : '') +
         // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
         // (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
         // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
-         // `代理 IP : ${info.query}\n` +
-         `代理服务 : ${info.isp}\n` +
-         `代理位置 : ${info.countryCode} - ${
+         `IP : ${info.query}\n` +
+         `ISP : ${info.isp}\n` +
+         `LOC : ${info.countryCode} - ${
            info.city
          }`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
