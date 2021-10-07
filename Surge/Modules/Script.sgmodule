@@ -5,7 +5,7 @@
 hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
 
 [Panel]
-# Surge Pro
+# Surge_Pro
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # IP_Check
@@ -14,8 +14,8 @@ IP_Check = script-name=IP_Check,update-interval=1
 # Sub_Info
 Sub_Info = script-name=Sub_Info,update-interval=1
 
-# NF_Select
-NF_Select = script-name=NF_Select,update-interval=3600
+# Netflix_Select
+Netflix_Select = script-name=Netflix_Select,update-interval=3600
 
 # Update_Policy
 Update_Policy = script-name=Update_Policy,update-interval=-1
@@ -27,7 +27,7 @@ Apple_Policy = script-name=Apple_Policy,update-interval=-1
 SelfSS_Policy = script-name=SelfSS_Policy,update-interval=-1
 
 [Script]
-# Surge Pro
+# Surge_Pro
 Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=icon=waveform.circle.fill&color=#FF7909
 
 # IP_Check
@@ -36,11 +36,8 @@ IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/Al
 # Sub_Info
 Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
 
-# NF_Cron
-NF_Cron = type=cron,cronexp=0 7-23/2 * * *,wake-system=1,timeout=3600,control-api=1,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Cron.js
-
-# NF_Select
-NF_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/NF_Select.js,argument=Group=Netflix
+# Netflix_Select
+Netflix_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Select.js,argument=Group=Netflix
 
 # Update_Policy
 Update_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=gear.circle.fill&color=#949499&Group=Update
