@@ -14,7 +14,7 @@
   }
   if (expire) {
     if (/^[\d]+$/.test(expire)) expire *= 1000;
-    content.push(`到期时间 : ${formatTime(expire)} | 流量使用 : ${bytesToSize(used)} ⇋ ${bytesToSize(total)}`);
+    content.push(`到期时间 : ${formatTime(expire)}`);
   }
 
   let now = new Date();
