@@ -59,7 +59,7 @@ if(status==1){
 
 /* 创建持久化数据 */
 $persistentStore.write(unlocked.toString(),"unlockedDisney");
-console.log("可解锁"+unlocked.sort())
+console.log("可解锁: "+unlocked.sort())
 //设定策略选项为初始值
 $surge.setSelectGroupPolicy(Group, first);
 
