@@ -158,7 +158,7 @@ while(allGroup.includes(rootName)==true){
    * 面板显示
    */
 
-let title = "Netflix ➟ " + rootName;
+let title = "Netflix";
 
 let panel = {
   title: `${title}`,
@@ -166,16 +166,16 @@ let panel = {
 
   
   if (status==2) {
-    panel['content'] = `完整解锁 ➟ ${regionCode}`
+    panel['content'] = `${rootName} | 完整解锁 ➟ ${regionCode}`
     panel['icon'] = 'checkmark.circle.fill'
 	 panel['icon-color'] = '#36CE66'
   } else if (status==1) {
-      panel['content'] = `解锁自制剧 ➟ ${regionCode}`
+      panel['content'] = `${rootName} | 解锁自制剧 ➟ ${regionCode}`
       panel['icon'] = 'exclamationmark.circle.fill'
 	   panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
-  		panel['content'] = `不支持解锁`
+  		panel['content'] = `${rootName} | 不支持解锁`
   		panel['icon'] = 'multiply.circle.fill'
 	 	panel['icon-color'] = '#F52900'
 		return

@@ -163,23 +163,23 @@ while(allGroup.includes(rootName)==true){
 
 
 
-let title = "Disney+ ➟ " + rootName;
+let title = "Disney+";
 
 let panel = {
   title: `${title}`,
 }
   
   if (status==1) {
-    panel['content'] = `支持解锁 ➟ ${region}`
+    panel['content'] = `${rootName} | 支持解锁 ➟ ${region}`
     panel['icon'] = 'checkmark.circle.fill'
 	 panel['icon-color'] = '#36CE66'
   } else if (status==2) {
-      panel['content'] = `即将登陆 ➟ ${region}`
+      panel['content'] = `${rootName} | 即将登陆 ➟ ${region}`
       panel['icon'] = 'exclamationmark.circle.fill'
 	   panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
-  		panel['content'] = `不支持解锁`
+  		panel['content'] = `${rootName} | 不支持解锁`
   		panel['icon'] = 'multiply.circle.fill'
 	 	panel['icon-color'] = '#F52900'
 		return
