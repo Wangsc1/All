@@ -1,3 +1,6 @@
+const AUTHORIZATION = 'Bearer ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84'
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
+
 // 即将登陆
 const STATUS_COMING = 2
 // 支持解锁
@@ -10,12 +13,12 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 ;(async () => {
-let disneyGroup = $persistentStore.read("DISNEYGROUP")
+let Group = $persistentStore.read("DISNEYGROUP")
 let proxy = await httpAPI("/v1/policy_groups");
-let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(disneyGroup)+"")).policy;
+let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 let first = groupName;
 var proxyName= [];//Disney节点组名称
-let arr = proxy[""+disneyGroup+""];
+let arr = proxy[""+Group+""];
 for (let i = 0; i < arr.length; ++i) {
 proxyName.push(arr[i].name);
 }
@@ -26,7 +29,7 @@ proxyName.push(arr[i].name);
 var unlocked = [];
 for (let i = 0; i < proxyName.length; ++i) {
 /* 切换节点 */
-$surge.setSelectGroupPolicy(disneyGroup, proxyName[i]);
+$surge.setSelectGroupPolicy(Group, proxyName[i]);
 //等待
 await timeout(1000).catch(() => {})
 //执行测试
@@ -58,7 +61,7 @@ if(status==1){
 $persistentStore.write(unlocked.toString(),"unlockedDisney");
 console.log("可解锁"+unlocked.sort())
 //设定策略选项为初始值
-$surge.setSelectGroupPolicy(disneyGroup, first);
+$surge.setSelectGroupPolicy(Group, first);
 
 	  $done()
 
@@ -240,3 +243,4 @@ function httpAPI(path = "", method = "GET", body = null) {
         });
     });
 };
+
