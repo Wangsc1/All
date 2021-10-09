@@ -170,18 +170,18 @@ let panel = {
 }
   
   if (status==1) {
-    panel['content'] = `支援Disney+，区域：${region}`
-    panel['icon'] = params.icon1
-	 panel['icon-color'] = params.color1
+    panel['content'] = `支持解锁 ➟ ${region}`
+    panel['icon'] = 'checkmark.circle.fill'
+	 panel['icon-color'] = '#36CE66'
   } else if (status==2) {
-      panel['content'] = `即将登陆，敬请期待，区域：${region}`
-      panel['icon'] = params.icon2
-	   panel['icon-color'] = params.color2
+      panel['content'] = `即将登陆 ➟ ${region}`
+      panel['icon'] = 'exclamationmark.circle.fill'
+	   panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
-  		panel['content'] = `您的节点不支持Disney+呢～`
-  		panel['icon'] = params.icon3
-	 	panel['icon-color'] = params.color3
+  		panel['content'] = `不支持解锁`
+  		panel['icon'] = 'multiply.circle.fill'
+	 	panel['icon-color'] = '#F52900'
 		return
 	}
 
