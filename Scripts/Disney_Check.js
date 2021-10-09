@@ -35,14 +35,14 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
-  title: 'Disney 解锁检测',
-  availableContent: '支持解锁 Disney+ ➟ #REGION_NAME#',
+  title: 'Disney',
+  availableContent: '支持解锁 ➟ #REGION_NAME#',
   availableIcon: 'checkmark.circle.fill',
   availableIconColor: '36CE66',
   comingContent: '即将登陆 ➟ #REGION_NAME#',
   comingIcon: 'exclamationmark.circle.fill',
   comingIconColor: 'FFDE00',
-  notAvailableContent: '不支持解锁 Disney+',
+  notAvailableContent: '不支持解锁',
   notAvailableIcon: 'multiply.circle.fill',
   notAvailableIconColor: 'F52900',
   errorContent: '检测失败，请重试',

@@ -22,11 +22,11 @@
 const BASE_URL = 'https://www.youtube.com/premium'
 
 const DEFAULT_OPTIONS = {
-  title: 'YouTube Premium 解锁检测',
-  availableContent: '支持解锁 Premium ➟ #REGION_NAME#',
+  title: 'YouTube Premium',
+  availableContent: '支持解锁 ➟ #REGION_NAME#',
   availableIcon: 'checkmark.circle.fill',
   availableIconColor: '36CE66',
-  notAvailableContent: '不支持解锁 Premium',
+  notAvailableContent: '不支持解锁',
   notAvailableIcon: 'multiply.circle.fill',
   notAvailableIconColor: 'F52900',
   errorContent: '检测失败，请重试',
