@@ -170,7 +170,7 @@ let panel = {
     panel['icon'] = 'checkmark.circle.fill'
     panel['icon-color'] = '#36CE66'
   } else if (status==1) {
-      panel['content'] = `${rootName} | 解锁自制剧 ➟ ${regionCode}`
+      panel['content'] = `${rootName} | 解锁自制剧`
       panel['icon'] = 'exclamationmark.circle.fill'
       panel['icon-color'] = '#FFDE00'
     }else {
