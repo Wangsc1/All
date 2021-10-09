@@ -37,7 +37,7 @@ IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/Al
 Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
 
 # Netflix_Select
-Netflix_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Select.js,argument=Group=Netflix
+Netflix_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Select.js,timeout=10,argument=Group=Netflix
 
 # Update_Policy
 Update_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=gear.circle.fill&color=#949499&Group=Update
