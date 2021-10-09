@@ -3,12 +3,12 @@ const AREA_TEST_FILM_ID = 80018499
 
 
 ;(async () => {
-let netflixGroup = $persistentStore.read("NFGroupName")
+let Group = $persistentStore.read("NFGroupName")
 let proxy = await httpAPI("/v1/policy_groups");
-let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(netflixGroup)+"")).policy;
+let groupName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(Group)+"")).policy;
 let first = groupName;
 var proxyName= [];//netflix节点组名称
-let arr = proxy[""+netflixGroup+""];
+let arr = proxy[""+Group+""];
 for (let i = 0; i < arr.length; ++i) {
 proxyName.push(arr[i].name);
 }
@@ -23,7 +23,7 @@ var onlyOriginal=[];
 
 for (let i = 0; i < proxyName.length; ++i) {
 //切换节点
-$surge.setSelectGroupPolicy(netflixGroup, proxyName[i]);
+$surge.setSelectGroupPolicy(Group, proxyName[i]);
 //等待
 await timeout(1000).catch(() => {})
 //执行测试
@@ -66,7 +66,7 @@ console.log("全解锁:"+fullUnlock.sort())
 console.log("仅自制:"+onlyOriginal.sort())
 
 //设定策略选项为初始值
-$surge.setSelectGroupPolicy(netflixGroup, first);
+$surge.setSelectGroupPolicy(Group, first);
 
     $done()
 

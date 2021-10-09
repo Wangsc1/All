@@ -166,18 +166,18 @@ let panel = {
 
   
   if (status==2) {
-    panel['content'] = `完整支援Netflix，区域：${regionCode}`
-    panel['icon'] = params.icon1
-	 panel['icon-color'] = params.color1
+    panel['content'] = `完整解锁 ➟ ${regionCode}`
+    panel['icon'] = 'checkmark.circle.fill'
+	 panel['icon-color'] = '#36CE66'
   } else if (status==1) {
-      panel['content'] = `解锁自制内容`
-      panel['icon'] = params.icon2
-	   panel['icon-color'] = params.color2
+      panel['content'] = `解锁自制剧 ➟ ${regionCode}`
+      panel['icon'] = 'exclamationmark.circle.fill'
+	   panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
-  		panel['content'] = `您的节点连自制内容都不支持呢～`
-  		panel['icon'] = params.icon3
-	 	panel['icon-color'] = params.color3
+  		panel['content'] = `不支持解锁`
+  		panel['icon'] = 'multiply.circle.fill'
+	 	panel['icon-color'] = '#F52900'
 		return
 	}
 
