@@ -172,11 +172,11 @@ let panel = {
   if (status==1) {
     panel['content'] = `${rootName} | 支持解锁 ➟ ${region}`
     panel['icon'] = 'checkmark.circle.fill'
-	 panel['icon-color'] = '#36CE66'
+    panel['icon-color'] = '#36CE66'
   } else if (status==2) {
       panel['content'] = `${rootName} | 即将登陆 ➟ ${region}`
       panel['icon'] = 'exclamationmark.circle.fill'
-	   panel['icon-color'] = '#FFDE00'
+      panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
   		panel['content'] = `${rootName} | 不支持解锁`
@@ -336,28 +336,6 @@ function timeout(delay = 5000) {
       reject('Timeout')
     }, delay)
   })
-}
-
-
-function replaceRegionPlaceholder(content, region) {
-  let result = content
-
-  if (result.indexOf('#REGION_CODE#') !== -1) {
-    result = result.replaceAll('#REGION_CODE#', region.toUpperCase())
-  }
-  if (result.indexOf('#REGION_FLAG#') !== -1) {
-    result = result.replaceAll('#REGION_FLAG#', getCountryFlagEmoji(region.toUpperCase()))
-  }
-
-  if (result.indexOf('#REGION_NAME#') !== -1) {
-    result = result.replaceAll('#REGION_NAME#', RESION_NAMES?.[region.toUpperCase()]?.chinese ?? '')
-  }
-
-  if (result.indexOf('#REGION_NAME_EN#') !== -1) {
-    result = result.replaceAll('#REGION_NAME_EN#', RESION_NAMES?.[region.toUpperCase()]?.english ?? '')
-  }
-
-  return result
 }
 
 function httpAPI(path = "", method = "GET", body = null) {

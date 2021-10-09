@@ -168,11 +168,11 @@ let panel = {
   if (status==2) {
     panel['content'] = `${rootName} | 完整解锁 ➟ ${regionCode}`
     panel['icon'] = 'checkmark.circle.fill'
-	 panel['icon-color'] = '#36CE66'
+    panel['icon-color'] = '#36CE66'
   } else if (status==1) {
       panel['content'] = `${rootName} | 解锁自制剧 ➟ ${regionCode}`
       panel['icon'] = 'exclamationmark.circle.fill'
-	   panel['icon-color'] = '#FFDE00'
+      panel['icon-color'] = '#FFDE00'
     }else {
  		$surge.setSelectGroupPolicy(Group, first);
   		panel['content'] = `${rootName} | 不支持解锁`
