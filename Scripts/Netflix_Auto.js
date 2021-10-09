@@ -97,7 +97,7 @@ await timeout(1000).catch(() => {})
 /* 检查选择列表 */
 console.log(select.length)
 if(select.length==0){
-	$notification.post("节点列表获取失败", "未获取到节点列表，请手动运行一次NetflixChecker脚本", "")
+	$notification.post("节点列表获取失败", "未获取到节点列表，请手动运行一次Netflix_Cron脚本", "")
 }
 //测试当前选择
 
