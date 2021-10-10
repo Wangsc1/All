@@ -2,51 +2,33 @@
 #!desc=脚本,任务,重写
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.*,weixin110.qq.com,security.wechat.com,api.m.jd.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.cn,api.m.jd.com
 
 [Panel]
-# Surge_Pro
-Surge_Pro = script-name=Surge_Pro,update-interval=1
-
-# IP_Check
-IP_Check = script-name=IP_Check,update-interval=1
-
 # Sub_Info
 Sub_Info = script-name=Sub_Info,update-interval=1
 
-# Netflix_Select
-Netflix_Select = script-name=Netflix_Select,update-interval=3600
+# Netflix_Auto
+Netflix_Auto = script-name=Netflix_Auto,update-interval=600
 
-# Update_Policy
-Update_Policy = script-name=Update_Policy,update-interval=-1
-
-# Apple_Policy
-Apple_Policy = script-name=Apple_Policy,update-interval=-1
-
-# SelfSS_Policy
-SelfSS_Policy = script-name=SelfSS_Policy,update-interval=-1
+# Disney_Auto
+Disney_Auto = script-name=Disney_Auto,update-interval=600
 
 [Script]
-# Surge_Pro
-Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=icon=waveform.circle.fill&color=#FF7909
-
-# IP_Check
-IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
-
 # Sub_Info
 Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
 
-# Netflix_Select
-Netflix_Select = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Select.js,timeout=10,argument=Group=Netflix
+# Netflix_Cron
+Netflix_Cron = type=cron,cronexp=0 8-22 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Cron.js,control-api=1
 
-# Update_Policy
-Update_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=gear.circle.fill&color=#949499&Group=Update
+# Netflix_Auto
+Netflix_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Auto.js,argument=Group=Netflix
 
-# Apple_Policy
-Apple_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=a.circle.fill&color=#3C9BFF&Group=Apple
+# Disney_Cron
+Disney_Cron = type=cron,cronexp=0 8-22 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_Cron.js,control-api=1
 
-# SelfSS_Policy
-SelfSS_Policy = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Switch_Policy.js,timeout=10,argument=icon=star.circle.fill&color=#914447&Group=SelfSS
+# Disney_Auto
+Disney_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_Auto.js,argument=Group=Disney
 
 # QL同步BoxJs
 QL同步BoxJs = type=cron,cronexp=54 */12 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
@@ -59,12 +41,6 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 
 # 彩云SVIP
 彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
-
-# Endless
-Endless = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Endless.js
-
-# 微信链接跳转
-微信链接跳转 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/UnblockWeChat.js
 
 # 京粉佣金
 京粉佣金 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
