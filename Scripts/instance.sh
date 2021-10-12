@@ -1,15 +1,9 @@
 #!/bin/bash
-trap 'onCtrlC' INT
-#==========================================================#
-#	Description: 甲骨文ARM自动申请脚本（使用教程在博客)   	
-#	Version: 3.2 					  				
-#	Author: 蜘蛛子									
-#       Blog：https://www.zhizhuzi.org      				   
-# 	Telegram: https://t.me/Zhizhuzi			            
-#	Github: https://github.com/ZhizhuziQAQ/instance	     
-#	Latest Update: Fri 30 Jul 2021 09:20:55 AM CST         
-#==========================================================#
-#===========================================填写配置区域1====================================================#
+trap 'onCtrlC' INT			  				
+#Author: 蜘蛛子   				   
+#Telegram: https://t.me/Zhizhuzi			            
+#Github: https://github.com/ZhizhuziQAQ/instance	     
+
 # 0=新建 1=升配 默认为0，即新建实例
 Flag=0
 # 区域ID				【availability_domain】
@@ -141,7 +135,7 @@ function InstanceUpate(){
 #==========================================================================================================#
 function CheckInit(){
 	current_time=`date +"%Y-%m-%d %H:%M:%S"`
-	echo -e "["$current_time"]" "${Font_Green}蜘蛛子の脚本正在启动中…………${Font_Suffix}";
+	echo -e "["$current_time"]" "${Font_Green}脚本正启动中…………${Font_Suffix}";
 	sleep 1
 	if ! [ -x "$(command -v jq)" ]; then
 		InstallJQ
