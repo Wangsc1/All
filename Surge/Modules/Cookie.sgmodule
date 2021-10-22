@@ -2,7 +2,7 @@
 #!desc=获取Cookie
 
 [MITM]
-hostname = %APPEND% me-api.jd.com,api.m.jd.com,www.smzdm.com,account.huami.com,api.tuhu.cn,maicai.api.ddxq.mobi,www.52pojie.cn
+hostname = %APPEND% me-api.jd.com,api.m.jd.com,api-dd.jd.com,www.smzdm.com,account.huami.com,api.tuhu.cn,maicai.api.ddxq.mobi,www.52pojie.cn
 
 [Script]
 # 京东Cookie
@@ -10,7 +10,7 @@ hostname = %APPEND% me-api.jd.com,api.m.jd.com,www.smzdm.com,account.huami.com,a
 
 AppCookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/openUpgrade,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra_cookie.js
 
-AppWskey = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra_cookie.js
+AppWskey = type=http-request,pattern=^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra_cookie.js
 
 # 什么值得买Cookie
 什么值得买Cookie = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
