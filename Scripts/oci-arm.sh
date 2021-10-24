@@ -119,32 +119,32 @@ launch_instance() {
             ;;
         502)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         503)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         400)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         401)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         404)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         409)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         *)
@@ -198,32 +198,32 @@ update_instance() {
             ;;
         502)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         503)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         400)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         401)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         404)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         409)
             error "$msg_text"
-            sendMessage "脚本已停止, ${msg_text}"
+            sendMessage "😳 脚本已停止, ${msg_text}"
             break
             ;;
         *)
