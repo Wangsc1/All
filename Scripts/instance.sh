@@ -4,36 +4,36 @@ trap 'onCtrlC' INT
 #Telegram: https://t.me/Zhizhuzi			            
 #Github: https://github.com/ZhizhuziQAQ/instance	     
 
-# 0=新建 1=升配 默认为0，即新建实例
+# 0=新建 1=升配
 Flag=0
-# 区域ID				【availability_domain】
-Available_Domain='xxxx:AP-xxxxx-1-AD-1'
-# 镜像				【【source_id】】
-Image_ID='ocid1.image.oc1.ap-xxxxx-1.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-# 子网ID				【subnet-id】
-Subnet_ID='ocid1.subnet.oc1.ap-xxxxx-1.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-# 默认申请ARM 请根据需求自行修改，并测试
+# 区域ID【availability_domain】
+Available_Domain=''
+# 镜像ID【source_id】
+Image_ID=''
+# 子网ID【subnet-id】
+Subnet_ID=''
+# 默认申请ARM 请根据需求自行修改
 Shape='VM.Standard.A1.Flex'
-# 你的公钥			【ssh_authorized_keys】
-SSH_Key_PUB="此处填入Your_Key_Pub"
-# 租户ID				【compartment_id】
-Compartment_ID='ocid1.tenancy.oc1..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# 公钥【ssh_authorized_keys】
+SSH_Key_PUB=""
+# 租户ID【compartment_id】
+Compartment_ID=''
 # 实例CPU数目
 xCPU=4
 # 实例内存大小GB
 xRAM=24
-# 硬盘默认100GB
-xHD=100
+# 硬盘默认200GB
+xHD=200
 # 新建实例名字，喜欢取什么就取什么，可由英文数字组成
-Instance_Name="ARM"
+Instance_Name="xxx-ARM"
 # 升配时才要填，填入需要升配的实例ID，如果没填入脚本会终止。升配需要三个参数 实例ID CPU 内存
-InstanceID="ocid1.instance.oc1.ap-xxxxx-1.xxxxxxxxxxxxxx"
+InstanceID=""
 
 #===========================================填写配置区域2====================================================#
 # 消息通知机器人,填入你的机器人token
-TOKEN=xxxxxxxx:xxxxxxxxxxxxxx
+TOKEN=
 # 通知接收人的Telegram ID 一般填自己的
-CHAT_ID=xxxxxxxxxxx
+CHAT_ID=
 # Telegram API 无需更改
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
 
