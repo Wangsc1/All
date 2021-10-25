@@ -62,7 +62,7 @@ PROXY_URL=socks5://127.0.0.1:1080
 
 
 ###============================== 以下区域无需修改 ==============================###
-PROJECT="甲骨文 OCI 新建/升级实例"
+PROJECT="甲骨文新建/升级实例"
 VER=1.0.0
 PROJECT_ENTRY="$0"
 LOG_DIR=./log
@@ -158,7 +158,7 @@ launch_instance() {
                 break
                 exit 0
             else
-                local text_error="脚本已停止, $ret"
+                local text_error="😳 脚本已停止, $ret"
                 error "$text_error"
                 sendMessage "$text_error"
                 break
@@ -236,7 +236,7 @@ update_instance() {
                 break
                 exit 0
             else
-                local text_error="脚本已停止, $ret"
+                local text_error="😳 脚本已停止, $ret"
                 error "$text_error"
                 sendMessage "$text_error"
                 break
@@ -261,16 +261,16 @@ sendMessage() {
         if [ 1 -eq $PROXY ]; then
             result=$(curl --connect-timeout 10 --max-time 10 -s -S -x $PROXY_URL -X POST $URL -d parse_mode=Markdown -d chat_id=${CHAT_ID} -d text="*甲骨文信息*%0A${1}" 2>&1)
             if [ 0 -eq $? ]; then
-                info "Telegram 消息提醒发送成功"
+                info "Telegram 消息发送成功"
             else    
-                error "Telegram 消息提醒发送失败, $result"
+                error "Telegram 消息发送失败, $result"
             fi
         else
             result=$(curl --connect-timeout 10 --max-time 10 -s -S -X POST $URL -d parse_mode=Markdown -d chat_id=${CHAT_ID} -d text="*甲骨文信息*%0A${1}" 2>&1)
             if [ 0 -eq $? ]; then
-                info "Telegram 消息提醒发送成功"
+                info "Telegram 消息发送成功"
             else    
-                error "Telegram 消息提醒发送失败, $result"
+                error "Telegram 消息发送失败, $result"
             fi
         fi
     fi

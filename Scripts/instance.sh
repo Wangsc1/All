@@ -113,7 +113,7 @@ function onCtrlC(){
     current_time=`date +"%Y-%m-%d %H:%M:%S"`
     echo -e "["$current_time"]" "${Font_Red}检测到【Ctrl+C】终止命令......${Font_Suffix}"
     echo -e "["$current_time"]" "${Font_Red}正在终止脚本......${Font_Suffix}"
-    Msg_success="【甲骨文信息】：${Instance_Name} ${xCPU}c${xRAM}g 申请脚本已停止"
+    Msg_success="甲骨文信息\n${Instance_Name} ${xCPU}c${xRAM}g 申请脚本已停止"
     curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_success}"
     exit 0
 }
@@ -124,7 +124,7 @@ function InstanceUpate(){
 		if [[ $InstanceID == "" ]]; then
 			echo -e "["$current_time"]" "${Font_Red}请设置需要升配的实例ID, 当前实例ID为空。${Font_Suffix}"
 			echo -e "["$current_time"]" "${Font_Red}请设置需要升配的实例ID, 当前实例ID为空。${Font_Suffix}" >> /root/oci_error.log 2>&1
-			Msg_warning="【甲骨文信息】：请设置需要升配的实例ID，当前ID为空。"
+			Msg_warning="甲骨文信息\n请设置需要升配的实例ID，当前ID为空。"
 			curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_warning}"
 			exit 0
 		else
@@ -151,7 +151,7 @@ function CheckInit(){
 		sleep 1
 		echo -e "["$current_time"]" "${Font_SkyBlue}检测待建配置, 配置为${Instance_Name} ${xCPU}c${xRAM}g${Font_Suffix}"
 		sleep 1
-		Msg_success="【甲骨文信息】：${Instance_Name} ${xCPU}c${xRAM}g 开始新建实例"
+		Msg_success="甲骨文信息\n${Instance_Name} ${xCPU}c${xRAM}g 开始新建实例"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_success}"
 		echo -e "\n"
 		api_launch > /root/result.json 2>&1
@@ -160,7 +160,7 @@ function CheckInit(){
 		sleep 1
 		echo -e "["$current_time"]" "${Font_Yellow}检测待升配置, 配置为${Instance_Name} ${xCPU}c${xRAM}g${Font_Suffix}"
 		sleep 1
-		Msg_success="【甲骨文信息】：${Instance_Name} ${xCPU}c${xRAM}g 开始升级实例"
+		Msg_success="甲骨文信息\n${Instance_Name} ${xCPU}c${xRAM}g 开始升级实例"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_success}"
 		echo -e "\n"
 		api_update > /root/result.json 2>&1
@@ -193,49 +193,49 @@ while [[ true ]]; do
     409)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}Apply conflict${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"  
 		echo -e "["$current_time"]" "实例状态：${Font_Red}Apply conflict${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-    	Msg_error="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为Apply conflict"
+    	Msg_error="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为Apply conflict"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_error}"
 		break
     ;;
     404)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_error="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
+		Msg_error="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_error}"
 		break	
     ;;
     401)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_error="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
+		Msg_error="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_error}"
 		break
     ;;
     503)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_error="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
+		Msg_error="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_error}"
 		break
     ;;
     400)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}InvalidParameter or LimitExceed${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_error="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
+		Msg_error="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为InvalidParameter or LimitExceed"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_error}"
 		break
     ;;
     401)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}NotAuthenticated${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}NotAuthenticated${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_warning="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为NotAuthenticated"
+		Msg_warning="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为NotAuthenticated"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_warning}"
 		break
     ;;
     502)
 		echo -e "["$current_time"]" "实例状态：${Font_Red}Bad Gateway${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}"
 		echo -e "["$current_time"]" "实例状态：${Font_Red}Bad Gateway${Font_Suffix}, 返回状态：""${Font_Red}${outcome}${Font_Suffix}" >> /root/oci_error.log
-		Msg_warning="【甲骨文信息】：${Instance_Name}申请脚本已停止，返回信息为Bad Gateway"
+		Msg_warning="甲骨文信息\n${Instance_Name}申请脚本已停止，返回信息为Bad Gateway"
 		curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_warning}"
 		break
     ;;
@@ -243,13 +243,13 @@ while [[ true ]]; do
 		if [[ $Flag == 0 ]]; then
 			echo -e "["$current_time"]" "${Font_SkyBlue}${Instance_Name} ${xCPU}c${xRAM}g 成功新建实例，正在发起通知…………${Font_Suffix}"
 			echo -e "["$current_time"]" "${Font_SkyBlue}${Instance_Name} ${xCPU}c${xRAM}g 成功新建实例，正在发起通知…………${Font_Suffix}" >> /root/success/success.log
-			Msg_success="【甲骨文信息】：${Instance_Name} ${xCPU}c${xRAM}g 新建实例成功"
+			Msg_success="甲骨文信息\n${Instance_Name} ${xCPU}c${xRAM}g 新建实例成功"
 			curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_success}"
 			echo -e "\n"
 		elif [[ $Flag == 1 ]]; then
 			echo -e "["$current_time"]" "${Font_Yellow}${Instance_Name} ${xCPU}c${xRAM}g 成功升级实例，正在发起通知…………${Font_Suffix}"
 			echo -e "["$current_time"]" "${Font_Yellow}${Instance_Name} ${xCPU}c${xRAM}g 成功升级实例，正在发起通知…………${Font_Suffix}" >> /root/success/success.log
-			Msg_success="【甲骨文信息】：${Instance_Name} ${xCPU}c${xRAM}g 实例升级成功"
+			Msg_success="甲骨文信息\n${Instance_Name} ${xCPU}c${xRAM}g 实例升级成功"
 			curl -s -X POST $URL -d chat_id=${CHAT_ID} -d text="${Msg_success}"
 			echo -e "\n"
 		fi
