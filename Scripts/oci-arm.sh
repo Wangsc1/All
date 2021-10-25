@@ -85,7 +85,7 @@ oci_launch_instance() {
     --subnet-id $Subnet_ID \
     --shape $Shape \
     --assign-public-ip true \
-    --metadata '{"ssh_authorized_keys": "IyEvYmluL2Jhc2gKZWNobyByb290OldhbmdzYzEgfHN1ZG8gY2hwYXNzd2Qgcm9vdApzdWRvIHNlZCAtaSAicy9eI1w/UGVybWl0Um9vdExvZ2luLiovUGVybWl0Um9vdExvZ2luIHllcy9nIiAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZWQgLWkgInMvXiNcP1Bhc3N3b3JkQXV0aGVudGljYXRpb24uKi9QYXNzd29yZEF1dGhlbnRpY2F0aW9uIHllcy9nIiAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZXJ2aWNlIHNzaGQgcmVzdGFydA=="}' \
+    --metadata '{"ssh_authorized_keys": "'"${SSH_Key_PUB}"'"}' \
     --compartment-id $Compartment_ID \
     --shape-config '{"ocpus":'$CPU',"memory_in_gbs":'$RAM'}' \
     --boot-volume-size-in-gbs $HD \
