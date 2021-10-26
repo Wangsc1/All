@@ -81,10 +81,10 @@ def tf_parser(buf):
     imageid_pat = re.compile('source_id = "(.*)"')
     imageid = imageid_pat.findall(buf)[0]
     ssh = '{"ssh_authorized_keys":"%s"}' % ssh_rsa
-    config = '{"ocpus":%s,"memory_in_gbs":%s,"boot_volume_size_in_gbs":%s}' % (
-        cpu, memory, HARDDRIVE_SIZE)
-    oci_cmd = '''oci compute instance launch --availability-domain {} --image-id {} --subnet-id {} --shape {} --assign-public-ip {} --metadata '{}' --compartment-id {} --shape-config '{}' '''.format(
-        ava_domain, imageid, subnet, shape, pubip, ssh, compoartment, config)
+    config = '{"ocpus":%s,"memory_in_gbs":%s}' % (
+        cpu, memory,)
+    oci_cmd = '''oci compute instance launch --availability-domain {} --image-id {} --subnet-id {} --shape {} --assign-public-ip {} --metadata '{}' --compartment-id {} --shape-config '{}' --boot-volume-size-in-gbs {} '''.format(
+        ava_domain, imageid, subnet, shape, pubip, ssh, compoartment, config,HARDDRIVE_SIZE)
 
     try:
         f = open(SHELL_FILENAME, "w+")
