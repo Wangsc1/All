@@ -96,7 +96,8 @@ def tf_parser(buf):
 
 
 def start():
-
+    telegram("🐔🐔{}:{}核:{}G 开刷! ".format(
+                    domain, cpu_count, memory_size))
     cmd = "bash arm.sh"
     count = 0
     while True:
