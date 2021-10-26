@@ -21,9 +21,24 @@ CPU=4
 # 内存大小(GB)
 RAM=24
 # 引导卷大小(GB)
-HD=200
+HD=100
 # 实例名称
 Instance_Name="xxx-ARM"
+
+
+#====== Telegram 消息提醒配置相关 ======#
+# 发送消息提醒。0: 不发送；1: 发送
+SEND_MSG=1
+# Telegram bot token, 通过 BotFather(https://t.me/BotFather) 创建一个 Bot 获取 token。
+TOKEN=
+# 接收消息的Telegram ID, 通过 IDBot(https://t.me/myidbot) 获取个人 Telegram ID。
+CHAT_ID=
+# 使用代理访问Telegram bot发送消息的API。0: 不使用；1: 使用。
+PROXY=0
+# Socks 代理
+PROXY_URL=socks5://127.0.0.1:1080
+# Http 代理
+#PROXY_URL=http://127.0.0.1:1087
 
 
 #====== 升级实例配置相关 ======#
@@ -46,21 +61,6 @@ max_Time=10
 profile="DEFAULT"
 
 
-#====== Telegram bot 消息提醒配置相关 ======#
-# 发送消息提醒。0: 不发送；1: 发送
-SEND_MSG=1
-# Telegram bot token, 通过 BotFather(https://t.me/BotFather) 创建一个 Bot 获取 token。
-TOKEN=
-# 接收消息的Telegram ID, 通过 IDBot(https://t.me/myidbot) 获取个人 Telegram ID。
-CHAT_ID=
-# 使用代理访问Telegram bot发送消息的API。0: 不使用；1: 使用。
-PROXY=0
-# Socks 代理
-PROXY_URL=socks5://127.0.0.1:1080
-# Http 代理
-#PROXY_URL=http://127.0.0.1:1087
-
-
 ###============================== 以下区域无需修改 ==============================###
 PROJECT="甲骨文新建/升级实例"
 VER=1.0.0
@@ -71,7 +71,7 @@ NO_TIMESTAMP=0
 # 保存日志到文件。0:不保存；1:保存
 SAVE_LOG=1
 
-# Telegram bot 发送消息 API 
+# Telegram 发送消息 API 
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
 
 
