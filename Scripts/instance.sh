@@ -31,9 +31,9 @@ InstanceID=""
 
 #===========================================填写配置区域2====================================================#
 # 消息通知机器人,填入你的机器人token
-TOKEN=
+TOKEN=2039936157:AAEJK8ThdNsEWAw443OxxhlorFQvAqkJ-MY
 # 通知接收人的Telegram ID 一般填自己的
-CHAT_ID=
+CHAT_ID=299029352
 # Telegram API 无需更改
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
 
