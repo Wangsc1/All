@@ -97,7 +97,7 @@ def tf_parser(buf):
 
 def start():
     if USE_TG:
-        telegram("开始新建实例 👉 {} : {}C{}G".format(
+        telegram("开始新建 👉 {} : {}C{}G".format(
                         domain, cpu_count, memory_size))
     cmd = "bash arm.sh"
     count = 0
@@ -109,7 +109,7 @@ def start():
         if 'LimitExceeded' in res:
             print(u"脚本配置失败或者已经成功创建机器")
             if USE_TG:
-                telegram("🎉 经过{}次努力,实例 {} : {}C{}G 新建成功\n点击查看 👉 https://www.oracle.com/cn/cloud/sign-in.html".format(
+                telegram("🎉 新建成功 {} : {}C{}G\n点击查看 👉 https://www.oracle.com/cn/cloud/sign-in.html".format(
                     count, domain, cpu_count, memory_size))
             break
         time.sleep(random.randint(10, 15))
