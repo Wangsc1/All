@@ -79,7 +79,7 @@ def tf_parser(buf):
     cpu_count = cpu
     # imageid
     imageid_pat = re.compile('source_id = "(.*)"')
-    imageid = imageid_pat.findall(buf).pop()
+    imageid = imageid_pat.findall(buf)[0]
     ssh = '{"ssh_authorized_keys":"%s"}' % ssh_rsa
     config = '{"ocpus":%s,"memory_in_gbs":%s,"boot_volume_size_in_gbs":%s}' % (
         cpu, memory, HARDDRIVE_SIZE)
