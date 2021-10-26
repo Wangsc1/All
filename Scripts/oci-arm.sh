@@ -50,9 +50,9 @@ profile="DEFAULT"
 # 发送消息提醒。0: 不发送；1: 发送
 SEND_MSG=1
 # Telegram bot token, 通过 BotFather(https://t.me/BotFather) 创建一个 Bot 获取 token。
-TOKEN=2039936157:AAEJK8ThdNsEWAw443OxxhlorFQvAqkJ-MY
+TOKEN=
 # 接收消息的Telegram ID, 通过 IDBot(https://t.me/myidbot) 获取个人 Telegram ID。
-CHAT_ID=299029352
+CHAT_ID=
 # 使用代理访问Telegram bot发送消息的API。0: 不使用；1: 使用。
 PROXY=0
 # Socks 代理
