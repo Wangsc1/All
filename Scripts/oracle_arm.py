@@ -24,7 +24,7 @@ memory_size = ""
 
 
 def telegram(desp):
-    data = (('chat_id', TG_USER_ID), ('text', '🏆ARM开通脚本🏆\n\n' + desp))
+    data = (('chat_id', TG_USER_ID), ('text', '甲骨文ARM信息\n' + desp))
     response = requests.post('https://' + TG_API_HOST + '/bot' + TG_BOT_TOKEN +
                              '/sendMessage',
                              data=data)
@@ -96,7 +96,7 @@ def tf_parser(buf):
 
 
 def start():
-    telegram("🐔🐔{}:{}核:{}G 开刷! ".format(
+    telegram("开始新建实例 👉 {}:{}核:{}G".format(
                     domain, cpu_count, memory_size))
     cmd = "bash arm.sh"
     count = 0
@@ -108,7 +108,7 @@ def start():
         if 'LimitExceeded' in res:
             print(u"脚本配置失败或者已经成功创建机器")
             if USE_TG:
-                telegram("经过{}次注册后,{}:{}核:{}G🐔🐔 似乎注册成功,请上后台查看确认吧".format(
+                telegram("🎉 经过{}次努力,实例 {}:{}核:{}G 新建成功\n点击查看 👉 https://www.oracle.com/cn/cloud/sign-in.html".format(
                     count, domain, cpu_count, memory_size))
             break
         time.sleep(random.randint(10, 15))
