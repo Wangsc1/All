@@ -100,7 +100,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 		reg = regionCode
       
       /* 检测超时 再测一次 */
-      if (status < 0) {
+      if (newStatus < 0) {
         console.log(selectName[i] + ": 连接超时了，再测一次")
         await timeout(1000).catch(() => {})
 		let { status, regionCode, policyName } = await testPolicy(selectName[i]);
@@ -110,8 +110,8 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
       console.log("检测结果："+selectName[i]+" | "+statusName(newStatus))
       //填充数据
       dataname = selectName[i]
-      data[dataname] = regionCode
-      if (newStatis === 2) {
+      data[dataname] = reg
+      if (newStatus === 2) {
         if (fullUnlock.includes(selectName[i]) == false) {
           fullUnlock.push(selectName[i])
           selectFU.push(selectName[i])
