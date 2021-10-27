@@ -85,6 +85,14 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 
   // 为空时执行检测
   if (selectFU.length == 0) {
+	//去除历史数据
+	for (let i = 0; i < selectName.length; ++i) {
+	if(fullUnlock.includes(selectName[i])==true){
+		del(fullUnlock,selectName[i])
+		}else if(onlyOriginal.includes(selectName[i])==true){
+		del(onlyOriginal,selectName[i])
+		}
+	}
     //遍历检测当选策略
     console.log("当前检测：" + groupName)
 	let newStatus;
@@ -134,10 +142,6 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
     } else if (selectFU.length == 0 && selectOG.length > 0) {
       selectList = selectOG
     }
-
-    if (selectList.length > 0) {
-		$surge.setSelectGroupPolicy(groupName, selectList[0]);
-	 }
 	// 更新持久化数据
 	$persistentStore.write(fullUnlock.toString(),"FULLUNLOCK");
 	$persistentStore.write(onlyOriginal.toString(),"ONLYORIGINAL")
@@ -145,8 +149,12 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 
   }
 
-	//修正节点
-	$surge.setSelectGroupPolicy(groupName, selectList[0]);
+	//设定节点
+	 if (selectList.length > 0) {
+		$surge.setSelectGroupPolicy(groupName, selectList[0]);
+	 }else{
+	 	$surge.setSelectGroupPolicy(groupName, selectName[0]);
+	 }
 
   /* 刷新信息 */
   //获取根节点名
