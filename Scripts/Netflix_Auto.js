@@ -76,7 +76,12 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
     }
   }
 
-  var selectList = []
+   var selectList = []
+	if (selectFU.length > 0) {
+      selectList = selectFU
+    } else if (selectFU.length == 0 && selectOG.length > 0) {
+      selectList = selectOG
+    }
 
   // 为空时执行检测
   if (selectFU.length == 0) {
@@ -91,8 +96,8 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
       await timeout(1000).catch(() => {})
       //执行测试
       let { status, regionCode, policyName } = await testPolicy(selectName[i]);
-		let newStatus=status 
-		let reg = regionCode
+		newStatus=status 
+		reg = regionCode
       
       /* 检测超时 再测一次 */
       if (status < 0) {
@@ -102,23 +107,23 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
         newStatus=status 
 		  reg = regionCode
       }
-      console.log("检测结果："+selectName[i]+" | "+statusName(status))
+      console.log("检测结果："+selectName[i]+" | "+statusName(newStatus))
       //填充数据
       dataname = selectName[i]
       data[dataname] = regionCode
-      if (status === 2) {
+      if (newStatis === 2) {
         if (fullUnlock.includes(selectName[i]) == false) {
           fullUnlock.push(selectName[i])
           selectFU.push(selectName[i])
         }
-      } else if (status === 1) {
+      } else if (newStatus === 1) {
         if (onlyOriginal.includes(selectName[i]) == false) {
           onlyOriginal.push(selectName[i])
           selectOG.push(selectName[i])
         }
       }
 		//找到全解锁节点 退出检测
-		if(status==2) {
+		if(newStatus==2) {
 		console.log("找到可用节点 退出检测")
 		break;
 		}
@@ -130,7 +135,6 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
       selectList = selectOG
     }
 
-		console.log(selectList.length)
     if (selectList.length > 0) {
 		$surge.setSelectGroupPolicy(groupName, selectList[0]);
 	 }
@@ -140,6 +144,9 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 	$persistentStore.write(JSON.stringify(data),"NFREGIONCODE")
 
   }
+
+	//修正节点
+	$surge.setSelectGroupPolicy(groupName, selectList[0]);
 
   /* 刷新信息 */
   //获取根节点名
@@ -174,7 +181,6 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
     return
   }
 
- 
 
   $done(panel)
 
