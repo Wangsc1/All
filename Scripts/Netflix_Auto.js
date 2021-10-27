@@ -163,7 +163,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
     panel['icon'] = 'checkmark.circle.fill'
     panel['icon-color'] = '#36CE66'
   } else if (onlyOriginal.includes(rootName)) {
-    panel['content'] = `${rootName} | 解锁自制剧 ➟ ${data[rootName]}`
+    panel['content'] = `${rootName} | 解锁自制剧`
     panel['icon'] = 'exclamationmark.circle.fill'
     panel['icon-color'] = '#FFDE00'
   } else {
