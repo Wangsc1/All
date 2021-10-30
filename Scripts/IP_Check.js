@@ -58,11 +58,8 @@ const radioGeneration = {
         // (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
         // (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
         // (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
-         `IP : ${info.query}\n` +
-         `ISP : ${info.isp}\n` +
-         `LOC : ${info.countryCode} - ${
-           info.city
-         }`,
+         `${info.query}\n` +
+         `${info.countryCode}-${info.city} | ${info.isp}`,
        icon: wifi.ssid ? 'wifi.circle.fill' : 'antenna.radiowaves.left.and.right.circle.fill',
        'icon-color': wifi.ssid ? '#007BFF' : '#65C466',
      });
