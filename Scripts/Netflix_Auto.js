@@ -182,11 +182,10 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
     panel['icon'] = 'exclamationmark.circle.fill'
     panel['icon-color'] = '#FFDE00'
   } else {
-    $surge.setSelectGroupPolicy(Group, first);
+console.log("test")
     panel['content'] = `${rootName} | 不支持解锁`
     panel['icon'] = 'multiply.circle.fill'
     panel['icon-color'] = '#F52900'
-    return
   }
 
 
