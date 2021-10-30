@@ -146,7 +146,15 @@ console.log("仅自制:"+onlyOriginal.sort())
   while (allGroup.includes(rootName) == true) {
     rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(rootName) + "")).policy;
   }
-let info = `${rootName} | ${statusName(newStatus)} ➟ ${reg}`
+	
+let info
+if(newStatus===2){
+info = `${rootName} | ${statusName(newStatus)} ➟ ${reg}`
+}else if(newStatus===1){
+info = `${rootName} | ${statusName(newStatus)}`
+}else{
+info = "该策略组暂无解锁的节点"
+}
 $notification.post("Netflix", info , "")
 
     $done()
