@@ -47,6 +47,7 @@ def tf_parser(buf):
     ava_domain_pat = re.compile('availability_domain = "(.*)"')
 
     ava_domain = ava_domain_pat.findall(buf).pop()
+    
     domain = ava_domain
 
     # compoartment id
@@ -65,6 +66,7 @@ def tf_parser(buf):
     # 实例名称
     disname_pat = re.compile('display_name = "(.*)"')
     disname = disname_pat.findall(buf).pop()
+    disname = disname.strip().replace(" ","-")
     disp_name = disname
     # 查找类型
     shape_pat = re.compile('shape = "(.*)"')
