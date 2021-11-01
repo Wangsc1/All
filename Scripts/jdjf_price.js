@@ -355,7 +355,7 @@ function convert(url, isOriginJXURL) {
                         let r = {};
                         let scheme = autoChoose ? autoScheme : chooseScheme;
                         if (data.data.promotionUrl) {
-                            r.msg = `〽️ 佣金比例 ➩ ${data.data.wlCommissionShare}%║💴 预估佣金 ➩ ${data.data.wlCommission}¥`;
+                            r.msg = `💴 预估佣金 ➩ ${data.data.wlCommission}¥〽️║佣金比例 ➩ ${data.data.wlCommissionShare}%`;
                             r.convertURL =
                                 scheme == "browser"
                                     ? chooseBrowser + data.data.promotionUrl
