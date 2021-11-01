@@ -12,8 +12,8 @@ if ($trigger == "button") await httpAPI("/v1/profiles/reload");
   $done({
       title:"Surge",
       content:`2022-09-27 | ${startTime}`,
-		icon: params.icon,
-		"icon-color": params.color
+		"icon": 'waveform.circle.fill',
+		"icon-color": 'FF7909'
     });
 
 })();
