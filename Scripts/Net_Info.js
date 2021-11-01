@@ -9,7 +9,7 @@ let allGroup = [];
 for (var key in proxy){
    allGroup.push(key)
     }
-let group = params.group
+let group = params.Group
 let rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(group)+"")).policy;
 while(allGroup.includes(rootName)==true){
 	rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(rootName)+"")).policy;
@@ -20,11 +20,10 @@ $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, da
     $done({
       title:rootName,
       content:
-		`国家地区: ${jsonData.country} - ${jsonData.city}\n`+
-      `运营商 : ${jsonData.isp}\n` +
-		`数据中心: ${jsonData.org}`,
-          "icon":'location.circle.fill',
-		  "icon-color":'007BFF'
+		`${jsonData.query} | ${jsonData.countryCode}-${jsonData.city}\n` + 
+               `${jsonData.isp}`,
+                "icon":'location.circle.fill',
+		 "icon-color":'007BFF'
     });
   });
 
