@@ -132,7 +132,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
             let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
             msg += convertmsg ? convertmsg : "😤 该商品暂无返利";
             let oprnUrl = detail[1].convertURL ? detail[1].convertURL : "";
-            $tool.notify("京粉佣金", "", msg, oprnUrl);
+            $tool.notify("京粉返利", "", msg, oprnUrl);
         })
         .finally(() => {
             $done({ body });
@@ -198,7 +198,7 @@ function convert(url, isOriginJXURL) {
                         let r = {};
                         let scheme = autoChoose ? autoScheme : chooseScheme;
                         if (data.data.promotionUrl) {
-                            r.msg = `〽️ 佣金比例 ➩ ${data.data.wlCommissionShare}%║💴 预估佣金 ➩ ${data.data.wlCommission}¥`;
+                            r.msg = `💴 预估返利 ➩ ${data.data.wlCommission}¥║〽️ 返利比例 ➩ ${data.data.wlCommissionShare}%`;
                             r.convertURL =
                                 scheme == "browser"
                                     ? chooseBrowser + data.data.promotionUrl
