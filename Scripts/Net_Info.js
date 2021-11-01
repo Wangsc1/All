@@ -20,9 +20,9 @@ $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, da
     $done({
       title:rootName,
       content:
-		`${jsonData.query} | ${jsonData.countryCode}-${jsonData.city}\n` + 
-               `${jsonData.isp}`,
-                "icon":'location.circle.fill',
+		`${jsonData.query}\n` + 
+        `${jsonData.countryCode}-${jsonData.city} | ${jsonData.isp}`,
+         "icon":'location.circle.fill',
 		 "icon-color":'007BFF'
     });
   });
