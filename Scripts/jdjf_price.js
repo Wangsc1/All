@@ -122,11 +122,11 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
             if (detail[0].lower_tip) {
                 msg += detail[0].lower_tip;
                 let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
-                msg += convertmsg ? "\n" + convertmsg : "";
+                msg += convertmsg ? convertmsg : "😤 该商品暂无返利";
                 // msg += "\n" + detail[0].historydetail;
             } else {
                 let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
-                msg += convertmsg ? convertmsg + "\n" : "";
+                msg += convertmsg ? convertmsg : "";
                 msg += detail[0];
             }
             let oprnUrl = detail[1].convertURL ? detail[1].convertURL : "";
@@ -280,7 +280,7 @@ function request_history_price(share_url) {
                     const detail = priceSummary(data);
                     const tip = data.PriceRemark.Tip;
                     let r = {};
-                    r.lower_tip = `${lower}`;
+                    r.lower_tip = `${lower}\n`;
                     r.historydetail = `${detail.substr(1)}`;
                     resolve(r);
                 }
