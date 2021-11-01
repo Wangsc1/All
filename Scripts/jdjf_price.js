@@ -140,7 +140,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
 function lowerMsgs(data) {
     const lower = data.lowerPriceyh;
     const lowerDate = dateFormat(data.lowerDateyh);
-        const lowerMsg = "💴 历史最低 ➩ " + String(lower) + "¥║" + `${lowerDate}`;
+        const lowerMsg = "💴 历史最低 ➩ " + String(lower) + "¥║" + `🕒 ${lowerDate}`;
     return lowerMsg;
 }
 
