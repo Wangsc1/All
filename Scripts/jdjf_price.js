@@ -123,14 +123,14 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
                 msg += detail[0].lower_tip;
                 let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
                 msg += convertmsg ? "\n" + convertmsg : "";
-                msg += "\n" + detail[0].historydetail;
+                // msg += "\n" + detail[0].historydetail;
             } else {
                 let convertmsg = detail[1].convertURL ? detail[1].msg : detail[1];
                 msg += convertmsg ? convertmsg + "\n" : "";
                 msg += detail[0];
             }
             let oprnUrl = detail[1].convertURL ? detail[1].convertURL : "";
-            $tool.notify("", "", msg, oprnUrl);
+            $tool.notify("京东价格(京粉佣金)", "", msg, oprnUrl);
         })
         .finally(() => {
             $done({ body });
@@ -140,7 +140,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
 function lowerMsgs(data) {
     const lower = data.lowerPriceyh;
     const lowerDate = dateFormat(data.lowerDateyh);
-    const lowerMsg = "🤖️ 历史最低价 ➩ " + String(lower) + "¥" + ` (${lowerDate}) `;
+    const lowerMsg = "🤖️ 历史最低 ➩ " + String(lower) + "¥" + ` (${lowerDate}) `;
     return lowerMsg;
 }
 
@@ -155,7 +155,7 @@ function priceSummary(data) {
             item.Name = "六一八价格";
         }
         let price = String(parseInt(item.Price.substr(1)));
-        summary += `\n${item.Name}   ${isNaN(price) ? "-" :price}¥  ${item.Date}  ${
+        summary += `\n${item.Name}   ${isNaN(price) ? "-" : "¥" + price}   ${item.Date}   ${
             item.Difference
         }`;
     });
@@ -178,28 +178,28 @@ function historySummary(single) {
                 currentPrice = price;
                 lowest30 = {
                     Name: "三十天最低",
-                    Price: `${String(price)}¥`,
+                    Price: `¥${String(price)}`,
                     Date: date,
                     Difference: difference(currentPrice, price),
                     price,
                 };
                 lowest90 = {
                     Name: "九十天最低",
-                    Price: `${String(price)}¥`,
+                    Price: `¥${String(price)}`,
                     Date: date,
                     Difference: difference(currentPrice, price),
                     price,
                 };
                 lowest180 = {
                     Name: "一百八最低",
-                    Price: `${String(price)}¥`,
+                    Price: `¥${String(price)}`,
                     Date: date,
                     Difference: difference(currentPrice, price),
                     price,
                 };
                 lowest360 = {
                     Name: "三百六最低",
-                    Price: `${String(price)}¥`,
+                    Price: `¥${String(price)}`,
                     Date: date,
                     Difference: difference(currentPrice, price),
                     price,
@@ -280,12 +280,12 @@ function request_history_price(share_url) {
                     const detail = priceSummary(data);
                     const tip = data.PriceRemark.Tip;
                     let r = {};
-                    r.lower_tip = `${lower} ${tip}`;
+                    r.lower_tip = `${lower}`;
                     r.historydetail = `${detail.substr(1)}`;
                     resolve(r);
                 }
                 if (data.ok == 0 && data.msg.length > 0) {
-                    let e = `⚠️ ${data.msg}`;
+                    let e = `😳 ${data.msg}`;
                     resolve(e);
                 }
             } else {
