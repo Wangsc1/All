@@ -1,16 +1,15 @@
 const FILM_ID = 81215567
 const AREA_TEST_FILM_ID = 80018499
-let params = getParams($argument)
+// let params = getParams($argument)
 
-  ;
-(async () => {
-  let Group = params.Group
+  ;(async () => {
+  let Group = 'Netflix'
   //将策略组名称创建为持久化数据
   $persistentStore.write(Group, "NFGroupName");
 
   let proxy = await httpAPI("/v1/policy_groups");
   let groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
-  var proxyName = [];//获取子策略名称
+  var proxyName = [];// 获取子策略名称
   let arr = proxy["" + Group + ""];
   for (let i = 0; i < arr.length; ++i) {
     proxyName.push(arr[i].name);
@@ -20,7 +19,7 @@ let params = getParams($argument)
     allGroup.push(key)
   }
 
-  /* 手动切换策略 */
+  // 手动切换策略
   let index;
   for (let i = 0; i < proxyName.length; ++i) {
     if (groupName == proxyName[i]) {
@@ -40,7 +39,7 @@ let params = getParams($argument)
 groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
 
 
-  /* 判断节点列表是否为空 */
+  // 判断节点列表是否为空
   var data
   if($persistentStore.read("NFREGIONCODE") == null){
 	data={}
@@ -55,10 +54,10 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
   var selectOG = []
 
   if ($persistentStore.read("FULLUNLOCK") == null || $persistentStore.read("ONLYORIGINAL") == null) { } else {
-    //读取持久化数据
+    // 读取持久化数据
     fullUnlock = $persistentStore.read("FULLUNLOCK").split(",");
     onlyOriginal = $persistentStore.read("ONLYORIGINAL").split(",");
-    //清除空值
+    // 清除空值
     del(fullUnlock, "")
     del(onlyOriginal, "")
   }
@@ -85,7 +84,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 
   // 为空时执行检测
   if (selectFU.length == 0) {
-	//去除历史数据
+	// 去除历史数据
 	for (let i = 0; i < selectName.length; ++i) {
 	if(fullUnlock.includes(selectName[i])==true){
 		del(fullUnlock,selectName[i])
@@ -93,21 +92,21 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 		del(onlyOriginal,selectName[i])
 		}
 	}
-    //遍历检测当选策略
+    // 遍历检测当选策略
     console.log("当前检测：" + groupName)
 	let newStatus;
 	let reg;
     for (let i = 0; i < selectName.length; ++i) {
-      //切换节点
+      // 切换节点
       $surge.setSelectGroupPolicy(groupName, selectName[i]);
-      //等待
+      // 等待
       await timeout(1000).catch(() => {})
-      //执行测试
+      // 执行测试
       let { status, regionCode, policyName } = await testPolicy(selectName[i]);
 		newStatus=status 
 		reg = regionCode
       
-      /* 检测超时 再测一次 */
+      // 检测超时 再测一次
       if (newStatus < 0) {
         console.log(selectName[i] + ": 连接超时了，再测一次")
         await timeout(1000).catch(() => {})
@@ -116,7 +115,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 		  reg = regionCode
       }
       console.log("检测结果："+selectName[i]+" | "+statusName(newStatus))
-      //填充数据
+      // 填充数据
       dataname = selectName[i]
       data[dataname] = reg
       if (newStatus === 2) {
@@ -130,7 +129,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
           selectOG.push(selectName[i])
         }
       }
-		//找到全解锁节点 退出检测
+		// 找到全解锁节点 退出检测
 		if(newStatus==2) {
 		console.log("找到可用节点 退出检测")
 		break;
@@ -149,24 +148,21 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
 
   }
 
-	//设定节点
+	// 设定节点
 	 if (selectList.length > 0) {
 		$surge.setSelectGroupPolicy(groupName, selectList[0]);
 	 }else{
 	 	$surge.setSelectGroupPolicy(groupName, selectName[0]);
 	 }
 
-  /* 刷新信息 */
-  //获取根节点名
+  // 刷新信息
+  // 获取根节点名
   let rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
   while (allGroup.includes(rootName) == true) {
     rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(rootName) + "")).policy;
   }
 
-  /**
-   * 面板显示
-   */
-
+  // 面板显示
   let title = "Netflix";
 
   let panel = {
@@ -231,9 +227,7 @@ async function testPolicy(policyName) {
   }
 }
 
-/**
- * 测试是否解锁
- */
+// 测试是否解锁
 function testFilm(filmId) {
   return new Promise((resolve, reject) => {
     let option = {

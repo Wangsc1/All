@@ -1,14 +1,13 @@
 ;(async () => {
 
-let params = getParams(Proxy) // Proxy为策略组名称，可替换成$argument使用
-
-//获取根节点名
+// let params = getParams($argument)
+// 获取根节点名
 let proxy = await httpAPI("/v1/policy_groups");
 let allGroup = [];
 for (var key in proxy){
    allGroup.push(key)
     }
-let group = params.Group
+let group = 'Proxy'
 let rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(group)+"")).policy;
 while(allGroup.includes(rootName)==true){
 	rootName = (await httpAPI("/v1/policy_groups/select?group_name="+encodeURIComponent(rootName)+"")).policy;
