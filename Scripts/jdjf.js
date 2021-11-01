@@ -1,9 +1,9 @@
 /*
 Surge：
-京粉转链 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
+京粉转链 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
 
 QuanX：
-^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_jf.js
+^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
 
 hostname=api.m.jd.com
  */
@@ -117,7 +117,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
             ? others.property.shareUrl
             : commodity_info.data.property.shareUrl;
     autoScheme = url.indexOf(path2h) != -1 ? "openApp.jdHealth" : "openjd";
-    //const scheme = !autoChoose ? chooseScheme : url.indexOf(path4) != -1 ? "openapp.jdpingou" : url.indexOf(path2h) != -1 ? "openApp.jdHealth" : url.indexOf("lite_"+path3) != -1 ? "openjdlite" : "openjd";
+    // const scheme = !autoChoose ? chooseScheme : url.indexOf(path4) != -1 ? "openapp.jdpingou" : url.indexOf(path2h) != -1 ? "openApp.jdHealth" : url.indexOf("lite_"+path3) != -1 ? "openjdlite" : "openjd";
     let getHistory = "";
     let convertURL = "";
     let jxconvertURL = "";
@@ -165,7 +165,7 @@ function convert(url, isOriginJXURL) {
                 autoScheme = jsapp ? "openjdlite" : "browser";
             } else {
                 url = url;
-                //url = url.replace(/\//g, "\\/");
+                // url = url.replace(/\//g, "\\/");
             }
             let body = {
                 funName: "getSuperClickUrl",

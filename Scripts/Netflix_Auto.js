@@ -4,7 +4,7 @@ const AREA_TEST_FILM_ID = 80018499
 
   ;(async () => {
   let Group = 'Netflix'
-  //将策略组名称创建为持久化数据
+  // 将策略组名称创建为持久化数据
   $persistentStore.write(Group, "NFGroupName");
 
   let proxy = await httpAPI("/v1/policy_groups");
