@@ -155,9 +155,7 @@ function priceSummary(data) {
             item.Name = "六一八价格";
         }
         let price = String(parseInt(item.Price.substr(1)));
-        summary += `\n${item.Name}   ${isNaN(price) ? "-" : "¥" + price}   ${item.Date}   ${
-            item.Difference
-        }`;
+        summary += `\n${item.Name}   ${isNaN(price) ? "-" : "¥" + price}   ${item.Date}   ${item.Difference}`;
     });
     return summary;
 }
