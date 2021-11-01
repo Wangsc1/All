@@ -1,11 +1,3 @@
-/*
-Loon：
-[Script]
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价
-[MITM]
-hostname = api.m.jd.com
- */
-
 const path1 = "serverConfig";
 const path2 = "wareBusiness";
 const path2h = "wareBusiness.style";
@@ -148,7 +140,7 @@ if (url.indexOf(path2) != -1 || url.indexOf(path4) != -1) {
 function lowerMsgs(data) {
     const lower = data.lowerPriceyh;
     const lowerDate = dateFormat(data.lowerDateyh);
-    const lowerMsg = "🤖️ 历史最低价 ➩ " + String(lower) +"¥" + ` (${lowerDate}) `;
+    const lowerMsg = "🤖️ 历史最低价 ➩ " + String(lower) + "¥" + ` (${lowerDate}) `;
     return lowerMsg;
 }
 
@@ -163,7 +155,7 @@ function priceSummary(data) {
             item.Name = "六一八价格";
         }
         let price = String(parseInt(item.Price.substr(1)));
-        summary += `\n${item.Name}   ${isNaN(price) ? "-" : "¥" + price}   ${item.Date}   ${
+        summary += `\n${item.Name}   ${isNaN(price) ? "-" :price} + "¥"   ${item.Date}   ${
             item.Difference
         }`;
     });
@@ -363,7 +355,7 @@ function convert(url, isOriginJXURL) {
                         let r = {};
                         let scheme = autoChoose ? autoScheme : chooseScheme;
                         if (data.data.promotionUrl) {
-                            r.msg = `〽️ 佣金比例 ➩ ${data.data.wlCommissionShare} %║💴 预估佣金 ➩ ${data.data.wlCommission}`;
+                            r.msg = `〽️ 佣金比例 ➩ ${data.data.wlCommissionShare}%║💴 预估佣金 ➩ ${data.data.wlCommission}¥`;
                             r.convertURL =
                                 scheme == "browser"
                                     ? chooseBrowser + data.data.promotionUrl
