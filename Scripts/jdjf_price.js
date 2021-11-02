@@ -283,7 +283,7 @@ function request_history_price(share_url) {
                     resolve(r);
                 }
                 if (data.ok == 0 && data.msg.length > 0) {
-                    let e = `😳 ${data.msg}`;
+                    let e = `\n😳 ${data.msg}`;
                     resolve(e);
                 }
             } else {
