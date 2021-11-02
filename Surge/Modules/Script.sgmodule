@@ -2,38 +2,38 @@
 #!desc=脚本,任务,重写
 
 [MITM]
-hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.cn,api.m.jd.com
+hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade-acs.m.taobao.com
 
 [Panel]
-# Surge Pro
+# Surge_Pro
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # Sub_Info
-Sub_Exflux = script-name=Sub_Exflux,update-interval=1
+Sub_Info = script-name=Sub_Info,update-interval=1
 
-# IP_Check
-IP_Check = script-name=IP_Check, update-interval=1
+# Net_Info
+NET_Info = script-name=NET_Info,update-interval=1
 
 # Netflix_Auto
-Netflix_Auto = script-name=Netflix_Auto, update-interval=1
+Netflix_Auto = script-name=Netflix_Auto, update-interval=600
 
 [Script]
-# Surge Pro
-Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=icon=waveform.circle.fill&color=#FF7909
+# Surge_Pro
+Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10
 
 # Sub_Info
-Sub_Exflux = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
 
-# IP_Check
-IP_Check = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/IP_Check.js,timeout=10
+# Net_Info
+NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,timeout=10
 
 # Netflix_Auto
-Netflix_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Auto.js,argument=Group=Netflix
+Netflix_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Auto.js
 
-// Netflix_Shortcut = type=cron,cronexp=* * * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_ShortCut.js,control-api=1
+// Netflix_Shortcut = type=cron,cronexp=5 * 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_ShortCut.js,control-api=1
 
 # QL同步BoxJs
-QL同步BoxJs = type=cron,cronexp=54 */12 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
+QL同步BoxJs = type=cron,cronexp=54 0,12 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
 
 # BoxJs
 BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
@@ -44,8 +44,12 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 # 彩云SVIP
 彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
-# 京粉佣金
-京粉佣金 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf.js
+# 京东价格/返利
+京东价格/返利 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jdjf_price.js
+
+# 淘宝价格
+淘宝价格 = type=http-response,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
+淘宝价格 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
 
 [URL Rewrite]
 # 谷歌
