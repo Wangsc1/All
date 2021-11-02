@@ -16,12 +16,11 @@ while(allGroup.includes(rootName)==true){
 $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, data) {
     const jsonData = JSON.parse(data);
     $done({
-      title:rootName,
+      title:'Network',
       content:
-		`${jsonData.query}\n` + 
-        `${jsonData.countryCode}-${jsonData.city} | ${jsonData.isp}`,
-         "icon":'location.circle.fill',
-		 "icon-color":'007BFF'
+		`${rootName} | ${jsonData.query}`,
+        "icon":'location.circle.fill',
+		"icon-color":'007BFF'
     });
   });
 
