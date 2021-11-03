@@ -1,14 +1,13 @@
 // let params = getParams($argument)
 
 !(async () => {
-
 // 时间获取
 let traffic = (await httpAPI("/v1/traffic","GET"))
 let dateNow = new Date()
 let dateTime = Math.floor(traffic.startTime*1000)
 let startTime = timeTransform(dateNow,dateTime)
 
-if ($trigger == "button") await httpAPI("/v1/profiles/reload");
+if ($trigger == "button") await httpAPI("/v1/dns/flush");
 
   $done({
       title:"Surge",
