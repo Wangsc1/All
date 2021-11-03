@@ -19,7 +19,7 @@ $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, da
       title:'Network',
       content:
 		`${rootName} | ${jsonData.query}`,
-        "icon":'location.circle.fill',
+        "icon":'map.circle.fill',
 		"icon-color":'007BFF'
     });
   });
