@@ -1,12 +1,12 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
-项目名称: JD-Script / jd_Evaluation
+项目名称: JD-Script/jd_Evaluation
 Author: qiu_lzsnmb
 功能：全自动完成评价+晒单，提高京享值，满足强迫症
 Date: 2021/10/30 上午10:58
 update: 2021.11.6 13:21
-建议cron: 0 9 * * 3 python3 jd_Evaluation.py
+建议cron: 5 9 * * 3 python3 jd_Evaluation.py
 new Env('自动评价商品');
 '''
 import os
