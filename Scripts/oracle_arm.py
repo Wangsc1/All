@@ -204,7 +204,7 @@ class InsCreate:
     def create(self):
         # print("与运行创建活动")
         # 开启一个tg的原始推送
-        text = "👻 开始新建\n区域:{}-实例:{},CPU:{}C-内存:{}G-硬盘:{}G".format(
+        text = "👻 开始新建：\n区域:{}\n实例:{},CPU:{}C-内存:{}G-硬盘:{}G".format(
             self.tf.availability_domain,
             self.tf.display_name,
             self.tf.ocpus,
@@ -237,7 +237,7 @@ class InsCreate:
                 #  开通成功 ，ins 就是返回的数据
                 #  可以等一会去请求实例的ip
                 # print("开通成功之后的ins:\n\n", ins, type(ins))
-                self.logp("🎉 新建成功\n区域:{}实例:{}-CPU:{}C-内存:{}G\n👉 后台登录：https://www.oracle.com/cn/cloud/sign-in.html".format(
+                self.logp("🎉 新建成功：\n区域:{}\n实例:{}-CPU:{}C-内存:{}G\n".format(
                     self.try_count + 1,
                     self.tf.availability_domain,
                     self.tf.display_name,
@@ -265,7 +265,7 @@ class InsCreate:
                 print("开始查找vnic id ")
                 vnic_id = data[0].vnic_id
                 public_ip = network_client.get_vnic(vnic_id).data.public_ip
-                self.logp("🌐 IP地址为:{}".format(public_ip))
+                self.logp("🌐 IP地址：{}\n👉 后台登录：https://www.oracle.com/cn/cloud/sign-in.html".format(public_ip))
                 self.public_ip = public_ip
                 break
             time.sleep(5)
