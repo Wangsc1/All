@@ -107,7 +107,7 @@ class FileParser:
         try:
             self.boot_volume_size_in_gbs = float(oot_volume_size_in_gbs_pat.findall(self._filebuf).pop())
         except IndexError:
-            self.boot_volume_size_in_gbs = 50.0
+            self.boot_volume_size_in_gbs = 100.0
 
         # print("硬盘大小", self.boot_volume_size_in_gbs)
         # 读取密钥
@@ -204,7 +204,7 @@ class InsCreate:
     def create(self):
         # print("与运行创建活动")
         # 开启一个tg的原始推送
-        text = "👻 开始新建:\n区域:{}\n实例:{}\n配置:CPU:{}C-内存:{}G-硬盘:{}G".format(
+        text = "👻 开始新建：\n区域：{}\n实例：{}\n配置：CPU:{}C-内存:{}G-硬盘:{}G".format(
             self.tf.availability_domain,
             self.tf.display_name,
             self.tf.ocpus,
@@ -237,7 +237,7 @@ class InsCreate:
                 #  开通成功 ，ins 就是返回的数据
                 #  可以等一会去请求实例的ip
                 # print("开通成功之后的ins:\n\n", ins, type(ins))
-                self.logp("🎉 新建成功:\n区域:{}\n实例:{}\n配置:CPU:{}C-内存:{}G\n".format(
+                self.logp("🎉 新建成功：\n区域：{}\n实例：{}\n配置：CPU:{}C-内存:{}G\n".format(
                     self.try_count + 1,
                     self.tf.availability_domain,
                     self.tf.display_name,
