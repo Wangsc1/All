@@ -107,7 +107,7 @@ class FileParser:
         try:
             self.boot_volume_size_in_gbs = float(oot_volume_size_in_gbs_pat.findall(self._filebuf).pop())
         except IndexError:
-            self.boot_volume_size_in_gbs = 100.0
+            self.boot_volume_size_in_gbs = 50.0
 
         # print("硬盘大小", self.boot_volume_size_in_gbs)
         # 读取密钥
