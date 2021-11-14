@@ -25,7 +25,7 @@
 
   $done({
     title: `${args.title}`,
-    content: (`${formatTime(expire)} | ${bytesToSize(used)} ⇋ ${bytesToSize(total)} • ${resetDayLeft} D`),
+    content: (`${formatTime(expire)} | ${bytesToSize(used)} ⇋ ${bytesToSize(total)} • ${resetDayLeft}D`),
     icon: args.icon || "airplane.circle.fill",
     "icon-color": args.color || "#C3291C",
   });
@@ -102,7 +102,7 @@ function getRmainingDays(resetDay) {
 function bytesToSize(bytes) {
   if (bytes === 0) return "0B";
   let k = 1024;
-  sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  sizes = ["B", "K", "M", "G", "T", "P", "E", "Z", "Y"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + sizes[i];
 }
