@@ -38,7 +38,7 @@ if(days==0){
 	}
 	return(`${hours}时${minutes}分${seconds}秒`)
 	}else {
-	return(`${days}天${hours}时${minutes}分`)
+	return(`${days}天${hours}时${minutes}分${seconds}秒`)
 	}
 
 }
