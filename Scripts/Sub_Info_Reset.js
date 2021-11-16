@@ -26,7 +26,7 @@
 
   $done({
     title: `${args.title}`,
-    content: (`${formatTime(expire)} | ${bytesToSize(left)} • ${resetDayLeft}D(s)`),
+    content: (`${formatTime(expire)} | ${bytesToSize(left)} • ${resetDayLeft}天`),
     icon: args.icon || "airplane.circle.fill",
     "icon-color": args.color || "#C3291C",
   });
