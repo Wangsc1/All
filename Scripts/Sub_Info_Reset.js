@@ -6,6 +6,7 @@
 
   let used = info.download + info.upload;
   let total = info.total;
+  let left = total - used;
   let expire = args.expire || info.expire;
   let content = [`流量使用 : ${bytesToSize(used)} ⇋ ${bytesToSize(total)}`];
 
@@ -25,7 +26,7 @@
 
   $done({
     title: `${args.title}`,
-    content: (`${formatTime(expire)} | ${bytesToSize(used)} ⇋ ${bytesToSize(total)} • ${resetDayLeft}D`),
+    content: (`${formatTime(expire)} | ${bytesToSize(left)} • ${resetDayLeft}D`),
     icon: args.icon || "airplane.circle.fill",
     "icon-color": args.color || "#C3291C",
   });
@@ -102,7 +103,7 @@ function getRmainingDays(resetDay) {
 function bytesToSize(bytes) {
   if (bytes === 0) return "0B";
   let k = 1024;
-  sizes = ["B", "K", "M", "G", "T", "P", "E", "Z", "Y"];
+  sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + sizes[i];
 }
