@@ -170,7 +170,7 @@ groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURICom
   }
 
   if (fullUnlock.includes(rootName)){
-    panel['content'] = `${rootName} | 完整解锁  ➟ ${regData[rootName]}`
+    panel['content'] = `${rootName} | 完整解锁  ➟ ${data[rootName]}`
     panel['icon'] = 'checkmark.circle.fill'
     panel['icon-color'] = '#36CE66'
   } else if (onlyOriginal.includes(rootName)) {
