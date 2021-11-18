@@ -14,84 +14,72 @@ const STATUS_ERROR = -2
 
   ; (async () => {
 
-    // let params = getParams($argument)
-    let Group = 'Disney'
-    //将策略组名称创建为持久化数据
-    $persistentStore.write(Group, "DISNEYGROUP");
-
+    let disneyGroup = $persistentStore.read("DISNEYGROUP")
     let proxy = await httpAPI("/v1/policy_groups");
-    let groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
-    var proxyName = [];//Disney节点组名称
-    let arr = proxy["" + Group + ""];
-    for (let i = 0; i < arr.length; ++i) {
-      proxyName.push(arr[i].name);
-    }
+    let groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(disneyGroup) + "")).policy;
+
     let allGroup = [];
     for (var key in proxy) {
       allGroup.push(key)
     }
 
-    /* 手动切换策略 */
-    let index;
-    for (let i = 0; i < proxyName.length; ++i) {
-      if (groupName == proxyName[i]) {
-        index = i
-      }
-    };
-    if ($trigger == "button") {
-      index += 1;
-      if (index > arr.length - 1) {
-        index = 0;
-      }
-      $surge.setSelectGroupPolicy(Group, proxyName[index]);
-    };
-
-    groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
-
-    /* 判断节点列表是否为空 */
-    var regData
-    if ($persistentStore.read("DISNETYREG") == null) {
-      regData = {}
+    //测试当前状态
+    let { region, status } = await testDisneyPlus()
+    let newStatus = status
+    let reg = region
+    if (newStatus < 0) {
+      console.log("连接超时了，再测一次")
+      await timeout(1000).catch(() => { })
+      let { region, status } = await testDisneyPlus()
+      newStatus = status
+      reg = region
+    }
+    if (newStatus === 1) {
+      console.log("当前节点仍可用 退出检测")
     } else {
-      regData = JSON.parse($persistentStore.read("DISNETYREG"))
-    }
-    var statusData
-    if ($persistentStore.read("DISNETYSTATUS") == null) {
-      statusData = {}
-    } else {
-      statusData = JSON.parse($persistentStore.read("DISNETYSTATUS"))
-    }
 
-    let dataname;
-    var unlocked = []
-    var selectFU = []
-
-    if ($persistentStore.read("DISNEYUNLOCKED") == null) {
-    } else {
-      //读取持久化数据
-      unlocked = $persistentStore.read("DISNEYUNLOCKED").split(",");
-      //清除空值
-      del(unlocked, "")
-    }
-
-    var selectName = []
-    let select = proxy["" + groupName + ""];
-    for (let i = 0; i < select.length; ++i) {
-      selectName.push(select[i].name);
-    }
-
-    for (let i = 0; i < selectName.length; ++i) {
-      if (unlocked.includes(selectName[i]) == true) {
-        selectFU.push(selectName[i])
+      var regData
+      if ($persistentStore.read("DISNETYREG") == null) {
+        regData = {}
+      } else {
+        regData = JSON.parse($persistentStore.read("DISNETYREG"))
       }
-    }
+      var statusData
+      if ($persistentStore.read("DISNETYSTATUS") == null) {
+        statusData = {}
+      } else {
+        statusData = JSON.parse($persistentStore.read("DISNETYSTATUS"))
+      }
 
-    // 为空时执行检测
-    if (selectFU.length == 0) {
+
+      let dataname;
+      var unlocked = []
+      var selectFU = []
+
+      if ($persistentStore.read("DISNEYUNLOCKED") == null) {
+      } else {
+        //读取持久化数据
+        unlocked = $persistentStore.read("DISNEYUNLOCKED").split(",");
+        //清除空值
+        del(unlocked, "")
+      }
+
+      /* 测试当选策略组节点状态并记录数据 */
+
+      var selectName = []
+      let select = proxy["" + groupName + ""];
+      for (let i = 0; i < select.length; ++i) {
+        selectName.push(select[i].name);
+      }
+      //去除历史数据
+      for (let i = 0; i < selectName.length; ++i) {
+        if (unlocked.includes(selectName[i]) == true) {
+          del(unlocked, selectName[i])
+        }
+      }
+
       //遍历检测当选策略
       console.log("当前检测：" + groupName)
-      let newStatus;
-      let reg;
       for (let i = 0; i < selectName.length; ++i) {
         //切换节点
         $surge.setSelectGroupPolicy(groupName, selectName[i]);
@@ -129,54 +117,43 @@ const STATUS_ERROR = -2
         }
       }
 
-      // 更新持久化数据
+      //设定节点
+      if (selectFU.length > 0) {
+        $surge.setSelectGroupPolicy(groupName, selectFU[0]);
+      } else {
+        $surge.setSelectGroupPolicy(groupName, selectName[0]);
+      }
+
+      // 创建持久化数据
+
       $persistentStore.write(unlocked.toString(), "DISNEYUNLOCKED");
       $persistentStore.write(JSON.stringify(regData), "DISNETYREG")
       $persistentStore.write(JSON.stringify(statusData), "DISNETYSTATUS")
 
 
+      //打印测试结果
+      console.log("可解锁:" + unlocked.sort())
     }
 
-    //设定节点
-    if (selectFU.length > 0) {
-      $surge.setSelectGroupPolicy(groupName, selectFU[0]);
-    } else {
-      $surge.setSelectGroupPolicy(groupName, selectName[0]);
-    }
-
-    /* 刷新信息 */
     //获取根节点名
-    let rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(Group) + "")).policy;
+    let rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(disneyGroup) + "")).policy;
     while (allGroup.includes(rootName) == true) {
       rootName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(rootName) + "")).policy;
     }
 
-    /**
-       * 面板显示
-       */
-
-    let title = "Disney+"
-
-    let panel = {
-      title: `${title}`,
-    }
-
-    if (statusData[rootName] == 1) {
-    panel['content'] = `${rootName} | 支持解锁  ➟ ${regData[rootName]}`
-    panel['icon'] = 'checkmark.circle.fill'
-    panel['icon-color'] = '#36CE66'
+    let info
+    if (newStatus === 1) {
+      info = `${rootName} | ${statusName(newStatus)} ➟ ${reg}`
     } else if (statusData[rootName] == 2) {
-    panel['content'] = `${rootName} | 该地区即将上线`
-    panel['icon'] = 'exclamationmark.circle.fill'
-    panel['icon-color'] = '#FFDE00'
+      info = `${rootName} | 该地区即将上线`
     } else {
-    panel['content'] = `${rootName} | 不支持解锁`
-    panel['icon'] = 'multiply.circle.fill'
-    panel['icon-color'] = '#F52900'
+      info = "该策略组暂无解锁的节点"
     }
 
-    $done(panel)
+    $notification.post("Disney檢測", info, "")
 
+
+    $done()
 
   })()
 
@@ -360,7 +337,6 @@ function replaceRegionPlaceholder(content, region) {
   return result
 }
 
-
 function httpAPI(path = "", method = "GET", body = null) {
   return new Promise((resolve) => {
     $httpAPI(method, path, body, (result) => {
@@ -368,15 +344,6 @@ function httpAPI(path = "", method = "GET", body = null) {
     });
   });
 };
-
-function getParams(param) {
-  return Object.fromEntries(
-    $argument
-      .split("&")
-      .map((item) => item.split("="))
-      .map(([k, v]) => [k, decodeURIComponent(v)])
-  );
-}
 
 function statusName(status) {
   return status == 2 ? "即将登陆"
