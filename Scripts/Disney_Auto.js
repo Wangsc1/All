@@ -155,7 +155,7 @@ const STATUS_ERROR = -2
        * 面板显示
        */
 
-    let title = "Disney+"
+    let title = "Disney"
 
     let panel = {
       title: `${title}`,
