@@ -346,9 +346,9 @@ function httpAPI(path = "", method = "GET", body = null) {
 };
 
 function statusName(status) {
-  return status == 2 ? "即将登陆"
-    : status == 1 ? "已解锁"
-      : status == 0 ? "不解锁"
+  return status == 2 ? "该地区即将上线"
+    : status == 1 ? "支持解锁"
+      : status == 0 ? "不支持解锁"
         : status == -1 ? "检测超时"
           : "检测异常";
 }
