@@ -9,17 +9,19 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # Sub_Info
+# 1
 Sub_Info1 = script-name=Sub_Info1,update-interval=1
+# 2
 Sub_Info2 = script-name=Sub_Info2,update-interval=1
 
 # Net_Info
 NET_Info = script-name=NET_Info,update-interval=1
 
 # Netflix_Auto
-Netflix_Auto = script-name=Netflix_Auto,update-interval=600
+Netflix_Auto = script-name=Netflix_Auto,update-interval=1
 
 # Disney_Auto
-Disney_Auto = script-name=Disney_Auto,update-interval=600
+Disney_Auto = script-name=Disney_Auto,update-interval=1
 
 [Script]
 # Surge_Pro
@@ -27,9 +29,9 @@ Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/A
 
 # Sub_Info
 # 1
-Sub_Info1 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=Exflux&icon=airplane.circle.fill&color=C3291C
+Sub_Info1 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=FrogHub&icon=airplane.circle.fill&color=C3291C
 # 2
-Sub_Info2 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_Reset.js,timeout=10,argument=url=订阅urlencode&reset=18&title=FastFrog&icon=airplane.circle.fill&color=6CC1DC
+Sub_Info2 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_Reset.js,timeout=10,argument=url=订阅urlencode&reset=19&title=FastFrog&icon=airplane.circle.fill&color=6CC1DC
 
 # Net_Info
 NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,timeout=10
@@ -37,15 +39,15 @@ NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/Al
 # Netflix_Auto
 Netflix_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Auto.js,timeout=3600
 
-// Netflix_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_ShortCut.js,control-api=1
+// Netflix_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_ShortCut2.js,control-api=1
 
 # Disney_Auto
 Disney_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_Auto.js,timeout=3600
 
-// Disney_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_ShortCut.js,control-api=1
+// Disney_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_ShortCut2.js,control-api=1
 
-# 青龙同步至BoxJs
-青龙同步至BoxJs = type=cron,cronexp=54 */6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
+# Cookie同步
+Cookie同步 = type=cron,cronexp=54 */6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
 
 # BoxJs
 BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
