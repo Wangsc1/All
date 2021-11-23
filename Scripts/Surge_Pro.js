@@ -1,4 +1,4 @@
-// let params = getParams($argument)
+let params = getParams($argument)
 
 !(async () => {
 // 时间获取
@@ -11,7 +11,7 @@ if ($trigger == "button") await httpAPI("/v1/dns/flush");
 
   $done({
       title:"Surge",
-      content:`2022-09-27 | ${startTime}`,
+      content:`${params.Expire} | ${startTime}`,
 		"icon": 'waveform.circle.fill',
 		"icon-color": 'FF7909'
     });
