@@ -9,29 +9,23 @@ hostname = %APPEND% sub.store,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # Sub_Info
-# 1
-Sub_Info1 = script-name=Sub_Info1,update-interval=1
-# 2
-Sub_Info2 = script-name=Sub_Info2,update-interval=1
+Sub_Info = script-name=Sub_Info,update-interval=1
 
 # Net_Info
 NET_Info = script-name=NET_Info,update-interval=1
 
 # Netflix_Auto
-Netflix_Auto = script-name=Netflix_Auto,update-interval=1
+Netflix_Auto = script-name=Netflix_Auto,update-interval=600
 
 # Disney_Auto
-Disney_Auto = script-name=Disney_Auto,update-interval=1
+Disney_Auto = script-name=Disney_Auto,update-interval=600
 
 [Script]
 # Surge_Pro
-Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10
+Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=Expire=2022-09-27
 
 # Sub_Info
-# 1
-Sub_Info1 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=FrogHub&icon=airplane.circle.fill&color=C3291C
-# 2
-Sub_Info2 = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info_Reset.js,timeout=10,argument=url=订阅urlencode&reset=19&title=FastFrog&icon=airplane.circle.fill&color=6CC1DC
+Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=FrogHub&icon=airplane.circle.fill&color=C3291C
 
 # Net_Info
 NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,timeout=10
