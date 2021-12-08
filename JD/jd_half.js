@@ -1,4 +1,4 @@
-const $ = new Env('京东整点京豆雨');
+const $ = new Env('京东半点京豆雨');
 let allMessage = '';
 let bodyList = {
     '20': {
@@ -221,11 +221,11 @@ async function retryCdn(code, url) {
 }
 
 function rraUrl() {
-    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/JD/jd_live_id.json'
-    if($.isNode() && process.env.JD_RRA_URL){
-        url = process.env.JD_RRA_URL
-    }else if($.getdata('jdRRAUrl')){
-        url = $.getdata('jdRRAUrl')
+    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/JD/jd_half_id.json'
+    if($.isNode() && process.env.JD_HALF_RRA_URL){
+        url = process.env.JD_HALF_RRA_URL
+    }else if($.getdata('jdHalfRRAUrl')){
+        url = $.getdata('jdHalfRRAUrl')
     }
     return url
 }
