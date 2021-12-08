@@ -30,7 +30,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
         return;
     }
     let url = rraUrl()
-    console.log(`获取红包雨: ${url}`)
+    // console.log(`获取红包雨: ${url}`)
     let code = await redRainId(url)
     code = await retryCdn(code, url)
     console.log(`获取成功`)
