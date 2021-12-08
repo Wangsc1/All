@@ -33,7 +33,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     // console.log(`获取红包雨: ${url}`)
     let code = await redRainId(url)
     code = await retryCdn(code, url)
-    console.log(`获取成功`)
+    console.log(`🎉 获取成功`)
 
     if(!code){
         $.log(`目前没有红包雨直播，请改日再来吧😊\n`)
@@ -41,7 +41,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
     }
 
     let codeList = code.split(";")
-    console.log(`红包雨就位: ${codeList}`)
+    // console.log(`红包雨就位: ${codeList}`)
 
     for(let codeItem of codeList){
 
@@ -53,7 +53,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
         let hour = (new Date().getUTCHours() + 8) % 24
         if (ids[hour]) {
             $.activityId = ids[hour]
-            $.log(`RRA: ${codeItem}`)
+            $.log(`红包雨ID: ${codeItem}`)
         } else {
             $.log(`无法从本地读取配置，请检查运行时间`)
             return
