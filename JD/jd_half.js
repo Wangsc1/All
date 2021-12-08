@@ -53,7 +53,7 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
         let hour = (new Date().getUTCHours() + 8) % 24
         if (ids[hour]) {
             $.activityId = ids[hour]
-            $.log(`京豆雨ID: ${codeItem}`)
+            $.log(`🆔 京豆雨ID: ${codeItem}`)
         } else {
             $.log(`无法从本地读取配置，请检查运行时间`)
             return
