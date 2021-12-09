@@ -221,7 +221,7 @@ async function retryCdn(code, url) {
 }
 
 function rraUrl() {
-    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/JD/jd_live_id.json'
+    let url = 'https://raw.githubusercontent.com/Wangsc1/All/master/JD/live_id/jd_live_id.json'
     if($.isNode() && process.env.JD_RRA_URL){
         url = process.env.JD_RRA_URL
     }else if($.getdata('jdRRAUrl')){
