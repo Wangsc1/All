@@ -3,7 +3,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
   ; (async () => {
 
     let params = getParams($argument)
-    let youtubeGroup = YouTube
+    let youtubeGroup = 'YouTube'
     //将策略组名称创建为持久化数据
     $persistentStore.write(youtubeGroup, "YOUTUBEGROUP");
 
