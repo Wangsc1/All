@@ -3,9 +3,9 @@ const BASE_URL = 'https://www.youtube.com/premium'
   ; (async () => {
 
     let params = getParams($argument)
-    let youtubeGroup = params.YouTubeGroup
+    let youtubeGroup = YouTube
     //将策略组名称创建为持久化数据
-    $persistentStore.write(youtubeGroup, "YouTube");
+    $persistentStore.write(youtubeGroup, "YOUTUBEGROUP");
 
     let proxy = await httpAPI("/v1/policy_groups");
     let groupName = (await httpAPI("/v1/policy_groups/select?group_name=" + encodeURIComponent(youtubeGroup) + "")).policy;
