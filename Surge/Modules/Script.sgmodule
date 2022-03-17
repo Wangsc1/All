@@ -2,50 +2,31 @@
 #!desc=脚本,任务,重写
 
 [MITM]
-hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade-acs.m.taobao.com
+hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,*.youtube.com
 
 [Panel]
 # Surge_Pro
 Surge_Pro = script-name=Surge_Pro,update-interval=1
 
 # Sub_Info
-Sub_Info = script-name=Sub_Info,update-interval=1
+# Sub_Info = script-name=Sub_Info,update-interval=1
 
 # Net_Info
 NET_Info = script-name=NET_Info,update-interval=1
 
-# YouTube_Auto
-YouTube_Auto = script-name=YouTube_Auto,update-interval=600
-
-# Netflix_Auto
-Netflix_Auto = script-name=Netflix_Auto,update-interval=600
-
-# Disney_Auto
-Disney_Auto = script-name=Disney_Auto,update-interval=600
 [Script]
 # Surge_Pro
 Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=Expire=2022-09-27
 
 # Sub_Info
-Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=ExFlux&icon=airplane.circle.fill&color=C3291C
+# Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=ExFlux&icon=airplane.circle.fill&color=C3291C
 
 # Net_Info
-NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,timeout=10
+NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,argument=group=VPS,timeout=10
 
-# YouTube_Auto
-YouTube_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YouTube_Auto.js,timeout=3600
-
-// YouTube_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/YouTube_ShortCut2.js,control-api=1
-
-# Netflix_Auto
-Netflix_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_Auto.js,timeout=3600
-
-// Netflix_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Netflix_ShortCut2.js,control-api=1
-
-# Disney_Auto
-Disney_Auto = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_Auto.js,timeout=3600
-
-// Disney_ShortCut = type=cron,cronexp=5 * * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Disney_ShortCut2.js,control-api=1
+# YouTube字幕
+YouTube-Dualsub = type=http-response,pattern=https:\/\/www.youtube.com\/api\/timedtext.+,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js
+YouTube-Dualsub-Setting = type=http-request,pattern=https:\/\/setting.youtube.com\/\?action=(g|s)et,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js
 
 # Cookie同步
 Cookie同步 = type=cron,cronexp=54 */6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js
@@ -61,17 +42,17 @@ BoxJs备份 = type=cron,cronexp=10 0 */3 * *,wake-system=1,timeout=3600,script-p
 Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
 
 # Emby
-Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
+# Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
 
 # 彩云SVIP
 彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
 
 # 京东价格/返利
-京东价格/返利 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_fl_price.js
+# 京东价格/返利 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_fl_price.js
 
 # 淘宝价格
-淘宝价格 = type=http-response,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
-淘宝价格 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
+# 淘宝价格 = type=http-response,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
+# 淘宝价格 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
 
 [URL Rewrite]
 # 谷歌
