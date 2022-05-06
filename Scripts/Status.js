@@ -15,7 +15,7 @@ if ($trigger == "button") {
 	$notification.post("重载配置","成功 🎉","")
 };
 $done({
-    title:"Surge  已运行"+startTime,
+    title:"Surge ${params.Expire} | "+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: "waveform.circle.fill",
    // "icon-color":params.color
