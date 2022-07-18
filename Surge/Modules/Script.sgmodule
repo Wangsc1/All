@@ -24,9 +24,6 @@ Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/A
 # Net_Info
 NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,argument=group=VPS,timeout=10
 
-# BoxJs
-BoxJs = type=http-request,pattern=^https?://boxjs.net,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
-
 # Sub_Store
 Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
 
