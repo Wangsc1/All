@@ -2,7 +2,7 @@
 #!desc=脚本,任务,重写
 
 [MITM]
-hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade-acs.m.taobao.com
+hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,duckduckgo.com
 
 [Panel]
 # Surge_Pro
