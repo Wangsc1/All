@@ -41,5 +41,17 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 # 淘宝价格 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
 
 [URL Rewrite]
-# 谷歌
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+# TestFlight
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
+# GitHub
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+
+# 百度
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+# 汇率
+^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ https://www.google.com/search?q=$2+cny 302
+
+# Google
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
