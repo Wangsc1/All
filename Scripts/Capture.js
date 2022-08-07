@@ -1,5 +1,5 @@
 !(async () => {
-    let module = "A、MitmAll",
+    let module = "MitmAll",
         panel = { title: "CaptureMode", icon: "archivebox.circle.fill" },
         showHostname = false,
         capture,
