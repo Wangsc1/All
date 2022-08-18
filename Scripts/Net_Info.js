@@ -18,7 +18,7 @@ $httpClient.get('http://ip-api.com/json/?lang=zh-CN', function (error, response,
     $done({
       title:`${rootName} | ${jsonData.query}`,
       content:
-		`${jsonData.country}•${jsonData.city} | ${jsonData.org}`,
+		`${jsonData.country}•${jsonData.city} | ${jsonData.isp}`,
         "icon":'map.circle.fill',
 		"icon-color":'007BFF'
     });
