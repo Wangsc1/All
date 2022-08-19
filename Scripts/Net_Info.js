@@ -18,7 +18,7 @@ $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, da
     $done({
       title:`${rootName} | ${jsonData.query}`,
       content:
-		`${jsonData.country}•${jsonData.city} | ${jsonData.org}`,
+		`${jsonData.countryCode} • ${jsonData.city} | ${jsonData.org}`,
         "icon":'map.circle.fill',
 		"icon-color":'007BFF'
     });
