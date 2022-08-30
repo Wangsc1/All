@@ -27,7 +27,7 @@ const DataBase = {
 	const Trace = await Cloudflare("trace").then(trace => formatTrace(trace));
 	const Account = await Cloudflare("GET").then(result => formatAccount(result.account));
 	const Panel = {
-		"title": `WarpTeam | ${Trace.ip}`,
+		"title": `WarpInfo | ${Trace.ip}`,
 		"icon": "icloud.circle.fill",
 		"icon-color":'E5873C',
 		"content": `账户: ${Account.data.type} | 流量: ${Account.data.text}`,
