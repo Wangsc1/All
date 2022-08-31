@@ -2,7 +2,7 @@
 README:https://github.com/VirgilClyne/Cloudflare
 */
 
-const $ = new Env("1.1.1.1 by Cloudflare v1.0.0-panel");
+const $ = new Env("1.1.1.1 by Cloudflare v1.0.1-panel");
 const DataBase = {
 	"DNS": {
 		"Settings":{"Switch":true,"Verify":{"Mode":"Token","Content":""},"zone":{"id":"","name":"","dns_records":[{"id":"","type":"A","name":"","content":"","ttl":1,"proxied":false}]}},
@@ -30,7 +30,7 @@ const DataBase = {
 		"title": `WarpInfo | ${Trace.ip}`,
 		"icon": "icloud.circle.fill",
 		"icon-color":'E5873C',
-		"content": `账户: ${Account.data.type} | 流量: ${Account.data.text}`,
+		"content": `${Trace.loc}_${Trace.colo} | ${Account.data.type}_${Account.data.text}_${Trace.warp}`,
 	};
     $done(Panel);
 })()
@@ -86,23 +86,29 @@ async function setENV(name, platform, database) {
 function formatTrace(trace) {
 	switch (trace.warp) {
 		case "off":
-			trace.warp = "关闭";
+			trace.warp = "没有保护";
 			break;
 		case "on":
-			trace.warp = "开启";
+			trace.warp = "部分保护";
 			break;
 		case "plus":
-			trace.warp = "PLUS";
+			trace.warp = "完整保护";
 			break;
 		default:
-			trace.warp = "未知";
+			trace.warp = "未知类型";
 			break;
 	};
 	return trace;
 };
 
 function formatAccount(account) {
-	switch (account.account_type){
+	switch (account.account_type) {
+		case "unlimited":
+			account.data = {
+				"type": "无限",
+				"limited": false,
+			}
+			break;
 		case "limited":
 			account.data = {
 				"type": "有限",
@@ -129,14 +135,14 @@ function formatAccount(account) {
 			break;
 		default:
 			account.data = {
-				"type": "未知类型,请向 @R·E 反馈!",
+				"type": "未知 | 请向 @R·E 反馈!",
 				"limited": undefined
 			}
 			break;
 	};
 	switch (account.data.limited) {
 		case true:
-			account.data.text = `\n已用${account.data.used.toFixed(2)}GB\n剩余: ${account.data.flow.toFixed(2)}GB\n总计: ${account.data.total.toFixed(2)}GB`
+			account.data.text = `已用流量: ${account.data.used.toFixed(2)}GB\n剩余流量: ${account.data.flow.toFixed(2)}GB\n总计流量: ${account.data.total.toFixed(2)}GB`
 			break;
 		case false:
 			account.data.text = "无限"
