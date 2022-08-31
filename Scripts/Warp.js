@@ -86,16 +86,16 @@ async function setENV(name, platform, database) {
 function formatTrace(trace) {
 	switch (trace.warp) {
 		case "off":
-			trace.warp = "没有保护";
+			trace.warp = "Off";
 			break;
 		case "on":
-			trace.warp = "部分保护";
+			trace.warp = "On";
 			break;
 		case "plus":
-			trace.warp = "完整保护";
+			trace.warp = "Plus";
 			break;
 		default:
-			trace.warp = "未知类型";
+			trace.warp = "Unknow";
 			break;
 	};
 	return trace;
@@ -105,13 +105,13 @@ function formatAccount(account) {
 	switch (account.account_type) {
 		case "unlimited":
 			account.data = {
-				"type": "无限",
+				"type": "Unlimited",
 				"limited": false,
 			}
 			break;
 		case "limited":
 			account.data = {
-				"type": "有限",
+				"type": "Limited",
 				"limited": true,
 				"used": parseInt(account.premium_data - account.quota) / 1024 / 1024 / 1024,
 				"flow": parseInt(account.quota) / 1024 / 1024 / 1024,
@@ -120,13 +120,13 @@ function formatAccount(account) {
 			break;
 		case "team":
 			account.data = {
-				"type": "团队",
+				"type": "Team",
 				"limited": false,
 			}
 			break;
 		case "free":
 			account.data = {
-				"type": "免费",
+				"type": "Free",
 				"limited": true,
 				"used": parseInt(account.premium_data - account.quota) / 1024 / 1024 / 1024,
 				"flow": parseInt(account.quota) / 1024 / 1024 / 1024,
