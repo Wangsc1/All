@@ -2,8 +2,16 @@
 README:https://github.com/VirgilClyne/Cloudflare
 */
 
-const $ = new Env("1.1.1.1 by Cloudflare v1.0.2-panel");
+const $ = new Env("1.1.1.1 by Cloudflare v1.3.1-panel");
 const DataBase = {
+	"1dot1dot1dot1": {
+		"Settings": {"Switch":true,"setupMode":"ChangeKeypair","Verify":{"RegistrationId":null,"Mode":"Token","Content":null}},
+		"Configs": {"Request":{"url":"https://api.cloudflareclient.com","headers":{"authorization":null,"content-Type":"application/json","user-Agent":"1.1.1.1/2109031904.1 CFNetwork/1327.0.4 Darwin/21.2.0","cf-client-version":"i-6.7-2109031904.1"}}}
+	},
+	"VPN": {
+		"Settings":{"Switch":true,"PrivateKey":"","PublicKey":""},
+		"Configs":{"interface":{"addresses":{"v4":"","v6":""}},"peers":[{"public_key":"","endpoint":{"host":"","v4":"","v6":""}}]}
+	},
 	"DNS": {
 		"Settings":{"Switch":true,"Verify":{"Mode":"Token","Content":""},"zone":{"id":"","name":"","dns_records":[{"id":"","type":"A","name":"","content":"","ttl":1,"proxied":false}]}},
 		"Configs":{"Request":{"url":"https://api.cloudflare.com/client/v4","headers":{"content-type":"application/json"}}}
@@ -11,17 +19,13 @@ const DataBase = {
 	"WARP": {
 		"Settings":{"Switch":true,"setupMode":null,"deviceType":"iOS","Verify":{"License":null,"Mode":"Token","Content":null,"RegistrationId":null}},
 		"Configs":{"Request":{"url":"https://api.cloudflareclient.com","headers":{"authorization":null,"content-type":"application/json","user-agent":"1.1.1.1/2109031904.1 CFNetwork/1327.0.4 Darwin/21.2.0","cf-client-version":"i-6.7-2109031904.1"}},"Environment":{"iOS":{"Type":"i","Version":"v0i2109031904","headers":{"user-agent":"1.1.1.1/2109031904.1 CFNetwork/1327.0.4 Darwin/21.2.0","cf-client-version":"i-6.7-2109031904.1"}},"macOS":{"Type":"m","Version":"v0i2109031904","headers":{"user-agent":"1.1.1.1/2109031904.1 CFNetwork/1327.0.4 Darwin/21.2.0","cf-client-version":"m-2021.12.1.0-0"}},"Android":{"Type":"a","Version":"v0a1922","headers":{"user-agent":"okhttp/3.12.1","cf-client-version":"a-6.3-1922"}},"Windows":{"Type":"w","Version":"","headers":{"user-agent":"","cf-client-version":""}},"Linux":{"Type":"l","Version":"","headers":{"user-agent":"","cf-client-version":""}}}}
-	},
-	"VPN": {
-		"Settings":{"Switch":true,"PrivateKey":"","PublicKey":""},
-		"Configs":{"interface":{"addresses":{"v4":"","v6":""}},"peers":[{"public_key":"","endpoint":{"host":"","v4":"","v6":""}}]}
 	}
 };
 
 /***************** Processing *****************/
 (async () => {
-	const { Settings, Caches, Configs } = await setENV("Cloudflare", "WARP", DataBase);
-	const Trace = await Cloudflare("trace").then(trace => formatTrace(trace));
+	const { Settings, Caches, Configs } = await setENV("Cloudflare", "1dot1dot1dot1", DataBase);
+	const [Trace4, Trace6] = await Promise.allSettled([Cloudflare("trace4"), Cloudflare("trace6")]).then(results => results.map(result => formatTrace(result.value)));
 	let Account = {};
 	if (Caches?.url && Caches?.headers) {
 		const Request = {
@@ -33,11 +37,23 @@ const DataBase = {
 		};
 		Account = await Cloudflare("GET", Request).then(result => formatAccount(result?.account ?? {}));
 	};
+	let content = {}
+	switch ($environment.language) {
+		case "zh-Hans":
+		case "zh-Hant":
+			content = `${Trace4?.ip} | ${Trace6?.ip}`
+			break;
+		case "en":
+		case "en-US":
+		default:
+			content = `Public IPv4: ${Trace4?.ip}\nPublic IPv6: ${Trace6?.ip}\nColocation Center: ${Trace4?.loc ?? Trace6?.loc} | ${Trace4?.colo ?? Trace6?.colo}\nWARP Level: ${Trace4?.warp ?? Trace6?.warp}\nAccount Type: ${Account?.data?.type ?? "Failed to get"}\nData Information: ${Account?.data?.text ?? "Failed to get"}`
+			break;
+	};
 	const Panel = {
-		"title": `WARP | ${Trace.ip}`,
+		"title": `${Trace4?.loc ?? Trace6?.loc}_${Trace4?.colo ?? Trace6?.colo} | ${Account?.data?.type ?? "获取失败"}_${Account?.data?.text ?? "获取失败"}_${Trace4?.warp ?? Trace6?.warp}`,
 		"icon": "icloud.circle.fill",
 		"icon-color":'E5873C',
-		"content": `${Trace.loc}_${Trace.colo} | ${Account.data.type}_${Account.data.text}_${Trace.warp}`,
+		"content": content,
 	};
     $done(Panel);
 })()
@@ -91,7 +107,7 @@ async function setENV(name, platform, database) {
 };
 
 function formatTrace(trace) {
-	switch (trace.warp) {
+	switch (trace?.warp) {
 		case "off":
 			trace.warp = "Off";
 			break;
@@ -100,6 +116,8 @@ function formatTrace(trace) {
 			break;
 		case "plus":
 			trace.warp = "Plus";
+			break;
+		case undefined:
 			break;
 		default:
 			trace.warp = "Unknown";
@@ -155,7 +173,17 @@ function formatAccount(account) {
 	};
 	switch (account.data.limited) {
 		case true:
-			account.data.text = `\n已用流量: ${account.data.used.toFixed(2)}GB\n剩余流量: ${account.data.flow.toFixed(2)}GB\n总计流量: ${account.data.total.toFixed(2)}GB`
+			switch ($environment.language) {
+				case "zh-Hans":
+				case "zh-Hant":
+					account.data.text = `\n已用流量: ${account.data.used.toFixed(2)}GB\n剩余流量: ${account.data.flow.toFixed(2)}GB\n总计流量: ${account.data.total.toFixed(2)}GB`
+					break;
+				case "en":
+				case "en-US":
+				default:
+					account.data.text = `\nUsed: ${account.data.used.toFixed(2)}GB\nResidual: ${account.data.flow.toFixed(2)}GB\nTotal: ${account.data.total.toFixed(2)}GB`
+					break;
+			};
 			break;
 		case false:
 			account.data.text = "Unlimited"
@@ -183,8 +211,14 @@ async function Cloudflare(opt, Request = DataBase.WARP.Configs.Request, Environm
 	switch (opt) {
 		case "trace":
 			_Request.url = "https://cloudflare.com/cdn-cgi/trace";
-			//_Request.url = "https://1.1.1.1/cdn-cgi/trace";
-			//_Request.url = "https://[2606:4700:4700::1111]/cdn-cgi/trace";
+			delete _Request.headers;
+			return await formatCFJSON(_Request);
+		case "trace4":
+			_Request.url = "https://1.1.1.1/cdn-cgi/trace";
+			delete _Request.headers;
+			return await formatCFJSON(_Request);
+		case "trace6":
+			_Request.url = "https://[2606:4700:4700::1111]/cdn-cgi/trace";
 			delete _Request.headers;
 			return await formatCFJSON(_Request);
 		case "GET":
