@@ -34,7 +34,7 @@ const DataBase = {
 		Account = await Cloudflare("GET", Request).then(result => formatAccount(result?.account ?? {}));
 	};
 	const Panel = {
-		"title": `WarpInfo | ${Trace.ip}`,
+		"title": `WARP | ${Trace.ip}`,
 		"icon": "icloud.circle.fill",
 		"icon-color":'E5873C',
 		"content": `${Trace.loc}_${Trace.colo} | ${Account.data.type}_${Account.data.text}_${Trace.warp}`,
