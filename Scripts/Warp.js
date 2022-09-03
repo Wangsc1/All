@@ -41,7 +41,7 @@ const DataBase = {
 	switch ($environment.language) {
 		case "zh-Hans":
 		case "zh-Hant":
-			content = `${Trace4?.ip} | ${Trace6?.ip}`
+			content = `${Trace4?.loc ?? Trace6?.loc}_${Trace4?.colo ?? Trace6?.colo} | ${Account?.data?.type ?? "获取失败"}_${Account?.data?.text ?? "获取失败"}_${Trace4?.warp ?? Trace6?.warp}`
 			break;
 		case "en":
 		case "en-US":
@@ -50,7 +50,7 @@ const DataBase = {
 			break;
 	};
 	const Panel = {
-		"title": `${Trace4?.loc ?? Trace6?.loc}_${Trace4?.colo ?? Trace6?.colo} | ${Account?.data?.type ?? "获取失败"}_${Account?.data?.text ?? "获取失败"}_${Trace4?.warp ?? Trace6?.warp}`,
+		"title": `WARP | ${Trace4?.ip}`,
 		"icon": "icloud.circle.fill",
 		"icon-color":'E5873C',
 		"content": content,
