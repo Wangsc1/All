@@ -1,4 +1,12 @@
 # oyunfor
 DOMAIN-KEYWORD,oyunfor
+# v.ps
 DOMAIN,vps.hosting
 DOMAIN,stat.v.ps
+# paypal
+USER-AGENT,PayPal*
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypal-mktg.com
+DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-KEYWORD,paypal
