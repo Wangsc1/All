@@ -1,3 +1,3 @@
 # Emby
 DOMAIN-KEYWORD,emby
-DOMAIN,ockr.cf:8096
+URL-REGEX,^http:\/\/ockr\.cf:8096\/emby.*
