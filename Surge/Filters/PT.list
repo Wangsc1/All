@@ -1,10 +1,12 @@
 # 阿童木
 DOMAIN-SUFFIX,hdatmos.club
 # 柠檬
-DOMAIN-SUFFIX,lemonhd.org,Direct
+DOMAIN-SUFFIX,lemonhd.org
 # 憨憨
-DOMAIN-SUFFIX,hhanclub.top,Direct
+DOMAIN-SUFFIX,hhanclub.top
 # 观众
-DOMAIN-SUFFIX,audiences.me,Direct
+DOMAIN-SUFFIX,audiences.me
 # 馒头
-DOMAIN-SUFFIX,m-team.cc,Direct
+DOMAIN-SUFFIX,m-team.cc
+# 高清时光
+DOMAIN-SUFFIX,hdtime.org
