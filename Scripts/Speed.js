@@ -27,7 +27,7 @@ let content = ''
   const end = Date.now()
   const duration = (end - time || start) / 1000
   const speed = mb / duration
-  title = `Speed Test`
+  title = `SpeedTest`
   content = `${round(speed * 8, 2)} Mbps | ${round(duration, 2)}s`
   if ($.isTile()) {
     await notify('网络速率', '面板', '查询完成')

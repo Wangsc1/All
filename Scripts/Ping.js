@@ -8,7 +8,7 @@ Google:'https://www.google.com/generate_204'
 !(async () => {
 await Promise.all([http('Baidu'),http('Google')]).then((x)=>{
 	$done({
-    title: 'Ping Test',
+    title: 'PingTest',
     content: x.join(' | '),
     icon: 'bolt.horizontal.circle.fill',
     'icon-color': '#2B2D40',
