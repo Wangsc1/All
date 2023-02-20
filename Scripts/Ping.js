@@ -10,7 +10,7 @@ Github:'https://www.github.com'
 await Promise.all([http('Baidu'),http('Github'),http('Google')]).then((x)=>{
 	$done({
     title: 'Ping Test',
-    content: x.join('\n'),
+    content: x.join(' | '),
     icon: 'bolt.horizontal.circle.fill',
     'icon-color': '#2B2D40',
   })
