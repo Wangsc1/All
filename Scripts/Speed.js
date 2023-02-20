@@ -1,3 +1,5 @@
+// https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-speed/index.js
+
 const $ = new Env('network-speed')
 
 $.isPanel = () => $.isSurge() && typeof $input != 'undefined' && $.lodash_get($input, 'purpose') === 'panel'

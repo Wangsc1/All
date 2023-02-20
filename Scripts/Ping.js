@@ -1,4 +1,5 @@
-//由本群重庆佬提供，key和小白脸大佬修改完善。
+// https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/ConnectivityTest.js
+
 let $ = {
 Baidu:'https://www.baidu.com',
 Google:'https://www.google.com/generate_204',
