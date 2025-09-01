@@ -1,0 +1,8 @@
+    - DOMAIN,alphatvx.alphatvapp.top,PROXY
+    - DOMAIN,pro.204cloud.com,DIRECT
+    - DOMAIN,o.204cloud.com,DIRECT    
+    - DOMAIN,w.204cloud.com,DIRECT
+    - IP-CIDR,202.189.5.63/32,DIRECT
+    - IP-CIDR,43.139.184.65/32,DIRECT
+    - IP-CIDR,129.204.227.118/32,DIRECT
+    - IP-CIDR,101.33.250.162/32,DIRECT
