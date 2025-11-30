@@ -1,44 +1,30 @@
-#!name=B、Script
-#!desc=脚本,任务,重写
+#!name=Script
+#!desc=脚本,重写
+
+[General]
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net
+
+skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [MITM]
-hostname = %APPEND% sub.store,mb3admin.com,biz.caiyunapp.com,api.m.jd.com,trade-acs.m.taobao.com,duckduckgo.com
+hostname = %APPEND% duckduckgo.com
 
 [Panel]
-# Surge_Pro
-Surge_Pro = script-name=Surge_Pro,update-interval=1
-
-# Sub_Info
-# Sub_Info = script-name=Sub_Info,update-interval=1
-
 # Net_Info
 NET_Info = script-name=NET_Info,update-interval=1
 
+# Capture
+Capture = script-name=Capture,update-interval=1
+
 [Script]
-# Surge_Pro
-Surge_Pro = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Surge_Pro.js,timeout=10,argument=Expire=2022-09-27
-
-# Sub_Info
-# Sub_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Sub_Info.js,timeout=10,argument=url=订阅urlencode&title=ExFlux&icon=airplane.circle.fill&color=C3291C
-
 # Net_Info
-NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,argument=group=VPS,timeout=10
+NET_Info = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Net_Info.js,timeout=10
 
-# Sub_Store
-Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=0,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js
+# Capture
+Capture = type=generic,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Capture.js,argument=color1=#F2AE3D,timeout=10
 
-# Emby
-# Emby = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Emby.js
-
-# 彩云SVIP
-彩云SVIP = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/Caiyun.js
-
-# 京东价格/返利
-# 京东价格/返利 = type=http-response,pattern=^https:\/\/api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/jd_fl_price.js
-
-# 淘宝价格
-# 淘宝价格 = type=http-response,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
-# 淘宝价格 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Wangsc1/All/master/Scripts/tb_price.js
+# BoxJs
+BoxJs = type=http-request,pattern=https?:\/\/boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 [URL Rewrite]
 # TestFlight
@@ -47,11 +33,23 @@ Sub_Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 # GitHub
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 
+# Surge
+^https:\/\/duckduckgo.com\/\?q=sg\+([^&]+).+ https://www.google.com/search?as_q=$1&as_sitesearch=manual.nssurge.com 302
+
 # 百度
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 
 # 汇率
 ^https:\/\/duckduckgo.com\/\?q=hl(\+|%20)([^&]+).+ https://www.google.com/search?q=$2+cny 302
+
+# 豆瓣
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+
+# 知乎
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+
+# TMDB
+^https:\/\/duckduckgo.com\/\?q=tmdb\+([^&]+).+ https://www.themoviedb.org/search?language=zh-CN&query=$1 302
 
 # Google
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
