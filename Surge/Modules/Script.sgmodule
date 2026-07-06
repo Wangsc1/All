@@ -1,5 +1,6 @@
 #!name=Script
 #!desc=脚本,重写
+#!category=Tools
 
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net

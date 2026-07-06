@@ -1,5 +1,6 @@
 #!name=MitMAll
 #!desc=全局抓包
+#!category=Tools
 
 [MITM]
 hostname = -*.apple.com,-*.icloud.com,-*.mzstatic.com,-*.crashlytics.com,*

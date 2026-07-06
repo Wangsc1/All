@@ -1,5 +1,6 @@
 #!name=TunOnly
 #!desc=兼容模式
+#!category=Tools
 
 [General]
 compatibility-mode = 3

@@ -1,5 +1,6 @@
 #!name=软路由接管
 #!desc=软路由接管下直连，关闭加密DNS
+#!category=Tools
 #!arguments=wifi-ssid
 #!arguments-desc=填写wifi-ssid名称，可使用*
 
