@@ -1,0 +1,10 @@
+#!name=软路由接管
+#!desc=软路由接管下直连，关闭加密 DNS
+#!arguments=wifi-ssid
+#!arguments-desc=填写你的 WI-FI SSID，可以使用通配符 *
+
+[Rule]
+SUBNET,SSID:{{{wifi-ssid}}},DIRECT
+
+[SSID Setting]
+SSID:{{{wifi-ssid}}} dns-server=system,encrypted-dns-server=off
