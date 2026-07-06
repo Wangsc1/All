@@ -4,7 +4,7 @@
 #!arguments-desc=填写wifi-ssid，可使用通配符 *
 
 [Rule]
-SUBNET,SSID:{{{wifi-ssid}}},DIRECT
+SUBNET,SSID:{{{wifi-ssid}}},Direct
 
 [SSID Setting]
 SSID:{{{wifi-ssid}}} dns-server=system,encrypted-dns-server=off
