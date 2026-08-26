@@ -225,25 +225,25 @@ let content = ''
     const entranceMeta = mergeLocationCarrier(maskAddr(entranceLines.join('\n')))
     const cards = []
 
-    if (SSID.trim()) cards.push(`📶  ${SSID.replace(/^SSID:\s*/, '').trim()}`)
-    if (LAN.trim()) cards.push(`⌂  ${LAN.replace(/^LAN:\s*/, '').trim()}`)
+    if (SSID.trim()) cards.push(`SSID: ${SSID.replace(/^SSID:\s*/, '').trim()}`)
+    if (LAN.trim()) cards.push(`LAN: ${LAN.replace(/^LAN:\s*/, '').trim()}`)
 
     cards.push(
-      [`◉  本机IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}`, directMeta ? `   ${directMeta}` : '', CN_POLICY.trim()]
+      [`本机IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}`, directMeta, CN_POLICY.trim()]
         .filter(Boolean)
         .join('\n')
     )
     if (entranceIP) {
-      cards.push([`↗  入口IP: ${entranceIP}`, entranceMeta ? `   ${entranceMeta}` : ''].filter(Boolean).join('\n'))
+      cards.push([`入口IP: ${entranceIP}`, entranceMeta].filter(Boolean).join('\n'))
     }
     cards.push(
-      [`◎  出口IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}`, proxyMeta ? `   ${proxyMeta}` : '', PROXY_PRIVACY.trim()]
+      [`出口IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}`, proxyMeta, PROXY_PRIVACY.trim()]
         .filter(Boolean)
         .join('\n')
     )
 
-    title = `🛡  ${policyName}`
-    content = cards.join('\n\n')
+    title = stripIcons(policyName)
+    content = stripIcons(cards.join('\n\n'))
     if (!isInteraction()) {
       content = `${content}\n\n更新于  ${new Date().toTimeString().split(' ')[0]}`
     }
@@ -312,6 +312,15 @@ let content = ''
       $.done(result)
     }
   })
+
+function stripIcons(text = '') {
+  return String(text)
+    .replace(/[\u{1F1E6}-\u{1F1FF}]{2}/gu, '')
+    .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{24B6}-\u{24E9}]/gu, '')
+    .replace(/[\uFE0E\uFE0F\u200D]/g, '')
+    .replace(/^\s+|\s+$/g, '')
+    .replace(/ {2,}/g, ' ')
+}
 
 function mergeLocationCarrier(info = '') {
   const groups = {}
