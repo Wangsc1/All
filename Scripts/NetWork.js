@@ -228,24 +228,21 @@ let content = ''
     if (SSID.trim()) cards.push(`SSID: ${SSID.replace(/^SSID:\s*/, '').trim()}`)
     if (LAN.trim()) cards.push(`LAN: ${LAN.replace(/^LAN:\s*/, '').trim()}`)
 
-    cards.push(
-      [`本机IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}`, directMeta, CN_POLICY.trim()]
-        .filter(Boolean)
-        .join('\n')
-    )
-    if (entranceIP) {
-      cards.push([`入口IP: ${entranceIP}`, entranceMeta].filter(Boolean).join('\n'))
-    }
-    cards.push(
-      [`出口IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}`, proxyMeta, PROXY_PRIVACY.trim()]
-        .filter(Boolean)
-        .join('\n')
-    )
+    const ipRows = [
+      { label: '本机IP', ip: `${maskIP(CN_IP) || '-'}${CN_IPv6}`, meta: directMeta, extra: CN_POLICY.trim() },
+      entranceIP ? { label: '入口IP', ip: entranceIP, meta: entranceMeta, extra: '' } : null,
+      { label: '出口IP', ip: `${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}`, meta: proxyMeta, extra: PROXY_PRIVACY.trim() },
+    ].filter(Boolean)
+    const maxIPLength = Math.max(...ipRows.map(row => row.ip.length))
+    ipRows.forEach(row => {
+      const padding = '\u00a0'.repeat(maxIPLength - row.ip.length)
+      cards.push([`${row.label}: ${row.ip}${padding}`, row.meta, row.extra].filter(Boolean).join(' | '))
+    })
 
-    title = stripIcons(policyName)
-    content = stripIcons(cards.join('\n\n'))
+    title = policyName
+    content = stripIcons(cards.join('\n'))
     if (!isInteraction()) {
-      content = `${content}\n\n更新于  ${new Date().toTimeString().split(' ')[0]}`
+      content = `${content}\n更新: ${new Date().toTimeString().split(' ')[0]}`
     }
     if (isTile()) {
       await notify('网络信息', '面板', '查询完成')
@@ -336,11 +333,11 @@ function mergeLocationCarrier(info = '') {
       groups[suffix] = groups[suffix] || {}
       groups[suffix][match[1]] = match[3]
     })
-  const merged = Object.keys(groups).map(suffix => {
+  const values = Object.keys(groups).map(suffix => {
     const group = groups[suffix]
-    const value = [group['位置'], group['运营商']].filter(Boolean).join(' · ')
-    return `位置${suffix}: ${value}`
+    return [group['位置'], group['运营商']].filter(Boolean).join(' · ')
   })
+  const merged = values.length ? [`位置: ${values.join(' / ')}`] : []
   return merged.concat(extras).join('\n').trim()
 }
 
