@@ -219,7 +219,7 @@ let content = ''
     const policyName = PROXY_POLICY.replace(/^(节点|代理策略):\s*/, '') || '直连'
     // 保留位置、运营商及多接口查询结果，只调整三个 IP 标签
     const directMeta = mergeLocationCarrier(maskAddr(CN_INFO))
-    const proxyMeta = mergeLocationCarrier(maskAddr(PROXY_INFO))
+    const proxyMeta = translateLocation(mergeLocationCarrier(maskAddr(PROXY_INFO)))
     const entranceLines = ENTRANCE.trim().split('\n').filter(Boolean)
     const entranceIP = (entranceLines.shift() || '').replace(/^入口(?:¹|²)?:\s*/, '')
     const entranceMeta = mergeLocationCarrier(maskAddr(entranceLines.join('\n')))
@@ -236,11 +236,12 @@ let content = ''
     const maxIPLength = Math.max(...ipRows.map(row => row.ip.length))
     ipRows.forEach(row => {
       const padding = '\u00a0'.repeat(maxIPLength - row.ip.length)
-      cards.push([`${row.label}: ${row.ip}${padding}`, row.meta, row.extra].filter(Boolean).join(' | '))
+      const meta = row.meta.replace(/^位置:\s*/, '')
+      cards.push([`${row.label}: ${row.ip}${padding}`, meta, row.extra].filter(Boolean).join(' · '))
     })
 
     title = policyName
-    content = stripIcons(cards.join('\n'))
+    content = stripIcons(cards.join('\n\n'))
     if (!isInteraction()) {
       content = `${content}\n更新: ${new Date().toTimeString().split(' ')[0]}`
     }
@@ -317,6 +318,14 @@ function stripIcons(text = '') {
     .replace(/[\uFE0E\uFE0F\u200D]/g, '')
     .replace(/^\s+|\s+$/g, '')
     .replace(/ {2,}/g, ' ')
+}
+
+function translateLocation(info = '') {
+  return String(info)
+    .replace(/Sham Shui Po District/gi, '深水埗区')
+    .replace(/Shek Kip Mei/gi, '石硖尾')
+    .replace(/Kowloon/gi, '九龙')
+    .replace(/Hong Kong/gi, '香港')
 }
 
 function mergeLocationCarrier(info = '') {
