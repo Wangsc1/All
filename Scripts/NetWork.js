@@ -243,7 +243,7 @@ let content = ''
     title = policyName
     content = stripIcons(cards.join('\n\n'))
     if (!isInteraction()) {
-      content = `${content}\n更新: ${new Date().toTimeString().split(' ')[0]}`
+      content = `${content}\n\n更新: ${new Date().toTimeString().split(' ')[0]}`
     }
     if (isTile()) {
       await notify('网络信息', '面板', '查询完成')
@@ -342,11 +342,13 @@ function mergeLocationCarrier(info = '') {
       groups[suffix] = groups[suffix] || {}
       groups[suffix][match[1]] = match[3]
     })
-  const values = Object.keys(groups).map(suffix => {
-    const group = groups[suffix]
-    return [group['位置'], group['运营商']].filter(Boolean).join(' · ')
-  })
-  const merged = values.length ? [`位置: ${values.join(' / ')}`] : []
+  const locationValues = Object.keys(groups).map(suffix => groups[suffix]['位置']).filter(Boolean)
+  const carrierValues = Object.keys(groups).map(suffix => groups[suffix]['运营商']).filter(Boolean)
+  // 入口第二组（通常为广州 / Chinanet）不在面板展示
+  const locations = [...new Set(locationValues)].slice(0, 1).join('')
+  const carriers = [...new Set(carrierValues)].slice(0, 1).join('')
+  const mergedValue = [locations, carriers].filter(Boolean).join(' · ')
+  const merged = mergedValue ? [`位置: ${mergedValue}`] : []
   return merged.concat(extras).join('\n').trim()
 }
 
