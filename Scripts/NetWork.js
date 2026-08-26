@@ -241,7 +241,7 @@ let content = ''
     })
 
     title = policyName
-    content = stripIcons(cards.join('\n\n'))
+    content = `\n${stripIcons(cards.join('\n\n'))}`
     if (!isInteraction()) {
       content = `${content}\n\n更新: ${new Date().toTimeString().split(' ')[0]}`
     }
