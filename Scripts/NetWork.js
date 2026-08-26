@@ -242,9 +242,7 @@ let content = ''
 
     title = policyName
     content = `\n${stripIcons(cards.join('\n\n'))}`
-    if (!isInteraction()) {
-      content = `${content}\n\n更新: ${new Date().toTimeString().split(' ')[0]}`
-    }
+
     if (isTile()) {
       await notify('网络信息', '面板', '查询完成')
     } else if (!isPanel()) {
