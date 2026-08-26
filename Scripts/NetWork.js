@@ -215,15 +215,38 @@ let content = ''
     if (PROXY_INFO) {
       PROXY_INFO = `\n${PROXY_INFO}`
     }
-    title = `${PROXY_POLICY}`
-    content = `${SSID}${LAN}${CN_POLICY}IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${maskAddr(
-      CN_INFO
-    )}\n\n${ENTRANCE}落地 IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${maskAddr(PROXY_INFO)}${PROXY_PRIVACY}`
-    if (!isInteraction()) {
-      content = `${content}\n执行时间: ${new Date().toTimeString().split(' ')[0]}`
-    }
+    // 精简面板：重点信息卡片化，减少重复标签与大段灰字
+    const policyName = PROXY_POLICY.replace(/^(节点|代理策略):\s*/, '') || '直连'
+    // 保留位置、运营商及多接口查询结果，只调整三个 IP 标签
+    const directMeta = mergeLocationCarrier(maskAddr(CN_INFO))
+    const proxyMeta = mergeLocationCarrier(maskAddr(PROXY_INFO))
+    const entranceLines = ENTRANCE.trim().split('\n').filter(Boolean)
+    const entranceIP = (entranceLines.shift() || '').replace(/^入口(?:¹|²)?:\s*/, '')
+    const entranceMeta = mergeLocationCarrier(maskAddr(entranceLines.join('\n')))
+    const cards = []
 
-    title = title || '网络信息 𝕏'
+    if (SSID.trim()) cards.push(`📶  ${SSID.replace(/^SSID:\s*/, '').trim()}`)
+    if (LAN.trim()) cards.push(`⌂  ${LAN.replace(/^LAN:\s*/, '').trim()}`)
+
+    cards.push(
+      [`◉  本机IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}`, directMeta ? `   ${directMeta}` : '', CN_POLICY.trim()]
+        .filter(Boolean)
+        .join('\n')
+    )
+    if (entranceIP) {
+      cards.push([`↗  入口IP: ${entranceIP}`, entranceMeta ? `   ${entranceMeta}` : ''].filter(Boolean).join('\n'))
+    }
+    cards.push(
+      [`◎  出口IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}`, proxyMeta ? `   ${proxyMeta}` : '', PROXY_PRIVACY.trim()]
+        .filter(Boolean)
+        .join('\n')
+    )
+
+    title = `🛡  ${policyName}`
+    content = cards.join('\n\n')
+    if (!isInteraction()) {
+      content = `${content}\n\n更新于  ${new Date().toTimeString().split(' ')[0]}`
+    }
     if (isTile()) {
       await notify('网络信息', '面板', '查询完成')
     } else if (!isPanel()) {
@@ -281,20 +304,75 @@ let content = ''
     }
     $.log($.toStr(result))
     if (isInteraction()) {
-      const html = `<div style="font-family: -apple-system; font-size: large">${`\n${content}${
-        proxy_policy ? `\n\n${proxy_policy.replace(/^(.*?:\s*)(.*)$/, '$1<span style="color: #467fcf">$2</span>')}` : ''
-      }`
-        .replace(/^(.*?):/gim, '<span style="font-weight: bold">$1</span>:')
-        .replace(/\n/g, '<br/>')}</div>`
-      // $.log(html)
       $.done({
-        title: '网络信息 𝕏',
-        htmlMessage: html,
+        title: title || '网络信息',
+        htmlMessage: renderPanelHTML(content),
       })
     } else {
       $.done(result)
     }
   })
+
+function mergeLocationCarrier(info = '') {
+  const groups = {}
+  const extras = []
+  String(info)
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean)
+    .forEach(line => {
+      const match = line.match(/^(位置|运营商)([¹²]?):\s*(.*)$/)
+      if (!match) return extras.push(line)
+      const suffix = match[2] || ''
+      groups[suffix] = groups[suffix] || {}
+      groups[suffix][match[1]] = match[3]
+    })
+  const merged = Object.keys(groups).map(suffix => {
+    const group = groups[suffix]
+    const value = [group['位置'], group['运营商']].filter(Boolean).join(' · ')
+    return `位置${suffix}: ${value}`
+  })
+  return merged.concat(extras).join('\n').trim()
+}
+
+function compactInfo(info = '') {
+  return info
+    .replace(/\n+/g, ' · ')
+    .replace(/(?:位置|运营商)(?:¹|²)?:\s*/g, '')
+    .replace(/\s*·\s*/g, '  ·  ')
+    .trim()
+}
+
+function escapeHTML(text = '') {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+function renderPanelHTML(text = '') {
+  const blocks = text.split(/\n\n+/).filter(Boolean)
+  const cards = blocks
+    .map((block, index) => {
+      const lines = block.split('\n').filter(Boolean)
+      const heading = escapeHTML(lines.shift() || '')
+      const details = lines.map(line => `<div class="meta">${escapeHTML(line.trim())}</div>`).join('')
+      return `<section class="card card-${index}"><div class="heading">${heading}</div>${details}</section>`
+    })
+    .join('')
+  return `<style>
+    :root{color-scheme:light dark}
+    body{margin:0;padding:18px;background:#f3f6fb;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif}
+    .wrap{max-width:720px;margin:auto}
+    .hero{padding:6px 4px 16px;color:#64748b;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .card{margin:0 0 12px;padding:16px 17px;border:1px solid rgba(148,163,184,.18);border-radius:18px;background:rgba(255,255,255,.9);box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .heading{color:#0f172a;font-size:17px;font-weight:700;line-height:1.45;word-break:break-word}
+    .meta{margin-top:7px;color:#64748b;font-size:14px;line-height:1.55;word-break:break-word}
+    .card-0{border-left:4px solid #3b82f6}.card-1{border-left:4px solid #8b5cf6}.card-2{border-left:4px solid #10b981}
+    @media(prefers-color-scheme:dark){body{background:#0b1120}.hero{color:#94a3b8}.card{background:#151e30;border-color:#253149;box-shadow:none}.heading{color:#f8fafc}.meta{color:#a8b3c7}}
+  </style><div class="wrap"><div class="hero">NETWORK OVERVIEW</div>${cards}</div>`
+}
 
 async function getEntranceInfo() {
   let IP = ''
