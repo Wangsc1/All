@@ -1,0 +1,10 @@
+#!name=本机回环
+#!desc=10.7.0.1回环
+#!category=Tools
+
+[General]
+ipv6-vif = auto
+tun-included-routes = %INSERT% 10.7.0.1/32
+
+[IP Rewrite]
+10.7.0.1 = reflect
